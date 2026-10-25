@@ -8,7 +8,7 @@ https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standal
 
 - 單檔 HTML，內嵌最新 `data.json`
 - 每次紙盤掃描後會 export + push 呢個 repo 嘅 `main`，jsDelivr 跟住刷新
-- 若 CDN 未更新，可用 commit pin：`https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@&lt;sha12&gt;/index.standalone.html`
+- 若 CDN 未更新，可用 commit pin（例）：`https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@60b27d3efa31/index.standalone.html`
 
 模組版：https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.html
 
