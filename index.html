@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>南瓜仔紙盤</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>南瓜仔紙盤</h1>
+        <div class="meta">
+          <div>as_of</div>
+          <div id="as-of">—</div>
+        </div>
+      </div>
+      <div class="stats" id="stat-chips"></div>
+    </header>
+
+    <nav class="tabs" aria-label="分頁">
+      <button class="tab active" type="button" data-tab="tips">今日建議</button>
+      <button class="tab" type="button" data-tab="review">覆盤</button>
+    </nav>
+
+    <section id="panel-tips" class="panel active" aria-label="今日建議">
+      <div id="tips-list" class="loading">載入緊…</div>
+    </section>
+
+    <section id="panel-review" class="panel" aria-label="覆盤">
+      <div id="review-hero" class="review-hero"></div>
+      <div id="review-patterns"></div>
+      <div id="review-list"></div>
+    </section>
+
+    <footer class="footer">
+      <div id="footer-note">紙盤分析，唔係投注建議。</div>
+      <div style="margin-top:6px">HKT · 南瓜仔 HKJC paper tips</div>
+    </footer>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
