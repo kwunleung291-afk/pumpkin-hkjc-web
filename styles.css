@@ -184,7 +184,77 @@ a { color: var(--accent2); }
 .pill.status-pending { color: var(--warn); border-color: rgba(245,185,66,.45); }
 .pill.conf-high { color: var(--accent); }
 .pill.conf-medium { color: var(--accent2); }
+
 .pill.conf-low { color: var(--muted); }
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 4px 0 2px;
+}
+.option {
+  background: var(--card2);
+  border: 1px solid #2f3c50;
+  border-radius: 12px;
+  padding: 10px 12px;
+  border-left-width: 4px;
+}
+.option.risk-low { border-left-color: var(--ok); }
+.option.risk-medium { border-left-color: var(--accent2); }
+.option.risk-high { border-left-color: var(--warn); }
+.option-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.risk-badge {
+  font-size: .78rem;
+  font-weight: 750;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+}
+.risk-badge.risk-low {
+  color: var(--ok);
+  border-color: rgba(61,214,140,.5);
+  background: rgba(61,214,140,.08);
+}
+.risk-badge.risk-medium {
+  color: var(--accent2);
+  border-color: rgba(91,140,255,.5);
+  background: rgba(91,140,255,.08);
+}
+.risk-badge.risk-high {
+  color: var(--warn);
+  border-color: rgba(245,185,66,.5);
+  background: rgba(245,185,66,.08);
+}
+.pill.ge60 {
+  color: var(--ok);
+  border-color: rgba(61,214,140,.55);
+  font-weight: 700;
+}
+.option-pick {
+  font-size: 1.02rem;
+  font-weight: 750;
+  color: var(--text);
+}
+.option.risk-low .option-pick { color: var(--accent); }
+.option-prob {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.option-sum {
+  margin: 6px 0 0;
+  font-size: .84rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 
 .summary {
   margin-top: 12px;
