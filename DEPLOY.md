@@ -1,18 +1,30 @@
 # Deploy notes — 持續更新
 
-## Public phone URL（推薦）
+## Public phone URL
 
+### 目標（永久）
 **https://kwunleung291-afk.github.io/pumpkin-hkjc-web/**
 
-來源 repo：https://github.com/kwunleung291-afk/pumpkin-hkjc-web
+首次要用 GitHub Pages 前，喺 repo 開一次（Actions token **唔可以**自己 create Pages site）：
 
-> 唔好用 jsDelivr / raw.githubusercontent 開 `.html` — 佢哋會用 `text/plain`，手機見到源碼而唔係網頁。
+1. 開 https://github.com/kwunleung291-afk/pumpkin-hkjc-web/settings/pages  
+2. **Build and deployment → Source** 選 **GitHub Actions**  
+3. 之後每次 push `main` 會自動部署（`.github/workflows/pages.yml`，`enablement: true`）
+
+### 臨時（已驗證 `text/html`）
+匿名 Vercel prebuilt（約 60 分鐘到期，除非 claim）：
+
+- Site: https://prompt-pearl-5lywvd9.tmp.now/
+- Claim: https://vercel.com/claim-deployment?code=b21fdf47-9816-4cd1-ad2a-c030c5c84d8d
+
+> **唔好用** jsDelivr / raw.githubusercontent 開 `.html` — `Content-Type: text/plain`，手機會見到源碼。
+
+來源 repo：https://github.com/kwunleung291-afk/pumpkin-hkjc-web
 
 ## 刷新流程（紙盤 → 網站）
 
 ```bash
 cd /workspace/pumpkin-hkjc
-# 完整掃描（結尾會 export_web + 嘗試 deploy_web）
 PUMPKIN_DEPLOY_WEB=1 python3 -m src.run_screen --hours 6
 
 # 或者只刷新網站資料再部署：
@@ -20,18 +32,13 @@ python3 -m src.export_web
 PUMPKIN_DEPLOY_WEB=1 python3 -m src.deploy_web
 ```
 
-- `export_web`：由 `reports/screen-latest.json` + 覆盤 JSON 寫入 `web/data.json`、`index.standalone.html`，並將同一份自包含內容寫入 `index.html`（Pages 首頁）
-- `deploy_web`：用 `gh` push 到 `kwunleung291-afk/pumpkin-hkjc-web@main`
-  - 若 `gh` 未登入：印出 MCP 清單，由 parent 用 GitHub MCP `push_files` 推送
-  - 關閉：`PUMPKIN_DEPLOY_WEB=0`
-- Push 後 GitHub Actions workflow `.github/workflows/pages.yml` 會部署 Pages（`configure-pages` 設咗 `enablement: true`）
+- `export_web`：寫 `web/data.json`，並把自包含 HTML 寫入 `index.standalone.html` **同** `index.html`（Pages 首頁）
+- `deploy_web`：`gh` push 到 `kwunleung291-afk/pumpkin-hkjc-web@main`；未登入則印 MCP `push_files` 清單
+- 關閉：`PUMPKIN_DEPLOY_WEB=0`
 
-## GitHub Pages
+## 驗證
 
-- 目標：https://kwunleung291-afk.github.io/pumpkin-hkjc-web/
-- Source：GitHub Actions（workflow 會嘗試自動 enable）
-- 若 Actions 仍然失敗：Repo → Settings → Pages → Source = **GitHub Actions**，再 re-run workflow
-
-## Vercel（可選）
-
-- `cd web && vercel --prod`（需 login）
+```bash
+curl -sI https://kwunleung291-afk.github.io/pumpkin-hkjc-web/ | grep -i content-type
+# 期望: content-type: text/html
+```
