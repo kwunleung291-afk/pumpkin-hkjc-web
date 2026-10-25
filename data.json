@@ -1,0 +1,2175 @@
+{
+  "generated_at_hkt": "2026-10-25 15:32:50 HKT",
+  "as_of_hkt": "2026-10-25 15:23:11 HKT",
+  "tips_count": 25,
+  "screened": 25,
+  "method": "每場至少一個馬會盤推薦；一視同仁（無 A/B 層）；免費源：HKJC + ESPN/DK + FotMob + DATA4MULA + 7M評述 + X討論 + 衍生訊號 + 科學模型（Poisson/Dixon-Coles、Elo、Bayes、FD校準、Kelly注碼、走盤蒸汽/RLM、莊家視角、同場相關性守衛）；角球盤降權（覆盤後）；外盤／D4M 只做機率估計，絕唔推外圍投注。",
+  "hit_rate": 0.4615,
+  "settlement_summary": {
+    "as_of_hkt": "2026-10-25 15:24:08 HKT",
+    "tips_as_of": "2026-10-25 11:56:20 HKT",
+    "n_tips": 23,
+    "n_settled": 13,
+    "n_pending": 10,
+    "n_hit": 6,
+    "n_miss": 7,
+    "hit_rate": 0.4615,
+    "paper_pnl": -549.0,
+    "by_market": {
+      "HIL": {
+        "n": 6,
+        "hit": 3,
+        "miss": 3,
+        "hit_rate": 0.5
+      },
+      "HAD": {
+        "n": 3,
+        "hit": 3,
+        "miss": 0,
+        "hit_rate": 1.0
+      },
+      "CHL": {
+        "n": 4,
+        "hit": 0,
+        "miss": 4,
+        "hit_rate": 0.0
+      }
+    },
+    "error_patterns": [
+      "角球細（CHL Under）連唔中：J2 完場角球多數 >9.5，馬會去水角球盤缺乏外盤校準",
+      "入球大細有失手：大球場次出現低比分／細球場次爆大"
+    ]
+  },
+  "tips": [
+    {
+      "front_end_id": "FB7488",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "天安城",
+        "en": "Cheonan City"
+      },
+      "away": {
+        "ch": "安山綠人",
+        "en": "Ansan Greeners"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "客勝",
+      "pick_code": "A",
+      "line": null,
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.85,
+      "est_prob_pct": 36.9,
+      "prob_label": "D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 350,
+      "edge_pp": 10.96,
+      "short_price": false,
+      "summary": "建議「主客和 客勝」 @ 3.85，估計機率約 36.9%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）。莊家視角偏「對沖熱門」：蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。關鍵訊號：天氣平和；客隊積分榜第15：保級／下游壓力；HAD客隊縮水 4.00→3.85。信心中，紙注 350，相對邊 11.0pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 36.9%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會客勝 3.85｜莊家視角：對沖熱門；跟公眾熱門（對沖）；CLV代理正｜天氣平和；客隊積分榜第15：保級／下游壓力",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "under",
+        "cites": [
+          "天氣平和",
+          "客隊積分榜第15：保級／下游壓力",
+          "HAD客隊縮水 4.00→3.85",
+          "細球縮水 2.10→2.01"
+        ],
+        "goal_expectancy": 2.7
+      },
+      "bookmaker_angle": {
+        "intent": "對沖熱門",
+        "brief_zh": "蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。｜HAD開盤 H1.65/A4.0 → 即市 H1.7/A3.85；HAD蒸汽→客；大細蒸汽→細",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LDDLW",
+        "WLLLW"
+      ],
+      "h2h_summary": [
+        2,
+        5,
+        3
+      ],
+      "goal_expectancy": 2.7,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": "未結算；未開賽。"
+    },
+    {
+      "front_end_id": "FB7489",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "忠北清州",
+        "en": "Chungbuk Cheongju"
+      },
+      "away": {
+        "ch": "龍仁FC",
+        "en": "Yongin FC"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.17,
+      "est_prob_pct": 52.0,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 250,
+      "edge_pp": 5.93,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 2.17，估計機率約 52.0%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「對沖熱門」：蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。關鍵訊號：BTTS 比率偏高；天氣平和；HAD客隊縮水 2.88→2.78。信心中，紙注 250，相對邊 5.9pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 52.0%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會主勝 2.17｜莊家視角：對沖熱門；CLV代理正｜BTTS 比率偏高；天氣平和",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "over",
+        "cites": [
+          "BTTS 比率偏高",
+          "天氣平和",
+          "HAD客隊縮水 2.88→2.78"
+        ],
+        "goal_expectancy": 2.9
+      },
+      "bookmaker_angle": {
+        "intent": "對沖熱門",
+        "brief_zh": "蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。｜HAD開盤 H2.09/A2.88 → 即市 H2.17/A2.78；HAD蒸汽→客",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LWWWL",
+        "DLDLL"
+      ],
+      "h2h_summary": [
+        0,
+        1,
+        0
+      ],
+      "goal_expectancy": 2.9,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": "未結算；未開賽。"
+    },
+    {
+      "front_end_id": "FB7487",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "坡州前線",
+        "en": "Paju Frontier"
+      },
+      "away": {
+        "ch": "FC華城",
+        "en": "Hwaseong FC"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.65,
+      "est_prob_pct": 33.4,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 200,
+      "edge_pp": 5.99,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.65，估計機率約 33.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：天氣平和；HAD客隊縮水 1.64→1.57；近況 主 LDWDL／客 DWDLL。信心中，紙注 200，相對邊 6.0pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 33.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會和 3.65｜莊家視角：資訊導向；CLV代理正｜天氣平和；HAD客隊縮水 1.64→1.57",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": null,
+        "cites": [
+          "天氣平和",
+          "HAD客隊縮水 1.64→1.57"
+        ],
+        "goal_expectancy": 2.4
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H4.1/A1.64 → 即市 H4.5/A1.57；HAD蒸汽→客",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LDWDL",
+        "DWDLL"
+      ],
+      "h2h_summary": [
+        3,
+        4,
+        2
+      ],
+      "goal_expectancy": 2.4,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": "未結算；未開賽。"
+    },
+    {
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "湘南比馬",
+        "en": "Shonan Bellmare"
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": "Tochigi City"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.75,
+      "est_prob_pct": 32.7,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 300,
+      "edge_pp": 6.06,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.75，估計機率約 32.7%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「對沖熱門」：蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。關鍵訊號：BTTS 比率偏高；客隊積分榜第18：保級／下游壓力；HAD客隊縮水 3.00→2.94。信心高，紙注 300，相對邊 6.1pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 32.7%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會和 3.75｜莊家視角：對沖熱門；CLV代理正｜BTTS 比率偏高；客隊積分榜第18：保級／下游壓力",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "over",
+        "cites": [
+          "BTTS 比率偏高",
+          "客隊積分榜第18：保級／下游壓力",
+          "HAD客隊縮水 3.00→2.94",
+          "大球縮水 1.59→1.49"
+        ],
+        "goal_expectancy": 2.6
+      },
+      "bookmaker_angle": {
+        "intent": "對沖熱門",
+        "brief_zh": "蒸汽跟住公眾熱門走，莊家或在對沖熱門注碼。｜HAD開盤 H1.9/A3.0 → 即市 H1.9/A2.94；HAD蒸汽→客；大細蒸汽→大",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DLDDD",
+        "LLLDD"
+      ],
+      "h2h_summary": [
+        1,
+        0,
+        1
+      ],
+      "goal_expectancy": 2.6,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": "未結算；未開賽。"
+    },
+    {
+      "front_end_id": "FB7551",
+      "kickoff_hkt": "2026-10-25 18:45",
+      "tournament": "俄羅斯超級聯賽",
+      "home": {
+        "ch": "羅斯托夫",
+        "en": "Rostov"
+      },
+      "away": {
+        "ch": "莫斯科火車頭",
+        "en": "Lokomotiv Moscow"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "客勝",
+      "pick_code": "A",
+      "line": null,
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.98,
+      "est_prob_pct": 51.4,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 500,
+      "edge_pp": 17.84,
+      "short_price": false,
+      "summary": "建議「主客和 客勝」 @ 2.98，估計機率約 51.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：H2H近6場場均 3.17 球；天氣平和；近況 主 LLWLD／客 LDWDD。信心高，紙注 500，相對邊 17.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 51.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會客勝 2.98｜莊家視角：穩盤；CLV代理正｜H2H近6場場均 3.17 球；天氣平和",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "H2H近6場場均 3.17 球",
+          "天氣平和"
+        ],
+        "goal_expectancy": 2.9
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.13/A2.98 → 即市 H2.13/A2.98",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LLWLD",
+        "LDWDD"
+      ],
+      "h2h_summary": [
+        13,
+        12,
+        21
+      ],
+      "goal_expectancy": 2.9,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7629",
+      "kickoff_hkt": "2026-10-25 19:00",
+      "tournament": "泰國甲組聯賽",
+      "home": {
+        "ch": "巴蜀",
+        "en": "Prachuap"
+      },
+      "away": {
+        "ch": "曼谷聯",
+        "en": "Bangkok Utd"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.58,
+      "est_prob_pct": 44.4,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 300,
+      "edge_pp": 5.64,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 2.58，估計機率約 44.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.1（代理，非xG）→ 偏大；主隊休整僅 2.8 日（疲勞旗）；天氣平和。信心高，紙注 300，相對邊 5.6pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 44.4%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會主勝 2.58｜莊家視角：穩盤；CLV代理正｜形勢進球期望約 3.1（代理，非xG）→ 偏大；主隊休整僅 2.8 日（疲勞旗）",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.1（代理，非xG）→ 偏大",
+          "主隊休整僅 2.8 日（疲勞旗）",
+          "天氣平和"
+        ],
+        "goal_expectancy": 3.1
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.58/A2.37 → 即市 H2.58/A2.37",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "WWWWW",
+        "LWWLW"
+      ],
+      "h2h_summary": [
+        3,
+        5,
+        8
+      ],
+      "goal_expectancy": 3.1,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7628",
+      "kickoff_hkt": "2026-10-25 19:00",
+      "tournament": "泰國甲組聯賽",
+      "home": {
+        "ch": "拉西薩萊聯",
+        "en": "Rasisalai Utd"
+      },
+      "away": {
+        "ch": "大城聯",
+        "en": "Ayutthaya Utd"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.44,
+      "est_prob_pct": 43.5,
+      "prob_label": "D4M外盤+Elo+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 100,
+      "edge_pp": 2.5,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 2.44，估計機率約 43.5%（D4M外盤+Elo+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。信心中，紙注 100，相對邊 2.5pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 43.5%（D4M外盤+Elo+馬會去水+Bayes）；馬會主勝 2.44｜莊家視角：穩盤；CLV代理正",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [],
+        "goal_expectancy": null
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.44/A2.44 → 即市 H2.44/A2.44",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7491",
+      "kickoff_hkt": "2026-10-25 19:15",
+      "tournament": "荷蘭甲組聯賽",
+      "home": {
+        "ch": "幸運薛達",
+        "en": "Fortuna Sittard"
+      },
+      "away": {
+        "ch": "精英隊",
+        "en": "Excelsior"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.19,
+      "est_prob_pct": 49.2,
+      "prob_label": "D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 150,
+      "edge_pp": 5.0,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 2.19，估計機率約 49.2%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「責任平衡」：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。關鍵訊號：形勢進球期望約 3.9（代理，非xG）→ 偏大；BTTS 比率偏高；H2H近6場場均 3.17 球。信心中，紙注 150，相對邊 5.0pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 49.2%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）；馬會主勝 2.19｜莊家視角：責任平衡；RLM 放長側→避；CLV代理正｜形勢進球期望約 3.9（代理，非xG）→ 偏大；BTTS 比率偏高",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.9（代理，非xG）→ 偏大",
+          "BTTS 比率偏高",
+          "H2H近6場場均 3.17 球",
+          "天氣平和",
+          "HAD客隊縮水 2.73→2.58"
+        ],
+        "goal_expectancy": 3.9
+      },
+      "bookmaker_angle": {
+        "intent": "責任平衡",
+        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H2.08/A2.73 → 即市 H2.19/A2.58；HAD蒸汽→客；RLM:home_drift",
+        "steam": true,
+        "rlm": true,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "WLWDD",
+        "DLDLL"
+      ],
+      "h2h_summary": [
+        5,
+        3,
+        4
+      ],
+      "goal_expectancy": 3.9,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7492",
+      "kickoff_hkt": "2026-10-25 19:30",
+      "tournament": "意大利甲組聯賽",
+      "home": {
+        "ch": "國際米蘭",
+        "en": "Inter Milan"
+      },
+      "away": {
+        "ch": "費倫天拿",
+        "en": "Fiorentina"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "大",
+      "pick_code": "H",
+      "line": 3.5,
+      "pick_line": "入球大細 大 3.5",
+      "hkjc_odds": 1.91,
+      "est_prob_pct": 48.2,
+      "prob_label": "ESPN公允+形勢偏向+訊號偏向+評述偏向+馬會去水",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 200,
+      "edge_pp": -4.13,
+      "short_price": false,
+      "summary": "建議「入球大細 大 3.5」 @ 1.91，估計機率約 48.2%（ESPN公允+形勢偏向+訊號偏向+評述偏向+馬會去水）。莊家視角偏「資料不足」：有盤路片段但模式唔清。關鍵訊號：形勢進球期望約 3.7（代理，非xG）→ 偏大；天氣平和；主隊積分榜第2：上游／爭標動機。信心中，紙注 200，相對邊 -4.1pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 48.2%（ESPN公允+形勢偏向+訊號偏向+評述偏向+馬會去水）；馬會大 1.91｜莊家視角：資料不足｜形勢進球期望約 3.7（代理，非xG）→ 偏大；天氣平和｜7M：「費倫天拿今季聯賽僅得1勝，目前還處於兩連敗打擊之中，而國米不但斬獲6勝1和不敗佳績，場均入球數更是高達3個，對比之下，紫百合今仗唯有寄望輸少當贏。」；7M心水指向主隊「國際米蘭」",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.7（代理，非xG）→ 偏大",
+          "天氣平和",
+          "主隊積分榜第2：上游／爭標動機",
+          "客隊積分榜第18：保級／下游壓力"
+        ],
+        "goal_expectancy": 3.7
+      },
+      "bookmaker_angle": {
+        "intent": "資料不足",
+        "brief_zh": "有盤路片段但模式唔清。｜HAD開盤 H1.27/A6.7 → 即市 H1.22/A7.5",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DWLWW",
+        "WWDLL"
+      ],
+      "h2h_summary": [
+        20,
+        7,
+        8
+      ],
+      "goal_expectancy": 3.7,
+      "narrative_cites": [
+        "7M：「費倫天拿今季聯賽僅得1勝，目前還處於兩連敗打擊之中，而國米不但斬獲6勝1和不敗佳績，場均入球數更是高達3個，對比之下，紫百合今仗唯有寄望輸少當贏。」",
+        "7M心水指向主隊「國際米蘭」",
+        "7M：評述偏大球／進攻"
+      ],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7630",
+      "kickoff_hkt": "2026-10-25 19:30",
+      "tournament": "泰國甲組聯賽",
+      "home": {
+        "ch": "南奔勇士",
+        "en": "Lamphun Warriors"
+      },
+      "away": {
+        "ch": "北大年",
+        "en": "Pattani"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "大",
+      "pick_code": "H",
+      "line": 2.5,
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.75,
+      "est_prob_pct": 56.3,
+      "prob_label": "FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 200,
+      "edge_pp": -0.85,
+      "short_price": false,
+      "summary": "建議「入球大細 大 2.5」 @ 1.75，估計機率約 56.3%（FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.1（代理，非xG）→ 偏大；天氣平和；客隊積分榜第14：保級／下游壓力。信心中，紙注 200，相對邊 -0.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 56.3%（FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes）；馬會大 1.75｜莊家視角：穩盤｜形勢進球期望約 3.1（代理，非xG）→ 偏大；天氣平和",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.1（代理，非xG）→ 偏大",
+          "天氣平和",
+          "客隊積分榜第14：保級／下游壓力"
+        ],
+        "goal_expectancy": 3.1
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.58/A4.5 → 即市 H1.58/A4.5",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LDLWW",
+        "WLLLL"
+      ],
+      "h2h_summary": [
+        0,
+        0,
+        0
+      ],
+      "goal_expectancy": 3.1,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7631",
+      "kickoff_hkt": "2026-10-25 20:00",
+      "tournament": "泰國甲組聯賽",
+      "home": {
+        "ch": "烏泰他尼",
+        "en": "Uthai Thani"
+      },
+      "away": {
+        "ch": "素可泰",
+        "en": "Sukhothai"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "大",
+      "pick_code": "H",
+      "line": 2.5,
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.59,
+      "est_prob_pct": 59.8,
+      "prob_label": "FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 200,
+      "edge_pp": -3.09,
+      "short_price": false,
+      "summary": "建議「入球大細 大 2.5」 @ 1.59，估計機率約 59.8%（FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.3（代理，非xG）→ 偏大；BTTS 比率偏高；天氣平和。信心中，紙注 200，相對邊 -3.1pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 59.8%（FD校準(混合)+Poisson+訊號偏向+馬會去水+Bayes）；馬會大 1.59｜莊家視角：穩盤｜形勢進球期望約 3.3（代理，非xG）→ 偏大；BTTS 比率偏高",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.3（代理，非xG）→ 偏大",
+          "BTTS 比率偏高",
+          "天氣平和"
+        ],
+        "goal_expectancy": 3.3
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.65/A3.95 → 即市 H1.61/A4.1",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LWWDW",
+        "LWLWL"
+      ],
+      "h2h_summary": [
+        3,
+        3,
+        1
+      ],
+      "goal_expectancy": 3.3,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7558",
+      "kickoff_hkt": "2026-10-25 20:00",
+      "tournament": "蘇格蘭超級聯賽",
+      "home": {
+        "ch": "喜伯年",
+        "en": "Hibernian"
+      },
+      "away": {
+        "ch": "些路迪",
+        "en": "Celtic"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 4.3,
+      "est_prob_pct": 30.7,
+      "prob_label": "D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 350,
+      "edge_pp": 7.47,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 4.3，估計機率約 30.7%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：客隊休整僅 2.5 日（疲勞旗）；主隊積分榜第12：保級／下游壓力；客隊積分榜第1：上游／爭標動機。信心高，紙注 350，相對邊 7.5pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 30.7%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）；馬會和 4.3｜莊家視角：資訊導向；CLV代理正｜客隊休整僅 2.5 日（疲勞旗）；主隊積分榜第12：保級／下游壓力",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": null,
+        "cites": [
+          "客隊休整僅 2.5 日（疲勞旗）",
+          "主隊積分榜第12：保級／下游壓力",
+          "客隊積分榜第1：上游／爭標動機",
+          "HAD客隊縮水 1.54→1.40"
+        ],
+        "goal_expectancy": 2.9
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H4.25/A1.54 → 即市 H5.3/A1.4；HAD蒸汽→客",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "WLDLL",
+        "LWLWL"
+      ],
+      "h2h_summary": [
+        6,
+        13,
+        34
+      ],
+      "goal_expectancy": 2.9,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7568",
+      "kickoff_hkt": "2026-10-25 20:00",
+      "tournament": "芬蘭超級聯賽",
+      "home": {
+        "ch": "查路",
+        "en": "Jaro"
+      },
+      "away": {
+        "ch": "赫爾辛基PK-35",
+        "en": "PK-35 Helsinki"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.3,
+      "est_prob_pct": 33.1,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 100,
+      "edge_pp": 2.75,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.3，估計機率約 33.1%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：天氣平和；近況 主 DDWDD／客 LDLWD；對賽往績 主勝4／和2／客勝2。信心中，紙注 100，相對邊 2.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 33.1%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會和 3.3｜莊家視角：穩盤；CLV代理正｜天氣平和",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [
+          "天氣平和"
+        ],
+        "goal_expectancy": 2.2
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.7/A4.15 → 即市 H1.7/A4.15",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DDWDD",
+        "LDLWD"
+      ],
+      "h2h_summary": [
+        4,
+        2,
+        2
+      ],
+      "goal_expectancy": 2.2,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7517",
+      "kickoff_hkt": "2026-10-25 20:30",
+      "tournament": "德國乙組聯賽",
+      "home": {
+        "ch": "布倫瑞克",
+        "en": "Braunschweig"
+      },
+      "away": {
+        "ch": "漢諾威",
+        "en": "Hannover"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.65,
+      "est_prob_pct": 32.9,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 250,
+      "edge_pp": 5.48,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.65，估計機率約 32.9%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：H2H近6場場均僅 1.67 球；天氣平和；主隊積分榜第17：保級／下游壓力。信心高，紙注 250，相對邊 5.5pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 32.9%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會和 3.65｜莊家視角：穩盤；CLV代理正｜H2H近6場場均僅 1.67 球；天氣平和｜7M：「漢諾威最近2次聯賽作客出戰全部輸球，就算對手布倫斯維克近況不佳，漢諾威本輪也只能拿到1分。」",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "under",
+        "cites": [
+          "H2H近6場場均僅 1.67 球",
+          "天氣平和",
+          "主隊積分榜第17：保級／下游壓力"
+        ],
+        "goal_expectancy": 2.7
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.84/A1.97 → 即市 H2.84/A1.97",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DLLWL",
+        "DLWLD"
+      ],
+      "h2h_summary": [
+        3,
+        5,
+        6
+      ],
+      "goal_expectancy": 2.7,
+      "narrative_cites": [
+        "7M：「漢諾威最近2次聯賽作客出戰全部輸球，就算對手布倫斯維克近況不佳，漢諾威本輪也只能拿到1分。」"
+      ],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7514",
+      "kickoff_hkt": "2026-10-25 20:30",
+      "tournament": "德國乙組聯賽",
+      "home": {
+        "ch": "基爾",
+        "en": "Holstein Kiel"
+      },
+      "away": {
+        "ch": "特雷斯登",
+        "en": "Dresden"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "細",
+      "pick_code": "L",
+      "line": 2.5,
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 2.33,
+      "est_prob_pct": 53.4,
+      "prob_label": "FD校準(混合)+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 450,
+      "edge_pp": 10.51,
+      "short_price": false,
+      "summary": "建議「入球大細 細 2.5」 @ 2.33，估計機率約 53.4%（FD校準(混合)+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：BTTS 比率偏高；雨／高降水機率 → 輕偏細球／少角；主隊積分榜第18：保級／下游壓力。信心中，紙注 450，相對邊 10.5pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 53.4%（FD校準(混合)+Poisson+馬會去水+Bayes）；馬會細 2.33｜莊家視角：穩盤｜BTTS 比率偏高；雨／高降水機率 → 輕偏細球／少角",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "BTTS 比率偏高",
+          "雨／高降水機率 → 輕偏細球／少角",
+          "主隊積分榜第18：保級／下游壓力"
+        ],
+        "goal_expectancy": 2.2
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.08/A2.73 → 即市 H2.08/A2.73",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LDWLD",
+        "LDLDW"
+      ],
+      "h2h_summary": [
+        10,
+        2,
+        2
+      ],
+      "goal_expectancy": 2.2,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7516",
+      "kickoff_hkt": "2026-10-25 20:30",
+      "tournament": "德國乙組聯賽",
+      "home": {
+        "ch": "奧斯納貝克",
+        "en": "Osnabruck"
+      },
+      "away": {
+        "ch": "格雷特霍夫",
+        "en": "Greuther Furth"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.55,
+      "est_prob_pct": 33.3,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 250,
+      "edge_pp": 5.14,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.55，估計機率約 33.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：天氣平和；HAD主隊縮水 2.15→1.99；近況 主 LDLDL／客 DDLLW。信心高，紙注 250，相對邊 5.1pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 33.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會和 3.55｜莊家視角：資訊導向；CLV代理正｜天氣平和；HAD主隊縮水 2.15→1.99",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": null,
+        "cites": [
+          "天氣平和",
+          "HAD主隊縮水 2.15→1.99"
+        ],
+        "goal_expectancy": 2.6
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H2.15/A2.62 → 即市 H1.99/A2.87；HAD蒸汽→主",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LDLDL",
+        "DDLLW"
+      ],
+      "h2h_summary": [
+        2,
+        2,
+        4
+      ],
+      "goal_expectancy": 2.6,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7633",
+      "kickoff_hkt": "2026-10-25 20:30",
+      "tournament": "比利時甲組聯賽",
+      "home": {
+        "ch": "亨克",
+        "en": "Genk"
+      },
+      "away": {
+        "ch": "標準列治",
+        "en": "Standard"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "細",
+      "pick_code": "L",
+      "line": 2.5,
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 2.27,
+      "est_prob_pct": 51.3,
+      "prob_label": "ESPN公允+FD校準(混合)+Poisson+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 450,
+      "edge_pp": 7.3,
+      "short_price": false,
+      "summary": "建議「入球大細 細 2.5」 @ 2.27，估計機率約 51.3%（ESPN公允+FD校準(混合)+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：天氣平和；近況 主 DDLWW／客 WLLLW；對賽往績 主勝17／和15／客勝22。信心高，紙注 450，相對邊 7.3pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 51.3%（ESPN公允+FD校準(混合)+Poisson+馬會去水+Bayes）；馬會細 2.27｜莊家視角：穩盤｜天氣平和",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [
+          "天氣平和"
+        ],
+        "goal_expectancy": 2.3
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.58/A4.2 → 即市 H1.58/A4.2",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DDLWW",
+        "WLLLW"
+      ],
+      "h2h_summary": [
+        17,
+        15,
+        22
+      ],
+      "goal_expectancy": 2.3,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7709",
+      "kickoff_hkt": "2026-10-25 20:57",
+      "tournament": "烏拉圭甲組聯賽",
+      "home": {
+        "ch": "蒙特維多流浪者",
+        "en": "Montevideo Wanderers"
+      },
+      "away": {
+        "ch": "CA普格雷素",
+        "en": "CA Progresso"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "客勝",
+      "pick_code": "A",
+      "line": null,
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.6,
+      "est_prob_pct": 35.3,
+      "prob_label": "D4M外盤+Elo+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 350,
+      "edge_pp": 7.54,
+      "short_price": false,
+      "summary": "建議「主客和 客勝」 @ 3.6，估計機率約 35.3%（D4M外盤+Elo+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。信心高，紙注 350，相對邊 7.5pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 35.3%（D4M外盤+Elo+馬會去水+Bayes）；馬會客勝 3.6｜莊家視角：穩盤；CLV代理正",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [],
+        "goal_expectancy": null
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.78/A3.6 → 即市 H1.78/A3.6",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7637",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "西班牙甲組聯賽",
+      "home": {
+        "ch": "畢爾包",
+        "en": "Bilbao"
+      },
+      "away": {
+        "ch": "基達菲",
+        "en": "Getafe"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "和",
+      "pick_code": "D",
+      "line": null,
+      "pick_line": "主客和 和",
+      "hkjc_odds": 3.5,
+      "est_prob_pct": 33.3,
+      "prob_label": "D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 150,
+      "edge_pp": 4.76,
+      "short_price": false,
+      "summary": "建議「主客和 和」 @ 3.5，估計機率約 33.3%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：客隊休整僅 2.6 日（疲勞旗）；HAD主隊縮水 1.50→1.44；近況 主 DDWDL／客 WLDDL。信心中，紙注 150，相對邊 4.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 33.3%（D4M外盤+ESPN公允+Elo+Poisson+馬會去水+Bayes）；馬會和 3.5｜莊家視角：資訊導向；CLV代理正｜客隊休整僅 2.6 日（疲勞旗）；HAD主隊縮水 1.50→1.44",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": null,
+        "cites": [
+          "客隊休整僅 2.6 日（疲勞旗）",
+          "HAD主隊縮水 1.50→1.44"
+        ],
+        "goal_expectancy": 2.2
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H1.5/A5.8 → 即市 H1.44/A6.5；HAD蒸汽→主",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DDWDL",
+        "WLDDL"
+      ],
+      "h2h_summary": [
+        10,
+        14,
+        6
+      ],
+      "goal_expectancy": 2.2,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7639",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "瑞典超級聯賽",
+      "home": {
+        "ch": "加爾斯",
+        "en": "GAIS"
+      },
+      "away": {
+        "ch": "哥登堡",
+        "en": "Goteborg"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "客勝",
+      "pick_code": "A",
+      "line": null,
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.73,
+      "est_prob_pct": 43.9,
+      "prob_label": "D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 400,
+      "edge_pp": 5.73,
+      "short_price": false,
+      "summary": "建議「主客和 客勝」 @ 2.73，估計機率約 43.9%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：雨／高降水機率 → 輕偏細球／少角；HAD客隊縮水 2.80→2.73；近況 主 DLWLL／客 WWLWD。信心高，紙注 400，相對邊 5.7pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 43.9%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會客勝 2.73｜莊家視角：資訊導向；跟蒸汽／資訊向；CLV代理正｜雨／高降水機率 → 輕偏細球／少角；HAD客隊縮水 2.80→2.73",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "under",
+        "cites": [
+          "雨／高降水機率 → 輕偏細球／少角",
+          "HAD客隊縮水 2.80→2.73"
+        ],
+        "goal_expectancy": 2.6
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H2.14/A2.8 → 即市 H2.18/A2.73；HAD蒸汽→客",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DLWLL",
+        "WWLWD"
+      ],
+      "h2h_summary": [
+        4,
+        4,
+        4
+      ],
+      "goal_expectancy": 2.6,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7549",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "俄羅斯超級聯賽",
+      "home": {
+        "ch": "莫斯科中央陸軍",
+        "en": "CSKA Moscow"
+      },
+      "away": {
+        "ch": "莫斯科斯巴達",
+        "en": "Spartak Moscow"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.74,
+      "est_prob_pct": 38.3,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 50,
+      "edge_pp": 1.78,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 2.74，估計機率約 38.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.5（代理，非xG）→ 偏大；天氣平和；近況 主 LWWWL／客 WWDWW。信心中，紙注 50，相對邊 1.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 38.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會主勝 2.74｜莊家視角：穩盤；CLV代理正｜形勢進球期望約 3.5（代理，非xG）→ 偏大；天氣平和",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.5（代理，非xG）→ 偏大",
+          "天氣平和"
+        ],
+        "goal_expectancy": 3.5
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.74/A2.07 → 即市 H2.74/A2.07",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "LWWWL",
+        "WWDWW"
+      ],
+      "h2h_summary": [
+        17,
+        7,
+        15
+      ],
+      "goal_expectancy": 3.5,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7567",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "芬蘭超級聯賽",
+      "home": {
+        "ch": "赫爾辛基",
+        "en": "HJK Helsinki"
+      },
+      "away": {
+        "ch": "古比斯",
+        "en": "KuPS"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.7,
+      "est_prob_pct": 64.5,
+      "prob_label": "D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 350,
+      "edge_pp": 4.16,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 1.7，估計機率約 64.5%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：形勢進球期望約 3.1（代理，非xG）→ 偏大；客隊休整僅 2.5 日（疲勞旗）；天氣平和。信心中，紙注 350，相對邊 4.2pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 64.5%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會主勝 1.7｜莊家視角：資訊導向；跟蒸汽／資訊向；CLV代理正｜形勢進球期望約 3.1（代理，非xG）→ 偏大；客隊休整僅 2.5 日（疲勞旗）",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.1（代理，非xG）→ 偏大",
+          "客隊休整僅 2.5 日（疲勞旗）",
+          "天氣平和",
+          "HAD主隊縮水 1.85→1.70"
+        ],
+        "goal_expectancy": 3.1
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H1.85/A3.25 → 即市 H1.7/A3.7；HAD蒸汽→主",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DDWWW",
+        "LLLWL"
+      ],
+      "h2h_summary": [
+        24,
+        20,
+        15
+      ],
+      "goal_expectancy": 3.1,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7640",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "丹麥超級聯賽",
+      "home": {
+        "ch": "米迪蘭特",
+        "en": "Midtjylland"
+      },
+      "away": {
+        "ch": "寧比",
+        "en": "Lyngby"
+      },
+      "market": "HIL",
+      "market_label": "入球大細",
+      "pick": "大",
+      "pick_code": "H",
+      "line": 3.5,
+      "pick_line": "入球大細 大 3.5",
+      "hkjc_odds": 2.13,
+      "est_prob_pct": 44.2,
+      "prob_label": "形勢偏向+訊號偏向+馬會去水",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 200,
+      "edge_pp": -2.77,
+      "short_price": false,
+      "summary": "建議「入球大細 大 3.5」 @ 2.13，估計機率約 44.2%（形勢偏向+訊號偏向+馬會去水）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高；主隊休整僅 2.5 日（疲勞旗）。信心中，紙注 200，相對邊 -2.8pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 44.2%（形勢偏向+訊號偏向+馬會去水）；馬會大 2.13｜莊家視角：穩盤｜形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高",
+      "signals": {
+        "lean_had": "away",
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.7（代理，非xG）→ 偏大",
+          "BTTS 比率偏高",
+          "主隊休整僅 2.5 日（疲勞旗）",
+          "雨／高降水機率 → 輕偏細球／少角",
+          "主隊積分榜第2：上游／爭標動機"
+        ],
+        "goal_expectancy": 3.7
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.34/A5.9 → 即市 H1.34/A5.9",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "DWDWL",
+        "DLLLD"
+      ],
+      "h2h_summary": [
+        9,
+        7,
+        9
+      ],
+      "goal_expectancy": 3.7,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7638",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "丹麥超級聯賽",
+      "home": {
+        "ch": "錫爾克堡",
+        "en": "Silkeborg IF"
+      },
+      "away": {
+        "ch": "洛斯查蘭特",
+        "en": "Nordsjaelland"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_code": "H",
+      "line": null,
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 4.35,
+      "est_prob_pct": 40.5,
+      "prob_label": "D4M外盤+Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes",
+      "confidence": "high",
+      "confidence_zh": "高",
+      "stake": 500,
+      "edge_pp": 15.98,
+      "short_price": false,
+      "summary": "建議「主客和 主勝」 @ 4.35，估計機率約 40.5%（D4M外盤+Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）。莊家視角偏「資訊導向」：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。關鍵訊號：HAD主隊縮水 4.40→4.35；大球縮水 1.94→1.88。信心高，紙注 500，相對邊 16.0pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 40.5%（D4M外盤+Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會主勝 4.35｜莊家視角：資訊導向；跟蒸汽／資訊向；CLV代理正｜HAD主隊縮水 4.40→4.35；大球縮水 1.94→1.88",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": "over",
+        "cites": [
+          "HAD主隊縮水 4.40→4.35",
+          "大球縮水 1.94→1.88"
+        ],
+        "goal_expectancy": null
+      },
+      "bookmaker_angle": {
+        "intent": "資訊導向",
+        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H4.4/A1.51 → 即市 H4.35/A1.51；HAD蒸汽→主；大細蒸汽→大",
+        "steam": true,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB7636",
+      "kickoff_hkt": "2026-10-25 21:00",
+      "tournament": "瑞士超級聯賽",
+      "home": {
+        "ch": "杜安",
+        "en": "Thun"
+      },
+      "away": {
+        "ch": "盧加諾",
+        "en": "Lugano"
+      },
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "客勝",
+      "pick_code": "A",
+      "line": null,
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 1.79,
+      "est_prob_pct": 60.2,
+      "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
+      "confidence": "medium",
+      "confidence_zh": "中",
+      "stake": 250,
+      "edge_pp": 4.33,
+      "short_price": false,
+      "summary": "建議「主客和 客勝」 @ 1.79，估計機率約 60.2%（D4M外盤+Elo+Poisson+馬會去水+Bayes）。莊家視角偏「穩盤」：開盤至即市變動細，莊家似穩盤／少責任壓力。關鍵訊號：形勢進球期望約 3.9（代理，非xG）→ 偏大；雨／高降水機率 → 輕偏細球／少角；客隊積分榜第1：上游／爭標動機。信心中，紙注 250，相對邊 4.3pp，綜合模型同盤口意圖後揀呢邊。",
+      "why": "估計機率 60.2%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會客勝 1.79｜莊家視角：穩盤；CLV代理正｜形勢進球期望約 3.9（代理，非xG）→ 偏大；雨／高降水機率 → 輕偏細球／少角",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "形勢進球期望約 3.9（代理，非xG）→ 偏大",
+          "雨／高降水機率 → 輕偏細球／少角",
+          "客隊積分榜第1：上游／爭標動機"
+        ],
+        "goal_expectancy": 3.9
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H3.15/A1.79 → 即市 H3.15/A1.79",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true
+      },
+      "form": [
+        "WLLDL",
+        "WWWWW"
+      ],
+      "h2h_summary": [
+        11,
+        7,
+        10
+      ],
+      "goal_expectancy": 3.9,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    }
+  ],
+  "review_rows": [
+    {
+      "front_end_id": "FB7389",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "澳洲職業聯賽",
+      "home": {
+        "ch": "FC悉尼",
+        "en": "Sydney FC"
+      },
+      "away": {
+        "ch": "阿德萊德聯",
+        "en": "Adelaide Utd"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.56,
+      "est_prob_pct": 58.1,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1 總3",
+      "review_zh": "估計方向啱；入球過線。；莊家視角：走盤（責任平衡）與結果同向，有 foreshadow。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7539",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "澳洲冠軍聯賽盃",
+      "home": {
+        "ch": "悉尼奧林匹克",
+        "en": "Sydney Olympic"
+      },
+      "away": {
+        "ch": "比斯活特城",
+        "en": "Bayswater City"
+      },
+      "pick_line": "入球大細 細 3.5",
+      "hkjc_odds": 1.56,
+      "est_prob_pct": 59.3,
+      "stake": 100,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2 總3",
+      "review_zh": "估計方向啱；低入球符合細波。；莊家視角：逆走盤／穩盤（對沖熱門）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7542",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "澳洲冠軍聯賽盃",
+      "home": {
+        "ch": "臥龍崗狼隊",
+        "en": "Wollongong Wolves"
+      },
+      "away": {
+        "ch": "南霍巴特",
+        "en": "South Hobart"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.22,
+      "est_prob_pct": 69.2,
+      "stake": 100,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "估計方向啱；主客和揀中。；莊家視角：逆走盤／穩盤（穩盤）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7478",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本職業聯賽",
+      "home": {
+        "ch": "名古屋鯨魚",
+        "en": "Nagoya Grampus"
+      },
+      "away": {
+        "ch": "橫濱水手",
+        "en": "Yokohama F.Marinos"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.69,
+      "est_prob_pct": 55.1,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1 總2",
+      "review_zh": "估計方向錯；入球唔夠線。；莊家視角：跟咗蒸汽（責任平衡）但結果相反。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7477",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "新潟天鵝",
+        "en": "Albirex Niigata"
+      },
+      "away": {
+        "ch": "仙台維加泰",
+        "en": "Vegalta Sendai"
+      },
+      "pick_line": "角球大細 細 9.5",
+      "hkjc_odds": 1.72,
+      "est_prob_pct": 53.8,
+      "stake": 100,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": "4-6",
+      "result_value": "角4-6 總10（入球2-1）",
+      "review_zh": "估計方向錯；角球細線被穿（J2角球波動大）。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7481",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "秋田藍閃電",
+        "en": "Blaublitz Akita"
+      },
+      "away": {
+        "ch": "FC今治",
+        "en": "FC Imabari"
+      },
+      "pick_line": "角球大細 細 9.5",
+      "hkjc_odds": 1.75,
+      "est_prob_pct": 52.7,
+      "stake": 100,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-0",
+      "corners": "7-6",
+      "result_value": "角7-6 總13（入球1-0）",
+      "review_zh": "估計方向錯；角球細線被穿（J2角球波動大）。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7476",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "富山勝利",
+        "en": "Kataller Toyama"
+      },
+      "away": {
+        "ch": "北海道札幌岡薩多",
+        "en": "Hokkaido Consadole Sapporo"
+      },
+      "pick_line": "入球大細 細 3.5",
+      "hkjc_odds": 1.57,
+      "est_prob_pct": 58.9,
+      "stake": 100,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-1",
+      "corners": null,
+      "result_value": "0-1 總1",
+      "review_zh": "估計方向啱；低入球符合細波。；莊家視角：逆走盤／穩盤（對沖熱門）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7480",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "山形山神",
+        "en": "Montedio Yamagata"
+      },
+      "away": {
+        "ch": "宮崎棒牛鳥",
+        "en": "Tegevajaro Miyazaki"
+      },
+      "pick_line": "角球大細 細 9.5",
+      "hkjc_odds": 1.71,
+      "est_prob_pct": 54.0,
+      "stake": 100,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "0-2",
+      "corners": "7-4",
+      "result_value": "角7-4 總11（入球0-2）",
+      "review_zh": "估計方向錯；角球細線被穿（J2角球波動大）。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7479",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "大分三神",
+        "en": "Oita Trinita"
+      },
+      "away": {
+        "ch": "甲府風林",
+        "en": "Ventforet Kofu"
+      },
+      "pick_line": "角球大細 細 10.5",
+      "hkjc_odds": 1.52,
+      "est_prob_pct": 60.7,
+      "stake": 100,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": "8-4",
+      "result_value": "角8-4 總12（入球1-1）",
+      "review_zh": "估計方向錯；角球細線被穿（J2角球波動大）。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7475",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "鳥棲砂岩",
+        "en": "Sagan Tosu"
+      },
+      "away": {
+        "ch": "八戶雲羅里",
+        "en": "Vanraure Hachinohe"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.49,
+      "est_prob_pct": 57.5,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "估計方向啱；主客和揀中。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7543",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "釜山偶像",
+        "en": "Busan I'Park"
+      },
+      "away": {
+        "ch": "FC慶南",
+        "en": "Gyeongnam FC"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 1.78,
+      "est_prob_pct": 52.2,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1 總4",
+      "review_zh": "估計方向錯；入球爆細。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7473",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "FC城南",
+        "en": "Seongnam FC"
+      },
+      "away": {
+        "ch": "水原藍翼",
+        "en": "Suwon Bluewings"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 1.53,
+      "est_prob_pct": 56.2,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-2",
+      "corners": null,
+      "result_value": "0-2",
+      "review_zh": "估計方向啱；主客和揀中。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7474",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "FC水原",
+        "en": "Suwon FC"
+      },
+      "away": {
+        "ch": "忠南牙山",
+        "en": "Chungnam Asan"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.64,
+      "est_prob_pct": 56.6,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "0-1",
+      "corners": null,
+      "result_value": "0-1 總1",
+      "review_zh": "估計方向錯；入球唔夠線。；莊家視角：當時無走盤資料。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB7482",
+      "kickoff_hkt": "2026-10-25 14:00",
+      "tournament": "日本職業聯賽",
+      "home": {
+        "ch": "大阪櫻花",
+        "en": "Cerezo Osaka"
+      },
+      "away": {
+        "ch": "千葉市原",
+        "en": "JEF United Chiba"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.62,
+      "est_prob_pct": 56.5,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "0-2",
+      "corners": "2-1",
+      "result_value": null,
+      "review_zh": "未結算；進行中 56‎’‎ 0-2。",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7484",
+      "kickoff_hkt": "2026-10-25 14:00",
+      "tournament": "日本職業聯賽",
+      "home": {
+        "ch": "浦和紅鑽",
+        "en": "Urawa Reds"
+      },
+      "away": {
+        "ch": "長崎成功丸",
+        "en": "V-Varen Nagasaki"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.46,
+      "est_prob_pct": 59.4,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "0-0",
+      "corners": "5-1",
+      "result_value": null,
+      "review_zh": "未結算；進行中 59‎’‎ 0-0。",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7483",
+      "kickoff_hkt": "2026-10-25 14:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "磐城FC",
+        "en": "Iwaki FC"
+      },
+      "away": {
+        "ch": "磐田山葉",
+        "en": "Jubilo Iwata"
+      },
+      "pick_line": "角球大細 細 10.5",
+      "hkjc_odds": 1.62,
+      "est_prob_pct": 57.0,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；進行中 56‎’‎ 1-0。",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7510",
+      "kickoff_hkt": "2026-10-25 14:45",
+      "tournament": "女子澳洲職業聯賽",
+      "home": {
+        "ch": "FC悉尼女足",
+        "en": "Sydney FC Women"
+      },
+      "away": {
+        "ch": "墨爾本城女足",
+        "en": "Melbourne City Women"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 1.37,
+      "est_prob_pct": 63.8,
+      "stake": 50,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；未開賽。",
+      "match_status": "NS"
+    },
+    {
+      "front_end_id": "FB7485",
+      "kickoff_hkt": "2026-10-25 15:00",
+      "tournament": "日本職業聯賽",
+      "home": {
+        "ch": "川崎前鋒",
+        "en": "Kawasaki Frontale"
+      },
+      "away": {
+        "ch": "岡山綠雉",
+        "en": "Fagiano Okayama"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.64,
+      "est_prob_pct": 54.9,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "1-0",
+      "corners": "0-2",
+      "result_value": null,
+      "review_zh": "未結算；進行中 16‎’‎ 1-0。",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7486",
+      "kickoff_hkt": "2026-10-25 15:00",
+      "tournament": "日本職業聯賽",
+      "home": {
+        "ch": "FC東京",
+        "en": "FC Tokyo"
+      },
+      "away": {
+        "ch": "水戶蜀葵",
+        "en": "Mito Hollyhock"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.2,
+      "est_prob_pct": 72.9,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "0-0",
+      "corners": "2-1",
+      "result_value": null,
+      "review_zh": "未結算；進行中 16‎’‎ 0-0。",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7488",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "天安城",
+        "en": "Cheonan City"
+      },
+      "away": {
+        "ch": "安山綠人",
+        "en": "Ansan Greeners"
+      },
+      "pick_line": "角球大細 細 9.5",
+      "hkjc_odds": 1.57,
+      "est_prob_pct": 58.9,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；未開賽。",
+      "match_status": "NS"
+    },
+    {
+      "front_end_id": "FB7489",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "忠北清州",
+        "en": "Chungbuk Cheongju"
+      },
+      "away": {
+        "ch": "龍仁FC",
+        "en": "Yongin FC"
+      },
+      "pick_line": "角球大細 細 9.5",
+      "hkjc_odds": 1.64,
+      "est_prob_pct": 56.4,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；未開賽。",
+      "match_status": "NS"
+    },
+    {
+      "front_end_id": "FB7487",
+      "kickoff_hkt": "2026-10-25 15:30",
+      "tournament": "南韓乙組聯賽",
+      "home": {
+        "ch": "坡州前線",
+        "en": "Paju Frontier"
+      },
+      "away": {
+        "ch": "FC華城",
+        "en": "Hwaseong FC"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.69,
+      "est_prob_pct": 54.7,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；未開賽。",
+      "match_status": "NS"
+    },
+    {
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "湘南比馬",
+        "en": "Shonan Bellmare"
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": "Tochigi City"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.59,
+      "est_prob_pct": 58.5,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "未結算；未開賽。",
+      "match_status": "NS"
+    }
+  ],
+  "disclaimer": "紙盤分析，唔係投注建議。估計機率唔保證命中。18歲以下唔准。請理性博彩。"
+}
