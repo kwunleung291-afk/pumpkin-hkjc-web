@@ -2,9 +2,11 @@
 
 ## Public phone URL（推薦）
 
-**https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standalone.html**
+**https://kwunleung291-afk.github.io/pumpkin-hkjc-web/**
 
 來源 repo：https://github.com/kwunleung291-afk/pumpkin-hkjc-web
+
+> 唔好用 jsDelivr / raw.githubusercontent 開 `.html` — 佢哋會用 `text/plain`，手機見到源碼而唔係網頁。
 
 ## 刷新流程（紙盤 → 網站）
 
@@ -18,17 +20,18 @@ python3 -m src.export_web
 PUMPKIN_DEPLOY_WEB=1 python3 -m src.deploy_web
 ```
 
-- `export_web`：由 `reports/screen-latest.json` + 覆盤 JSON 寫入 `web/data.json` 同 `index.standalone.html`
+- `export_web`：由 `reports/screen-latest.json` + 覆盤 JSON 寫入 `web/data.json`、`index.standalone.html`，並將同一份自包含內容寫入 `index.html`（Pages 首頁）
 - `deploy_web`：用 `gh` push 到 `kwunleung291-afk/pumpkin-hkjc-web@main`
   - 若 `gh` 未登入：印出 MCP 清單，由 parent 用 GitHub MCP `push_files` 推送
   - 關閉：`PUMPKIN_DEPLOY_WEB=0`
+- Push 後 GitHub Actions workflow `.github/workflows/pages.yml` 會部署 Pages（`configure-pages` 設咗 `enablement: true`）
 
-## jsDelivr 注意
+## GitHub Pages
 
-- `@main` 通常幾分鐘內刷新；急用可 pin commit SHA
-- 強制刷新：`https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standalone.html?v=<timestamp>`
+- 目標：https://kwunleung291-afk.github.io/pumpkin-hkjc-web/
+- Source：GitHub Actions（workflow 會嘗試自動 enable）
+- 若 Actions 仍然失敗：Repo → Settings → Pages → Source = **GitHub Actions**，再 re-run workflow
 
-## Vercel / GitHub Pages（可選）
+## Vercel（可選）
 
-- Vercel：`cd web && vercel --prod`（需 login）
-- Pages：repo 已有 `.github/workflows/pages.yml`；Settings → Pages → Source = Actions
+- `cd web && vercel --prod`（需 login）
