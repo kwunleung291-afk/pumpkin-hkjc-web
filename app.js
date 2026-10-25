@@ -141,8 +141,17 @@
       <dl>
         <dt>莊家視角</dt>
         <dd>${esc(bk.intent || "—")}${
+          bk.action ? "／" + esc(bk.action) : ""
+        }${
+          bk.toxicity_score != null ? "／毒性" + esc(bk.toxicity_score) : ""
+        }${
           bk.brief_zh ? " — " + esc(bk.brief_zh) : ""
         }</dd>
+        ${
+          (t.odds_compare && t.odds_compare.brief_zh)
+            ? `<dt>跨站對比</dt><dd>${esc(t.odds_compare.brief_zh)}</dd>`
+            : ""
+        }
         <dt>訊號</dt>
         <dd>${cites.length ? `<ul>${cites.join("")}</ul>` : "—"}</dd>
         ${
@@ -312,6 +321,11 @@
     if (data.low_risk_ge60 != null) {
       parts.push(
         `<span class="chip ok">低風險≥60% ${esc(data.low_risk_ge60)}</span>`
+      );
+    }
+    if (data.odds_compare_coverage) {
+      parts.push(
+        `<span class="chip">跨站 ${esc(String(data.odds_compare_coverage).slice(0, 48))}</span>`
       );
     }
     parts.push(rollChip("7日", data.rolling_7d));
