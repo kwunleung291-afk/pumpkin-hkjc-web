@@ -23,9 +23,43 @@
     return "conf-medium";
   }
 
+  function riskClass(tier) {
+    const k = String(tier || "").toLowerCase();
+    if (k === "low") return "risk-low";
+    if (k === "high") return "risk-high";
+    return "risk-medium";
+  }
+
   function pct(n) {
     if (n == null || Number.isNaN(Number(n))) return "—";
     return (Number(n) * 100).toFixed(1) + "%";
+  }
+
+  function renderOption(o) {
+    const odds = o.hkjc_odds != null ? `@ ${esc(o.hkjc_odds)}` : "";
+    const prob =
+      o.est_prob_pct != null ? `估計 ${esc(o.est_prob_pct)}%` : "";
+    const ge60 =
+      o.est_prob_pct != null && Number(o.est_prob_pct) >= 60
+        ? '<span class="pill ge60">≥60%</span>'
+        : "";
+    return `<div class="option ${riskClass(o.risk_tier)}">
+  <div class="option-head">
+    <span class="risk-badge ${riskClass(o.risk_tier)}">${esc(
+      o.risk_zh || o.risk_tier || "—"
+    )}</span>
+    ${ge60}
+    <span class="pill ${confClass(o.confidence)}">信心 ${esc(
+      o.confidence_zh || o.confidence || "—"
+    )}</span>
+    <span class="pill">紙注 ${esc(o.stake ?? "—")}</span>
+  </div>
+  <div class="option-pick">${esc(o.pick_line || "")} ${odds}</div>
+  <div class="option-prob">${prob}${
+      o.prob_label ? ` · ${esc(o.prob_label)}` : ""
+    }</div>
+  <p class="option-sum">${esc(o.summary || "")}</p>
+</div>`;
   }
 
   function renderTips(tips) {
@@ -36,10 +70,23 @@
     }
     root.innerHTML = tips
       .map((t) => {
-        const odds = t.hkjc_odds != null ? `@ ${esc(t.hkjc_odds)}` : "";
-        const prob =
-          t.est_prob_pct != null ? `估計 ${esc(t.est_prob_pct)}%` : "";
-        const lineBits = [t.pick_line, odds, prob].filter(Boolean).join(" · ");
+        const options =
+          t.options && t.options.length
+            ? t.options
+            : [
+                {
+                  risk_tier: t.risk_tier || "low",
+                  risk_zh: t.risk_zh || "低風險",
+                  pick_line: t.pick_line,
+                  hkjc_odds: t.hkjc_odds,
+                  est_prob_pct: t.est_prob_pct,
+                  prob_label: t.prob_label,
+                  confidence: t.confidence,
+                  confidence_zh: t.confidence_zh,
+                  stake: t.stake,
+                  summary: t.summary,
+                },
+              ];
         const cites = ((t.signals && t.signals.cites) || []).map(
           (c) => `<li>${esc(c)}</li>`
         );
@@ -64,23 +111,13 @@
   </div>
   <div class="tour">${esc(t.tournament)}</div>
   <div class="teams">${esc(t.home.ch)} vs ${esc(t.away.ch)}</div>
-  <div class="pick">
-    <div class="pick-main">${esc(lineBits)}</div>
-    <div class="pick-sub">${esc(t.prob_label || "")}</div>
+  <div class="options">
+    ${options.map(renderOption).join("")}
   </div>
   <div class="row">
-    <span class="pill ${confClass(t.confidence)}">信心 ${esc(
-          t.confidence_zh || t.confidence || "—"
-        )}</span>
-    <span class="pill">紙注 ${esc(t.stake ?? "—")}</span>
-    ${
-      t.edge_pp != null
-        ? `<span class="pill">邊 ${esc(Number(t.edge_pp).toFixed(1))}pp</span>`
-        : ""
-    }
     <span class="pill ${statusClass(t.settlement)}">${esc(
-          t.status_zh || "待結"
-        )}</span>
+      t.status_zh || "待結"
+    )}</span>
   </div>
   ${live}${ft}
   <div class="summary">
@@ -91,16 +128,12 @@
     <summary>詳細</summary>
     <div class="more-body">
       <dl>
-        <dt>理由</dt>
-        <dd>${esc(t.why || "—")}</dd>
         <dt>莊家視角</dt>
         <dd>${esc(bk.intent || "—")}${
           bk.brief_zh ? " — " + esc(bk.brief_zh) : ""
         }</dd>
         <dt>訊號</dt>
-        <dd>${
-          cites.length ? `<ul>${cites.join("")}</ul>` : "—"
-        }</dd>
+        <dd>${cites.length ? `<ul>${cites.join("")}</ul>` : "—"}</dd>
         ${
           narrative.length
             ? `<dt>敘事引用</dt><dd><ul>${narrative.join("")}</ul></dd>`
@@ -198,8 +231,8 @@
   </div>
   <div class="row">
     <span class="pill ${statusClass(r.settlement)}">${esc(
-          r.status_zh || r.settlement || "—"
-        )}</span>
+      r.status_zh || r.settlement || "—"
+    )}</span>
     ${
       r.est_prob_pct != null
         ? `<span class="pill">估計 ${esc(r.est_prob_pct)}%</span>`
@@ -242,8 +275,16 @@
     $("#as-of").textContent = data.as_of_hkt || "—";
     const chips = $("#stat-chips");
     const parts = [
-      `<span class="chip">建議 ${esc(data.tips_count)}</span>`,
+      `<span class="chip">場次 ${esc(data.matches_count || data.tips_count)}</span>`,
     ];
+    if (data.options_total != null) {
+      parts.push(`<span class="chip">選項 ${esc(data.options_total)}</span>`);
+    }
+    if (data.low_risk_ge60 != null) {
+      parts.push(
+        `<span class="chip ok">低風險≥60% ${esc(data.low_risk_ge60)}</span>`
+      );
+    }
     if (data.hit_rate != null) {
       const hr = pct(data.hit_rate);
       const cls = data.hit_rate >= 0.5 ? "ok" : "warn";
