@@ -4,13 +4,11 @@
 
 ## 手機直接開（持續更新）
 
-https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standalone.html
+**https://kwunleung291-afk.github.io/pumpkin-hkjc-web/**
 
-- 單檔 HTML，內嵌最新 `data.json`
-- 每次紙盤掃描後會 export + push 呢個 repo 嘅 `main`，jsDelivr 跟住刷新
-- 若 CDN 未更新，可用 commit pin（例）：`https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@60b27d3efa31/index.standalone.html`
-
-模組版：https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.html
+- 自包含 `index.html`（內嵌 CSS / JS / 最新 data）
+- 每次紙盤掃描後會 export + push 呢個 repo 嘅 `main`，GitHub Pages 跟住刷新
+- **唔好用** jsDelivr / raw GitHub 開 `.html`（會顯示源碼）
 
 ## 畫面
 
@@ -21,8 +19,10 @@ https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standal
 
 | 檔案 | 用途 |
 |------|------|
-| `index.standalone.html` | 手機推薦（單檔） |
-| `index.html` + `styles.css` + `app.js` + `data.json` | 模組版 |
-| `vercel.json` | 短 cache headers |
+| `index.html` | **手機推薦首頁**（自包含，同 standalone） |
+| `index.standalone.html` | 單檔備份 |
+| `styles.css` + `app.js` + `data.json` | 模組版資產 |
+| `.github/workflows/pages.yml` | GitHub Pages 自動部署 |
+| `vercel.json` | 短 cache headers（可選 Vercel） |
 
 **免責**：紙盤分析，唔係投注建議。估計機率唔保證命中。18歲以下唔准。請理性博彩。
