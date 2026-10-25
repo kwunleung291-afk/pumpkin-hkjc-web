@@ -1,30 +1,34 @@
-# Deploy notes
+# Deploy notes — 持續更新
 
 ## Public phone URL（推薦）
 
 **https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standalone.html**
 
-- 單檔 HTML，手機瀏覽器直接開
-- 來源 repo：https://github.com/kwunleung291-afk/pumpkin-hkjc-web
-- 模組版（同 CDN）：https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.html
+來源 repo：https://github.com/kwunleung291-afk/pumpkin-hkjc-web
 
-## Vercel
-
-- 匿名 `vercel deploy --temporary`：約 60 分鐘過期，要 claim 先至保留
-- 長久 `*.vercel.app` 需要 `vercel login` 之後 `cd web && vercel --prod`
-
-## GitHub Pages
-
-Workflow 已加（`.github/workflows/pages.yml`）。若 Actions 因 Pages 未啟用而失敗，到 repo Settings → Pages → Source = GitHub Actions 開一次即可，之後 URL：
-
-`https://kwunleung291-afk.github.io/pumpkin-hkjc-web/`
-
-## Refresh after screen
+## 刷新流程（紙盤 → 網站）
 
 ```bash
 cd /workspace/pumpkin-hkjc
-python3 -m src.run_screen     # 結尾會 refresh web/data.json + standalone
-# 或只刷新網站資料：
+# 完整掃描（結尾會 export_web + 嘗試 deploy_web）
+PUMPKIN_DEPLOY_WEB=1 python3 -m src.run_screen --hours 6
+
+# 或者只刷新網站資料再部署：
 python3 -m src.export_web
-# 再 push web/ 到 GitHub（MCP push_files 或 git）
+PUMPKIN_DEPLOY_WEB=1 python3 -m src.deploy_web
 ```
+
+- `export_web`：由 `reports/screen-latest.json` + 覆盤 JSON 寫入 `web/data.json` 同 `index.standalone.html`
+- `deploy_web`：用 `gh` push 到 `kwunleung291-afk/pumpkin-hkjc-web@main`
+  - 若 `gh` 未登入：印出 MCP 清單，由 parent 用 GitHub MCP `push_files` 推送
+  - 關閉：`PUMPKIN_DEPLOY_WEB=0`
+
+## jsDelivr 注意
+
+- `@main` 通常幾分鐘內刷新；急用可 pin commit SHA
+- 強制刷新：`https://cdn.jsdelivr.net/gh/kwunleung291-afk/pumpkin-hkjc-web@main/index.standalone.html?v=<timestamp>`
+
+## Vercel / GitHub Pages（可選）
+
+- Vercel：`cd web && vercel --prod`（需 login）
+- Pages：repo 已有 `.github/workflows/pages.yml`；Settings → Pages → Source = Actions

@@ -39,7 +39,7 @@ body {
 a { color: var(--accent2); }
 
 .app {
-  max-width: 520px;
+  max-width: 390px;
   margin: 0 auto;
   padding: 0 12px calc(28px + var(--safe-bottom));
 }
@@ -52,6 +52,7 @@ a { color: var(--accent2); }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
   padding: 12px 0 10px;
+  padding-top: calc(12px + env(safe-area-inset-top, 0px));
   margin: 0 -12px;
   padding-left: 12px;
   padding-right: 12px;
@@ -167,6 +168,7 @@ a { color: var(--accent2); }
 .pick-main {
   font-size: 1.12rem;
   font-weight: 750;
+  color: var(--accent);
 }
 .pick-sub {
   margin-top: 4px;
@@ -195,8 +197,9 @@ a { color: var(--accent2); }
 
 .summary {
   margin-top: 12px;
-  padding-top: 10px;
+  padding: 10px 0 0 10px;
   border-top: 1px dashed #2c384a;
+  border-left: 3px solid rgba(61,214,140,.55);
 }
 .summary h3 {
   margin: 0 0 6px;
@@ -338,7 +341,7 @@ details.more[open] > summary::after { content: "－"; }
   </div>
   <script>
 window.__PUMPKIN_EMBEDDED__ = {
-  "generated_at_hkt": "2026-10-25 15:35:55 HKT",
+  "generated_at_hkt": "2026-10-25 15:43:28 HKT",
   "as_of_hkt": "2026-10-25 15:23:11 HKT",
   "tips_count": 25,
   "screened": 25,
