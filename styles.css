@@ -368,3 +368,18 @@ details.more[open] > summary::after { content: "－"; }
   padding: 28px 10px;
 }
 .loading { color: var(--muted); padding: 24px 8px; text-align: center; }
+
+.chip.cal { border-color: rgba(91,140,255,.45); color: var(--accent2); }
+.pill.cal { border-color: rgba(91,140,255,.4); color: var(--accent2); }
+.cal-strip {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: .72rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.cal-strip .cal-metrics { margin-top: 4px; color: var(--text); opacity: .85; }
+.review-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }

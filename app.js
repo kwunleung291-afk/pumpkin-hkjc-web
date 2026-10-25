@@ -37,18 +37,29 @@
 
   function renderOption(o) {
     const odds = o.hkjc_odds != null ? `@ ${esc(o.hkjc_odds)}` : "";
-    const prob =
-      o.est_prob_pct != null ? `估計 ${esc(o.est_prob_pct)}%` : "";
+    const calTag = o.calibrated ? "校準" : "估計";
+    let prob =
+      o.est_prob_pct != null ? `${calTag} ${esc(o.est_prob_pct)}%` : "";
+    if (
+      o.calibrated &&
+      o.est_prob_raw_pct != null &&
+      Math.abs(Number(o.est_prob_raw_pct) - Number(o.est_prob_pct)) >= 1
+    ) {
+      prob += `（原 ${esc(o.est_prob_raw_pct)}%）`;
+    }
     const ge60 =
       o.est_prob_pct != null && Number(o.est_prob_pct) >= 60
         ? '<span class="pill ge60">≥60%</span>'
         : "";
+    const calPill = o.calibrated
+      ? '<span class="pill cal">已校準</span>'
+      : "";
     return `<div class="option ${riskClass(o.risk_tier)}">
   <div class="option-head">
     <span class="risk-badge ${riskClass(o.risk_tier)}">${esc(
       o.risk_zh || o.risk_tier || "—"
     )}</span>
-    ${ge60}
+    ${ge60}${calPill}
     <span class="pill ${confClass(o.confidence)}">信心 ${esc(
       o.confidence_zh || o.confidence || "—"
     )}</span>
@@ -177,11 +188,19 @@
       list.innerHTML = '<div class="empty">尚未有覆盤資料</div>';
       return;
     }
+    const cal = data.calibration || {};
+    const r7 = data.rolling_7d || (cal.rolling && cal.rolling["7d"]) || {};
     hero.innerHTML = `
       <div class="statbox"><div class="n">${esc(pct(s.hit_rate))}</div><div class="l">命中率（已結）</div></div>
       <div class="statbox"><div class="n">${esc(s.n_hit)}/${esc(
       s.n_settled
     )}</div><div class="l">中／已結</div></div>
+      <div class="statbox"><div class="n">${esc(
+        s.brier != null ? Number(s.brier).toFixed(3) : "—"
+      )}</div><div class="l">Brier</div></div>
+      <div class="statbox"><div class="n">${esc(
+        r7.hit_rate != null ? pct(r7.hit_rate) : "—"
+      )}</div><div class="l">近7日命中</div></div>
       <div class="statbox"><div class="n">${esc(s.paper_pnl)}</div><div class="l">紙注損益</div></div>
       <div class="statbox"><div class="n">${esc(s.n_pending)}</div><div class="l">待結</div></div>
     `;
@@ -271,6 +290,16 @@
     });
   }
 
+  function rollChip(label, roll) {
+    if (!roll || roll.n == null || roll.n === 0) {
+      return `<span class="chip">${esc(label)} n=0</span>`;
+    }
+    const hr = roll.hit_rate != null ? pct(roll.hit_rate) : "—";
+    const br = roll.brier != null ? Number(roll.brier).toFixed(3) : "—";
+    const cls = roll.hit_rate != null && roll.hit_rate >= 0.5 ? "ok" : "warn";
+    return `<span class="chip ${cls}">${esc(label)} ${esc(hr)}｜Brier ${esc(br)}（n=${esc(roll.n)}）</span>`;
+  }
+
   function fillTop(data) {
     $("#as-of").textContent = data.as_of_hkt || "—";
     const chips = $("#stat-chips");
@@ -283,6 +312,16 @@
     if (data.low_risk_ge60 != null) {
       parts.push(
         `<span class="chip ok">低風險≥60% ${esc(data.low_risk_ge60)}</span>`
+      );
+    }
+    parts.push(rollChip("7日", data.rolling_7d));
+    parts.push(rollChip("30日", data.rolling_30d));
+    const cal = data.calibration || {};
+    if (cal.honesty_zh) {
+      parts.push(
+        `<span class="chip cal">${esc(
+          cal.identity ? "校準：樣本少" : "校準：已套用"
+        )}</span>`
       );
     }
     if (data.hit_rate != null) {
@@ -298,6 +337,27 @@
       );
     }
     chips.innerHTML = parts.join("");
+
+    // Calibration honesty strip under chips
+    let strip = $("#cal-strip");
+    if (!strip) {
+      strip = document.createElement("div");
+      strip.id = "cal-strip";
+      strip.className = "cal-strip";
+      chips.parentElement.appendChild(strip);
+    }
+    const r7 = data.rolling_7d || {};
+    const r30 = data.rolling_30d || {};
+    strip.innerHTML = `<div>${esc(cal.honesty_zh || "機率校準狀態未載入")}</div>
+      <div class="cal-metrics">近7日命中 ${esc(
+        r7.hit_rate != null ? pct(r7.hit_rate) : "—"
+      )}｜Brier ${esc(r7.brier != null ? Number(r7.brier).toFixed(3) : "—")}（n=${esc(
+      r7.n || 0
+    )}） · 近30日命中 ${esc(
+      r30.hit_rate != null ? pct(r30.hit_rate) : "—"
+    )}｜Brier ${esc(
+      r30.brier != null ? Number(r30.brier).toFixed(3) : "—"
+    )}（n=${esc(r30.n || 0)}）</div>`;
   }
 
   async function boot() {
