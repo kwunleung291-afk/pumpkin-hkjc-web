@@ -1,6 +1,6 @@
 {
-  "generated_at_hkt": "2026-10-26 12:02:28 HKT",
-  "as_of_hkt": "2026-10-26 12:02:26 HKT",
+  "generated_at_hkt": "2026-10-26 15:01:50 HKT",
+  "as_of_hkt": "2026-10-26 15:01:40 HKT",
   "tips_count": 0,
   "matches_count": 0,
   "options_total": 0,
@@ -69,14 +69,14 @@
   "odds_compare_coverage": "EMPTY — external 0/0 (D4M 0.0% ESPN 0.0% TipsAudit 0.0%)",
   "toxic_train": "cached — soft≥2.5pp n=14320 @ 2026-10-25 19:17:08 HKT",
   "sources": {
-    "HKJC": "OK — window 0 / raw 32",
+    "HKJC": "OK — window 0 / raw 31",
     "Overseas ESPN/DK": "OK — linked 0/0 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
     "DATA4MULA": "OK — linked 0/0 (fb_map 31, odds 31)",
     "FotMob": "OK — linked 0, detailed 0, near_KO_XI 0",
-    "7M": "PARTIAL — linked 0/0 (catalogue 41)",
+    "7M": "PARTIAL — linked 0/0 (catalogue 29)",
     "X": "EMPTY — linked 0/0 (raw_matches 10)",
     "Signals": "EMPTY — linked 0/0 (weather 0, standings 0, line_move 0, xg_recent 0)",
-    "TipsAudit": "PARTIAL — linked 0/0 (catalogue 319)",
+    "TipsAudit": "PARTIAL — linked 0/0 (catalogue 334)",
     "OddsCompare": "EMPTY — external 0/0 (D4M 0.0% ESPN 0.0% TipsAudit 0.0%)",
     "ToxicTrain": "cached — soft≥2.5pp n=14320 @ 2026-10-25 19:17:08 HKT",
     "HistoricalElo/ρ": "cached — matches 37859 teams 439 ρ=-0.033",
@@ -84,21 +84,1179 @@
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-10-26 12:02:28 HKT",
-    "tips_as_of": "2026-10-26 12:02:26 HKT",
-    "n_tips": 0,
+    "as_of_hkt": "2026-10-25 21:42:28 HKT",
+    "tips_as_of": "2026-10-25 21:42:23 HKT",
+    "n_tips": 48,
     "n_settled": 0,
-    "n_pending": 0,
+    "n_pending": 48,
     "n_hit": 0,
     "n_miss": 0,
     "hit_rate": null,
     "brier": null,
     "paper_pnl": 0.0,
     "by_market": {},
-    "clv_by_quality": {},
+    "clv_by_quality": {
+      "screen_snap": {
+        "n": 144,
+        "mean": -0.0008
+      }
+    },
     "error_patterns": []
   },
   "tips": [],
-  "review_rows": [],
+  "review_rows": [
+    {
+      "front_end_id": "FB7493",
+      "kickoff_hkt": "2026-10-25 21:30",
+      "tournament": "荷蘭甲組聯賽",
+      "home": {
+        "ch": "燕豪芬",
+        "en": "PSV Eindhoven"
+      },
+      "away": {
+        "ch": "飛燕諾",
+        "en": "Feyenoord"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 51.8,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": "0-0",
+      "corners": 4,
+      "result_value": "LIVE 0-0",
+      "review_zh": "LIVE 0-0（暫算 MISS）",
+      "match_status": "LIVE"
+    },
+    {
+      "front_end_id": "FB7555",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "英格蘭超級聯賽",
+      "home": {
+        "ch": "利物浦",
+        "en": "Liverpool"
+      },
+      "away": {
+        "ch": "白禮頓",
+        "en": "Brighton"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.0,
+      "est_prob_pct": 45.2,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7554",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "英格蘭超級聯賽",
+      "home": {
+        "ch": "曼聯",
+        "en": "Manchester Utd"
+      },
+      "away": {
+        "ch": "般尼茅夫",
+        "en": "Bournemouth"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.77,
+      "est_prob_pct": 41.0,
+      "stake": 250,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7553",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "英格蘭超級聯賽",
+      "home": {
+        "ch": "水晶宮",
+        "en": "Crystal Palace"
+      },
+      "away": {
+        "ch": "紐卡素",
+        "en": "Newcastle"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.5,
+      "est_prob_pct": 42.9,
+      "stake": 150,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7466",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "英格蘭超級聯賽",
+      "home": {
+        "ch": "侯城",
+        "en": "Hull City"
+      },
+      "away": {
+        "ch": "賓福特",
+        "en": "Brentford"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 2.27,
+      "est_prob_pct": 43.3,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7660",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "意大利甲組聯賽",
+      "home": {
+        "ch": "阿特蘭大",
+        "en": "Atalanta"
+      },
+      "away": {
+        "ch": "費辛隆尼",
+        "en": "Frosinone"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.05,
+      "est_prob_pct": 40.3,
+      "stake": 400,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7504",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "意大利甲組聯賽",
+      "home": {
+        "ch": "熱拿亞",
+        "en": "Genoa"
+      },
+      "away": {
+        "ch": "威尼斯",
+        "en": "Venezia"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.05,
+      "est_prob_pct": 34.3,
+      "stake": 100,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7642",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "摩納哥",
+        "en": "Monaco"
+      },
+      "away": {
+        "ch": "里爾",
+        "en": "Lille"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 1.74,
+      "est_prob_pct": 55.2,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7559",
+      "kickoff_hkt": "2026-10-25 22:00",
+      "tournament": "蘇格蘭超級聯賽",
+      "home": {
+        "ch": "馬瑟韋爾",
+        "en": "Motherwell"
+      },
+      "away": {
+        "ch": "赫斯",
+        "en": "Hearts"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 3.15,
+      "est_prob_pct": 34.5,
+      "stake": 150,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7632",
+      "kickoff_hkt": "2026-10-25 22:30",
+      "tournament": "德國甲組聯賽",
+      "home": {
+        "ch": "賀芬咸",
+        "en": "Hoffenheim"
+      },
+      "away": {
+        "ch": "利華古遜",
+        "en": "Leverkusen"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.85,
+      "est_prob_pct": 34.7,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7646",
+      "kickoff_hkt": "2026-10-25 23:00",
+      "tournament": "丹麥超級聯賽",
+      "home": {
+        "ch": "賀森斯",
+        "en": "Horsens"
+      },
+      "away": {
+        "ch": "桑德捷斯基",
+        "en": "Sonderjyske"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.6,
+      "est_prob_pct": 38.4,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7647",
+      "kickoff_hkt": "2026-10-25 23:00",
+      "tournament": "比利時甲組聯賽",
+      "home": {
+        "ch": "布魯日",
+        "en": "Bruges"
+      },
+      "away": {
+        "ch": "聖圖爾登",
+        "en": "Sint Truiden"
+      },
+      "pick_line": "主客和 和",
+      "hkjc_odds": 5.5,
+      "est_prob_pct": 29.0,
+      "stake": 450,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7645",
+      "kickoff_hkt": "2026-10-25 23:15",
+      "tournament": "西班牙甲組聯賽",
+      "home": {
+        "ch": "切爾達",
+        "en": "Celta Vigo"
+      },
+      "away": {
+        "ch": "貝迪斯",
+        "en": "Betis"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.97,
+      "est_prob_pct": 43.5,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7649",
+      "kickoff_hkt": "2026-10-25 23:15",
+      "tournament": "西班牙乙組聯賽",
+      "home": {
+        "ch": "阿爾巴塞特",
+        "en": "Albacete"
+      },
+      "away": {
+        "ch": "CD艾丹斯",
+        "en": "CD Eldense"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.72,
+      "est_prob_pct": 55.7,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7648",
+      "kickoff_hkt": "2026-10-25 23:15",
+      "tournament": "西班牙乙組聯賽",
+      "home": {
+        "ch": "卡迪斯",
+        "en": "Cadiz"
+      },
+      "away": {
+        "ch": "施奧達",
+        "en": "Ceuta"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.45,
+      "est_prob_pct": 36.9,
+      "stake": 400,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7593",
+      "kickoff_hkt": "2026-10-25 23:27",
+      "tournament": "智利甲組聯賽",
+      "home": {
+        "ch": "紐柏萊斯",
+        "en": "Deportivo Nublense"
+      },
+      "away": {
+        "ch": "哥甘保",
+        "en": "Coquimbo Unido"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.95,
+      "est_prob_pct": 57.5,
+      "stake": 450,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7651",
+      "kickoff_hkt": "2026-10-25 23:30",
+      "tournament": "瑞典超級聯賽",
+      "home": {
+        "ch": "米贊比",
+        "en": "Mjallby"
+      },
+      "away": {
+        "ch": "哈馬比",
+        "en": "Hammarby"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 2.33,
+      "est_prob_pct": 58.5,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7550",
+      "kickoff_hkt": "2026-10-25 23:30",
+      "tournament": "俄羅斯超級聯賽",
+      "home": {
+        "ch": "辛尼特",
+        "en": "Zenit St. Petersburg"
+      },
+      "away": {
+        "ch": "馬哈奇卡拉戴拿模",
+        "en": "Dynamo Makhachkala"
+      },
+      "pick_line": "主客和 和",
+      "hkjc_odds": 5.6,
+      "est_prob_pct": 27.3,
+      "stake": 400,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7652",
+      "kickoff_hkt": "2026-10-25 23:30",
+      "tournament": "瑞士超級聯賽",
+      "home": {
+        "ch": "巴素利",
+        "en": "Basel"
+      },
+      "away": {
+        "ch": "草蜢",
+        "en": "Grasshoppers"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 4.05,
+      "est_prob_pct": 37.2,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7650",
+      "kickoff_hkt": "2026-10-25 23:30",
+      "tournament": "瑞士超級聯賽",
+      "home": {
+        "ch": "錫永",
+        "en": "Sion"
+      },
+      "away": {
+        "ch": "洛桑",
+        "en": "Lausanne"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 6.7,
+      "est_prob_pct": 30.2,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7505",
+      "kickoff_hkt": "2026-10-25 23:30",
+      "tournament": "葡萄牙超級聯賽",
+      "home": {
+        "ch": "艾斯杜尼",
+        "en": "Estoril"
+      },
+      "away": {
+        "ch": "摩里倫斯",
+        "en": "Moreirense"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 1.89,
+      "est_prob_pct": 55.6,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7561",
+      "kickoff_hkt": "2026-10-25 23:45",
+      "tournament": "荷蘭甲組聯賽",
+      "home": {
+        "ch": "鹿特丹斯巴達",
+        "en": "Sparta Rotterdam"
+      },
+      "away": {
+        "ch": "阿積士",
+        "en": "Ajax"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 6.0,
+      "est_prob_pct": 30.6,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7537",
+      "kickoff_hkt": "2026-10-26 00:00",
+      "tournament": "挪威超級聯賽",
+      "home": {
+        "ch": "基斯迪辛德",
+        "en": "Kristiansund"
+      },
+      "away": {
+        "ch": "KFUM奧斯陸",
+        "en": "KFUM Oslo"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.74,
+      "est_prob_pct": 55.1,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7564",
+      "kickoff_hkt": "2026-10-26 00:00",
+      "tournament": "挪威超級聯賽",
+      "home": {
+        "ch": "利尼史特朗",
+        "en": "Lillestrom"
+      },
+      "away": {
+        "ch": "白蘭恩",
+        "en": "Brann"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.66,
+      "est_prob_pct": 42.4,
+      "stake": 250,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7535",
+      "kickoff_hkt": "2026-10-26 00:00",
+      "tournament": "挪威超級聯賽",
+      "home": {
+        "ch": "薩普斯堡",
+        "en": "Sarpsborg"
+      },
+      "away": {
+        "ch": "阿里辛特",
+        "en": "Aalesund"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.5,
+      "est_prob_pct": 38.3,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7534",
+      "kickoff_hkt": "2026-10-26 00:00",
+      "tournament": "挪威超級聯賽",
+      "home": {
+        "ch": "史達",
+        "en": "Start"
+      },
+      "away": {
+        "ch": "辛迪夫佐特",
+        "en": "Sandefjord"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.68,
+      "est_prob_pct": 45.9,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7721",
+      "kickoff_hkt": "2026-10-26 00:00",
+      "tournament": "奧地利甲組聯賽",
+      "home": {
+        "ch": "寧斯",
+        "en": "LASK Linz"
+      },
+      "away": {
+        "ch": "薩爾斯堡",
+        "en": "Salzburg"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 45.5,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7456",
+      "kickoff_hkt": "2026-10-26 00:15",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "圖盧茲",
+        "en": "Toulouse"
+      },
+      "away": {
+        "ch": "特魯瓦",
+        "en": "Troyes"
+      },
+      "pick_line": "讓球 主讓 -1.0",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.9,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7500",
+      "kickoff_hkt": "2026-10-26 00:15",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "昂熱",
+        "en": "Angers SCO"
+      },
+      "away": {
+        "ch": "羅連安特",
+        "en": "Lorient"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.18,
+      "est_prob_pct": 45.8,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7501",
+      "kickoff_hkt": "2026-10-26 00:15",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "歐塞爾",
+        "en": "Auxerre"
+      },
+      "away": {
+        "ch": "勒芒",
+        "en": "Le Mans"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.25,
+      "est_prob_pct": 34.5,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7635",
+      "kickoff_hkt": "2026-10-26 00:15",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "馬賽",
+        "en": "Marseille"
+      },
+      "away": {
+        "ch": "勒哈弗爾",
+        "en": "Le Havre"
+      },
+      "pick_line": "主客和 和",
+      "hkjc_odds": 4.5,
+      "est_prob_pct": 29.2,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7641",
+      "kickoff_hkt": "2026-10-26 00:15",
+      "tournament": "法國甲組聯賽",
+      "home": {
+        "ch": "雷恩",
+        "en": "Rennes"
+      },
+      "away": {
+        "ch": "斯特拉斯堡",
+        "en": "Strasbourg"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 3.7,
+      "est_prob_pct": 36.4,
+      "stake": 450,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7556",
+      "kickoff_hkt": "2026-10-26 00:30",
+      "tournament": "英格蘭超級聯賽",
+      "home": {
+        "ch": "新特蘭",
+        "en": "Sunderland"
+      },
+      "away": {
+        "ch": "列斯聯",
+        "en": "Leeds"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 2.15,
+      "est_prob_pct": 55.8,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7634",
+      "kickoff_hkt": "2026-10-26 00:30",
+      "tournament": "德國甲組聯賽",
+      "home": {
+        "ch": "弗賴堡",
+        "en": "Freiburg"
+      },
+      "away": {
+        "ch": "拜仁慕尼黑",
+        "en": "Bayern Munich"
+      },
+      "pick_line": "入球大細 細 3.5",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 46.3,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7653",
+      "kickoff_hkt": "2026-10-26 01:00",
+      "tournament": "意大利甲組聯賽",
+      "home": {
+        "ch": "萊切",
+        "en": "Lecce"
+      },
+      "away": {
+        "ch": "祖雲達斯",
+        "en": "Juventus"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 6.6,
+      "est_prob_pct": 37.7,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7654",
+      "kickoff_hkt": "2026-10-26 01:00",
+      "tournament": "丹麥超級聯賽",
+      "home": {
+        "ch": "阿侯斯",
+        "en": "AGF Aarhus"
+      },
+      "away": {
+        "ch": "域堡",
+        "en": "Viborg"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 2.22,
+      "est_prob_pct": 44.2,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7644",
+      "kickoff_hkt": "2026-10-26 01:30",
+      "tournament": "西班牙甲組聯賽",
+      "home": {
+        "ch": "皇家蘇斯達",
+        "en": "Real Sociedad"
+      },
+      "away": {
+        "ch": "利雲特",
+        "en": "Levante"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.71,
+      "est_prob_pct": 52.2,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7656",
+      "kickoff_hkt": "2026-10-26 01:30",
+      "tournament": "比利時甲組聯賽",
+      "home": {
+        "ch": "真特",
+        "en": "AA Gent"
+      },
+      "away": {
+        "ch": "安德列治",
+        "en": "Anderlecht"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.97,
+      "est_prob_pct": 49.1,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7655",
+      "kickoff_hkt": "2026-10-26 01:30",
+      "tournament": "西班牙乙組聯賽",
+      "home": {
+        "ch": "卡斯迪隆",
+        "en": "Castellon"
+      },
+      "away": {
+        "ch": "希杭",
+        "en": "Gijon"
+      },
+      "pick_line": "主客和 和",
+      "hkjc_odds": 4.15,
+      "est_prob_pct": 30.3,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7671",
+      "kickoff_hkt": "2026-10-26 01:43",
+      "tournament": "阿根廷甲組聯賽",
+      "home": {
+        "ch": "阿度斯維",
+        "en": "Aldosivi"
+      },
+      "away": {
+        "ch": "貝格拉諾",
+        "en": "Belgrano"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 2.2,
+      "est_prob_pct": 48.9,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7596",
+      "kickoff_hkt": "2026-10-26 01:57",
+      "tournament": "智利甲組聯賽",
+      "home": {
+        "ch": "卡拉雷聯",
+        "en": "Union La Calera"
+      },
+      "away": {
+        "ch": "天主教大學",
+        "en": "Universidad Catolica"
+      },
+      "pick_line": "入球大細 細 2.5",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 55.2,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7729",
+      "kickoff_hkt": "2026-10-26 02:00",
+      "tournament": "女子英格蘭超級聯賽",
+      "home": {
+        "ch": "曼聯女足",
+        "en": "Manchester Utd Women"
+      },
+      "away": {
+        "ch": "曼城女足",
+        "en": "Manchester City Women"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 4.75,
+      "est_prob_pct": 58.0,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7657",
+      "kickoff_hkt": "2026-10-26 02:00",
+      "tournament": "葡萄牙超級聯賽",
+      "home": {
+        "ch": "國民隊",
+        "en": "Nacional"
+      },
+      "away": {
+        "ch": "布拉加",
+        "en": "Braga"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 6.3,
+      "est_prob_pct": 31.2,
+      "stake": 500,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7506",
+      "kickoff_hkt": "2026-10-26 02:00",
+      "tournament": "葡萄牙超級聯賽",
+      "home": {
+        "ch": "里奧艾維",
+        "en": "Rio Ave"
+      },
+      "away": {
+        "ch": "法馬利卡奧",
+        "en": "Famalicao"
+      },
+      "pick_line": "入球大細 大 2.5",
+      "hkjc_odds": 1.98,
+      "est_prob_pct": 56.0,
+      "stake": 400,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7538",
+      "kickoff_hkt": "2026-10-26 02:15",
+      "tournament": "挪威超級聯賽",
+      "home": {
+        "ch": "莫迪",
+        "en": "Molde"
+      },
+      "away": {
+        "ch": "費德列斯達",
+        "en": "Fredrikstad"
+      },
+      "pick_line": "讓球 主讓 -1.0/-1.5",
+      "hkjc_odds": 1.78,
+      "est_prob_pct": 51.3,
+      "stake": 200,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7658",
+      "kickoff_hkt": "2026-10-26 02:15",
+      "tournament": "比利時甲組聯賽",
+      "home": {
+        "ch": "聖基萊斯聯",
+        "en": "Union Saint Gilloise"
+      },
+      "away": {
+        "ch": "布魯日舒高",
+        "en": "Cercle Bruges"
+      },
+      "pick_line": "入球大細 細 3.5",
+      "hkjc_odds": 1.7,
+      "est_prob_pct": 55.6,
+      "stake": 300,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7710",
+      "kickoff_hkt": "2026-10-26 02:57",
+      "tournament": "烏拉圭甲組聯賽",
+      "home": {
+        "ch": "切洛拉高",
+        "en": "Cerro Largo"
+      },
+      "away": {
+        "ch": "波士頓河",
+        "en": "Boston River"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.37,
+      "est_prob_pct": 45.0,
+      "stake": 150,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    },
+    {
+      "front_end_id": "FB7562",
+      "kickoff_hkt": "2026-10-26 03:00",
+      "tournament": "荷蘭甲組聯賽",
+      "home": {
+        "ch": "阿爾克馬爾",
+        "en": "AZ Alkmaar"
+      },
+      "away": {
+        "ch": "川迪",
+        "en": "Twente"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.66,
+      "est_prob_pct": 37.8,
+      "stake": 50,
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "result_value": null,
+      "review_zh": "無完場比分",
+      "match_status": "PREEVENT"
+    }
+  ],
   "disclaimer": "紙盤分析，唔係投注建議。估計機率（已盡量校準）唔保證命中。18歲以下唔准。請理性博彩。"
 }
