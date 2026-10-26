@@ -73,10 +73,15 @@
 </div>`;
   }
 
-  function renderTips(tips) {
+  function renderTips(tips, data) {
     const root = $("#tips-list");
     if (!tips.length) {
-      root.innerHTML = '<div class="empty">暫時未有建議</div>';
+      const hm = (data && data.history_meta) || {};
+      const n = hm.review_rows_n != null ? hm.review_rows_n : ((data && data.review_rows) || []).length;
+      root.innerHTML =
+        '<div class="empty">呢個時段（未來窗）暫時未有建議。<br/>歷史覆盤同命中率冇消失——撳上面「覆盤」睇' +
+        (n ? n + ' 場記錄' : '紀錄') +
+        '。</div>';
       return;
     }
     root.innerHTML = tips
@@ -235,7 +240,18 @@
       }
       <div style="margin-top:8px;color:var(--muted);font-size:.78rem">覆盤 as_of：${esc(
         s.as_of_hkt || ""
-      )}｜對照紙盤 ${esc(s.tips_as_of || "")}</div>
+      )}｜對照紙盤 ${esc(s.tips_as_of || "")}${
+        s.source ? `｜來源 ${esc(s.source)}` : ""
+      }</div>
+      ${
+        data.history_meta && data.history_meta.note_zh
+          ? `<div style="margin-top:6px;color:var(--muted);font-size:.75rem">${esc(
+              data.history_meta.note_zh
+            )}（ledger ${esc(data.history_meta.ledger_n)}｜實注 ${esc(
+              data.history_meta.user_bets_n
+            )}）</div>`
+          : ""
+      }
     </div>`;
 
     const rows = data.review_rows || [];
@@ -382,7 +398,7 @@
       const data = await res.json();
       window.__PUMPKIN_DATA__ = data;
       fillTop(data);
-      renderTips(data.tips || []);
+      renderTips(data.tips || [], data);
       renderReview(data);
       $("#footer-note").textContent =
         data.disclaimer ||

@@ -426,7 +426,7 @@ details.more[open] > summary::after { content: "－"; }
   </div>
   <script>
 window.__PUMPKIN_EMBEDDED__ = {
-  "generated_at_hkt": "2026-10-26 16:02:13 HKT",
+  "generated_at_hkt": "2026-10-26 16:10:29 HKT",
   "as_of_hkt": "2026-10-26 16:02:10 HKT",
   "tips_count": 1,
   "matches_count": 1,
@@ -450,7 +450,7 @@ window.__PUMPKIN_EMBEDDED__ = {
     "probability": "估計機率 = 加權混合：ESPN/DraftKings de-vig公允、DATA4MULA HAD_OS de-vig、TipsAudit尖市公允、馬會盤口去水、Poisson(近況GF/GA + 聯賽ρ)、歷史Elo（football-data）／形勢Elo、FD 校準基線；Bayes logit 收縮；訊號/評述/走盤；再經覆盤 isotonic 機率校準（樣本少會誠實收縮）；blend／市場權重讀 model_weights.json；收盤CLV快照＋效率門檻；跨場同向守衛；Kelly；唔係賽果保證",
     "risk_definition": "低風險＝最高校準估計機率（優先≥60%）、水位≥1.70 主盤（角球／高線大波≥3.5／水位<1.70 永遠排除）；中風險＝中段水位（≥1.70）同模型分；高風險＝較長賠率／較高上行但仍有理由（唔係亂槍）；水位<1.70 預設唔推（冇肉），僅中／高全場無肉時例外湊位並降注"
   },
-  "hit_rate": null,
+  "hit_rate": 0.375,
   "cross_match_guard": {
     "active": false,
     "n": 1,
@@ -511,24 +511,46 @@ window.__PUMPKIN_EMBEDDED__ = {
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-10-26 16:02:13 HKT",
+    "as_of_hkt": "2026-10-26 16:10:29 HKT",
     "tips_as_of": "2026-10-26 16:02:10 HKT",
     "n_tips": 1,
-    "n_settled": 0,
+    "n_settled": 16,
     "n_pending": 1,
-    "n_hit": 0,
-    "n_miss": 0,
-    "hit_rate": null,
-    "brier": null,
-    "paper_pnl": 0.0,
-    "by_market": {},
+    "n_hit": 6,
+    "n_miss": 10,
+    "n_void": 0,
+    "hit_rate": 0.375,
+    "brier": 0.2202,
+    "paper_pnl": -1414.0,
+    "by_market": {
+      "HIL": {
+        "n": 7,
+        "hit": 3,
+        "miss": 4,
+        "hit_rate": 0.4286
+      },
+      "HAD": {
+        "n": 5,
+        "hit": 3,
+        "miss": 2,
+        "hit_rate": 0.6
+      },
+      "CHL": {
+        "n": 4,
+        "hit": 0,
+        "miss": 4,
+        "hit_rate": 0.0
+      }
+    },
     "clv_by_quality": {
       "screen_snap": {
         "n": 3,
         "mean": 0.0
       }
     },
-    "error_patterns": []
+    "error_patterns": [],
+    "source": "settlement_ledger+window",
+    "ledger_n": 16
   },
   "tips": [
     {
@@ -760,8 +782,573 @@ window.__PUMPKIN_EMBEDDED__ = {
       "result_value": null,
       "review_zh": "無完場比分",
       "match_status": "PREEVENT"
+    },
+    {
+      "tip_key": "user|FB7492|HIL|大|3.5|2026-10-25 19:30",
+      "front_end_id": "FB7492",
+      "kickoff_hkt": "2026-10-25 19:30",
+      "tournament": "ISA",
+      "home": {
+        "ch": "國際米蘭",
+        "en": ""
+      },
+      "away": {
+        "ch": "費倫天拿",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "medium",
+      "pick_line": "HIL 大 3.5（實注）",
+      "hkjc_odds": 1.88,
+      "est_prob_pct": 48.9,
+      "stake": null,
+      "settlement": "MISS",
+      "status_zh": "實注·唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "總入球 3",
+      "review_zh": "Matthew 實注 大3.5；系統中風險約48.9%、效率偏低——唔係低風險推介｜準度升級後系統中風險改為「細 3.5」@1.82 ~49.7%；Matthew 所入「大 3.5」對應升級前中風險紙盤（~48.9%／效率偏低），從來都唔係低風險推介（低風險一直係半場主勝）。｜根因：完場 2-1 總入球 3，大 3.5 唔中（差 1 球）；系統當時中風險約 48.9%／效率偏低，從來唔係低風險推介；準度升級後系統中風險已改推細 3.5；實注跟舊紙盤大邊",
+      "match_status": "FT",
+      "source": "user_real",
+      "history": true
+    },
+    {
+      "tip_key": "FB7490|HIL|大|3.5|low|2026-10-25 16:40",
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "湘南比馬",
+        "en": ""
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "low",
+      "pick_line": "HIL 大 3.5",
+      "hkjc_odds": 2.33,
+      "est_prob_pct": 41.0,
+      "stake": 300,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1 總3",
+      "review_zh": "入球3 vs 線3.5",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true
+    },
+    {
+      "tip_key": "FB7490|HAD|和||medium|2026-10-25 16:40",
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "湘南比馬",
+        "en": ""
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "和",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "HAD 和",
+      "hkjc_odds": 3.75,
+      "est_prob_pct": 32.9,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1",
+      "review_zh": "FT 2-1",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true
+    },
+    {
+      "tip_key": "FB7490|HAD|客勝||high|2026-10-25 16:40",
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "日本乙組聯賽",
+      "home": {
+        "ch": "湘南比馬",
+        "en": ""
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "客勝",
+      "line": null,
+      "risk_tier": "high",
+      "pick_line": "HAD 客勝",
+      "hkjc_odds": 2.94,
+      "est_prob_pct": 38.1,
+      "stake": 100,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1",
+      "review_zh": "FT 2-1",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true
+    },
+    {
+      "tip_key": "user|FB7490|HIL|大|3.5|2026-10-25 17:00",
+      "front_end_id": "FB7490",
+      "kickoff_hkt": "2026-10-25 17:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "湘南比馬",
+        "en": ""
+      },
+      "away": {
+        "ch": "櫪木城",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "low",
+      "pick_line": "HIL 大 3.5（實注）",
+      "hkjc_odds": 2.33,
+      "est_prob_pct": 41.0,
+      "stake": null,
+      "settlement": "MISS",
+      "status_zh": "實注·唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "總入球 3",
+      "review_zh": "Matthew 實注 大3.5；系統當時低風險紙盤（估約41%，效率pass但邊負）｜根因：高線大3.5僅估41%仍標低風險（無≥60%時取最高，但大≥3.5本不應作低風險）；進球期望代理／BTTS／FotMob形勢／蒸汽把大波推高，代理非真xG且線已到3.5；無ESPN同線公允；邊負（edge_pp≈-2.3）仍效率pass",
+      "match_status": "FT",
+      "source": "user_real",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7478|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7478",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD1",
+      "home": {
+        "ch": "名古屋鯨魚",
+        "en": ""
+      },
+      "away": {
+        "ch": "橫濱水手",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.69,
+      "est_prob_pct": 55.1,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7477|CHL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7477",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "新潟天鵝",
+        "en": ""
+      },
+      "away": {
+        "ch": "仙台維加泰",
+        "en": ""
+      },
+      "market": "CHL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "CHL 大",
+      "hkjc_odds": 1.72,
+      "est_prob_pct": 53.8,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7481|CHL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7481",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "秋田藍閃電",
+        "en": ""
+      },
+      "away": {
+        "ch": "FC今治",
+        "en": ""
+      },
+      "market": "CHL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "CHL 大",
+      "hkjc_odds": 1.75,
+      "est_prob_pct": 52.7,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7476|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7476",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "富山勝利",
+        "en": ""
+      },
+      "away": {
+        "ch": "北海道札幌岡薩多",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.57,
+      "est_prob_pct": 58.9,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-1",
+      "corners": null,
+      "result_value": "0-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7480|CHL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7480",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "山形山神",
+        "en": ""
+      },
+      "away": {
+        "ch": "宮崎棒牛鳥",
+        "en": ""
+      },
+      "market": "CHL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "CHL 大",
+      "hkjc_odds": 1.71,
+      "est_prob_pct": 54.0,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "0-2",
+      "corners": null,
+      "result_value": "0-2",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7479|CHL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7479",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "大分三神",
+        "en": ""
+      },
+      "away": {
+        "ch": "甲府風林",
+        "en": ""
+      },
+      "market": "CHL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "CHL 大",
+      "hkjc_odds": 1.52,
+      "est_prob_pct": 60.7,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7475|HAD|主勝|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7475",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "JD2",
+      "home": {
+        "ch": "鳥棲砂岩",
+        "en": ""
+      },
+      "away": {
+        "ch": "八戶雲羅里",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 1.49,
+      "est_prob_pct": 57.5,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7543|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7543",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "KD2",
+      "home": {
+        "ch": "釜山偶像",
+        "en": ""
+      },
+      "away": {
+        "ch": "FC慶南",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.78,
+      "est_prob_pct": 52.2,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7473|HAD|客勝|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7473",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "KD2",
+      "home": {
+        "ch": "FC城南",
+        "en": ""
+      },
+      "away": {
+        "ch": "水原藍翼",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "客勝",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HAD 客勝",
+      "hkjc_odds": 1.53,
+      "est_prob_pct": 56.2,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-2",
+      "corners": null,
+      "result_value": "0-2",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7474|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7474",
+      "kickoff_hkt": "2026-10-25 13:00",
+      "tournament": "KD2",
+      "home": {
+        "ch": "FC水原",
+        "en": ""
+      },
+      "away": {
+        "ch": "忠南牙山",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.64,
+      "est_prob_pct": 56.6,
+      "stake": 200,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "0-1",
+      "corners": null,
+      "result_value": "0-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7389|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7389",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "AD1",
+      "home": {
+        "ch": "FC悉尼",
+        "en": ""
+      },
+      "away": {
+        "ch": "阿德萊德聯",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.56,
+      "est_prob_pct": 58.1,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7539|HIL|大|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7539",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "AD2",
+      "home": {
+        "ch": "悉尼奧林匹克",
+        "en": ""
+      },
+      "away": {
+        "ch": "比斯活特城",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HIL 大",
+      "hkjc_odds": 1.56,
+      "est_prob_pct": 59.3,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
+    },
+    {
+      "tip_key": "bootstrap|FB7542|HAD|主勝|None|low|2026-10-25T11:56",
+      "front_end_id": "FB7542",
+      "kickoff_hkt": "2026-10-25 12:00",
+      "tournament": "AD2",
+      "home": {
+        "ch": "臥龍崗狼隊",
+        "en": ""
+      },
+      "away": {
+        "ch": "南霍巴特",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 1.22,
+      "est_prob_pct": 69.2,
+      "stake": 200,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "來源：canvas_settled_bootstrap",
+      "match_status": "FT",
+      "source": "canvas_settled_bootstrap",
+      "history": true
     }
   ],
+  "history_meta": {
+    "ledger_n": 16,
+    "user_bets_n": 2,
+    "window_review_n": 1,
+    "review_rows_n": 19,
+    "note_zh": "覆盤／命中率來自 settlement_ledger + 實注；今日建議只顯示未來窗，空窗唔會清走歷史。"
+  },
   "disclaimer": "紙盤分析，唔係投注建議。估計機率（已盡量校準）唔保證命中。18歲以下唔准。請理性博彩。"
 }
 ;
@@ -840,10 +1427,15 @@ window.__PUMPKIN_EMBEDDED__ = {
 </div>`;
   }
 
-  function renderTips(tips) {
+  function renderTips(tips, data) {
     const root = $("#tips-list");
     if (!tips.length) {
-      root.innerHTML = '<div class="empty">暫時未有建議</div>';
+      const hm = (data && data.history_meta) || {};
+      const n = hm.review_rows_n != null ? hm.review_rows_n : ((data && data.review_rows) || []).length;
+      root.innerHTML =
+        '<div class="empty">呢個時段（未來窗）暫時未有建議。<br/>歷史覆盤同命中率冇消失——撳上面「覆盤」睇' +
+        (n ? n + ' 場記錄' : '紀錄') +
+        '。</div>';
       return;
     }
     root.innerHTML = tips
@@ -1002,7 +1594,18 @@ window.__PUMPKIN_EMBEDDED__ = {
       }
       <div style="margin-top:8px;color:var(--muted);font-size:.78rem">覆盤 as_of：${esc(
         s.as_of_hkt || ""
-      )}｜對照紙盤 ${esc(s.tips_as_of || "")}</div>
+      )}｜對照紙盤 ${esc(s.tips_as_of || "")}${
+        s.source ? `｜來源 ${esc(s.source)}` : ""
+      }</div>
+      ${
+        data.history_meta && data.history_meta.note_zh
+          ? `<div style="margin-top:6px;color:var(--muted);font-size:.75rem">${esc(
+              data.history_meta.note_zh
+            )}（ledger ${esc(data.history_meta.ledger_n)}｜實注 ${esc(
+              data.history_meta.user_bets_n
+            )}）</div>`
+          : ""
+      }
     </div>`;
 
     const rows = data.review_rows || [];
@@ -1147,7 +1750,7 @@ window.__PUMPKIN_EMBEDDED__ = {
       const data = window.__PUMPKIN_EMBEDDED__;
       window.__PUMPKIN_DATA__ = data;
       fillTop(data);
-      renderTips(data.tips || []);
+      renderTips(data.tips || [], data);
       renderReview(data);
       $("#footer-note").textContent =
         data.disclaimer ||
