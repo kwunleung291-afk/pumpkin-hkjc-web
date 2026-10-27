@@ -51,27 +51,36 @@
       o.est_prob_pct != null && Number(o.est_prob_pct) >= 60
         ? '<span class="pill ge60">≥60%</span>'
         : "";
+    const isStar =
+      o.star === true ||
+      (o.est_prob_pct != null && Number(o.est_prob_pct) >= 70);
+    const starPill = isStar
+      ? '<span class="pill star70" title="校準／估計機率≥70%">⭐ ≥70%</span>'
+      : "";
     const calPill = o.calibrated
       ? '<span class="pill cal">已校準</span>'
       : "";
-    return `<div class="option ${riskClass(o.risk_tier)}">
+    const starMark = isStar ? '<span class="star-mark">⭐</span>' : "";
+    return `<div class="option ${riskClass(o.risk_tier)}${isStar ? " has-star" : ""}" data-star="${isStar ? "1" : "0"}">
   <div class="option-head">
     <span class="risk-badge ${riskClass(o.risk_tier)}">${esc(
       o.risk_zh || o.risk_tier || "—"
     )}</span>
-    ${ge60}${calPill}
+    ${starPill}${ge60}${calPill}
     <span class="pill ${confClass(o.confidence)}">信心 ${esc(
       o.confidence_zh || o.confidence || "—"
     )}</span>
     <span class="pill">紙注 ${esc(o.stake ?? "—")}</span>
   </div>
-  <div class="option-pick">${esc(o.pick_line || "")} ${odds}</div>
+  <div class="option-pick">${esc(o.pick_line || "")} ${odds}${starMark}</div>
   <div class="option-prob">${prob}${
       o.prob_label ? ` · ${esc(o.prob_label)}` : ""
     }</div>
   <p class="option-sum">${esc(o.summary || "")}</p>
 </div>`;
   }
+
+  let starFilterOn = false;
 
   function renderTips(tips, data) {
     const root = $("#tips-list");
@@ -84,7 +93,33 @@
         '。</div>';
       return;
     }
-    root.innerHTML = tips
+    const filtered = starFilterOn
+      ? tips.filter((t) => {
+          const opts =
+            t.options && t.options.length
+              ? t.options
+              : [{ star: t.star, est_prob_pct: t.est_prob_pct }];
+          return opts.some(
+            (o) =>
+              o.star === true ||
+              (o.est_prob_pct != null && Number(o.est_prob_pct) >= 70)
+          );
+        })
+      : tips;
+    const filterBar = `<div class="filter-bar">
+      <button type="button" id="filter-star" class="${starFilterOn ? "active" : ""}">⭐ 只睇≥70%</button>
+      <button type="button" id="filter-all" class="${!starFilterOn ? "active" : ""}">全部</button>
+    </div>`;
+    if (!filtered.length && starFilterOn) {
+      root.innerHTML =
+        filterBar +
+        '<div class="empty">而家冇 ≥70% 星級選項。<br/>撳「全部」睇返所有紙盤。</div>';
+      bindStarFilter(tips, data);
+      return;
+    }
+    root.innerHTML =
+      filterBar +
+      filtered
       .map((t) => {
         const options =
           t.options && t.options.length
@@ -96,6 +131,8 @@
                   pick_line: t.pick_line,
                   hkjc_odds: t.hkjc_odds,
                   est_prob_pct: t.est_prob_pct,
+                  star: t.star,
+                  star_zh: t.star_zh,
                   prob_label: t.prob_label,
                   confidence: t.confidence,
                   confidence_zh: t.confidence_zh,
@@ -189,6 +226,24 @@
 </article>`;
       })
       .join("");
+    bindStarFilter(tips, data);
+  }
+
+  function bindStarFilter(tips, data) {
+    const starBtn = $("#filter-star");
+    const allBtn = $("#filter-all");
+    if (starBtn) {
+      starBtn.onclick = () => {
+        starFilterOn = true;
+        renderTips(tips, data);
+      };
+    }
+    if (allBtn) {
+      allBtn.onclick = () => {
+        starFilterOn = false;
+        renderTips(tips, data);
+      };
+    }
   }
 
   function renderReview(data) {
@@ -337,6 +392,11 @@
     if (data.low_risk_ge60 != null) {
       parts.push(
         `<span class="chip ok">低風險≥60% ${esc(data.low_risk_ge60)}</span>`
+      );
+    }
+    if (data.star_ge70 != null) {
+      parts.push(
+        `<span class="chip ok">⭐≥70% ${esc(data.star_ge70)}</span>`
       );
     }
     if (data.odds_compare_coverage) {

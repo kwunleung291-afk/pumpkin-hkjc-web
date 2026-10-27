@@ -246,6 +246,39 @@ a { color: var(--accent2); }
   border-color: rgba(61,214,140,.55);
   font-weight: 700;
 }
+.pill.star70 {
+  color: #ffd666;
+  border-color: rgba(255,214,102,.65);
+  background: rgba(255,214,102,.12);
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.option-pick .star-mark {
+  color: #ffd666;
+  margin-left: 4px;
+  font-size: 1.05em;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
+.filter-bar button {
+  border: 1px solid var(--line);
+  background: var(--pill);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: .78rem;
+  cursor: pointer;
+}
+.filter-bar button.active {
+  color: #ffd666;
+  border-color: rgba(255,214,102,.65);
+  background: rgba(255,214,102,.12);
+  font-weight: 700;
+}
 .option-pick {
   font-size: 1.02rem;
   font-weight: 750;
@@ -426,12 +459,13 @@ details.more[open] > summary::after { content: "－"; }
   </div>
   <script>
 window.__PUMPKIN_EMBEDDED__ = {
-  "generated_at_hkt": "2026-10-27 14:52:15 HKT",
-  "as_of_hkt": "2026-10-27 14:52:11 HKT",
+  "generated_at_hkt": "2026-10-27 15:01:50 HKT",
+  "as_of_hkt": "2026-10-27 15:01:46 HKT",
   "tips_count": 7,
   "matches_count": 7,
   "options_total": 21,
   "low_risk_ge60": 1,
+  "star_ge70": 1,
   "screened": 7,
   "method": "每場三個馬會盤推薦（低／中／高風險）；一視同仁（無 A/B 層）；免費源：HKJC + ESPN/DK + FotMob + DATA4MULA + 7M評述 + X討論 + 衍生訊號 + 科學模型（Poisson/Dixon-Coles ρ、歷史Elo、Bayes、機率校準曲線、Kelly、近開波CLV快照、跨場相關守衛、CHL嚴格降權、HIL大≥3.5唔作低風險、水位<1.70冇肉預設唔推、效率門檻、自動覆盤重權、莊家視角毒性、跨站賠率對比、TipsAudit公允、練蠱toxic_rules）；外盤／D4M 只做機率估計，絕唔推外圍投注。",
   "policy": {
@@ -509,7 +543,7 @@ window.__PUMPKIN_EMBEDDED__ = {
     "Overseas ESPN/DK": "OK — linked 0/7 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
     "DATA4MULA": "OK — linked 7/7 (fb_map 89, odds 89)",
     "FotMob": "OK — linked 7, detailed 7, near_KO_XI 0",
-    "7M": "OK — linked 4/7 (catalogue 52)",
+    "7M": "OK — linked 3/7 (catalogue 52)",
     "X": "EMPTY — linked 0/7 (raw_matches 10)",
     "Signals": "OK — linked 7/7 (weather 7, standings 7, line_move 5, xg_recent 0)",
     "TipsAudit": "PARTIAL — linked 0/7 (catalogue 349)",
@@ -521,8 +555,8 @@ window.__PUMPKIN_EMBEDDED__ = {
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-10-27 14:52:15 HKT",
-    "tips_as_of": "2026-10-27 14:52:11 HKT",
+    "as_of_hkt": "2026-10-27 15:01:50 HKT",
+    "tips_as_of": "2026-10-27 15:01:46 HKT",
     "n_tips": 7,
     "n_settled": 152,
     "n_pending": 7,
@@ -601,6 +635,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "入球單雙 雙",
       "hkjc_odds": 1.83,
       "est_prob_pct": 39.2,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -625,6 +661,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.83,
           "est_prob_pct": 39.2,
           "est_prob_raw_pct": 50.5,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -651,6 +689,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 2.53,
           "est_prob_pct": 28.9,
           "est_prob_raw_pct": 43.8,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "分桶校準[HAD] 分桶[HAD] n=76 hit=0.2632",
           "prob_label": "D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes",
@@ -660,7 +700,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": 4.93,
           "short_price": false,
           "summary": "中風險：「主客和 主勝」 @ 2.53，校準後約 28.9%（原 43.8%）（D4M外盤+Elo+Poisson）。訊號：BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2。",
-          "why": "估計機率 42.0%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會主勝 2.53｜莊家視角：誘盤嫌疑；RLM／逆公眾；誘盤嫌疑→勿追熱；fade公眾熱；CLV代理正；毒性0.70｜CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.20>客1.40｜客隊休整3.0日 → 主隊相對有利｜主隊休整3.1日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝2和0負 場均入1.8/失1.2 大2.5率60% BTTS100% 休整3.1日 賽程密集 疲勞旗｜校準[HAD] 43.8%→28.9%｜效率門檻：湊位／弱邊｜BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2；7M：「神戶勝利船聯賽階段頭2輪保持全勝，當中每場入2球，進攻端發揮有保障，神戶勝利船今仗值得勝券在握。」；7M心水指向客隊「神戶勝利船」"
+          "why": "估計機率 42.0%（D4M外盤+Elo+Poisson+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會主勝 2.53｜莊家視角：誘盤嫌疑；RLM／逆公眾；誘盤嫌疑→勿追熱；fade公眾熱；CLV代理正；毒性0.70｜CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.20>客1.40｜客隊休整3.0日 → 主隊相對有利｜主隊休整3.1日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝2和0負 場均入1.8/失1.2 大2.5率60% BTTS100% 休整3.1日 賽程密集 疲勞旗｜洲際盃客隊作客（跨國旅遊 proxy） → 主相對有利｜校準[HAD] 43.8%→28.9%｜效率門檻：湊位／弱邊｜BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2；7M：「神戶勝利船聯賽階段頭2輪保持全勝，當中每場入2球，進攻端發揮有保障，神戶勝利船今仗值得勝券在握。」；7M心水指向客隊「神戶勝利船」"
         },
         {
           "risk_tier": "high",
@@ -677,6 +717,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.96,
           "est_prob_pct": 38.4,
           "est_prob_raw_pct": 49.8,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -686,7 +728,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": -3.01,
           "short_price": false,
           "summary": "高風險：「讓球 主讓 0.0」 @ 1.96，校準後約 38.4%（原 49.8%）（馬會去水）。訊號：BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2。",
-          "why": "讓球估計機率 48.0%（馬會去水）；主讓 0.0 @ 1.96｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.20>客1.40｜客隊休整3.0日 → 主隊相對有利｜主隊休整3.1日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝2和0負 場均入1.8/失1.2 大2.5率60% BTTS100% 休整3.1日 賽程密集 疲勞旗｜校準[GLOBAL] 49.8%→38.4%｜效率門檻：湊位／弱邊｜BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2；7M：「神戶勝利船聯賽階段頭2輪保持全勝，當中每場入2球，進攻端發揮有保障，神戶勝利船今仗值得勝券在握。」；7M心水指向客隊「神戶勝利船」"
+          "why": "讓球估計機率 48.0%（馬會去水）；主讓 0.0 @ 1.96｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.20>客1.40｜客隊休整3.0日 → 主隊相對有利｜主隊休整3.1日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝2和0負 場均入1.8/失1.2 大2.5率60% BTTS100% 休整3.1日 賽程密集 疲勞旗｜洲際盃客隊作客（跨國旅遊 proxy） → 主相對有利｜校準[GLOBAL] 49.8%→38.4%｜效率門檻：湊位／弱邊｜BTTS 比率偏高；主近5場 3勝2和0負 場均入1.8/失1.2；近5 DWDWW PPG2.2；7M：「神戶勝利船聯賽階段頭2輪保持全勝，當中每場入2球，進攻端發揮有保障，神戶勝利船今仗值得勝券在握。」；7M心水指向客隊「神戶勝利船」"
         }
       ],
       "summary": "三選項：低風險 入球單雙 雙 @ 1.83（約39.2%）｜中風險 主客和 主勝 @ 2.53（約28.9%）｜高風險 讓球 主讓 0.0 @ 1.96（約38.4%）。建議「入球單雙 雙」 @ 1.83，估計機率約 39.2%（馬會去水）。莊家視角偏「誘盤嫌疑」→fade_public，毒性0.7：公眾敘事／熱門與蒸汽相反，兼有放長或馬會相對外盤偏軟 → 高誘盤嫌疑，勿追熱。跨站：跨站樣本不足或差異細。關",
@@ -810,6 +852,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "半場大細 細 1.5",
       "hkjc_odds": 1.7,
       "est_prob_pct": 38.1,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -834,6 +878,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.7,
           "est_prob_pct": 38.1,
           "est_prob_raw_pct": 52.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "分桶校準[FHL] 分桶[FHL] n=16 hit=0.5",
           "prob_label": "馬會去水",
@@ -842,8 +888,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 200,
           "edge_pp": -4.52,
           "short_price": false,
-          "summary": "低風險：「半場大細 細 1.5」 @ 1.7，校準後約 38.1%（原 52.3%）（馬會去水）。訊號：形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "半場大細估計 54.3%；細 1.7｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.6 → 降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[FHL] 52.3%→38.1%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高"
+          "summary": "低風險：「半場大細 細 1.5」 @ 1.7，校準後約 38.1%（原 52.3%）（馬會去水）。訊號：主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大。",
+          "why": "半場大細估計 54.3%；細 1.7｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.72 → 降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜主客場攻防拆相反 → 降權｜校準[FHL] 52.3%→38.1%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大"
         },
         {
           "risk_tier": "medium",
@@ -860,6 +906,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.81,
           "est_prob_pct": 43.6,
           "est_prob_raw_pct": 53.8,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -868,8 +916,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 200,
           "edge_pp": -3.26,
           "short_price": false,
-          "summary": "中風險：「讓球 主讓 -1.0/-1.5」 @ 1.81，校準後約 43.6%（原 53.8%）（馬會去水）。訊號：形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "讓球估計機率 52.0%（馬會去水）；主讓 -1.0/-1.5 @ 1.81｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主1.00>客0.40；主場近況PPG1.33 vs 客場近況0.33｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[GLOBAL] 53.8%→43.6%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高"
+          "summary": "中風險：「讓球 主讓 -1.0/-1.5」 @ 1.81，校準後約 43.6%（原 53.8%）（馬會去水）。訊號：主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大。",
+          "why": "讓球估計機率 52.0%（馬會去水）；主讓 -1.0/-1.5 @ 1.81｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主1.00>客0.40；主場近況PPG1.33 vs 客場近況0.33｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜客隊跨區作客（oceania→east_asia） → 主相對有利｜場地攻防拆偏主｜校準[GLOBAL] 53.8%→43.6%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大"
         },
         {
           "risk_tier": "high",
@@ -884,8 +932,10 @@ window.__PUMPKIN_EMBEDDED__ = {
           "line": 10.5,
           "pick_line": "角球大細 大 10.5",
           "hkjc_odds": 2.17,
-          "est_prob_pct": 35.0,
-          "est_prob_raw_pct": 44.1,
+          "est_prob_pct": 36.4,
+          "est_prob_raw_pct": 45.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
@@ -894,23 +944,23 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 100,
           "edge_pp": -3.49,
           "short_price": false,
-          "summary": "高風險：「角球大細 大 10.5」 @ 2.17，校準後約 35.0%（原 44.1%）（角球弱模型（馬會去水+無角球專用校準））。訊號：形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "角球估計機率 42.6%（馬會去水／無角球專用校準）；馬會大 2.17｜政策：通常唔作低風險｜市場權重×0.15｜盃賽／淘汰賽：數據噪訊高｜近況大細一致：近況／H2H大2.5率約70%；GE代理3.6｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[GLOBAL] 44.1%→35.0%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高"
+          "summary": "高風險：「角球大細 大 10.5」 @ 2.17，校準後約 36.4%（原 45.3%）（角球弱模型（馬會去水+無角球專用校準））。訊號：主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大。",
+          "why": "角球估計機率 42.6%（馬會去水／無角球專用校準）；馬會大 2.17｜政策：通常唔作低風險｜市場權重×0.15｜盃賽／淘汰賽：數據噪訊高｜近況大細一致：近況／H2H大2.5率約70%；GE代理3.72｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜長途客隊 → 大波輕罰｜主客場攻防拆一致：主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72｜校準[GLOBAL] 45.3%→36.4%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.72（代理，非xG）→ 偏大"
         }
       ],
-      "summary": "三選項：低風險 半場大細 細 1.5 @ 1.7（約38.1%）｜中風險 讓球 主讓 -1.0/-1.5 @ 1.81（約43.6%）｜高風險 角球大細 大 10.5 @ 2.17（約35.0%）。建議「半場大細 細 1.5」 @ 1.7，估計機率約 38.1%（馬會去水）。莊家視角偏「對沖熱門」→avoid，毒性0.5：蒸汽跟公眾熱門，但模型唔支持 → 莊家對沖熱門責任，唔好當 value。跨站：主相對共識硬3.4pp。關鍵訊號：形",
-      "why": "半場大細估計 54.3%；細 1.7｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.6 → 降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[FHL] 52.3%→38.1%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.6（代理，非xG）→ 偏大；BTTS 比率偏高",
+      "summary": "三選項：低風險 半場大細 細 1.5 @ 1.7（約38.1%）｜中風險 讓球 主讓 -1.0/-1.5 @ 1.81（約43.6%）｜高風險 角球大細 大 10.5 @ 2.17（約36.4%）。建議「半場大細 細 1.5」 @ 1.7，估計機率約 38.1%（馬會去水）。莊家視角偏「對沖熱門」→avoid，毒性0.5：蒸汽跟公眾熱門，但模型唔支持 → 莊家對沖熱門責任，唔好當 value。跨站：主相對共識硬3.4pp。關鍵訊號：主",
+      "why": "半場大細估計 54.3%；細 1.7｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.72 → 降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 1勝2和2負 場均入1.0/失1.6 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜主客場攻防拆相反 → 降權｜校準[FHL] 52.3%→38.1%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72；形勢進球期望約 3.72（代理，非xG）→ 偏大",
       "signals": {
         "lean_had": "away",
         "lean_ou": "over",
         "cites": [
-          "形勢進球期望約 3.6（代理，非xG）→ 偏大",
+          "主場攻防拆：主場入1.0/失1.0 vs 客場入1.67/失4.0→期望3.72",
+          "形勢進球期望約 3.72（代理，非xG）→ 偏大",
           "BTTS 比率偏高",
           "主近5場 1勝2和2負 場均入1.0/失1.6；近5 LWLDD PPG1.0",
-          "客近5場 0勝2和3負 場均入1.4/失3.2；近5 LLLDD PPG0.4",
-          "主隊近7日賽事 2 場（密集）"
+          "客近5場 0勝2和3負 場均入1.4/失3.2；近5 LLLDD PPG0.4"
         ],
-        "goal_expectancy": 3.6
+        "goal_expectancy": 3.72
       },
       "bookmaker_angle": {
         "intent": "對沖熱門",
@@ -990,7 +1040,7 @@ window.__PUMPKIN_EMBEDDED__ = {
         "LLLDD"
       ],
       "h2h_summary": null,
-      "goal_expectancy": 3.6,
+      "goal_expectancy": 3.72,
       "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
@@ -1019,6 +1069,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "半場大細 細 1.5",
       "hkjc_odds": 1.82,
       "est_prob_pct": 26.7,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -1043,6 +1095,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.82,
           "est_prob_pct": 26.7,
           "est_prob_raw_pct": 48.8,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "分桶校準[FHL] 分桶[FHL] n=16 hit=0.5",
           "prob_label": "馬會去水",
@@ -1051,8 +1105,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 200,
           "edge_pp": -4.13,
           "short_price": false,
-          "summary": "低風險：「半場大細 細 1.5」 @ 1.82，校準後約 26.7%（原 48.8%）（馬會去水）。訊號：形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6。",
-          "why": "半場大細估計 50.8%；細 1.82｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.8 → 降權｜盃賽輪換風險：盃賽短休／密集賽程｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.7日 長休｜校準[FHL] 48.8%→26.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6"
+          "summary": "低風險：「半場大細 細 1.5」 @ 1.82，校準後約 26.7%（原 48.8%）（馬會去水）。訊號：主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大。",
+          "why": "半場大細估計 50.8%；細 1.82｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.98 → 降權｜盃賽輪換風險：盃賽短休／密集賽程｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.8日 長休｜主客場攻防拆相反 → 降權｜校準[FHL] 48.8%→26.7%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大"
         },
         {
           "risk_tier": "medium",
@@ -1069,6 +1123,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.85,
           "est_prob_pct": 38.5,
           "est_prob_raw_pct": 50.0,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1077,8 +1133,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 200,
           "edge_pp": -4.05,
           "short_price": false,
-          "summary": "中風險：「入球單雙 單」 @ 1.85，校準後約 38.5%（原 50.0%）（馬會去水）。訊號：形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6。",
-          "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6"
+          "summary": "中風險：「入球單雙 單」 @ 1.85，校準後約 38.5%（原 50.0%）（馬會去水）。訊號：主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大。",
+          "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大"
         },
         {
           "risk_tier": "high",
@@ -1095,6 +1151,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.91,
           "est_prob_pct": 37.0,
           "est_prob_raw_pct": 46.7,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1103,23 +1161,23 @@ window.__PUMPKIN_EMBEDDED__ = {
           "stake": 100,
           "edge_pp": -3.15,
           "short_price": false,
-          "summary": "高風險：「讓球 客讓 -2.0」 @ 1.91，校準後約 37.0%（原 46.7%）（馬會去水）。訊號：形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6。",
-          "why": "讓球估計機率 49.2%（馬會去水）；客讓 -2.0 @ 1.91｜盃賽／淘汰賽：數據噪訊高｜近況相反：近況偏主 → 降權／唔入低風險｜客隊休整2.8日 → 客勝／客讓降權｜盃賽輪換風險：盃賽短休／密集賽程（讓球／主客和輕罰）｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.7日 長休｜校準[GLOBAL] 46.7%→37.0%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6"
+          "summary": "高風險：「讓球 客讓 -2.0」 @ 1.91，校準後約 37.0%（原 46.7%）（馬會去水）。訊號：主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大。",
+          "why": "讓球估計機率 49.2%（馬會去水）；客讓 -2.0 @ 1.91｜盃賽／淘汰賽：數據噪訊高｜近況相反：近況偏主 → 降權／唔入低風險｜客隊休整2.8日 → 客勝／客讓降權｜盃賽輪換風險：盃賽短休／密集賽程（讓球／主客和輕罰）｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.8日 長休｜洲際盃客隊作客（跨國旅遊 proxy）／當地開賽約0時（偏早／夜） → 客向降權｜場地攻防拆偏主 → 方向相反｜校準[GLOBAL] 46.7%→37.0%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大"
         }
       ],
-      "summary": "三選項：低風險 半場大細 細 1.5 @ 1.82（約26.7%）｜中風險 入球單雙 單 @ 1.85（約38.5%）｜高風險 讓球 客讓 -2.0 @ 1.91（約37.0%）。建議「半場大細 細 1.5」 @ 1.82，估計機率約 26.7%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：跨站樣本不足或差異細。關鍵訊號：形勢進球期望約 3.8（代理，非xG）→ 偏大；",
-      "why": "半場大細估計 50.8%；細 1.82｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.8 → 降權｜盃賽輪換風險：盃賽短休／密集賽程｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.7日 長休｜校準[FHL] 48.8%→26.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.8（代理，非xG）→ 偏大；主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6",
+      "summary": "三選項：低風險 半場大細 細 1.5 @ 1.82（約26.7%）｜中風險 入球單雙 單 @ 1.85（約38.5%）｜高風險 讓球 客讓 -2.0 @ 1.91（約37.0%）。建議「半場大細 細 1.5」 @ 1.82，估計機率約 26.7%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：跨站樣本不足或差異細。關鍵訊號：主場攻防拆：主場入3.33/失0.33 vs 客",
+      "why": "半場大細估計 50.8%；細 1.82｜盃賽／淘汰賽：數據噪訊高｜近況大細相反：近況／H2H大2.5率約70%；GE代理3.98 → 降權｜盃賽輪換風險：盃賽短休／密集賽程｜主近5場 4勝1和0負 場均入3.0/失0.2 大2.5率60% BTTS20% 休整8.8日 長休｜主客場攻防拆相反 → 降權｜校準[FHL] 48.8%→26.7%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98；形勢進球期望約 3.98（代理，非xG）→ 偏大",
       "signals": {
         "lean_had": "home",
         "lean_ou": "over",
         "cites": [
-          "形勢進球期望約 3.8（代理，非xG）→ 偏大",
+          "主場攻防拆：主場入3.33/失0.33 vs 客場入2.0/失2.0→期望3.98",
+          "形勢進球期望約 3.98（代理，非xG）→ 偏大",
           "主近5場 4勝1和0負 場均入3.0/失0.2；近5 WDWWW PPG2.6",
           "客近5場 4勝0和1負 場均入2.6/失1.8；近5 WLWWW PPG2.4",
-          "客隊休整僅 2.8 日（密集）",
-          "天氣平和"
+          "客隊休整僅 2.8 日（密集）"
         ],
-        "goal_expectancy": 3.8
+        "goal_expectancy": 3.98
       },
       "bookmaker_angle": {
         "intent": "穩盤",
@@ -1198,7 +1256,7 @@ window.__PUMPKIN_EMBEDDED__ = {
         0,
         0
       ],
-      "goal_expectancy": 3.8,
+      "goal_expectancy": 3.98,
       "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
@@ -1227,6 +1285,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "入球單雙 雙",
       "hkjc_odds": 1.84,
       "est_prob_pct": 38.8,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -1251,6 +1311,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.84,
           "est_prob_pct": 38.8,
           "est_prob_raw_pct": 50.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1277,6 +1339,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.72,
           "est_prob_pct": 47.1,
           "est_prob_raw_pct": 56.4,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1286,7 +1350,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": -3.52,
           "short_price": false,
           "summary": "中風險：「讓球 主讓 -0.5/-1.0」 @ 1.72，校準後約 47.1%（原 56.4%）（馬會去水）。訊號：形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高。",
-          "why": "讓球估計機率 54.6%（馬會去水）；主讓 -0.5/-1.0 @ 1.72｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.60>客1.40｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程（讓球／主客和輕罰）｜主近5場 4勝1和0負 場均入3.4/失1.6 大2.5率80% BTTS80% 休整3.0日 賽程密集 疲勞旗｜校準[GLOBAL] 56.4%→47.1%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高；7M：「上海海港聯賽階段頭2輪保持不敗，當中2場合計攻入7球之多，上海海港是役主場稱雄在望。」；7M心水指向主隊「上海海港」"
+          "why": "讓球估計機率 54.6%（馬會去水）；主讓 -0.5/-1.0 @ 1.72｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.60>客1.40｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程（讓球／主客和輕罰）｜主近5場 4勝1和0負 場均入3.4/失1.6 大2.5率80% BTTS80% 休整3.0日 賽程密集 疲勞旗｜客隊跨區作客（se_asia→east_asia） → 主相對有利｜校準[GLOBAL] 56.4%→47.1%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高；7M：「上海海港聯賽階段頭2輪保持不敗，當中2場合計攻入7球之多，上海海港是役主場稱雄在望。」；7M心水指向主隊「上海海港」"
         },
         {
           "risk_tier": "high",
@@ -1303,6 +1367,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 2.08,
           "est_prob_pct": 36.6,
           "est_prob_raw_pct": 45.9,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
@@ -1434,6 +1500,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "主客和 主勝",
       "hkjc_odds": 2.19,
       "est_prob_pct": 89.7,
+      "star": true,
+      "star_zh": "⭐",
       "prob_label": "D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes",
       "confidence": "medium",
       "confidence_zh": "中",
@@ -1458,6 +1526,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 2.19,
           "est_prob_pct": 89.7,
           "est_prob_raw_pct": 56.5,
+          "star": true,
+          "star_zh": "⭐",
           "calibrated": true,
           "calibration_note": "分桶校準[HAD] 分桶[HAD] n=76 hit=0.2632",
           "prob_label": "D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes",
@@ -1467,7 +1537,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": 9.05,
           "short_price": false,
           "summary": "低風險：「主客和 主勝」 @ 2.19，校準後約 89.7%（原 56.5%）（D4M外盤+Elo+Poisson）。訊號：形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 5勝0和0負 場均入2.4/失0.8；近5 WWWWW PPG3.0。",
-          "why": "估計機率 54.7%（D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes）；馬會主勝 2.19｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主3.00>客1.00｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 5勝0和0負 場均入2.4/失0.8 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[HAD] 56.5%→89.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 5勝0和0負 場均入2.4/失0.8；近5 WWWWW PPG3.0；7M：「北京國安斬獲各項賽事五連勝，其中就包括亞冠精英聯兩場勝利，球隊狀態火熱，北京國安今仗穩贏。」；7M心水指向主隊「北京國安」"
+          "why": "估計機率 54.7%（D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes）；馬會主勝 2.19｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主3.00>客1.00｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 5勝0和0負 場均入2.4/失0.8 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜洲際盃客隊作客（跨國旅遊 proxy） → 主相對有利｜校準[HAD] 56.5%→89.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 5勝0和0負 場均入2.4/失0.8；近5 WWWWW PPG3.0；7M：「北京國安斬獲各項賽事五連勝，其中就包括亞冠精英聯兩場勝利，球隊狀態火熱，北京國安今仗穩贏。」；7M心水指向主隊「北京國安」"
         },
         {
           "risk_tier": "medium",
@@ -1484,6 +1554,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.84,
           "est_prob_pct": 38.8,
           "est_prob_raw_pct": 50.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1510,6 +1582,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.98,
           "est_prob_pct": 37.0,
           "est_prob_raw_pct": 46.6,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
@@ -1523,7 +1597,7 @@ window.__PUMPKIN_EMBEDDED__ = {
         }
       ],
       "summary": "三選項：低風險 主客和 主勝 @ 2.19（約89.7%）｜中風險 入球單雙 雙 @ 1.84（約38.8%）｜高風險 角球大細 大 9.5 @ 1.98（約37.0%）。建議「主客和 主勝」 @ 2.19，估計機率約 89.7%（D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：跨站樣本不足或差異細。關鍵訊號",
-      "why": "估計機率 54.7%（D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes）；馬會主勝 2.19｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主3.00>客1.00｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 5勝0和0負 場均入2.4/失0.8 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜校準[HAD] 56.5%→89.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 5勝0和0負 場均入2.4/失0.8；近5 WWWWW PPG3.0；7M：「北京國安斬獲各項賽事五連勝，其中就包括亞冠精英聯兩場勝利，球隊狀態火熱，北京國安今仗穩贏。」；7M心水指向主隊「北京國安」",
+      "why": "估計機率 54.7%（D4M外盤+Elo+Poisson+評述偏向+馬會去水+Bayes）；馬會主勝 2.19｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主3.00>客1.00｜客隊休整3.1日 → 主隊相對有利｜主隊休整3.0日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 5勝0和0負 場均入2.4/失0.8 大2.5率60% BTTS40% 休整3.0日 賽程密集 疲勞旗｜洲際盃客隊作客（跨國旅遊 proxy） → 主相對有利｜校準[HAD] 56.5%→89.7%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 5勝0和0負 場均入2.4/失0.8；近5 WWWWW PPG3.0；7M：「北京國安斬獲各項賽事五連勝，其中就包括亞冠精英聯兩場勝利，球隊狀態火熱，北京國安今仗穩贏。」；7M心水指向主隊「北京國安」",
       "signals": {
         "lean_had": null,
         "lean_ou": null,
@@ -1645,6 +1719,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "入球單雙 單",
       "hkjc_odds": 1.85,
       "est_prob_pct": 38.5,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -1669,6 +1745,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.85,
           "est_prob_pct": 38.5,
           "est_prob_raw_pct": 50.0,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1678,7 +1756,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": -4.05,
           "short_price": false,
           "summary": "低風險：「入球單雙 單」 @ 1.85，校準後約 38.5%（原 50.0%）（馬會去水）。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高；7M：「失去多年來的核心之後，熱刺實力下滑不言而喻，特別是進攻上，反觀曼聯今夏引進了多名強援，實力進一步加強，雙方實力拉開一段距離，另外，熱刺最近3次主場對陣曼聯只錄得」；7M心水指向客隊「曼聯」"
+          "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高"
         },
         {
           "risk_tier": "medium",
@@ -1695,6 +1773,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 7.25,
           "est_prob_pct": 26.8,
           "est_prob_raw_pct": 40.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "分桶校準[HAD] 分桶[HAD] n=76 hit=0.2632",
           "prob_label": "D4M外盤+Elo+Poisson+馬會去水+Bayes",
@@ -1704,7 +1784,7 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": 26.54,
           "short_price": false,
           "summary": "中風險：「主客和 主勝」 @ 7.25，校準後約 26.8%（原 40.3%）（D4M外盤+Elo+Poisson）。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "估計機率 40.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會主勝 7.25｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜客隊休整3.0日 → 主隊相對有利｜主隊休整2.8日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝0和2負 場均入2.6/失1.2 大2.5率80% BTTS60% 休整2.8日 賽程密集 疲勞旗｜校準[HAD] 40.3%→26.8%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高；7M：「失去多年來的核心之後，熱刺實力下滑不言而喻，特別是進攻上，反觀曼聯今夏引進了多名強援，實力進一步加強，雙方實力拉開一段距離，另外，熱刺最近3次主場對陣曼聯只錄得」；7M心水指向客隊「曼聯」"
+          "why": "估計機率 40.3%（D4M外盤+Elo+Poisson+馬會去水+Bayes）；馬會主勝 7.25｜莊家視角：穩盤；微動；CLV代理正｜盃賽／淘汰賽：數據噪訊高｜客隊休整3.0日 → 主隊相對有利｜主隊休整2.8日 → 主勝降權｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 3勝0和2負 場均入2.6/失1.2 大2.5率80% BTTS60% 休整2.8日 賽程密集 疲勞旗｜洲際盃客隊作客（跨國旅遊 proxy） → 主相對有利｜校準[HAD] 40.3%→26.8%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高"
         },
         {
           "risk_tier": "high",
@@ -1721,6 +1801,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 2.19,
           "est_prob_pct": 34.5,
           "est_prob_raw_pct": 43.7,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
@@ -1730,11 +1812,11 @@ window.__PUMPKIN_EMBEDDED__ = {
           "edge_pp": -3.45,
           "short_price": false,
           "summary": "高風險：「角球大細 大 10.5」 @ 2.19，校準後約 34.5%（原 43.7%）（角球弱模型（馬會去水+無角球專用校準））。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。",
-          "why": "角球估計機率 42.2%（馬會去水／無角球專用校準）；馬會大 2.19｜政策：通常唔作低風險｜市場權重×0.15｜盃賽／淘汰賽：數據噪訊高｜近況大細一致：近況／H2H大2.5率約80%；GE代理4.0｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 3勝0和2負 場均入2.6/失1.2 大2.5率80% BTTS60% 休整2.8日 賽程密集 疲勞旗｜校準[GLOBAL] 43.7%→34.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高；7M：「失去多年來的核心之後，熱刺實力下滑不言而喻，特別是進攻上，反觀曼聯今夏引進了多名強援，實力進一步加強，雙方實力拉開一段距離，另外，熱刺最近3次主場對陣曼聯只錄得」；7M心水指向客隊「曼聯」"
+          "why": "角球估計機率 42.2%（馬會去水／無角球專用校準）；馬會大 2.19｜政策：通常唔作低風險｜市場權重×0.15｜盃賽／淘汰賽：數據噪訊高｜近況大細一致：近況／H2H大2.5率約80%；GE代理4.0｜盃賽輪換風險：盃賽短休／密集賽程／陣容lastStarting11｜主近5場 3勝0和2負 場均入2.6/失1.2 大2.5率80% BTTS60% 休整2.8日 賽程密集 疲勞旗｜校準[GLOBAL] 43.7%→34.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高"
         }
       ],
       "summary": "三選項：低風險 入球單雙 單 @ 1.85（約38.5%）｜中風險 主客和 主勝 @ 7.25（約26.8%）｜高風險 角球大細 大 10.5 @ 2.19（約34.5%）。建議「入球單雙 單」 @ 1.85，估計機率約 38.5%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：跨站樣本不足或差異細。關鍵訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS",
-      "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高；7M：「失去多年來的核心之後，熱刺實力下滑不言而喻，特別是進攻上，反觀曼聯今夏引進了多名強援，實力進一步加強，雙方實力拉開一段距離，另外，熱刺最近3次主場對陣曼聯只錄得」；7M心水指向客隊「曼聯」",
+      "why": "單雙估計 50.0%；單 1.85｜市場權重×0.45｜盃賽／淘汰賽：數據噪訊高｜校準[GLOBAL] 50.0%→38.5%｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高",
       "signals": {
         "lean_had": null,
         "lean_ou": "over",
@@ -1821,11 +1903,7 @@ window.__PUMPKIN_EMBEDDED__ = {
       ],
       "h2h_summary": null,
       "goal_expectancy": 4.0,
-      "narrative_cites": [
-        "7M：「失去多年來的核心之後，熱刺實力下滑不言而喻，特別是進攻上，反觀曼聯今夏引進了多名強援，實力進一步加強，雙方實力拉開一段距離，另外，熱刺最近3次主場對陣曼聯只錄得」",
-        "7M心水指向客隊「曼聯」",
-        "7M：評述偏大球／進攻"
-      ],
+      "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
       "ft_score": null,
@@ -1853,6 +1931,8 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_line": "入球單雙 雙",
       "hkjc_odds": 1.81,
       "est_prob_pct": 39.9,
+      "star": false,
+      "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
@@ -1877,6 +1957,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.81,
           "est_prob_pct": 39.9,
           "est_prob_raw_pct": 51.1,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "馬會去水",
@@ -1903,6 +1985,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 2.47,
           "est_prob_pct": 28.6,
           "est_prob_raw_pct": 43.3,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "分桶校準[HAD] 分桶[HAD] n=76 hit=0.2632",
           "prob_label": "Elo+Poisson+訊號偏向+馬會去水+Bayes",
@@ -1929,6 +2013,8 @@ window.__PUMPKIN_EMBEDDED__ = {
           "hkjc_odds": 1.97,
           "est_prob_pct": 37.8,
           "est_prob_raw_pct": 48.4,
+          "star": false,
+          "star_zh": null,
           "calibrated": true,
           "calibration_note": "校準已套用（n=152／時間加權595，半衰期10日）；仍係估計，唔保證命中",
           "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
@@ -7020,27 +7106,36 @@ window.__PUMPKIN_EMBEDDED__ = {
       o.est_prob_pct != null && Number(o.est_prob_pct) >= 60
         ? '<span class="pill ge60">≥60%</span>'
         : "";
+    const isStar =
+      o.star === true ||
+      (o.est_prob_pct != null && Number(o.est_prob_pct) >= 70);
+    const starPill = isStar
+      ? '<span class="pill star70" title="校準／估計機率≥70%">⭐ ≥70%</span>'
+      : "";
     const calPill = o.calibrated
       ? '<span class="pill cal">已校準</span>'
       : "";
-    return `<div class="option ${riskClass(o.risk_tier)}">
+    const starMark = isStar ? '<span class="star-mark">⭐</span>' : "";
+    return `<div class="option ${riskClass(o.risk_tier)}${isStar ? " has-star" : ""}" data-star="${isStar ? "1" : "0"}">
   <div class="option-head">
     <span class="risk-badge ${riskClass(o.risk_tier)}">${esc(
       o.risk_zh || o.risk_tier || "—"
     )}</span>
-    ${ge60}${calPill}
+    ${starPill}${ge60}${calPill}
     <span class="pill ${confClass(o.confidence)}">信心 ${esc(
       o.confidence_zh || o.confidence || "—"
     )}</span>
     <span class="pill">紙注 ${esc(o.stake ?? "—")}</span>
   </div>
-  <div class="option-pick">${esc(o.pick_line || "")} ${odds}</div>
+  <div class="option-pick">${esc(o.pick_line || "")} ${odds}${starMark}</div>
   <div class="option-prob">${prob}${
       o.prob_label ? ` · ${esc(o.prob_label)}` : ""
     }</div>
   <p class="option-sum">${esc(o.summary || "")}</p>
 </div>`;
   }
+
+  let starFilterOn = false;
 
   function renderTips(tips, data) {
     const root = $("#tips-list");
@@ -7053,7 +7148,33 @@ window.__PUMPKIN_EMBEDDED__ = {
         '。</div>';
       return;
     }
-    root.innerHTML = tips
+    const filtered = starFilterOn
+      ? tips.filter((t) => {
+          const opts =
+            t.options && t.options.length
+              ? t.options
+              : [{ star: t.star, est_prob_pct: t.est_prob_pct }];
+          return opts.some(
+            (o) =>
+              o.star === true ||
+              (o.est_prob_pct != null && Number(o.est_prob_pct) >= 70)
+          );
+        })
+      : tips;
+    const filterBar = `<div class="filter-bar">
+      <button type="button" id="filter-star" class="${starFilterOn ? "active" : ""}">⭐ 只睇≥70%</button>
+      <button type="button" id="filter-all" class="${!starFilterOn ? "active" : ""}">全部</button>
+    </div>`;
+    if (!filtered.length && starFilterOn) {
+      root.innerHTML =
+        filterBar +
+        '<div class="empty">而家冇 ≥70% 星級選項。<br/>撳「全部」睇返所有紙盤。</div>';
+      bindStarFilter(tips, data);
+      return;
+    }
+    root.innerHTML =
+      filterBar +
+      filtered
       .map((t) => {
         const options =
           t.options && t.options.length
@@ -7065,6 +7186,8 @@ window.__PUMPKIN_EMBEDDED__ = {
                   pick_line: t.pick_line,
                   hkjc_odds: t.hkjc_odds,
                   est_prob_pct: t.est_prob_pct,
+                  star: t.star,
+                  star_zh: t.star_zh,
                   prob_label: t.prob_label,
                   confidence: t.confidence,
                   confidence_zh: t.confidence_zh,
@@ -7158,6 +7281,24 @@ window.__PUMPKIN_EMBEDDED__ = {
 </article>`;
       })
       .join("");
+    bindStarFilter(tips, data);
+  }
+
+  function bindStarFilter(tips, data) {
+    const starBtn = $("#filter-star");
+    const allBtn = $("#filter-all");
+    if (starBtn) {
+      starBtn.onclick = () => {
+        starFilterOn = true;
+        renderTips(tips, data);
+      };
+    }
+    if (allBtn) {
+      allBtn.onclick = () => {
+        starFilterOn = false;
+        renderTips(tips, data);
+      };
+    }
   }
 
   function renderReview(data) {
@@ -7306,6 +7447,11 @@ window.__PUMPKIN_EMBEDDED__ = {
     if (data.low_risk_ge60 != null) {
       parts.push(
         `<span class="chip ok">低風險≥60% ${esc(data.low_risk_ge60)}</span>`
+      );
+    }
+    if (data.star_ge70 != null) {
+      parts.push(
+        `<span class="chip ok">⭐≥70% ${esc(data.star_ge70)}</span>`
       );
     }
     if (data.odds_compare_coverage) {
