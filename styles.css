@@ -237,6 +237,39 @@ a { color: var(--accent2); }
   border-color: rgba(61,214,140,.55);
   font-weight: 700;
 }
+.pill.star70 {
+  color: #ffd666;
+  border-color: rgba(255,214,102,.65);
+  background: rgba(255,214,102,.12);
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.option-pick .star-mark {
+  color: #ffd666;
+  margin-left: 4px;
+  font-size: 1.05em;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
+.filter-bar button {
+  border: 1px solid var(--line);
+  background: var(--pill);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: .78rem;
+  cursor: pointer;
+}
+.filter-bar button.active {
+  color: #ffd666;
+  border-color: rgba(255,214,102,.65);
+  background: rgba(255,214,102,.12);
+  font-weight: 700;
+}
 .option-pick {
   font-size: 1.02rem;
   font-weight: 750;
