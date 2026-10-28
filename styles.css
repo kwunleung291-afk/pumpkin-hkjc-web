@@ -424,3 +424,21 @@ details.more[open] > summary::after { content: "－"; }
 .pm-causes, .pm-ext ul { margin: 6px 0 0; padding-left: 1.1rem; font-size: .78rem; color: var(--text); }
 .pm-next { margin-top: 8px; font-size: .8rem; color: var(--accent, #f5c842); }
 .pm-ext a { color: var(--ok); }
+
+.pill.no-buy {
+  color: #ff6b6b;
+  border-color: rgba(255,107,107,.55);
+  font-weight: 700;
+  background: rgba(255,107,107,.1);
+}
+.pill.buyable {
+  color: var(--ok);
+  border-color: rgba(61,214,140,.55);
+  font-weight: 650;
+}
+.option.no-buy {
+  opacity: 0.82;
+}
+.option.no-buy .option-pick {
+  text-decoration: none;
+}
