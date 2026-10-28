@@ -304,7 +304,21 @@
               data.history_meta.note_zh
             )}（ledger ${esc(data.history_meta.ledger_n)}｜實注 ${esc(
               data.history_meta.user_bets_n
-            )}）</div>`
+            )}｜賽後分析 ${esc(data.history_meta.postmatch_n || 0)}）</div>`
+          : ""
+      }
+      ${
+        data.postmatch_adapt
+          ? `<h3 style="margin-top:10px">賽後自動適應</h3>
+      <ul>${(data.postmatch_adapt.changelog_zh || [])
+        .slice(0, 6)
+        .map((e) => `<li>${esc(e)}</li>`)
+        .join("") || "<li>暫無權重變更</li>"}</ul>
+      <div style="color:var(--muted);font-size:.72rem">adapt as_of：${esc(
+        data.postmatch_adapt.as_of_hkt || ""
+      )}｜罰分桶 ${esc(data.postmatch_adapt.n_penalties)}｜加分 ${esc(
+        data.postmatch_adapt.n_bonuses
+      )}｜硬閘 ${esc(data.postmatch_adapt.n_gates)}</div>`
           : ""
       }
     </div>`;
@@ -349,7 +363,43 @@
           r.result_value ? `｜${esc(r.result_value)}` : ""
         }</div>
   ${
-    r.review_zh
+    r.postmatch
+      ? `<div class="summary postmatch">
+    <h3>${r.settlement === "HIT" ? "✅ 賽後分析（贏）" : r.settlement === "MISS" ? "❌ 賽後分析（輸）" : "賽後分析"}</h3>
+    <p>${esc((r.postmatch.analysis_zh || r.review_zh || "").slice(0, 500))}</p>
+    ${
+      (r.postmatch.causes || []).length
+        ? `<ul class="pm-causes">${r.postmatch.causes
+            .map(
+              (c) =>
+                `<li><strong>${esc(c.direction || "")}</strong> ${esc(c.zh || "")}</li>`
+            )
+            .join("")}</ul>`
+        : ""
+    }
+    ${
+      (r.postmatch.external || []).length
+        ? `<div class="pm-ext"><h4>外網對照</h4><ul>${r.postmatch.external
+            .map((e) => {
+              const label = esc(e.summary_zh || e.source || "");
+              return e.url
+                ? `<li><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(
+                    e.source || "外網"
+                  )}</a>：${label}</li>`
+                : `<li>${esc(e.source || "外網")}：${label}</li>`;
+            })
+            .join("")}</ul></div>`
+        : ""
+    }
+    ${
+      r.postmatch.next_change_zh || r.next_change_zh
+        ? `<p class="pm-next"><strong>下次應改：</strong>${esc(
+            r.postmatch.next_change_zh || r.next_change_zh
+          )}</p>`
+        : ""
+    }
+  </div>`
+      : r.review_zh
       ? `<div class="summary"><h3>覆盤</h3><p>${esc(r.review_zh)}</p></div>`
       : ""
   }
