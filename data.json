@@ -1,11 +1,42 @@
 {
-  "generated_at_hkt": "2026-10-30 12:06:17 HKT",
+  "generated_at_hkt": "2026-10-30 12:10:19 HKT",
   "as_of_hkt": "2026-10-30 12:05:45 HKT",
   "tips_count": 3,
   "matches_count": 3,
   "options_total": 9,
   "low_risk_ge60": 0,
   "star_ge70": 0,
+  "buyable_count": 1,
+  "buyable_list": [
+    {
+      "front_end_id": "FB7926",
+      "kickoff_hkt": "2026-10-30 17:00",
+      "tournament": "澳洲職業聯賽",
+      "home": {
+        "ch": "布里斯班獅吼",
+        "en": "Brisbane Roar"
+      },
+      "away": {
+        "ch": "奧克蘭FC",
+        "en": "Auckland FC"
+      },
+      "match_label": "布里斯班獅吼 vs 奧克蘭FC",
+      "risk_tier": "medium",
+      "risk_zh": "中風險",
+      "market": "HAD",
+      "market_label": "主客和",
+      "pick": "主勝",
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.56,
+      "est_prob_pct": 35.8,
+      "calibrated": true,
+      "star": false,
+      "star_zh": null,
+      "recommend_zh": "可買（紙盤）",
+      "confidence_zh": "低",
+      "stake": 50
+    }
+  ],
   "screened": 3,
   "method": "每場三個馬會盤推薦（低／中／高風險）；一視同仁（無 A/B 層）；免費源：HKJC + ESPN/DK + FotMob + DATA4MULA + 7M評述 + X討論 + 衍生訊號 + 科學模型（Poisson/Dixon-Coles ρ、歷史Elo、pi-rating、市場錨定、Kelly可買閘、Bayes、機率校準曲線、Kelly、近開波CLV快照、跨場相關守衛、CHL嚴格降權、HIL大≥3.5唔作低風險、水位<1.70冇肉預設唔推、效率門檻、自動覆盤重權、莊家視角毒性、跨站賠率對比、TipsAudit公允、練蠱toxic_rules）；外盤／D4M 只做機率估計，絕唔推外圍投注。",
   "policy": {
@@ -95,7 +126,7 @@
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-10-30 12:06:17 HKT",
+    "as_of_hkt": "2026-10-30 12:10:19 HKT",
     "tips_as_of": "2026-10-30 12:05:45 HKT",
     "n_tips": 3,
     "n_settled": 154,
