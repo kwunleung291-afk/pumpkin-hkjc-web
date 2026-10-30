@@ -442,3 +442,85 @@ details.more[open] > summary::after { content: "－"; }
 .option.no-buy .option-pick {
   text-decoration: none;
 }
+
+
+/* 可買清單 */
+.buyable-box {
+  margin: 0 0 14px;
+  padding: 12px 12px 8px;
+  background: linear-gradient(180deg, rgba(61,214,140,.08), rgba(23,30,41,.6));
+  border: 1px solid rgba(61,214,140,.35);
+  border-radius: 14px;
+}
+.buyable-box.empty-buy {
+  background: var(--bg2);
+  border-color: var(--line);
+}
+.buyable-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.buyable-head h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.buyable-box.empty-buy .buyable-head h2 { color: var(--muted); }
+.buyable-empty {
+  padding: 12px 4px 16px;
+  font-size: .85rem;
+  line-height: 1.45;
+}
+.buyable-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.buyable-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.buyable-row.has-star {
+  border-color: rgba(245,200,66,.45);
+  box-shadow: inset 0 0 0 1px rgba(245,200,66,.15);
+}
+.buyable-main { min-width: 0; flex: 1; }
+.buyable-match {
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--text);
+}
+.buyable-meta {
+  margin-top: 2px;
+  font-size: .72rem;
+  color: var(--muted);
+}
+.buyable-pick {
+  margin-top: 4px;
+  font-size: .88rem;
+  color: var(--accent);
+  font-weight: 650;
+}
+.buyable-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+@media (max-width: 520px) {
+  .buyable-row { flex-direction: column; }
+  .buyable-side { flex-direction: row; flex-wrap: wrap; align-items: center; }
+}
