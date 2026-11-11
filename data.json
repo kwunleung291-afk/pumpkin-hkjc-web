@@ -1,14 +1,14 @@
 {
-  "generated_at_hkt": "2026-11-10 18:32:49 HKT",
-  "as_of_hkt": "2026-11-10 18:32:41 HKT",
-  "tips_count": 1,
-  "matches_count": 1,
-  "options_total": 3,
+  "generated_at_hkt": "2026-11-11 12:01:39 HKT",
+  "as_of_hkt": "2026-11-11 11:56:25 HKT",
+  "tips_count": 0,
+  "matches_count": 0,
+  "options_total": 0,
   "low_risk_ge60": 0,
   "star_ge70": 0,
   "buyable_count": 0,
   "buyable_list": [],
-  "screened": 1,
+  "screened": 0,
   "method": "每場三個馬會盤推薦（低／中／高風險）；一視同仁（無 A/B 層）；主資料：DATA4MULA（初盤→現盤／賠率／線移動）；次要對照：ESPN/DK、TipsAudit、Pinnacle、7M、X、FotMob；可買硬閘校準p≥60%（weak_fill 唔入可買清單）；模型：Poisson/Dixon-Coles ρ、歷史Elo、pi-rating、Bayes、isotonic 校準、Kelly；D4M／外盤只做機率估計，絕唔推外圍投注。",
   "policy": {
     "tiers": "disabled — all matches equal",
@@ -26,83 +26,83 @@
     "probability": "估計機率 = 以 DATA4MULA 為主（初盤→現盤、HAD_OS／大細 de-vig、線移動）；ESPN/DK、TipsAudit、Pinnacle、7M、X 只作次要對照；再混馬會去水、Poisson(時間衰減GF/GA + 聯賽ρ)、歷史Elo／pi-rating、市場錨定／Bayes／isotonic 校準；可買硬閘校準p≥60%；blend 讀 model_weights.json（d4m≫espn）；唔係賽果保證",
     "risk_definition": "低風險＝最高校準估計機率（優先≥60%）、水位≥1.70 主盤（角球／高線大波≥3.5／水位<1.70 永遠排除）；中風險＝中段水位（≥1.70）同模型分；高風險＝較長賠率／較高上行但仍有理由（唔係亂槍）；水位<1.70 預設唔推（冇肉），僅中／高全場無肉時例外湊位並降注"
   },
-  "hit_rate": 0.4158,
+  "hit_rate": 0.4169,
   "cross_match_guard": {
     "active": false,
-    "n": 1,
+    "n": 0,
     "reason": "too_few_picks"
   },
   "calibration": {
-    "n_settled": 707,
-    "honesty_zh": "校準已套用（n=707／時間加權1670，半衰期10日）；仍係估計，唔保證命中",
+    "n_settled": 710,
+    "honesty_zh": "校準已套用（n=710／時間加權1578，半衰期10日）；仍係估計，唔保證命中",
     "identity": false,
-    "brier_raw": 0.2394,
-    "brier_calibrated": 0.2379,
+    "brier_raw": 0.2399,
+    "brier_calibrated": 0.2385,
     "rolling": {
       "7d": {
-        "n": 309,
+        "n": 307,
         "hit": 144,
-        "miss": 165,
-        "hit_rate": 0.466,
+        "miss": 163,
+        "hit_rate": 0.4691,
         "brier": 0.2537
       },
       "30d": {
-        "n": 707,
-        "hit": 294,
-        "miss": 413,
-        "hit_rate": 0.4158,
+        "n": 710,
+        "hit": 296,
+        "miss": 414,
+        "hit_rate": 0.4169,
         "brier": 0.2424
       }
     }
   },
   "rolling_7d": {
-    "n": 309,
+    "n": 307,
     "hit": 144,
-    "miss": 165,
-    "hit_rate": 0.466,
+    "miss": 163,
+    "hit_rate": 0.4691,
     "brier": 0.2537
   },
   "rolling_30d": {
-    "n": 707,
-    "hit": 294,
-    "miss": 413,
-    "hit_rate": 0.4158,
+    "n": 710,
+    "hit": 296,
+    "miss": 414,
+    "hit_rate": 0.4169,
     "brier": 0.2424
   },
-  "odds_compare_coverage": "OK — external 1/1 (D4M 100.0% Pin 100.0% SM 0.0% ESPN 0.0% TA 0.0%)",
-  "toxic_train": "OK — samples 14320 rules→/workspace/pumpkin-hkjc/data/toxic_rules.json",
+  "odds_compare_coverage": "EMPTY — external 0/0 (D4M 0.0% Pin 0.0% SM 0.0% ESPN 0.0% TA 0.0%)",
+  "toxic_train": "cached — soft≥2.5pp n=14320 @ 2026-11-10 18:32:40 HKT",
   "sources": {
-    "HKJC": "OK — window 1 / raw 41",
-    "DATA4MULA": "PRIMARY — OK — linked 1/1 (fb_map 41, odds 41)",
-    "Overseas ESPN/DK": "SECONDARY — linked 0/1 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
+    "HKJC": "OK — window 0 / raw 35",
+    "DATA4MULA": "PRIMARY — OK — linked 0/0 (fb_map 36, odds 36)",
+    "Overseas ESPN/DK": "SECONDARY — linked 0/0 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
     "FotMob": "OK — linked 0, detailed 0, near_KO_XI 0",
-    "7M": "PARTIAL — linked 0/1 (catalogue 10)",
-    "X": "EMPTY — linked 0/1 (raw_matches 10)",
-    "Signals": "EMPTY — linked 0/1 (weather 0, standings 0, line_move 1, xg_recent 0)",
-    "TipsAudit": "PARTIAL — linked 0/1 (catalogue 75)",
-    "Pinnacle": "OK — linked 1/1 (catalogue 119)",
-    "Smarkets": "PARTIAL — linked 0/1 (catalogue 48)",
-    "OddsCompare": "OK — external 1/1 (D4M 100.0% Pin 100.0% SM 0.0% ESPN 0.0% TA 0.0%)",
-    "OddsMovement": "OK — with_move 1/1",
-    "ClassicHandicap": "OK — with_classic 1/1",
-    "ToxicTrain": "OK — samples 14320 rules→/workspace/pumpkin-hkjc/data/toxic_rules.json",
+    "7M": "PARTIAL — linked 0/0 (catalogue 15)",
+    "X": "EMPTY — linked 0/0 (raw_matches 10)",
+    "Signals": "EMPTY — linked 0/0 (weather 0, standings 0, line_move 0, xg_recent 0)",
+    "TipsAudit": "PARTIAL — linked 0/0 (catalogue 78)",
+    "Pinnacle": "PARTIAL — linked 0/0 (catalogue 97)",
+    "Smarkets": "PARTIAL — linked 0/0 (catalogue 21)",
+    "OddsCompare": "EMPTY — external 0/0 (D4M 0.0% Pin 0.0% SM 0.0% ESPN 0.0% TA 0.0%)",
+    "OddsMovement": "PARTIAL — with_move 0/0",
+    "ClassicHandicap": "PARTIAL — with_classic 0/0",
+    "ToxicTrain": "cached — soft≥2.5pp n=14320 @ 2026-11-10 18:32:40 HKT",
     "HistoricalElo/ρ": "cached — matches 38027 teams 439 ρ=-0.033",
-    "Calibration": "n=707 identity=False brier_raw=0.2394→cal=0.2379 | 校準已套用（n=707／時間加權1670，半衰期10日）；仍係估計，唔保證命中",
+    "Calibration": "n=707 identity=False brier_raw=0.2399→cal=0.2385 | 校準已套用（n=707／時間加權1566，半衰期10日）；仍係估計，唔保證命中",
     "HitrateBuckets": "n=707 prior=0.432 half_life=10.0d"
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-11-10 18:32:49 HKT",
-    "tips_as_of": "2026-11-10 18:32:41 HKT",
+    "as_of_hkt": "2026-11-11 12:01:39 HKT",
+    "tips_as_of": "2026-11-11 11:56:25 HKT",
     "n_tips": 1,
-    "n_settled": 707,
-    "n_pending": 1,
-    "n_hit": 294,
-    "n_miss": 413,
+    "n_settled": 710,
+    "n_pending": 0,
+    "n_hit": 296,
+    "n_miss": 414,
     "n_void": 4,
-    "hit_rate": 0.4158,
+    "hit_rate": 0.4169,
     "brier": 0.2424,
-    "paper_pnl": -9517.0,
+    "paper_pnl": -9469.5,
     "by_market": {
       "HIL": {
         "n": 145,
@@ -111,10 +111,10 @@
         "hit_rate": 0.5034
       },
       "HAD": {
-        "n": 246,
+        "n": 247,
         "hit": 78,
-        "miss": 168,
-        "hit_rate": 0.3171
+        "miss": 169,
+        "hit_rate": 0.3158
       },
       "CHL": {
         "n": 4,
@@ -135,16 +135,16 @@
         "hit_rate": 0.3913
       },
       "HDC": {
-        "n": 19,
-        "hit": 8,
+        "n": 20,
+        "hit": 9,
         "miss": 11,
-        "hit_rate": 0.4211
+        "hit_rate": 0.45
       },
       "OOE": {
-        "n": 179,
-        "hit": 86,
+        "n": 180,
+        "hit": 87,
         "miss": 93,
-        "hit_rate": 0.4804
+        "hit_rate": 0.4833
       }
     },
     "clv_by_quality": {
@@ -155,414 +155,203 @@
     },
     "error_patterns": [],
     "source": "settlement_ledger+window",
-    "ledger_n": 711
+    "ledger_n": 714
   },
-  "tips": [
-    {
-      "front_end_id": "FB8726",
-      "kickoff_hkt": "2026-11-10 20:00",
-      "tournament": "國際賽",
-      "home": {
-        "ch": "越南U23",
-        "en": "Vietnam U23"
-      },
-      "away": {
-        "ch": "泰國U23",
-        "en": "Thailand U23"
-      },
-      "market": "HDC",
-      "market_label": "讓球",
-      "pick": "主讓",
-      "pick_code": "H",
-      "line": "-0.5/-1.0",
-      "pick_line": "讓球 主讓 -0.5/-1.0",
-      "hkjc_odds": 2.1,
-      "est_prob_pct": 39.7,
-      "star": false,
-      "star_zh": null,
-      "prob_label": "馬會去水",
-      "confidence": "low",
-      "confidence_zh": "低",
-      "stake": 50,
-      "edge_pp": -3.32,
-      "short_price": false,
-      "risk_tier": "low",
-      "risk_zh": "低風險",
-      "options": [
-        {
-          "risk_tier": "low",
-          "risk_zh": "低風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": null,
-          "market": "HDC",
-          "market_label": "讓球",
-          "pick": "主讓",
-          "pick_code": "H",
-          "line": "-0.5/-1.0",
-          "pick_line": "讓球 主讓 -0.5/-1.0",
-          "hkjc_odds": 2.1,
-          "est_prob_pct": 39.7,
-          "est_prob_raw_pct": 41.8,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=19 hit=0.4211",
-          "prob_label": "馬會去水",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": -3.32,
-          "short_price": false,
-          "summary": "主：D4M｜低風險：「讓球 主讓 -0.5/-1.0」 @ 2.1，校準後約 39.7%（原 41.8%）（馬會去水）。訊號：HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）。【唔建議實注／湊位】",
-          "why": "讓球估計機率 44.3%（馬會去水）；主讓 -0.5/-1.0 @ 2.1｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：近況偏客 → 降權／唔入低風險｜走向：逆向蒸汽降權；RLM追熱降權；逆尖莊走勢降權｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.75（開大）；冷熱：主降溫升水；歐亞：歐亞大致一致｜校準[HDC] 41.8%→39.7%｜賽後適應罰−0.61｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）"
-        },
-        {
-          "risk_tier": "medium",
-          "risk_zh": "中風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": 0.1512,
-          "market": "HAD",
-          "market_label": "主客和",
-          "pick": "客勝",
-          "pick_code": "A",
-          "line": null,
-          "pick_line": "主客和 客勝",
-          "hkjc_odds": 3.65,
-          "est_prob_pct": 25.6,
-          "est_prob_raw_pct": 36.9,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "分桶校準[HAD] 分桶[HAD] n=246 hit=0.3171",
-          "prob_label": "D4M外盤+Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": 7.09,
-          "short_price": false,
-          "summary": "主：D4M｜中風險：「主客和 客勝」 @ 3.65，校準後約 25.6%（原 36.9%）（D4M外盤+Elo+訊號偏向）。訊號：HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）。【唔建議實注／湊位】",
-          "why": "估計機率 35.6%（D4M外盤+Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會客勝 3.65｜莊家視角：責任平衡；RLM；責任平衡→降權追價；fade公眾熱；CLV代理正｜CLV代理正｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況偏向客｜走向：順向蒸汽+0.95；RLM反向輕加；跟尖莊初盤→現盤蒸汽｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.75（開大）；冷熱：主降溫升水；歐亞：歐亞大致一致｜校準[HAD] 36.9%→25.6%｜賽後適應罰−0.61｜效率門檻：湊位／弱邊｜HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）｜唔建議實注：校準p 25.6% < 60%（可買硬閘）"
-        },
-        {
-          "risk_tier": "high",
-          "risk_zh": "高風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": null,
-          "market": "OOE",
-          "market_label": "入球單雙",
-          "pick": "單",
-          "pick_code": "O",
-          "line": null,
-          "pick_line": "入球單雙 單",
-          "hkjc_odds": 1.85,
-          "est_prob_pct": 47.3,
-          "est_prob_raw_pct": 50.0,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=179 hit=0.4804",
-          "prob_label": "馬會去水",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": -4.05,
-          "short_price": false,
-          "summary": "主：D4M｜高風險：「入球單雙 單」 @ 1.85，校準後約 47.3%（原 50.0%）（馬會去水）。訊號：HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）。【唔建議實注／湊位】",
-          "why": "單雙估計 50.0%；單 1.85｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜走向：RLM反向輕加｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.75（開大）；冷熱：主降溫升水；歐亞：歐亞大致一致｜校準[OOE] 50.0%→47.3%｜賽後適應罰−0.30｜效率門檻：湊位／弱邊｜HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）｜唔建議實注：市場 OOE 永不列入可買"
-        }
-      ],
-      "summary": "主：D4M。三選項：低風險 讓球 主讓 -0.5/-1.0 @ 2.1（約39.7%）｜中風險 主客和 客勝 @ 3.65（約25.6%）｜高風險 入球單雙 單 @ 1.85（約47.3%）。建議「讓球 主讓 -0.5/-1.0」 @ 2.1，估計機率約 39.7%（馬會去水）。莊家視角偏「責任平衡」→avoid，毒性0.45：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。跨站：主相對共識硬3.6pp；Pinnacle尖莊已對齊。Data4mula初盤→現",
-      "why": "讓球估計機率 44.3%（馬會去水）；主讓 -0.5/-1.0 @ 2.1｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：近況偏客 → 降權／唔入低風險｜走向：逆向蒸汽降權；RLM追熱降權；逆尖莊走勢降權｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.75（開大）；冷熱：主降溫升水；歐亞：歐亞大致一致｜校準[HDC] 41.8%→39.7%｜賽後適應罰−0.61｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜HAD客縮水 4.30→3.65；HAD主熱降冷 1.64→1.80（RLM 警示）",
-      "signals": {
-        "lean_had": "away",
-        "lean_ou": "under",
-        "cites": [
-          "HAD客縮水 4.30→3.65",
-          "HAD主熱降冷 1.64→1.80（RLM 警示）",
-          "外盤HAD_OS客縮水 3.63→3.49",
-          "細球縮水 1.85→1.78",
-          "客勝 CV 高 (0.100) — 盤路波動"
-        ],
-        "goal_expectancy": null
-      },
-      "bookmaker_angle": {
-        "intent": "責任平衡",
-        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H1.64/A4.3 → 即市 H1.8/A3.65；HAD蒸汽→客（強）；大細蒸汽→細；RLM:home_drift；馬會硬邊:home；最大縮水 15.1%",
-        "steam": true,
-        "rlm": true,
-        "against_public": false,
-        "available": true,
-        "toxicity_score": 0.45,
-        "action": "avoid",
-        "sub_tags": [
-          "RLM"
-        ],
-        "numbers": {
-          "had_max_short_pct": 0.1512,
-          "steam_grade": "強",
-          "trap_boost": 0.0,
-          "soft_sides": [],
-          "hard_sides": [
-            "home"
-          ],
-          "cross_conflict": false
-        }
-      },
-      "odds_compare": {
-        "brief_zh": "主相對共識硬3.6pp；Pinnacle尖莊已對齊",
-        "sources_status": {
-          "hkjc": true,
-          "d4m_os": true,
-          "espn_dk": false,
-          "tipsaudit_fair": false,
-          "pinnacle": true,
-          "smarkets": false,
-          "bsd_consensus": false
-        },
-        "had_diff_vs_consensus": {
-          "home": {
-            "hkjc_devig": 0.4905,
-            "consensus_fair": 0.4545,
-            "soft_pp": -3.6,
-            "flag": "hkjc_hard"
-          },
-          "draw": {
-            "hkjc_devig": 0.2676,
-            "consensus_fair": 0.2822,
-            "soft_pp": 1.46,
-            "flag": null
-          },
-          "away": {
-            "hkjc_devig": 0.2419,
-            "consensus_fair": 0.2632,
-            "soft_pp": 2.13,
-            "flag": null
-          }
-        },
-        "toxic": {
-          "hkjc_soft_sides": [],
-          "hkjc_hard_sides": [
-            "home"
-          ],
-          "best_soft": {
-            "side": "away",
-            "hkjc_devig": 0.2419,
-            "consensus_fair": 0.2632,
-            "soft_pp": 2.13,
-            "flag": null
-          },
-          "consensus_1x2": {
-            "home": 0.4545,
-            "draw": 0.2822,
-            "away": 0.2632
-          },
-          "n_sources_1x2": 2
-        }
-      },
-      "odds_movement": {
-        "brief_zh": "初盤意圖：責任平衡／RLM；HAD客縮水 4.30→3.65（15.1%）；主熱降冷／客縮（RLM）；主勝走勢加速；細球縮水 1.85→1.78",
-        "had_steam": "away",
-        "sharp_steam": "away",
-        "follow_sharp": "away",
-        "bait_suspect": false,
-        "d4m_intent_zh": "責任平衡／RLM",
-        "had_open": {
-          "home": 1.64,
-          "draw": 3.45,
-          "away": 4.3
-        },
-        "had_now": {
-          "home": 1.8,
-          "draw": 3.3,
-          "away": 3.65
-        },
-        "hil_steam": "under",
-        "hil_line_open": 2.5,
-        "hil_line_now": 2.5,
-        "timing": "near_ko",
-        "toxic_move": false,
-        "cross_book_n": 3,
-        "open_now": {
-          "intent_zh": "責任平衡／RLM",
-          "brief_zh": "馬會HAD初盤 H1.64/D3.45/A4.30 → 現盤 H1.80/D3.30/A3.65；蒸汽→客15.1%；RLM熱降冷；外盤HAD_OS初盤 H1.93/D3.29/A3.63 → 現盤 H1.98/D3.20/A3.49；蒸汽→客3.9%；入球線初盤2.5→現盤2.5；大 1.85→1.92；細 1.85→1.78；蒸汽→細；讓球初盤主-0.75/1.94 客1.79 → 現盤主-0.75/2.1 客1.67；讓球蒸汽→客",
-          "bait_suspect": false,
-          "sharp_steam": "away",
-          "hkjc_steam": "away",
-          "markets": {
-            "HAD": {
-              "open": {
-                "home": 1.64,
-                "draw": 3.45,
-                "away": 4.3
-              },
-              "now": {
-                "home": 1.8,
-                "draw": 3.3,
-                "away": 3.65
-              },
-              "shorten": {
-                "home": -0.0976,
-                "draw": 0.0435,
-                "away": 0.1512
-              },
-              "steam": "away",
-              "rlm": "home_drift",
-              "n_ticks": 2,
-              "brief_zh": "馬會HAD初盤 H1.64/D3.45/A4.30 → 現盤 H1.80/D3.30/A3.65；蒸汽→客15.1%；RLM熱降冷"
-            },
-            "HAD_OS": {
-              "open": {
-                "home": 1.93,
-                "draw": 3.29,
-                "away": 3.63
-              },
-              "now": {
-                "home": 1.98,
-                "draw": 3.2,
-                "away": 3.49
-              },
-              "shorten": {
-                "home": -0.0259,
-                "draw": 0.0274,
-                "away": 0.0386
-              },
-              "steam": "away",
-              "rlm": null,
-              "n_ticks": 2,
-              "brief_zh": "外盤HAD_OS初盤 H1.93/D3.29/A3.63 → 現盤 H1.98/D3.20/A3.49；蒸汽→客3.9%"
-            },
-            "HIL": {
-              "line_open": 2.5,
-              "line_now": 2.5,
-              "over_open": 1.85,
-              "over_now": 1.92,
-              "under_open": 1.85,
-              "under_now": 1.78,
-              "steam": "under",
-              "n_ticks": 2,
-              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.85→1.92；細 1.85→1.78；蒸汽→細"
-            },
-            "HDC": {
-              "line_open": -0.75,
-              "line_now": -0.75,
-              "home_open": 1.94,
-              "home_now": 2.1,
-              "away_open": 1.79,
-              "away_now": 1.67,
-              "steam": "away",
-              "n_ticks": 2,
-              "brief_zh": "讓球初盤主-0.75/1.94 客1.79 → 現盤主-0.75/2.1 客1.67；讓球蒸汽→客"
-            }
-          }
-        }
-      },
-      "d4m_open_now": {
-        "intent_zh": "責任平衡／RLM",
-        "brief_zh": "馬會HAD初盤 H1.64/D3.45/A4.30 → 現盤 H1.80/D3.30/A3.65；蒸汽→客15.1%；RLM熱降冷；外盤HAD_OS初盤 H1.93/D3.29/A3.63 → 現盤 H1.98/D3.20/A3.49；蒸汽→客3.9%；入球線初盤2.5→現盤2.5；大 1.85→1.92；細 1.85→1.78；蒸汽→細；讓球初盤主-0.75/1.94 客1.79 → 現盤主-0.75/2.1 客1.67；讓球蒸汽→客",
-        "bait_suspect": false,
-        "hkjc_steam": "away",
-        "sharp_steam": "away",
-        "had": {
-          "open": {
-            "home": 1.64,
-            "draw": 3.45,
-            "away": 4.3
-          },
-          "now": {
-            "home": 1.8,
-            "draw": 3.3,
-            "away": 3.65
-          },
-          "shorten": {
-            "home": -0.0976,
-            "draw": 0.0435,
-            "away": 0.1512
-          },
-          "steam": "away",
-          "rlm": "home_drift",
-          "n_ticks": 2,
-          "brief_zh": "馬會HAD初盤 H1.64/D3.45/A4.30 → 現盤 H1.80/D3.30/A3.65；蒸汽→客15.1%；RLM熱降冷"
-        },
-        "had_os": {
-          "open": {
-            "home": 1.93,
-            "draw": 3.29,
-            "away": 3.63
-          },
-          "now": {
-            "home": 1.98,
-            "draw": 3.2,
-            "away": 3.49
-          },
-          "shorten": {
-            "home": -0.0259,
-            "draw": 0.0274,
-            "away": 0.0386
-          },
-          "steam": "away",
-          "rlm": null,
-          "n_ticks": 2,
-          "brief_zh": "外盤HAD_OS初盤 H1.93/D3.29/A3.63 → 現盤 H1.98/D3.20/A3.49；蒸汽→客3.9%"
-        },
-        "hil": {
-          "line_open": 2.5,
-          "line_now": 2.5,
-          "over_open": 1.85,
-          "over_now": 1.92,
-          "under_open": 1.85,
-          "under_now": 1.78,
-          "steam": "under",
-          "n_ticks": 2,
-          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.85→1.92；細 1.85→1.78；蒸汽→細"
-        },
-        "hdc": {
-          "line_open": -0.75,
-          "line_now": -0.75,
-          "home_open": 1.94,
-          "home_now": 2.1,
-          "away_open": 1.79,
-          "away_now": 1.67,
-          "steam": "away",
-          "n_ticks": 2,
-          "brief_zh": "讓球初盤主-0.75/1.94 客1.79 → 現盤主-0.75/2.1 客1.67；讓球蒸汽→客"
-        }
-      },
-      "primary_source": "DATA4MULA",
-      "primary_source_zh": "主：D4M",
-      "d4m_missing": false,
-      "classic_handicap": {
-        "theory_line": -0.25,
-        "actual_line": -0.75,
-        "open_bias": "開大",
-        "heat": "主降溫升水",
-        "eu_asia_ok": true,
-        "verdict": "觀望",
-        "brief_zh": "理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.75（開大）；冷熱：主降溫升水；歐亞：歐亞大致一致",
-        "conflict": false
-      },
-      "form": null,
-      "h2h_summary": null,
-      "goal_expectancy": null,
-      "narrative_cites": [],
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
-      "corners": null,
-      "live_score": null,
-      "review_zh": "無完場比分"
-    }
-  ],
+  "tips": [],
   "review_rows": [
     {
+      "tip_key": "FB8726|HAD|客勝||medium|2026-11-10 18:32",
+      "front_end_id": "FB8726",
+      "kickoff_hkt": "2026-11-10 20:00",
+      "tournament": "國際賽",
+      "home": {
+        "ch": "越南U23",
+        "en": ""
+      },
+      "away": {
+        "ch": "泰國U23",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "客勝",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "HAD 客勝",
+      "hkjc_odds": 3.65,
+      "est_prob_pct": 25.6,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0",
+      "review_zh": "❌ 唔中｜FT 3-0。事前估 25.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：HAD/medium 水位帶再觀察，分數輕罰",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 3-0。事前估 25.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：HAD/medium 水位帶再觀察，分數輕罰",
+        "next_change_zh": "下次：HAD/medium 水位帶再觀察，分數輕罰",
+        "causes": [
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B6%8A%E5%8D%97U23%20%E6%B3%B0%E5%9C%8BU23",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261110",
+            "summary_zh": "ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 25.6,
+        "prob_error": 0.2564
+      },
+      "next_change_zh": "下次：HAD/medium 水位帶再觀察，分數輕罰"
+    },
+    {
+      "tip_key": "FB8726|OOE|單||high|2026-11-10 18:32",
+      "front_end_id": "FB8726",
+      "kickoff_hkt": "2026-11-10 20:00",
+      "tournament": "國際賽",
+      "home": {
+        "ch": "越南U23",
+        "en": ""
+      },
+      "away": {
+        "ch": "泰國U23",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "high",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 47.3,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0",
+      "review_zh": "✅ 中｜總3單。事前估 47.3%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總3單。事前估 47.3%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.85 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B6%8A%E5%8D%97U23%20%E6%B3%B0%E5%9C%8BU23",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261110",
+            "summary_zh": "ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 47.3,
+        "prob_error": 0.5273
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8726|HDC|主讓|-0.5/-1.0|low|2026-11-10 18:32",
+      "front_end_id": "FB8726",
+      "kickoff_hkt": "2026-11-10 20:00",
+      "tournament": "國際賽",
+      "home": {
+        "ch": "越南U23",
+        "en": ""
+      },
+      "away": {
+        "ch": "泰國U23",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 39.7,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0",
+      "review_zh": "✅ 中｜讓球 FT 3-0 line -0.75。事前估 39.7%。原因：水位 2.10 帶合理，有肉又中；低機率估 39.7% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 3-0 line -0.75。事前估 39.7%。原因：水位 2.10 帶合理，有肉又中；低機率估 39.7% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.10 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "underdog_hit",
+            "zh": "低機率估 39.7% 都中——幸運／或估得太保守",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B6%8A%E5%8D%97U23%20%E6%B3%B0%E5%9C%8BU23",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261110",
+            "summary_zh": "ESPN 當日分數板對照（20261110）：請核對 越南U23 vs 泰國U23",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 39.7,
+        "prob_error": 0.603
+      },
+      "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先"
+    },
+    {
       "front_end_id": "FB8726",
       "kickoff_hkt": "2026-11-10 20:00",
       "tournament": "國際賽",
@@ -578,13 +367,13 @@
       "hkjc_odds": 2.1,
       "est_prob_pct": 39.7,
       "stake": 50,
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-0",
       "corners": null,
-      "result_value": null,
-      "review_zh": "無完場比分",
-      "match_status": "PREEVENT"
+      "result_value": "3-0",
+      "review_zh": "估計方向啱；讓球 FT 3-0 line -0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB8463|HAD|客勝||medium|2026-11-08 18:41",
@@ -45527,29 +45316,29 @@
     }
   ],
   "history_meta": {
-    "ledger_n": 711,
+    "ledger_n": 714,
     "user_bets_n": 2,
     "window_review_n": 1,
-    "review_rows_n": 714,
-    "postmatch_n": 709,
+    "review_rows_n": 717,
+    "postmatch_n": 712,
     "note_zh": "覆盤／命中率來自 settlement_ledger + 實注；每場有賽後贏／輸分析（含外網對照）；空窗唔會清走歷史。"
   },
   "disclaimer": "紙盤分析，唔係投注建議。估計機率（已盡量校準）唔保證命中。18歲以下唔准。請理性博彩。",
   "postmatch_adapt": {
-    "as_of_hkt": "2026-11-10 18:32:49 HKT",
+    "as_of_hkt": "2026-11-11 12:00:58 HKT",
     "n_patterns": 141,
-    "n_penalties": 47,
+    "n_penalties": 45,
     "n_bonuses": 6,
     "n_gates": 5,
     "changelog_zh": [
       "輕罰 HAD|medium|med|3.50+ p̂=0.27 → +0.54",
-      "輕罰 HAD|high|hot|3.50+ p̂=0.25 → +0.62",
+      "輕罰 HAD|high|hot|3.50+ p̂=0.26 → +0.61",
       "輕罰 HAD|high|med|3.50+ p̂=0.27 → +0.54",
-      "輕罰 HAD|medium|cold|2.50-3.50 p̂=0.28 → +0.52",
-      "罰分 HIL|low|cold|2.00-2.50 p̂=0.28 → +0.53",
-      "罰分 HAD|low|med|3.50+ p̂=0.24 → +0.72",
+      "輕罰 HAD|medium|cold|2.50-3.50 p̂=0.28 → +0.51",
+      "罰分 HIL|low|cold|2.00-2.50 p̂=0.28 → +0.52",
+      "罰分 HAD|low|med|3.50+ p̂=0.25 → +0.70",
       "硬閘 block_low HAD|low|med|3.50+",
-      "輕罰 HAD|high|hot|2.50-3.50 p̂=0.29 → +0.47"
+      "輕罰 HAD|high|hot|2.50-3.50 p̂=0.29 → +0.46"
     ],
     "note_zh": "由 postmatch 賽後分析＋ledger 時間衰減聚合；analyse／選盤自動讀取。"
   }
