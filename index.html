@@ -568,8 +568,8 @@ details.more[open] > summary::after { content: "－"; }
   </div>
   <script>
 window.__PUMPKIN_EMBEDDED__ = {
-  "generated_at_hkt": "2026-11-12 08:06:13 HKT",
-  "as_of_hkt": "2026-11-12 07:44:56 HKT",
+  "generated_at_hkt": "2026-11-12 12:05:51 HKT",
+  "as_of_hkt": "2026-11-12 11:59:52 HKT",
   "tips_count": 4,
   "matches_count": 4,
   "options_total": 12,
@@ -595,96 +595,96 @@ window.__PUMPKIN_EMBEDDED__ = {
     "probability": "估計機率 = 以 DATA4MULA 為主（初盤→現盤、HAD_OS／大細 de-vig、線移動）；ESPN/DK、TipsAudit、Pinnacle、7M、X 只作次要對照；再混馬會去水、Poisson(時間衰減GF/GA + 聯賽ρ)、歷史Elo／pi-rating、市場錨定／Bayes／isotonic 校準；可買硬閘校準p≥60%；blend 讀 model_weights.json（d4m≫espn）；唔係賽果保證",
     "risk_definition": "低風險＝最高校準估計機率（優先≥60%）、水位≥1.70 主盤（角球／高線大波≥3.5／水位<1.70 永遠排除）；中風險＝中段水位（≥1.70）同模型分；高風險＝較長賠率／較高上行但仍有理由（唔係亂槍）；水位<1.70 預設唔推（冇肉），僅中／高全場無肉時例外湊位並降注"
   },
-  "hit_rate": 0.4139,
+  "hit_rate": 0.4162,
   "cross_match_guard": {
     "active": true,
     "n": 4,
     "demoted": 1,
     "direction_counts": {
       "HDC:A": 3,
-      "HAD:A": 1
+      "HDC:H": 1
     },
     "notes": [
       "跨場相關：HDC:A 佔 3/4（75%）→ 保留 2、改寫 1"
     ]
   },
   "calibration": {
-    "n_settled": 732,
-    "honesty_zh": "校準已套用（n=732／時間加權1666，半衰期10日）；仍係估計，唔保證命中",
+    "n_settled": 740,
+    "honesty_zh": "校準已套用（n=740／時間加權1698，半衰期10日）；仍係估計，唔保證命中",
     "identity": false,
-    "brier_raw": 0.2397,
+    "brier_raw": 0.2395,
     "brier_calibrated": 0.2379,
     "rolling": {
       "7d": {
-        "n": 329,
-        "hit": 151,
-        "miss": 178,
-        "hit_rate": 0.459,
-        "brier": 0.2505
+        "n": 337,
+        "hit": 156,
+        "miss": 181,
+        "hit_rate": 0.4629,
+        "brier": 0.2504
       },
       "30d": {
-        "n": 732,
-        "hit": 303,
-        "miss": 429,
-        "hit_rate": 0.4139,
-        "brier": 0.2412
+        "n": 740,
+        "hit": 308,
+        "miss": 432,
+        "hit_rate": 0.4162,
+        "brier": 0.2413
       }
     }
   },
   "rolling_7d": {
-    "n": 329,
-    "hit": 151,
-    "miss": 178,
-    "hit_rate": 0.459,
-    "brier": 0.2505
+    "n": 337,
+    "hit": 156,
+    "miss": 181,
+    "hit_rate": 0.4629,
+    "brier": 0.2504
   },
   "rolling_30d": {
-    "n": 732,
-    "hit": 303,
-    "miss": 429,
-    "hit_rate": 0.4139,
-    "brier": 0.2412
+    "n": 740,
+    "hit": 308,
+    "miss": 432,
+    "hit_rate": 0.4162,
+    "brier": 0.2413
   },
-  "odds_compare_coverage": "OK — external 4/4 (D4M 75.0% Pin 100.0% SM 100.0% ESPN 0.0% TA 25.0%)",
+  "odds_compare_coverage": "OK — external 4/4 (D4M 0.0% Pin 75.0% SM 75.0% ESPN 0.0% TA 25.0%)",
   "toxic_train": "cached — soft≥2.5pp n=14320 @ 2026-11-10 18:32:40 HKT",
   "sources": {
-    "HKJC": "OK — window 4 / raw 40",
-    "DATA4MULA": "PRIMARY — OK — linked 4/4 (fb_map 40, odds 40)",
+    "HKJC": "OK — window 4 / raw 38",
+    "DATA4MULA": "PRIMARY — OK — linked 4/4 (fb_map 36, odds 36)",
     "Overseas ESPN/DK": "SECONDARY — linked 0/4 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
-    "FotMob": "OK — linked 3, detailed 3, near_KO_XI 1",
+    "FotMob": "OK — linked 2, detailed 2, near_KO_XI 0",
     "7M": "PARTIAL — linked 0/4 (catalogue 17)",
     "X": "EMPTY — linked 0/4 (raw_matches 10)",
-    "Signals": "OK — linked 3/4 (weather 1, standings 0, line_move 3, xg_recent 0)",
+    "Signals": "OK — linked 2/4 (weather 1, standings 1, line_move 1, xg_recent 0)",
     "TipsAudit": "OK — linked 1/4 (catalogue 99)",
-    "Pinnacle": "OK — linked 4/4 (catalogue 45)",
-    "Smarkets": "OK — linked 4/4 (catalogue 14)",
-    "OddsCompare": "OK — external 4/4 (D4M 75.0% Pin 100.0% SM 100.0% ESPN 0.0% TA 25.0%)",
+    "Pinnacle": "OK — linked 3/4 (catalogue 98)",
+    "Smarkets": "OK — linked 3/4 (catalogue 28)",
+    "OddsCompare": "OK — external 4/4 (D4M 0.0% Pin 75.0% SM 75.0% ESPN 0.0% TA 25.0%)",
     "OddsMovement": "OK — with_move 4/4",
     "ClassicHandicap": "OK — with_classic 4/4",
     "ToxicTrain": "cached — soft≥2.5pp n=14320 @ 2026-11-10 18:32:40 HKT",
-    "HistoricalElo/ρ": "OK — matches 38091 teams 439 ρ=-0.033",
-    "Calibration": "n=710 identity=False brier_raw=0.2399→cal=0.2385 | 校準已套用（n=710／時間加權1578，半衰期10日）；仍係估計，唔保證命中",
-    "HitrateBuckets": "n=710 prior=0.4336 half_life=10.0d"
+    "HistoricalElo/ρ": "cached — matches 38091 teams 439 ρ=-0.033",
+    "Calibration": "n=732 identity=False brier_raw=0.2397→cal=0.2379 | 校準已套用（n=732／時間加權1666，半衰期10日）；仍係估計，唔保證命中",
+    "HitrateBuckets": "n=732 prior=0.4276 half_life=10.0d"
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-11-12 08:06:13 HKT",
-    "tips_as_of": "2026-11-12 07:44:56 HKT",
+    "as_of_hkt": "2026-11-12 12:05:51 HKT",
+    "tips_as_of": "2026-11-12 11:59:52 HKT",
     "n_tips": 4,
-    "n_settled": 732,
-    "n_pending": 4,
-    "n_hit": 303,
-    "n_miss": 429,
+    "n_settled": 740,
+    "n_pending": 1,
+    "n_hit": 308,
+    "n_miss": 432,
     "n_void": 4,
-    "hit_rate": 0.4139,
-    "brier": 0.2412,
-    "paper_pnl": -9906.0,
+    "hit_rate": 0.4162,
+    "brier": 0.2413,
+    "paper_pnl": -9851.5,
     "by_market": {
       "HIL": {
-        "n": 148,
+        "n": 149,
         "hit": 73,
-        "miss": 75,
-        "hit_rate": 0.4932
+        "miss": 76,
+        "hit_rate": 0.4899
       },
       "HAD": {
         "n": 251,
@@ -711,16 +711,16 @@ window.__PUMPKIN_EMBEDDED__ = {
         "hit_rate": 0.4043
       },
       "HDC": {
-        "n": 25,
-        "hit": 11,
-        "miss": 14,
-        "hit_rate": 0.44
+        "n": 29,
+        "hit": 13,
+        "miss": 16,
+        "hit_rate": 0.4483
       },
       "OOE": {
-        "n": 187,
-        "hit": 89,
+        "n": 190,
+        "hit": 92,
         "miss": 98,
-        "hit_rate": 0.4759
+        "hit_rate": 0.4842
       }
     },
     "clv_by_quality": {
@@ -729,38 +729,40 @@ window.__PUMPKIN_EMBEDDED__ = {
         "mean": 0.0
       }
     },
-    "error_patterns": [],
+    "error_patterns": [
+      "高線大波（HIL/FHL 大≥3.5）唔中 1/1 → 唔作低風險、收緊進球期望代理權重"
+    ],
     "source": "settlement_ledger+window",
-    "ledger_n": 736
+    "ledger_n": 744
   },
   "tips": [
     {
-      "front_end_id": "FB8773",
-      "kickoff_hkt": "2026-11-12 08:30",
-      "tournament": "盃賽",
+      "front_end_id": "FB8777",
+      "kickoff_hkt": "2026-11-12 14:00",
+      "tournament": "國際賽",
       "home": {
-        "ch": "法林明高女足",
-        "en": "Flamengo Women"
+        "ch": "新西蘭",
+        "en": "New Zealand"
       },
       "away": {
-        "ch": "國際體育會女足",
-        "en": "Internacional Women"
+        "ch": "印度",
+        "en": "India"
       },
       "market": "HDC",
       "market_label": "讓球",
       "pick": "客讓",
       "pick_code": "A",
-      "line": "-0.5/-1.0",
-      "pick_line": "讓球 客讓 -0.5/-1.0",
-      "hkjc_odds": 1.8,
-      "est_prob_pct": 47.3,
+      "line": "-1.5/-2.0",
+      "pick_line": "讓球 客讓 -1.5/-2.0",
+      "hkjc_odds": 1.92,
+      "est_prob_pct": 46.2,
       "star": false,
       "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
       "stake": 50,
-      "edge_pp": -4.34,
+      "edge_pp": -3.15,
       "short_price": false,
       "risk_tier": "low",
       "risk_zh": "低風險",
@@ -777,23 +779,23 @@ window.__PUMPKIN_EMBEDDED__ = {
           "market_label": "讓球",
           "pick": "客讓",
           "pick_code": "A",
-          "line": "-0.5/-1.0",
-          "pick_line": "讓球 客讓 -0.5/-1.0",
-          "hkjc_odds": 1.8,
-          "est_prob_pct": 47.3,
-          "est_prob_raw_pct": 51.2,
+          "line": "-1.5/-2.0",
+          "pick_line": "讓球 客讓 -1.5/-2.0",
+          "hkjc_odds": 1.92,
+          "est_prob_pct": 46.2,
+          "est_prob_raw_pct": 50.1,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=20 hit=0.45",
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=25 hit=0.44",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -4.34,
+          "edge_pp": -3.15,
           "short_price": false,
-          "summary": "主：D4M｜低風險：「讓球 客讓 -0.5/-1.0」 @ 1.8，校準後約 47.3%（原 51.2%）（馬會去水）。【唔建議實注／湊位】",
-          "why": "讓球估計機率 51.2%（馬會去水）；客讓 -0.5/-1.0 @ 1.8｜盃賽／淘汰賽：數據噪訊高｜走向：RLM追熱降權｜睇盤：理論盤後備 Pinnacle AH -0.5；理論盤-0.5；實際-0.75（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬6.5pp｜校準[HDC] 51.2%→47.3%｜賽後適應罰−0.50｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信"
+          "summary": "主：D4M｜低風險：「讓球 客讓 -1.5/-2.0」 @ 1.92，校準後約 46.2%（原 50.1%）（馬會去水）。訊號：形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "讓球估計機率 48.9%（馬會去水）；客讓 -1.5/-2.0 @ 1.92｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況偏向客｜客隊休整0.8日 → 客勝／客讓降權｜主近5場 1勝2和2負 場均入1.6/失2.0 大2.5率80% BTTS80% 休整37.7日 長休｜走向：順向蒸汽+0.80；RLM反向輕加｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；老派：跟客／下盤｜校準[HDC] 50.1%→46.2%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高"
         },
         {
           "risk_tier": "medium",
@@ -805,25 +807,25 @@ window.__PUMPKIN_EMBEDDED__ = {
           "clv_proxy": null,
           "market": "OOE",
           "market_label": "入球單雙",
-          "pick": "雙",
-          "pick_code": "E",
+          "pick": "單",
+          "pick_code": "O",
           "line": null,
-          "pick_line": "入球單雙 雙",
-          "hkjc_odds": 1.81,
-          "est_prob_pct": 49.0,
-          "est_prob_raw_pct": 51.1,
+          "pick_line": "入球單雙 單",
+          "hkjc_odds": 1.85,
+          "est_prob_pct": 47.3,
+          "est_prob_raw_pct": 50.0,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=180 hit=0.4833",
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=187 hit=0.4759",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -4.17,
+          "edge_pp": -4.05,
           "short_price": false,
-          "summary": "主：D4M｜中風險：「入球單雙 雙」 @ 1.81，校準後約 49.0%（原 51.1%）（馬會去水）。【唔建議實注／湊位】",
-          "why": "單雙估計 51.1%；雙 1.81｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜走向：RLM反向輕加｜睇盤：理論盤後備 Pinnacle AH -0.5；理論盤-0.5；實際-0.75（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬6.5pp｜校準[OOE] 51.1%→56.5%｜賽後適應罰−0.35；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：市場 OOE 永不列入可買"
+          "summary": "主：D4M｜中風險：「入球單雙 單」 @ 1.85，校準後約 47.3%（原 50.0%）（馬會去水）。訊號：形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "單雙估計 50.0%；單 1.85｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜走向：RLM反向輕加｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜校準[OOE] 50.0%→47.3%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高｜唔建議實注：市場 OOE 永不列入可買"
         },
         {
           "risk_tier": "high",
@@ -832,68 +834,71 @@ window.__PUMPKIN_EMBEDDED__ = {
           "efficiency_zh": "湊位／效率偏低",
           "buyable": false,
           "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": null,
-          "market": "HDC",
-          "market_label": "讓球",
-          "pick": "主讓",
+          "clv_proxy": -0.02,
+          "market": "HIL",
+          "market_label": "入球大細",
+          "pick": "大",
           "pick_code": "H",
-          "line": "-0.5/-1.0",
-          "pick_line": "讓球 主讓 -0.5/-1.0",
-          "hkjc_odds": 1.89,
-          "est_prob_pct": 46.0,
-          "est_prob_raw_pct": 48.8,
+          "line": 3.5,
+          "pick_line": "入球大細 大 3.5",
+          "hkjc_odds": 2.33,
+          "est_prob_pct": 36.0,
+          "est_prob_raw_pct": 45.1,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=20 hit=0.45",
-          "prob_label": "馬會去水",
+          "calibration_note": "分桶校準[HIL_OVER_HIGH] 分桶[HIL_OVER_HIGH] n=41 hit=0.5122",
+          "prob_label": "D4M大細+馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -4.13,
+          "edge_pp": 0.68,
           "short_price": false,
-          "summary": "主：D4M｜高風險：「讓球 主讓 -0.5/-1.0」 @ 1.89，校準後約 46.0%（原 48.8%）（馬會去水）。【唔建議實注／湊位】",
-          "why": "讓球估計機率 48.8%（馬會去水）；主讓 -0.5/-1.0 @ 1.89｜盃賽／淘汰賽：數據噪訊高｜走向：RLM反向輕加｜睇盤：理論盤後備 Pinnacle AH -0.5；理論盤-0.5；實際-0.75（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬6.5pp｜校準[HDC] 48.8%→46.0%｜賽後適應罰−0.50｜效率門檻：湊位／弱邊｜唔建議實注：高風險預設唔可買（減少負期望）"
+          "summary": "主：D4M｜高風險：「入球大細 大 3.5」 @ 2.33，校準後約 36.0%（原 45.1%）（D4M大細+馬會去水）。訊號：形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "估計機率 43.6%（D4M大細+馬會去水）；馬會大 2.33｜政策：大≥3.5 唔作低風險／代理期望降權｜莊家視角：責任平衡；RLM／HAD/HIL矛盾矛盾｜冷聯／稀缺：加嚴 HIL／FHA｜近況大細一致：近況／H2H大2.5率約70%；GE代理3.7｜長休 → 輕偏大｜主近5場 1勝2和2負 場均入1.6/失2.0 大2.5率80% BTTS80% 休整37.7日 長休｜走向：大細逆向蒸汽；RLM反向輕加｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；大球開淺於理論｜校準[HIL_OVER_HIGH] 45.1%→36.0%｜賽後適應罰−0.53；賽後硬閘：大≥3.5唔低風險｜同場大波+熱門相關降權｜同場讓球+大波堆疊降權｜效率門檻：湊位／弱邊｜形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高｜唔建議實注：高風險預設唔可買（減少負期望）"
         }
       ],
-      "summary": "主：D4M。三選項：低風險 讓球 客讓 -0.5/-1.0 @ 1.8（約47.3%）｜中風險 入球單雙 雙 @ 1.81（約49.0%）｜高風險 讓球 主讓 -0.5/-1.0 @ 1.89（約46.0%）。建議「讓球 客讓 -0.5/-1.0」 @ 1.8，估計機率約 47.3%（馬會去水）。莊家視角偏「責任平衡」→avoid，毒性0.45：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。跨站：主相對共識硬18.3pp；客相對共識軟18.5pp；Pinnacle尖莊已對齊",
-      "why": "讓球估計機率 51.2%（馬會去水）；客讓 -0.5/-1.0 @ 1.8｜盃賽／淘汰賽：數據噪訊高｜走向：RLM追熱降權｜睇盤：理論盤後備 Pinnacle AH -0.5；理論盤-0.5；實際-0.75（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬6.5pp｜校準[HDC] 51.2%→47.3%｜賽後適應罰−0.50｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信",
+      "summary": "主：D4M。三選項：低風險 讓球 客讓 -1.5/-2.0 @ 1.92（約46.2%）｜中風險 入球單雙 單 @ 1.85（約47.3%）｜高風險 入球大細 大 3.5 @ 2.33（約36.0%）。建議「讓球 客讓 -1.5/-2.0」 @ 1.92，估計機率約 46.2%（馬會去水）。莊家視角偏「責任平衡」→avoid，毒性0.405：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula",
+      "why": "讓球估計機率 48.9%（馬會去水）；客讓 -1.5/-2.0 @ 1.92｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況偏向客｜客隊休整0.8日 → 客勝／客讓降權｜主近5場 1勝2和2負 場均入1.6/失2.0 大2.5率80% BTTS80% 休整37.7日 長休｜走向：順向蒸汽+0.80；RLM反向輕加｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；老派：跟客／下盤｜校準[HDC] 50.1%→46.2%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.7（代理，非xG）→ 偏大；BTTS 比率偏高",
       "signals": {
-        "lean_had": null,
-        "lean_ou": null,
-        "cites": [],
-        "goal_expectancy": null
+        "lean_had": "away",
+        "lean_ou": "under",
+        "cites": [
+          "形勢進球期望約 3.7（代理，非xG）→ 偏大",
+          "BTTS 比率偏高",
+          "主近5場 1勝2和2負 場均入1.6/失2.0；近5 LDWDL PPG1.0",
+          "客近5場 2勝1和2負 場均入1.2/失2.6；近5 DLLWW PPG1.4",
+          "客隊休整僅 0.8 日（密集）"
+        ],
+        "goal_expectancy": 3.7
       },
       "bookmaker_angle": {
         "intent": "責任平衡",
-        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H1.65/A4.3 → 即市 H1.61/A4.5；RLM:away_drift；馬會軟邊:away；馬會硬邊:home；最大縮水 2.4%",
-        "steam": false,
+        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H1.09/A14.5 → 即市 H1.14/A11.5；HAD蒸汽→客（強）；大細蒸汽→細；RLM:home_drift；最大縮水 20.7%",
+        "steam": true,
         "rlm": true,
         "against_public": false,
         "available": true,
-        "toxicity_score": 0.45,
+        "toxicity_score": 0.405,
         "action": "avoid",
         "sub_tags": [
-          "RLM"
+          "RLM",
+          "HAD/HIL矛盾矛盾"
         ],
         "numbers": {
-          "had_max_short_pct": 0.0242,
-          "steam_grade": "弱",
+          "had_max_short_pct": 0.2069,
+          "steam_grade": "強",
           "trap_boost": 0.0,
-          "soft_sides": [
-            "away"
-          ],
-          "hard_sides": [
-            "home"
-          ],
-          "cross_conflict": false
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": true
         }
       },
       "odds_compare": {
-        "brief_zh": "主相對共識硬18.3pp；客相對共識軟18.5pp；Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
         "sources_status": {
           "hkjc": true,
-          "d4m_os": true,
+          "d4m_os": false,
           "espn_dk": false,
           "tipsaudit_fair": false,
           "pinnacle": true,
@@ -902,212 +907,167 @@ window.__PUMPKIN_EMBEDDED__ = {
         },
         "had_diff_vs_consensus": {
           "home": {
-            "hkjc_devig": 0.5461,
-            "consensus_fair": 0.3629,
-            "soft_pp": -18.32,
-            "flag": "hkjc_hard+outlier"
+            "hkjc_devig": 0.7776,
+            "consensus_fair": 0.7706,
+            "soft_pp": -0.7,
+            "flag": null
           },
           "draw": {
-            "hkjc_devig": 0.2586,
-            "consensus_fair": 0.2571,
-            "soft_pp": -0.15,
+            "hkjc_devig": 0.1453,
+            "consensus_fair": 0.1554,
+            "soft_pp": 1.01,
             "flag": null
           },
           "away": {
-            "hkjc_devig": 0.1954,
-            "consensus_fair": 0.38,
-            "soft_pp": 18.46,
-            "flag": "hkjc_soft+outlier"
+            "hkjc_devig": 0.0771,
+            "consensus_fair": 0.074,
+            "soft_pp": -0.31,
+            "flag": null
           }
         },
         "toxic": {
-          "hkjc_soft_sides": [
-            "away"
-          ],
-          "hkjc_hard_sides": [
-            "home"
-          ],
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
           "best_soft": {
-            "side": "away",
-            "hkjc_devig": 0.1954,
-            "consensus_fair": 0.38,
-            "soft_pp": 18.46,
-            "flag": "hkjc_soft+outlier"
+            "side": "draw",
+            "hkjc_devig": 0.1453,
+            "consensus_fair": 0.1554,
+            "soft_pp": 1.01,
+            "flag": null
           },
           "consensus_1x2": {
-            "home": 0.3629,
-            "draw": 0.2571,
-            "away": 0.38
+            "home": 0.7706,
+            "draw": 0.1554,
+            "away": 0.074
           },
-          "n_sources_1x2": 3
+          "n_sources_1x2": 2
         }
       },
       "odds_movement": {
-        "brief_zh": "初盤意圖：責任平衡／RLM；客熱降冷／主縮（RLM）；主勝走勢減速；馬會HAD初盤 H1.65/D3.35/A4.30 → 現盤 H1.61/D3.40/A4.50；RLM熱降冷；外盤HAD_OS初盤 H1.91/D3.31/A3.46 → 現盤 H1.91/D3.30/A3.49",
-        "had_steam": null,
+        "brief_zh": "初盤意圖：責任平衡／RLM；HAD客縮水 14.50→11.50（20.7%）；主熱降冷／客縮（RLM）；主勝走勢加速；細球縮水 1.74→1.67",
+        "had_steam": "away",
         "sharp_steam": null,
         "follow_sharp": null,
         "bait_suspect": false,
         "d4m_intent_zh": "責任平衡／RLM",
         "had_open": {
-          "home": 1.65,
-          "draw": 3.35,
-          "away": 4.3
+          "home": 1.09,
+          "draw": 6.75,
+          "away": 14.5
         },
         "had_now": {
-          "home": 1.61,
-          "draw": 3.4,
-          "away": 4.5
+          "home": 1.14,
+          "draw": 6.1,
+          "away": 11.5
         },
-        "hil_steam": null,
-        "hil_line_open": 2.5,
-        "hil_line_now": 2.5,
-        "timing": "near_ko",
+        "hil_steam": "under",
+        "hil_line_open": 3.25,
+        "hil_line_now": 3.25,
+        "timing": "mid",
         "toxic_move": false,
-        "cross_book_n": 4,
+        "cross_book_n": 3,
         "open_now": {
           "intent_zh": "責任平衡／RLM",
-          "brief_zh": "馬會HAD初盤 H1.65/D3.35/A4.30 → 現盤 H1.61/D3.40/A4.50；RLM熱降冷；外盤HAD_OS初盤 H1.91/D3.31/A3.46 → 現盤 H1.91/D3.30/A3.49；入球線初盤2.5→現盤2.5；大 1.91→1.91；細 1.79→1.79；讓球初盤主-0.75/1.95 客1.75 → 現盤主-0.75/1.89 客1.8；讓球蒸汽→主",
+          "brief_zh": "馬會HAD初盤 H1.09/D6.75/A14.50 → 現盤 H1.14/D6.10/A11.50；蒸汽→客20.7%；RLM熱降冷；入球線初盤3.25→現盤3.25；大 1.97→2.07；細 1.74→1.67；蒸汽→細；讓球初盤主-2.0/1.93 客1.83 → 現盤主-1.75/1.84 客1.92；盤口移動 -2.0→-1.75；讓球蒸汽→主",
           "bait_suspect": false,
           "sharp_steam": null,
-          "hkjc_steam": null,
+          "hkjc_steam": "away",
           "markets": {
             "HAD": {
               "open": {
-                "home": 1.65,
-                "draw": 3.35,
-                "away": 4.3
+                "home": 1.09,
+                "draw": 6.75,
+                "away": 14.5
               },
               "now": {
-                "home": 1.61,
-                "draw": 3.4,
-                "away": 4.5
+                "home": 1.14,
+                "draw": 6.1,
+                "away": 11.5
               },
               "shorten": {
-                "home": 0.0242,
-                "draw": -0.0149,
-                "away": -0.0465
+                "home": -0.0459,
+                "draw": 0.0963,
+                "away": 0.2069
               },
-              "steam": null,
-              "rlm": "away_drift",
+              "steam": "away",
+              "rlm": "home_drift",
               "n_ticks": 2,
-              "brief_zh": "馬會HAD初盤 H1.65/D3.35/A4.30 → 現盤 H1.61/D3.40/A4.50；RLM熱降冷"
-            },
-            "HAD_OS": {
-              "open": {
-                "home": 1.91,
-                "draw": 3.31,
-                "away": 3.46
-              },
-              "now": {
-                "home": 1.91,
-                "draw": 3.3,
-                "away": 3.49
-              },
-              "shorten": {
-                "home": 0.0,
-                "draw": 0.003,
-                "away": -0.0087
-              },
-              "steam": null,
-              "rlm": null,
-              "n_ticks": 2,
-              "brief_zh": "外盤HAD_OS初盤 H1.91/D3.31/A3.46 → 現盤 H1.91/D3.30/A3.49"
+              "brief_zh": "馬會HAD初盤 H1.09/D6.75/A14.50 → 現盤 H1.14/D6.10/A11.50；蒸汽→客20.7%；RLM熱降冷"
             },
             "HIL": {
-              "line_open": 2.5,
-              "line_now": 2.5,
-              "over_open": 1.91,
-              "over_now": 1.91,
-              "under_open": 1.79,
-              "under_now": 1.79,
-              "steam": null,
+              "line_open": 3.25,
+              "line_now": 3.25,
+              "over_open": 1.97,
+              "over_now": 2.07,
+              "under_open": 1.74,
+              "under_now": 1.67,
+              "steam": "under",
               "n_ticks": 2,
-              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.91→1.91；細 1.79→1.79"
+              "brief_zh": "入球線初盤3.25→現盤3.25；大 1.97→2.07；細 1.74→1.67；蒸汽→細"
             },
             "HDC": {
-              "line_open": -0.75,
-              "line_now": -0.75,
-              "home_open": 1.95,
-              "home_now": 1.89,
-              "away_open": 1.75,
-              "away_now": 1.8,
+              "line_open": -2.0,
+              "line_now": -1.75,
+              "home_open": 1.93,
+              "home_now": 1.84,
+              "away_open": 1.83,
+              "away_now": 1.92,
               "steam": "home",
               "n_ticks": 2,
-              "brief_zh": "讓球初盤主-0.75/1.95 客1.75 → 現盤主-0.75/1.89 客1.8；讓球蒸汽→主"
+              "brief_zh": "讓球初盤主-2.0/1.93 客1.83 → 現盤主-1.75/1.84 客1.92；盤口移動 -2.0→-1.75；讓球蒸汽→主"
             }
           }
         }
       },
       "d4m_open_now": {
         "intent_zh": "責任平衡／RLM",
-        "brief_zh": "馬會HAD初盤 H1.65/D3.35/A4.30 → 現盤 H1.61/D3.40/A4.50；RLM熱降冷；外盤HAD_OS初盤 H1.91/D3.31/A3.46 → 現盤 H1.91/D3.30/A3.49；入球線初盤2.5→現盤2.5；大 1.91→1.91；細 1.79→1.79；讓球初盤主-0.75/1.95 客1.75 → 現盤主-0.75/1.89 客1.8；讓球蒸汽→主",
+        "brief_zh": "馬會HAD初盤 H1.09/D6.75/A14.50 → 現盤 H1.14/D6.10/A11.50；蒸汽→客20.7%；RLM熱降冷；入球線初盤3.25→現盤3.25；大 1.97→2.07；細 1.74→1.67；蒸汽→細；讓球初盤主-2.0/1.93 客1.83 → 現盤主-1.75/1.84 客1.92；盤口移動 -2.0→-1.75；讓球蒸汽→主",
         "bait_suspect": false,
-        "hkjc_steam": null,
+        "hkjc_steam": "away",
         "sharp_steam": null,
         "had": {
           "open": {
-            "home": 1.65,
-            "draw": 3.35,
-            "away": 4.3
+            "home": 1.09,
+            "draw": 6.75,
+            "away": 14.5
           },
           "now": {
-            "home": 1.61,
-            "draw": 3.4,
-            "away": 4.5
+            "home": 1.14,
+            "draw": 6.1,
+            "away": 11.5
           },
           "shorten": {
-            "home": 0.0242,
-            "draw": -0.0149,
-            "away": -0.0465
+            "home": -0.0459,
+            "draw": 0.0963,
+            "away": 0.2069
           },
-          "steam": null,
-          "rlm": "away_drift",
+          "steam": "away",
+          "rlm": "home_drift",
           "n_ticks": 2,
-          "brief_zh": "馬會HAD初盤 H1.65/D3.35/A4.30 → 現盤 H1.61/D3.40/A4.50；RLM熱降冷"
+          "brief_zh": "馬會HAD初盤 H1.09/D6.75/A14.50 → 現盤 H1.14/D6.10/A11.50；蒸汽→客20.7%；RLM熱降冷"
         },
-        "had_os": {
-          "open": {
-            "home": 1.91,
-            "draw": 3.31,
-            "away": 3.46
-          },
-          "now": {
-            "home": 1.91,
-            "draw": 3.3,
-            "away": 3.49
-          },
-          "shorten": {
-            "home": 0.0,
-            "draw": 0.003,
-            "away": -0.0087
-          },
-          "steam": null,
-          "rlm": null,
-          "n_ticks": 2,
-          "brief_zh": "外盤HAD_OS初盤 H1.91/D3.31/A3.46 → 現盤 H1.91/D3.30/A3.49"
-        },
+        "had_os": null,
         "hil": {
-          "line_open": 2.5,
-          "line_now": 2.5,
-          "over_open": 1.91,
-          "over_now": 1.91,
-          "under_open": 1.79,
-          "under_now": 1.79,
-          "steam": null,
+          "line_open": 3.25,
+          "line_now": 3.25,
+          "over_open": 1.97,
+          "over_now": 2.07,
+          "under_open": 1.74,
+          "under_now": 1.67,
+          "steam": "under",
           "n_ticks": 2,
-          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.91→1.91；細 1.79→1.79"
+          "brief_zh": "入球線初盤3.25→現盤3.25；大 1.97→2.07；細 1.74→1.67；蒸汽→細"
         },
         "hdc": {
-          "line_open": -0.75,
-          "line_now": -0.75,
-          "home_open": 1.95,
-          "home_now": 1.89,
-          "away_open": 1.75,
-          "away_now": 1.8,
+          "line_open": -2.0,
+          "line_now": -1.75,
+          "home_open": 1.93,
+          "home_now": 1.84,
+          "away_open": 1.83,
+          "away_now": 1.92,
           "steam": "home",
           "n_ticks": 2,
-          "brief_zh": "讓球初盤主-0.75/1.95 客1.75 → 現盤主-0.75/1.89 客1.8；讓球蒸汽→主"
+          "brief_zh": "讓球初盤主-2.0/1.93 客1.83 → 現盤主-1.75/1.84 客1.92；盤口移動 -2.0→-1.75；讓球蒸汽→主"
         }
       },
       "primary_source": "DATA4MULA",
@@ -1115,36 +1075,43 @@ window.__PUMPKIN_EMBEDDED__ = {
       "d4m_missing": false,
       "classic_handicap": {
         "theory_line": -0.5,
-        "actual_line": -0.75,
-        "open_bias": "合適",
-        "heat": "不明",
+        "actual_line": -1.75,
+        "open_bias": "開大",
+        "heat": "開深仲低水→誘上風險",
         "eu_asia_ok": true,
-        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
-        "brief_zh": "理論盤後備 Pinnacle AH -0.5；理論盤-0.5；實際-0.75（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬6.5pp",
-        "conflict": false
+        "verdict": "開深誘上 → 偏向下盤／避低風險追熱",
+        "brief_zh": "進球期望 2.10-1.60；理論盤-0.5；實際-1.75（開大）；冷熱：開深仲低水→誘上風險；歐亞：歐亞大致一致；主水位相對公允軟21.2pp",
+        "conflict": true
       },
-      "form": null,
-      "h2h_summary": null,
-      "goal_expectancy": null,
+      "form": [
+        "LDWDL",
+        "DLLWW"
+      ],
+      "h2h_summary": [
+        0,
+        0,
+        0
+      ],
+      "goal_expectancy": 3.7,
       "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
       "ft_score": null,
       "corners": null,
       "live_score": null,
-      "review_zh": "無完場比分"
+      "review_zh": null
     },
     {
-      "front_end_id": "FB8772",
-      "kickoff_hkt": "2026-11-12 09:00",
-      "tournament": "女子墨西哥超級聯賽",
+      "front_end_id": "FB8765",
+      "kickoff_hkt": "2026-11-12 16:00",
+      "tournament": "國際賽",
       "home": {
-        "ch": "CF阿美利加女足",
-        "en": "CF America Women"
+        "ch": "泰國U23",
+        "en": "Thailand U23"
       },
       "away": {
-        "ch": "托盧卡女足",
-        "en": "Toluca Women"
+        "ch": "卡塔爾U23",
+        "en": "Qatar U23"
       },
       "market": "OOE",
       "market_label": "入球單雙",
@@ -1152,15 +1119,15 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_code": "O",
       "line": null,
       "pick_line": "入球單雙 單",
-      "hkjc_odds": 1.85,
-      "est_prob_pct": 47.5,
+      "hkjc_odds": 1.88,
+      "est_prob_pct": 37.6,
       "star": false,
       "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
       "stake": 50,
-      "edge_pp": -4.05,
+      "edge_pp": -4.0,
       "short_price": false,
       "risk_tier": "low",
       "risk_zh": "低風險",
@@ -1179,21 +1146,21 @@ window.__PUMPKIN_EMBEDDED__ = {
           "pick_code": "O",
           "line": null,
           "pick_line": "入球單雙 單",
-          "hkjc_odds": 1.85,
-          "est_prob_pct": 47.5,
-          "est_prob_raw_pct": 50.0,
+          "hkjc_odds": 1.88,
+          "est_prob_pct": 37.6,
+          "est_prob_raw_pct": 49.2,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=180 hit=0.4833",
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=187 hit=0.4759",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -4.05,
+          "edge_pp": -4.0,
           "short_price": false,
-          "summary": "主：D4M｜低風險：「入球單雙 單」 @ 1.85，校準後約 47.5%（原 50.0%）（馬會去水）。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
-          "why": "單雙估計 50.0%；單 1.85｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜校準[OOE] 50.0%→47.5%｜賽後適應罰−0.30｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A"
+          "summary": "主：D4M｜低風險：「入球單雙 單」 @ 1.88，校準後約 37.6%（原 49.2%）（馬會去水）。訊號：客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）。【唔建議實注／湊位】",
+          "why": "單雙估計 49.2%；單 1.88｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH 0.25；理論盤0.25；實際0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬29.8pp｜校準[OOE] 49.2%→37.6%｜效率門檻：湊位／弱邊｜客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A"
         },
         {
           "risk_tier": "medium",
@@ -1207,23 +1174,23 @@ window.__PUMPKIN_EMBEDDED__ = {
           "market_label": "讓球",
           "pick": "客讓",
           "pick_code": "A",
-          "line": "-2.0/-2.5",
-          "pick_line": "讓球 客讓 -2.0/-2.5",
+          "line": "0.0/+0.5",
+          "pick_line": "讓球 客讓 0.0/+0.5",
           "hkjc_odds": 2.01,
-          "est_prob_pct": 42.6,
-          "est_prob_raw_pct": 43.5,
+          "est_prob_pct": 43.8,
+          "est_prob_raw_pct": 46.3,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=20 hit=0.45",
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=25 hit=0.44",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -3.78,
+          "edge_pp": -3.49,
           "short_price": false,
-          "summary": "主：D4M｜中風險：「讓球 客讓 -2.0/-2.5」 @ 2.01，校準後約 42.6%（馬會去水）。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
-          "why": "讓球估計機率 46.0%（馬會去水）；客讓 -2.0/-2.5 @ 2.01｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：近況PPG主2.40>客1.60 → 降權／唔入低風險｜主近5場 4勝0和1負 場均入4.2/失1.2 大2.5率100% BTTS60% 休整4.9日｜走向：順向蒸汽+0.95｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；老派：跟客／下盤｜賽後適應罰−0.58｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高｜跨場堆疊降為中風險（HDC:A）"
+          "summary": "主：D4M｜中風險：「讓球 客讓 0.0/+0.5」 @ 2.01，校準後約 43.8%（原 46.3%）（馬會去水）。訊號：客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）。【唔建議實注／湊位】",
+          "why": "讓球估計機率 46.3%（馬會去水）；客讓 0.0/+0.5 @ 2.01｜冷聯／稀缺：加嚴 HIL／FHA｜客隊跨區作客（west_asia→se_asia）／長途跨區作客（洲際距離 proxy） → 客向降權｜睇盤：理論盤後備 Pinnacle AH 0.25；理論盤0.25；實際0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬29.8pp｜校準[HDC] 46.3%→43.8%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜跨場堆疊降為中風險（HDC:A）"
         },
         {
           "risk_tier": "high",
@@ -1232,64 +1199,58 @@ window.__PUMPKIN_EMBEDDED__ = {
           "efficiency_zh": "湊位／效率偏低",
           "buyable": false,
           "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": 0.03,
-          "market": "HIL",
-          "market_label": "入球大細",
-          "pick": "大",
-          "pick_code": "H",
-          "line": 4.5,
-          "pick_line": "入球大細 大 4.5",
-          "hkjc_odds": 2.08,
-          "est_prob_pct": 49.0,
-          "est_prob_raw_pct": 46.8,
+          "clv_proxy": null,
+          "market": "FHA",
+          "market_label": "半場主客和",
+          "pick": "半場和",
+          "pick_code": "D",
+          "line": null,
+          "pick_line": "半場主客和 半場和",
+          "hkjc_odds": 1.9,
+          "est_prob_pct": 55.0,
+          "est_prob_raw_pct": 46.0,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[HIL_OVER_HIGH] 分桶[HIL_OVER_HIGH] n=41 hit=0.5122",
-          "prob_label": "訊號偏向+走盤蒸汽+馬會去水",
+          "calibration_note": "分桶校準[FHA] 分桶[FHA] n=47 hit=0.4043",
+          "prob_label": "馬會去水（半場弱校準）",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -3.6,
+          "edge_pp": 2.42,
           "short_price": false,
-          "summary": "主：D4M｜高風險：「入球大細 大 4.5」 @ 2.08，校準後約 49.0%（原 46.8%）（訊號偏向+走盤蒸汽+馬會去水）。訊號：形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高。【唔建議實注／湊位】",
-          "why": "估計機率 45.3%（訊號偏向+走盤蒸汽+馬會去水）；馬會大 2.08｜政策：大≥3.5 唔作低風險／代理期望降權｜莊家視角：資訊導向；模型同向；大細蒸汽同向｜CLV代理正｜冷聯／稀缺：加嚴 HIL／FHA｜近況大細一致：近況／H2H大2.5率約81%；GE代理4.0｜主近5場 4勝0和1負 場均入4.2/失1.2 大2.5率100% BTTS60% 休整4.9日｜走向：大細順向蒸汽｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；大球開深於理論｜校準[HIL_OVER_HIGH] 46.8%→54.1%｜賽後適應罰−0.54；賽後硬閘：大≥3.5唔低風險；賽後機率封頂49%｜同場大波+熱門相關降權｜同場讓球+大波堆疊降權｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高｜唔建議實注：高風險預設唔可買（減少負期望）"
+          "summary": "主：D4M｜高風險：「半場主客和 半場和」 @ 1.9，校準後約 55.0%（原 46.0%）（馬會去水（半場弱校準））。訊號：客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）。【唔建議實注／湊位】",
+          "why": "半場主客和估計 46.0%；半場和 1.9｜政策：FHA 唔作低風險（覆盤命中極低）｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH 0.25；理論盤0.25；實際0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬29.8pp｜校準[FHA] 46.0%→55.6%｜賽後硬閘：FHA唔低風險｜市場錨定 55.6%→55.0%（邊3.02→2.41pp）｜效率門檻：湊位／弱邊｜客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）｜唔建議實注：市場 FHA 永不列入可買"
         }
       ],
-      "summary": "主：D4M。三選項：低風險 入球單雙 單 @ 1.85（約47.5%）｜中風險 讓球 客讓 -2.0/-2.5 @ 2.01（約42.6%）｜高風險 入球大細 大 4.5 @ 2.08（約49.0%）。建議「入球單雙 單」 @ 1.85，估計機率約 47.5%（馬會去水）。莊家視角偏「資訊導向」→follow_steam，毒性0.55：走盤方向與模型／資訊一致，莊家或在消化新資訊調價。跨站：主相對共識硬21.2pp；客相對共識軟18.4pp；Pinnacle尖莊已對齊；Smar",
-      "why": "單雙估計 50.0%；單 1.85｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜校準[OOE] 50.0%→47.5%｜賽後適應罰−0.30｜效率門檻：湊位／弱邊｜形勢進球期望約 4.0（代理，非xG）→ 偏大；BTTS 比率偏高｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A",
+      "summary": "主：D4M。三選項：低風險 入球單雙 單 @ 1.88（約37.6%）｜中風險 讓球 客讓 0.0/+0.5 @ 2.01（約43.8%）｜高風險 半場主客和 半場和 @ 1.9（約55.0%）。建議「入球單雙 單」 @ 1.88，估計機率約 37.6%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：主相對共識硬3.4pp；Pinnacle尖莊已對齊。Data4mula初盤→現盤「穩盤」：馬會HAD初盤 H2.82/D3.00",
+      "why": "單雙估計 49.2%；單 1.88｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH 0.25；理論盤0.25；實際0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬29.8pp｜校準[OOE] 49.2%→37.6%｜效率門檻：湊位／弱邊｜客隊跨區作客（west_asia→se_asia）；長途跨區作客（洲際距離 proxy）｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A",
       "signals": {
-        "lean_had": "away",
-        "lean_ou": "over",
+        "lean_had": null,
+        "lean_ou": null,
         "cites": [
-          "形勢進球期望約 4.0（代理，非xG）→ 偏大",
-          "BTTS 比率偏高",
-          "H2H近6場場均 5.67 球",
-          "主近5場 4勝0和1負 場均入4.2/失1.2；近5 LWWWW PPG2.4",
-          "客近5場 2勝2和1負 場均入1.4/失1.2；近5 WDWLD PPG1.6"
+          "客隊跨區作客（west_asia→se_asia）",
+          "長途跨區作客（洲際距離 proxy）"
         ],
-        "goal_expectancy": 4.0
+        "goal_expectancy": null
       },
       "bookmaker_angle": {
-        "intent": "資訊導向",
-        "brief_zh": "走盤方向與模型／資訊一致，莊家或在消化新資訊調價。｜HAD開盤 H1.08/A14.0 → 即市 H1.08/A13.0；HAD蒸汽→客（中）；大細蒸汽→大；馬會軟邊:draw,away；馬會硬邊:home；最大縮水 7.1%",
-        "steam": true,
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.82/A2.25 → 即市 H2.82/A2.25；馬會硬邊:home",
+        "steam": false,
         "rlm": false,
         "against_public": false,
         "available": true,
-        "toxicity_score": 0.55,
-        "action": "follow_steam",
+        "toxicity_score": 0.1,
+        "action": "neutral",
         "sub_tags": [
-          "模型同向"
+          "微動"
         ],
         "numbers": {
-          "had_max_short_pct": 0.0714,
-          "steam_grade": "中",
+          "had_max_short_pct": 0.0,
+          "steam_grade": "無",
           "trap_boost": 0.0,
-          "soft_sides": [
-            "draw",
-            "away"
-          ],
+          "soft_sides": [],
           "hard_sides": [
             "home"
           ],
@@ -1297,10 +1258,368 @@ window.__PUMPKIN_EMBEDDED__ = {
         }
       },
       "odds_compare": {
-        "brief_zh": "主相對共識硬21.2pp；客相對共識軟18.4pp；Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "brief_zh": "主相對共識硬3.4pp；Pinnacle尖莊已對齊",
         "sources_status": {
           "hkjc": true,
-          "d4m_os": true,
+          "d4m_os": false,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": false,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.3132,
+            "consensus_fair": 0.2796,
+            "soft_pp": -3.36,
+            "flag": "hkjc_hard"
+          },
+          "draw": {
+            "hkjc_devig": 0.2944,
+            "consensus_fair": 0.3066,
+            "soft_pp": 1.22,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.3925,
+            "consensus_fair": 0.4138,
+            "soft_pp": 2.13,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [
+            "home"
+          ],
+          "best_soft": {
+            "side": "away",
+            "hkjc_devig": 0.3925,
+            "consensus_fair": 0.4138,
+            "soft_pp": 2.13,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.2796,
+            "draw": 0.3066,
+            "away": 0.4138
+          },
+          "n_sources_1x2": 1
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：穩盤；馬會HAD初盤 H2.82/D3.00/A2.25 → 現盤 H2.82/D3.00/A2.25；入球線初盤2.25→現盤2.25；大 1.86→1.86；細 1.84→1.84；讓球初盤主0.25/1.73 客2.01 → 現盤主0.25/1.73 客2.01；跨莊分歧大（2源）",
+        "had_steam": null,
+        "sharp_steam": null,
+        "follow_sharp": null,
+        "bait_suspect": false,
+        "d4m_intent_zh": "穩盤",
+        "had_open": {
+          "home": 2.82,
+          "draw": 3.0,
+          "away": 2.25
+        },
+        "had_now": {
+          "home": 2.82,
+          "draw": 3.0,
+          "away": 2.25
+        },
+        "hil_steam": null,
+        "hil_line_open": 2.25,
+        "hil_line_now": 2.25,
+        "timing": "mid",
+        "toxic_move": false,
+        "cross_book_n": 2,
+        "open_now": {
+          "intent_zh": "穩盤",
+          "brief_zh": "馬會HAD初盤 H2.82/D3.00/A2.25 → 現盤 H2.82/D3.00/A2.25；入球線初盤2.25→現盤2.25；大 1.86→1.86；細 1.84→1.84；讓球初盤主0.25/1.73 客2.01 → 現盤主0.25/1.73 客2.01",
+          "bait_suspect": false,
+          "sharp_steam": null,
+          "hkjc_steam": null,
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 2.82,
+                "draw": 3.0,
+                "away": 2.25
+              },
+              "now": {
+                "home": 2.82,
+                "draw": 3.0,
+                "away": 2.25
+              },
+              "shorten": {
+                "home": 0.0,
+                "draw": 0.0,
+                "away": 0.0
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H2.82/D3.00/A2.25 → 現盤 H2.82/D3.00/A2.25"
+            },
+            "HIL": {
+              "line_open": 2.25,
+              "line_now": 2.25,
+              "over_open": 1.86,
+              "over_now": 1.86,
+              "under_open": 1.84,
+              "under_now": 1.84,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.25→現盤2.25；大 1.86→1.86；細 1.84→1.84"
+            },
+            "HDC": {
+              "line_open": 0.25,
+              "line_now": 0.25,
+              "home_open": 1.73,
+              "home_now": 1.73,
+              "away_open": 2.01,
+              "away_now": 2.01,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主0.25/1.73 客2.01 → 現盤主0.25/1.73 客2.01"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "穩盤",
+        "brief_zh": "馬會HAD初盤 H2.82/D3.00/A2.25 → 現盤 H2.82/D3.00/A2.25；入球線初盤2.25→現盤2.25；大 1.86→1.86；細 1.84→1.84；讓球初盤主0.25/1.73 客2.01 → 現盤主0.25/1.73 客2.01",
+        "bait_suspect": false,
+        "hkjc_steam": null,
+        "sharp_steam": null,
+        "had": {
+          "open": {
+            "home": 2.82,
+            "draw": 3.0,
+            "away": 2.25
+          },
+          "now": {
+            "home": 2.82,
+            "draw": 3.0,
+            "away": 2.25
+          },
+          "shorten": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H2.82/D3.00/A2.25 → 現盤 H2.82/D3.00/A2.25"
+        },
+        "had_os": null,
+        "hil": {
+          "line_open": 2.25,
+          "line_now": 2.25,
+          "over_open": 1.86,
+          "over_now": 1.86,
+          "under_open": 1.84,
+          "under_now": 1.84,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.25→現盤2.25；大 1.86→1.86；細 1.84→1.84"
+        },
+        "hdc": {
+          "line_open": 0.25,
+          "line_now": 0.25,
+          "home_open": 1.73,
+          "home_now": 1.73,
+          "away_open": 2.01,
+          "away_now": 2.01,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主0.25/1.73 客2.01 → 現盤主0.25/1.73 客2.01"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": 0.25,
+        "actual_line": 0.25,
+        "open_bias": "合適",
+        "heat": "不明",
+        "eu_asia_ok": true,
+        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
+        "brief_zh": "理論盤後備 Pinnacle AH 0.25；理論盤0.25；實際0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬29.8pp",
+        "conflict": false
+      },
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB8739",
+      "kickoff_hkt": "2026-11-12 16:30",
+      "tournament": "澳洲冠軍聯賽盃",
+      "home": {
+        "ch": "西部APIA FC",
+        "en": "Wests APIA FC"
+      },
+      "away": {
+        "ch": "阿德萊德城",
+        "en": "Adelaide City"
+      },
+      "market": "HDC",
+      "market_label": "讓球",
+      "pick": "主讓",
+      "pick_code": "H",
+      "line": "-1.5/-2.0",
+      "pick_line": "讓球 主讓 -1.5/-2.0",
+      "hkjc_odds": 2.07,
+      "est_prob_pct": 44.4,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -2.93,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "主讓",
+          "pick_code": "H",
+          "line": "-1.5/-2.0",
+          "pick_line": "讓球 主讓 -1.5/-2.0",
+          "hkjc_odds": 2.07,
+          "est_prob_pct": 44.4,
+          "est_prob_raw_pct": 47.2,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=25 hit=0.44",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -2.93,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「讓球 主讓 -1.5/-2.0」 @ 2.07，校準後約 44.4%（原 47.2%）（馬會去水）。訊號：形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "讓球估計機率 45.4%（馬會去水）；主讓 -1.5/-2.0 @ 2.07｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.00>客0.40｜主近5場 3勝1和1負 場均入2.0/失1.0 大2.5率60% BTTS60% 休整5.0日｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；開深唔追主讓低風險｜校準[HDC] 47.2%→44.4%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "單",
+          "pick_code": "O",
+          "line": null,
+          "pick_line": "入球單雙 單",
+          "hkjc_odds": 1.85,
+          "est_prob_pct": 47.3,
+          "est_prob_raw_pct": 50.0,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=187 hit=0.4759",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.05,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「入球單雙 單」 @ 1.85，校準後約 47.3%（原 50.0%）（馬會去水）。訊號：形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "單雙估計 50.0%；單 1.85｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜校準[OOE] 50.0%→47.3%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高｜唔建議實注：市場 OOE 永不列入可買"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "CHL",
+          "market_label": "角球大細",
+          "pick": "大",
+          "pick_code": "H",
+          "line": 9.5,
+          "pick_line": "角球大細 大 9.5",
+          "hkjc_odds": 1.91,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 49.9,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "校準已套用（n=732／時間加權1666，半衰期10日）；仍係估計，唔保證命中",
+          "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.98,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「角球大細 大 9.5」 @ 1.91，校準後約 49.0%（角球弱模型（馬會去水+無角球專用校準））。訊號：形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "角球估計機率 48.4%（馬會去水／無角球專用校準）；馬會大 1.91｜政策：通常唔作低風險｜市場權重×0.15｜盃賽／淘汰賽：數據噪訊高｜近況大細一致：近況／H2H大2.5率約87%；GE代理3.5｜主近5場 3勝1和1負 場均入2.0/失1.0 大2.5率60% BTTS60% 休整5.0日｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜賽後硬閘：CHL唔低風險；賽後機率封頂49%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高｜唔建議實注：市場 CHL 永不列入可買"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 讓球 主讓 -1.5/-2.0 @ 2.07（約44.4%）｜中風險 入球單雙 單 @ 1.85（約47.3%）｜高風險 角球大細 大 9.5 @ 1.91（約49.0%）。建議「讓球 主讓 -1.5/-2.0」 @ 2.07，估計機率約 44.4%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula初盤→現盤「穩盤」：馬會HAD初盤 ",
+      "why": "讓球估計機率 45.4%（馬會去水）；主讓 -1.5/-2.0 @ 2.07｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG主2.00>客0.40｜主近5場 3勝1和1負 場均入2.0/失1.0 大2.5率60% BTTS60% 休整5.0日｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；開深唔追主讓低風險｜校準[HDC] 47.2%→44.4%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）；BTTS 比率偏高",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [
+          "形勢進球期望約 3.5（代理，非xG；未夠強作大波偏向）",
+          "BTTS 比率偏高",
+          "主近5場 3勝1和1負 場均入2.0/失1.0；近5 LDWWW PPG2.0",
+          "客近5場 0勝2和3負 場均入1.6/失2.4；近5 DDLLL PPG0.4"
+        ],
+        "goal_expectancy": 3.5
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H1.23/A7.5 → 即市 H1.21/A8.0；最大縮水 1.6%",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true,
+        "toxicity_score": 0.1,
+        "action": "neutral",
+        "sub_tags": [
+          "微動"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0163,
+          "steam_grade": "無",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": false,
           "espn_dk": false,
           "tipsaudit_fair": false,
           "pinnacle": true,
@@ -1309,257 +1628,211 @@ window.__PUMPKIN_EMBEDDED__ = {
         },
         "had_diff_vs_consensus": {
           "home": {
-            "hkjc_devig": 0.8149,
-            "consensus_fair": 0.6025,
-            "soft_pp": -21.24,
-            "flag": "hkjc_hard+outlier"
+            "hkjc_devig": 0.7271,
+            "consensus_fair": 0.7237,
+            "soft_pp": -0.34,
+            "flag": null
           },
           "draw": {
-            "hkjc_devig": 0.1174,
-            "consensus_fair": 0.1455,
-            "soft_pp": 2.81,
-            "flag": "hkjc_soft"
+            "hkjc_devig": 0.1629,
+            "consensus_fair": 0.1654,
+            "soft_pp": 0.25,
+            "flag": null
           },
           "away": {
-            "hkjc_devig": 0.0677,
-            "consensus_fair": 0.252,
-            "soft_pp": 18.43,
-            "flag": "hkjc_soft+outlier"
+            "hkjc_devig": 0.11,
+            "consensus_fair": 0.1109,
+            "soft_pp": 0.09,
+            "flag": null
           }
         },
         "toxic": {
-          "hkjc_soft_sides": [
-            "draw",
-            "away"
-          ],
-          "hkjc_hard_sides": [
-            "home"
-          ],
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
           "best_soft": {
-            "side": "away",
-            "hkjc_devig": 0.0677,
-            "consensus_fair": 0.252,
-            "soft_pp": 18.43,
-            "flag": "hkjc_soft+outlier"
+            "side": "draw",
+            "hkjc_devig": 0.1629,
+            "consensus_fair": 0.1654,
+            "soft_pp": 0.25,
+            "flag": null
           },
           "consensus_1x2": {
-            "home": 0.6025,
-            "draw": 0.1455,
-            "away": 0.252
+            "home": 0.7237,
+            "draw": 0.1654,
+            "away": 0.1109
           },
-          "n_sources_1x2": 3
+          "n_sources_1x2": 2
         }
       },
       "odds_movement": {
-        "brief_zh": "初盤意圖：輕微蒸汽；HAD客縮水 14.00→13.00（7.1%）；大球縮水 1.59→1.47；馬會HAD初盤 H1.08/D7.25/A14.00 → 現盤 H1.08/D7.50/A13.00；蒸汽→客7.1%；外盤HAD_OS初盤 H1.14/D7.03/A11.40 → 現盤 H1.12/D7.58/A12.13",
-        "had_steam": "away",
+        "brief_zh": "初盤意圖：穩盤；馬會HAD初盤 H1.23/D5.30/A7.50 → 現盤 H1.21/D5.40/A8.00；入球線初盤3.5→現盤3.5；大 1.95→2.00；細 1.75→1.72；讓球初盤主-1.25/1.67 客2.1 → 現盤主-1.75/2.07 客1.72；盤口移動 -1.25→-1.75；讓球蒸汽→客；跨莊分歧大（3源）",
+        "had_steam": null,
         "sharp_steam": null,
         "follow_sharp": null,
         "bait_suspect": false,
-        "d4m_intent_zh": "輕微蒸汽",
+        "d4m_intent_zh": "穩盤",
         "had_open": {
-          "home": 1.08,
-          "draw": 7.25,
-          "away": 14.0
+          "home": 1.23,
+          "draw": 5.3,
+          "away": 7.5
         },
         "had_now": {
-          "home": 1.08,
-          "draw": 7.5,
-          "away": 13.0
+          "home": 1.21,
+          "draw": 5.4,
+          "away": 8.0
         },
-        "hil_steam": "over",
+        "hil_steam": null,
         "hil_line_open": 3.5,
         "hil_line_now": 3.5,
-        "timing": "near_ko",
+        "timing": "mid",
         "toxic_move": false,
-        "cross_book_n": 4,
+        "cross_book_n": 3,
         "open_now": {
-          "intent_zh": "輕微蒸汽",
-          "brief_zh": "馬會HAD初盤 H1.08/D7.25/A14.00 → 現盤 H1.08/D7.50/A13.00；蒸汽→客7.1%；外盤HAD_OS初盤 H1.14/D7.03/A11.40 → 現盤 H1.12/D7.58/A12.13；入球線初盤3.5→現盤3.5；大 1.59→1.47；細 2.20→2.48；蒸汽→大；讓球初盤主-2.25/1.74 客1.97 → 現盤主-2.25/1.71 客2.01",
+          "intent_zh": "穩盤",
+          "brief_zh": "馬會HAD初盤 H1.23/D5.30/A7.50 → 現盤 H1.21/D5.40/A8.00；入球線初盤3.5→現盤3.5；大 1.95→2.00；細 1.75→1.72；讓球初盤主-1.25/1.67 客2.1 → 現盤主-1.75/2.07 客1.72；盤口移動 -1.25→-1.75；讓球蒸汽→客",
           "bait_suspect": false,
           "sharp_steam": null,
-          "hkjc_steam": "away",
+          "hkjc_steam": null,
           "markets": {
             "HAD": {
               "open": {
-                "home": 1.08,
-                "draw": 7.25,
-                "away": 14.0
+                "home": 1.23,
+                "draw": 5.3,
+                "away": 7.5
               },
               "now": {
-                "home": 1.08,
-                "draw": 7.5,
-                "away": 13.0
+                "home": 1.21,
+                "draw": 5.4,
+                "away": 8.0
               },
               "shorten": {
-                "home": 0.0,
-                "draw": -0.0345,
-                "away": 0.0714
-              },
-              "steam": "away",
-              "rlm": null,
-              "n_ticks": 2,
-              "brief_zh": "馬會HAD初盤 H1.08/D7.25/A14.00 → 現盤 H1.08/D7.50/A13.00；蒸汽→客7.1%"
-            },
-            "HAD_OS": {
-              "open": {
-                "home": 1.14,
-                "draw": 7.03,
-                "away": 11.4
-              },
-              "now": {
-                "home": 1.12,
-                "draw": 7.58,
-                "away": 12.13
-              },
-              "shorten": {
-                "home": 0.0175,
-                "draw": -0.0782,
-                "away": -0.064
+                "home": 0.0163,
+                "draw": -0.0189,
+                "away": -0.0667
               },
               "steam": null,
               "rlm": null,
               "n_ticks": 2,
-              "brief_zh": "外盤HAD_OS初盤 H1.14/D7.03/A11.40 → 現盤 H1.12/D7.58/A12.13"
+              "brief_zh": "馬會HAD初盤 H1.23/D5.30/A7.50 → 現盤 H1.21/D5.40/A8.00"
             },
             "HIL": {
               "line_open": 3.5,
               "line_now": 3.5,
-              "over_open": 1.59,
-              "over_now": 1.47,
-              "under_open": 2.2,
-              "under_now": 2.48,
-              "steam": "over",
-              "n_ticks": 2,
-              "brief_zh": "入球線初盤3.5→現盤3.5；大 1.59→1.47；細 2.20→2.48；蒸汽→大"
-            },
-            "HDC": {
-              "line_open": -2.25,
-              "line_now": -2.25,
-              "home_open": 1.74,
-              "home_now": 1.71,
-              "away_open": 1.97,
-              "away_now": 2.01,
+              "over_open": 1.95,
+              "over_now": 2.0,
+              "under_open": 1.75,
+              "under_now": 1.72,
               "steam": null,
               "n_ticks": 2,
-              "brief_zh": "讓球初盤主-2.25/1.74 客1.97 → 現盤主-2.25/1.71 客2.01"
+              "brief_zh": "入球線初盤3.5→現盤3.5；大 1.95→2.00；細 1.75→1.72"
+            },
+            "HDC": {
+              "line_open": -1.25,
+              "line_now": -1.75,
+              "home_open": 1.67,
+              "home_now": 2.07,
+              "away_open": 2.1,
+              "away_now": 1.72,
+              "steam": "away",
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主-1.25/1.67 客2.1 → 現盤主-1.75/2.07 客1.72；盤口移動 -1.25→-1.75；讓球蒸汽→客"
             }
           }
         }
       },
       "d4m_open_now": {
-        "intent_zh": "輕微蒸汽",
-        "brief_zh": "馬會HAD初盤 H1.08/D7.25/A14.00 → 現盤 H1.08/D7.50/A13.00；蒸汽→客7.1%；外盤HAD_OS初盤 H1.14/D7.03/A11.40 → 現盤 H1.12/D7.58/A12.13；入球線初盤3.5→現盤3.5；大 1.59→1.47；細 2.20→2.48；蒸汽→大；讓球初盤主-2.25/1.74 客1.97 → 現盤主-2.25/1.71 客2.01",
+        "intent_zh": "穩盤",
+        "brief_zh": "馬會HAD初盤 H1.23/D5.30/A7.50 → 現盤 H1.21/D5.40/A8.00；入球線初盤3.5→現盤3.5；大 1.95→2.00；細 1.75→1.72；讓球初盤主-1.25/1.67 客2.1 → 現盤主-1.75/2.07 客1.72；盤口移動 -1.25→-1.75；讓球蒸汽→客",
         "bait_suspect": false,
-        "hkjc_steam": "away",
+        "hkjc_steam": null,
         "sharp_steam": null,
         "had": {
           "open": {
-            "home": 1.08,
-            "draw": 7.25,
-            "away": 14.0
+            "home": 1.23,
+            "draw": 5.3,
+            "away": 7.5
           },
           "now": {
-            "home": 1.08,
-            "draw": 7.5,
-            "away": 13.0
+            "home": 1.21,
+            "draw": 5.4,
+            "away": 8.0
           },
           "shorten": {
-            "home": 0.0,
-            "draw": -0.0345,
-            "away": 0.0714
-          },
-          "steam": "away",
-          "rlm": null,
-          "n_ticks": 2,
-          "brief_zh": "馬會HAD初盤 H1.08/D7.25/A14.00 → 現盤 H1.08/D7.50/A13.00；蒸汽→客7.1%"
-        },
-        "had_os": {
-          "open": {
-            "home": 1.14,
-            "draw": 7.03,
-            "away": 11.4
-          },
-          "now": {
-            "home": 1.12,
-            "draw": 7.58,
-            "away": 12.13
-          },
-          "shorten": {
-            "home": 0.0175,
-            "draw": -0.0782,
-            "away": -0.064
+            "home": 0.0163,
+            "draw": -0.0189,
+            "away": -0.0667
           },
           "steam": null,
           "rlm": null,
           "n_ticks": 2,
-          "brief_zh": "外盤HAD_OS初盤 H1.14/D7.03/A11.40 → 現盤 H1.12/D7.58/A12.13"
+          "brief_zh": "馬會HAD初盤 H1.23/D5.30/A7.50 → 現盤 H1.21/D5.40/A8.00"
         },
+        "had_os": null,
         "hil": {
           "line_open": 3.5,
           "line_now": 3.5,
-          "over_open": 1.59,
-          "over_now": 1.47,
-          "under_open": 2.2,
-          "under_now": 2.48,
-          "steam": "over",
-          "n_ticks": 2,
-          "brief_zh": "入球線初盤3.5→現盤3.5；大 1.59→1.47；細 2.20→2.48；蒸汽→大"
-        },
-        "hdc": {
-          "line_open": -2.25,
-          "line_now": -2.25,
-          "home_open": 1.74,
-          "home_now": 1.71,
-          "away_open": 1.97,
-          "away_now": 2.01,
+          "over_open": 1.95,
+          "over_now": 2.0,
+          "under_open": 1.75,
+          "under_now": 1.72,
           "steam": null,
           "n_ticks": 2,
-          "brief_zh": "讓球初盤主-2.25/1.74 客1.97 → 現盤主-2.25/1.71 客2.01"
+          "brief_zh": "入球線初盤3.5→現盤3.5；大 1.95→2.00；細 1.75→1.72"
+        },
+        "hdc": {
+          "line_open": -1.25,
+          "line_now": -1.75,
+          "home_open": 1.67,
+          "home_now": 2.07,
+          "away_open": 2.1,
+          "away_now": 1.72,
+          "steam": "away",
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主-1.25/1.67 客2.1 → 現盤主-1.75/2.07 客1.72；盤口移動 -1.25→-1.75；讓球蒸汽→客"
         }
       },
       "primary_source": "DATA4MULA",
       "primary_source_zh": "主：D4M",
       "d4m_missing": false,
       "classic_handicap": {
-        "theory_line": -1.5,
-        "actual_line": -2.25,
+        "theory_line": -1.0,
+        "actual_line": -1.75,
         "open_bias": "開大",
         "heat": "開深仲低水→誘上風險",
         "eu_asia_ok": true,
         "verdict": "開深誘上 → 偏向下盤／避低風險追熱",
-        "brief_zh": "進球期望 2.70-1.30；理論盤-1.5；實際-2.25（開大）；冷熱：開深仲低水→誘上風險；歐亞：歐亞大致一致；主水位相對公允軟25.0pp",
+        "brief_zh": "進球期望 2.20-1.30；理論盤-1.0；實際-1.75（開大）；冷熱：開深仲低水→誘上風險；歐亞：歐亞大致一致；主水位相對公允軟23.2pp",
         "conflict": true
       },
       "form": [
-        "LWWWW",
-        "WDWLD"
+        "LDWWW",
+        "DDLLL"
       ],
       "h2h_summary": [
-        7,
-        2,
-        3
+        1,
+        0,
+        0
       ],
-      "goal_expectancy": 4.0,
+      "goal_expectancy": 3.5,
       "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
       "ft_score": null,
       "corners": null,
       "live_score": null,
-      "review_zh": "無完場比分"
+      "review_zh": null
     },
     {
-      "front_end_id": "FB8771",
-      "kickoff_hkt": "2026-11-12 10:00",
-      "tournament": "墨西哥甲組聯賽",
+      "front_end_id": "FB8740",
+      "kickoff_hkt": "2026-11-12 17:57",
+      "tournament": "女子南韓職業聯賽",
       "home": {
-        "ch": "派拉達斯FC",
-        "en": "Piratas FC"
+        "ch": "華川FC女足",
+        "en": "Hwacheon FC Women"
       },
       "away": {
-        "ch": "拉巴斯體育會",
-        "en": "Atletico La Paz"
+        "ch": "慶州FC女足",
+        "en": "Gyeongju FC Women"
       },
       "market": "HDC",
       "market_label": "讓球",
@@ -1567,15 +1840,15 @@ window.__PUMPKIN_EMBEDDED__ = {
       "pick_code": "A",
       "line": "-0.5/-1.0",
       "pick_line": "讓球 客讓 -0.5/-1.0",
-      "hkjc_odds": 1.82,
-      "est_prob_pct": 47.5,
+      "hkjc_odds": 1.74,
+      "est_prob_pct": 47.4,
       "star": false,
       "star_zh": null,
       "prob_label": "馬會去水",
       "confidence": "low",
       "confidence_zh": "低",
       "stake": 50,
-      "edge_pp": -3.22,
+      "edge_pp": -4.37,
       "short_price": false,
       "risk_tier": "low",
       "risk_zh": "低風險",
@@ -1594,21 +1867,21 @@ window.__PUMPKIN_EMBEDDED__ = {
           "pick_code": "A",
           "line": "-0.5/-1.0",
           "pick_line": "讓球 客讓 -0.5/-1.0",
-          "hkjc_odds": 1.82,
-          "est_prob_pct": 47.5,
-          "est_prob_raw_pct": 51.7,
+          "hkjc_odds": 1.74,
+          "est_prob_pct": 47.4,
+          "est_prob_raw_pct": 53.1,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=20 hit=0.45",
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=25 hit=0.44",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -3.22,
+          "edge_pp": -4.37,
           "short_price": false,
-          "summary": "主：D4M｜低風險：「讓球 客讓 -0.5/-1.0」 @ 1.82，校準後約 47.5%（原 51.7%）（馬會去水）。訊號：形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8。【唔建議實注／湊位】",
-          "why": "讓球估計機率 51.7%（馬會去水）；客讓 -0.5/-1.0 @ 1.82｜冷聯／稀缺：加嚴 HIL／FHA｜客隊休整3.9日 → 客勝／客讓降權｜主隊休整2.9日 → 客相對有利｜主近5場 2勝3和0負 場均入2.2/失0.6 大2.5率40% BTTS60% 休整2.9日 賽程密集 疲勞旗｜走向：逆向蒸汽降權；逆尖莊走勢降權｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；老派：跟客／下盤｜校準[HDC] 51.7%→47.5%｜賽後適應罰−0.58｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8"
+          "summary": "主：D4M｜低風險：「讓球 客讓 -0.5/-1.0」 @ 1.74，校準後約 47.4%（原 53.1%）（馬會去水）。【唔建議實注／湊位】",
+          "why": "讓球估計機率 53.1%（馬會去水）；客讓 -0.5/-1.0 @ 1.74｜睇盤：歐亞分歧 → 降權／唔入低風險；歐亞分歧降權｜校準[HDC] 53.1%→47.4%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信"
         },
         {
           "risk_tier": "medium",
@@ -1624,400 +1897,25 @@ window.__PUMPKIN_EMBEDDED__ = {
           "pick_code": "E",
           "line": null,
           "pick_line": "入球單雙 雙",
-          "hkjc_odds": 1.81,
+          "hkjc_odds": 1.8,
           "est_prob_pct": 49.0,
-          "est_prob_raw_pct": 51.1,
+          "est_prob_raw_pct": 51.3,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=180 hit=0.4833",
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=187 hit=0.4759",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -4.17,
+          "edge_pp": -4.2,
           "short_price": false,
-          "summary": "主：D4M｜中風險：「入球單雙 雙」 @ 1.81，校準後約 49.0%（原 51.1%）（馬會去水）。訊號：形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8。【唔建議實注／湊位】",
-          "why": "單雙估計 51.1%；雙 1.81｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜校準[OOE] 51.1%→56.5%｜賽後適應罰−0.30；賽後機率封頂49%｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8｜唔建議實注：市場 OOE 永不列入可買"
+          "summary": "主：D4M｜中風險：「入球單雙 雙」 @ 1.8，校準後約 49.0%（原 51.3%）（馬會去水）。【唔建議實注／湊位】",
+          "why": "單雙估計 51.4%；雙 1.8｜政策：單雙預設唔入低風險｜市場權重×0.28｜睇盤：歐亞分歧 → 降權／唔入低風險；歐亞分歧降權｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：市場 OOE 永不列入可買"
         },
         {
           "risk_tier": "high",
           "risk_zh": "高風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": null,
-          "market": "CHL",
-          "market_label": "角球大細",
-          "pick": "細",
-          "pick_code": "L",
-          "line": 9.5,
-          "pick_line": "角球大細 細 9.5",
-          "hkjc_odds": 1.9,
-          "est_prob_pct": 48.6,
-          "est_prob_raw_pct": 48.6,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "校準已套用（n=710／時間加權1578，半衰期10日）；仍係估計，唔保證命中",
-          "prob_label": "角球弱模型（馬會去水+無角球專用校準）",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": -3.98,
-          "short_price": false,
-          "summary": "主：D4M｜高風險：「角球大細 細 9.5」 @ 1.9，校準後約 48.6%（角球弱模型（馬會去水+無角球專用校準））。訊號：形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8。【唔建議實注／湊位】",
-          "why": "角球估計機率 48.6%（馬會去水／無角球專用校準）；馬會細 1.9｜政策：通常唔作低風險｜市場權重×0.15｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：開深誘上 → 偏向下盤／避低風險追熱｜賽後硬閘：CHL唔低風險｜效率門檻：湊位／弱邊｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8｜唔建議實注：市場 CHL 永不列入可買"
-        }
-      ],
-      "summary": "主：D4M。三選項：低風險 讓球 客讓 -0.5/-1.0 @ 1.82（約47.5%）｜中風險 入球單雙 雙 @ 1.81（約49.0%）｜高風險 角球大細 細 9.5 @ 1.9（約48.6%）。建議「讓球 客讓 -0.5/-1.0」 @ 1.82，估計機率約 47.5%（馬會去水）。莊家視角偏「責任平衡」，毒性0.4：有明顯縮水，屬責任／注碼平衡調整。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula初盤→現盤「輕微蒸汽」：馬會HAD初盤 ",
-      "why": "讓球估計機率 51.7%（馬會去水）；客讓 -0.5/-1.0 @ 1.82｜冷聯／稀缺：加嚴 HIL／FHA｜客隊休整3.9日 → 客勝／客讓降權｜主隊休整2.9日 → 客相對有利｜主近5場 2勝3和0負 場均入2.2/失0.6 大2.5率40% BTTS60% 休整2.9日 賽程密集 疲勞旗｜走向：逆向蒸汽降權；逆尖莊走勢降權｜睇盤：開深誘上 → 偏向下盤／避低風險追熱；老派：跟客／下盤｜校準[HDC] 51.7%→47.5%｜賽後適應罰−0.58｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）；主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8",
-      "signals": {
-        "lean_had": null,
-        "lean_ou": null,
-        "cites": [
-          "形勢進球期望約 3.2（代理，非xG；未夠強作大波偏向）",
-          "主近5場 2勝3和0負 場均入2.2/失0.6；近5 WWDDD PPG1.8",
-          "客近5場 3勝2和0負 場均入2.4/失1.2；近5 DWWWD PPG2.2",
-          "主隊近7日賽事 2 場（密集）",
-          "客隊近7日賽事 2 場（密集）"
-        ],
-        "goal_expectancy": 3.2
-      },
-      "bookmaker_angle": {
-        "intent": "責任平衡",
-        "brief_zh": "有明顯縮水，屬責任／注碼平衡調整。｜HAD開盤 H1.62/A4.1 → 即市 H1.64/A4.05；HAD蒸汽→和（無）；最大縮水 1.4%",
-        "steam": true,
-        "rlm": false,
-        "against_public": false,
-        "available": true,
-        "toxicity_score": 0.4,
-        "action": "neutral",
-        "sub_tags": [
-          "蒸汽無"
-        ],
-        "numbers": {
-          "had_max_short_pct": 0.0137,
-          "steam_grade": "無",
-          "trap_boost": 0.0,
-          "soft_sides": [],
-          "hard_sides": [],
-          "cross_conflict": false
-        }
-      },
-      "odds_compare": {
-        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
-        "sources_status": {
-          "hkjc": true,
-          "d4m_os": true,
-          "espn_dk": false,
-          "tipsaudit_fair": false,
-          "pinnacle": true,
-          "smarkets": true,
-          "bsd_consensus": false
-        },
-        "had_diff_vs_consensus": {
-          "home": {
-            "hkjc_devig": 0.5375,
-            "consensus_fair": 0.5395,
-            "soft_pp": 0.2,
-            "flag": null
-          },
-          "draw": {
-            "hkjc_devig": 0.2449,
-            "consensus_fair": 0.2414,
-            "soft_pp": -0.35,
-            "flag": null
-          },
-          "away": {
-            "hkjc_devig": 0.2177,
-            "consensus_fair": 0.2191,
-            "soft_pp": 0.14,
-            "flag": null
-          }
-        },
-        "toxic": {
-          "hkjc_soft_sides": [],
-          "hkjc_hard_sides": [],
-          "best_soft": {
-            "side": "home",
-            "hkjc_devig": 0.5375,
-            "consensus_fair": 0.5395,
-            "soft_pp": 0.2,
-            "flag": null
-          },
-          "consensus_1x2": {
-            "home": 0.5395,
-            "draw": 0.2414,
-            "away": 0.2191
-          },
-          "n_sources_1x2": 3
-        }
-      },
-      "odds_movement": {
-        "brief_zh": "初盤意圖：輕微蒸汽；馬會HAD初盤 H1.62/D3.65/A4.10 → 現盤 H1.64/D3.60/A4.05；外盤HAD_OS初盤 H1.66/D3.86/A4.08 → 現盤 H1.71/D3.73/A4.05；蒸汽→和3.4%；入球線初盤2.5→現盤2.5；大 1.61→1.61；細 2.17→2.17；讓球初盤主-0.75/1.92 客1.84 → 現盤主-0.75/1.95 客1.82",
-        "had_steam": "draw",
-        "sharp_steam": "draw",
-        "follow_sharp": "draw",
-        "bait_suspect": false,
-        "d4m_intent_zh": "輕微蒸汽",
-        "had_open": {
-          "home": 1.62,
-          "draw": 3.65,
-          "away": 4.1
-        },
-        "had_now": {
-          "home": 1.64,
-          "draw": 3.6,
-          "away": 4.05
-        },
-        "hil_steam": null,
-        "hil_line_open": 2.5,
-        "hil_line_now": 2.5,
-        "timing": "mid",
-        "toxic_move": false,
-        "cross_book_n": 4,
-        "open_now": {
-          "intent_zh": "輕微蒸汽",
-          "brief_zh": "馬會HAD初盤 H1.62/D3.65/A4.10 → 現盤 H1.64/D3.60/A4.05；外盤HAD_OS初盤 H1.66/D3.86/A4.08 → 現盤 H1.71/D3.73/A4.05；蒸汽→和3.4%；入球線初盤2.5→現盤2.5；大 1.61→1.61；細 2.17→2.17；讓球初盤主-0.75/1.92 客1.84 → 現盤主-0.75/1.95 客1.82",
-          "bait_suspect": false,
-          "sharp_steam": "draw",
-          "hkjc_steam": null,
-          "markets": {
-            "HAD": {
-              "open": {
-                "home": 1.62,
-                "draw": 3.65,
-                "away": 4.1
-              },
-              "now": {
-                "home": 1.64,
-                "draw": 3.6,
-                "away": 4.05
-              },
-              "shorten": {
-                "home": -0.0123,
-                "draw": 0.0137,
-                "away": 0.0122
-              },
-              "steam": null,
-              "rlm": null,
-              "n_ticks": 2,
-              "brief_zh": "馬會HAD初盤 H1.62/D3.65/A4.10 → 現盤 H1.64/D3.60/A4.05"
-            },
-            "HAD_OS": {
-              "open": {
-                "home": 1.66,
-                "draw": 3.86,
-                "away": 4.08
-              },
-              "now": {
-                "home": 1.71,
-                "draw": 3.73,
-                "away": 4.05
-              },
-              "shorten": {
-                "home": -0.0301,
-                "draw": 0.0337,
-                "away": 0.0074
-              },
-              "steam": "draw",
-              "rlm": null,
-              "n_ticks": 2,
-              "brief_zh": "外盤HAD_OS初盤 H1.66/D3.86/A4.08 → 現盤 H1.71/D3.73/A4.05；蒸汽→和3.4%"
-            },
-            "HIL": {
-              "line_open": 2.5,
-              "line_now": 2.5,
-              "over_open": 1.61,
-              "over_now": 1.61,
-              "under_open": 2.17,
-              "under_now": 2.17,
-              "steam": null,
-              "n_ticks": 2,
-              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.61→1.61；細 2.17→2.17"
-            },
-            "HDC": {
-              "line_open": -0.75,
-              "line_now": -0.75,
-              "home_open": 1.92,
-              "home_now": 1.95,
-              "away_open": 1.84,
-              "away_now": 1.82,
-              "steam": null,
-              "n_ticks": 2,
-              "brief_zh": "讓球初盤主-0.75/1.92 客1.84 → 現盤主-0.75/1.95 客1.82"
-            }
-          }
-        }
-      },
-      "d4m_open_now": {
-        "intent_zh": "輕微蒸汽",
-        "brief_zh": "馬會HAD初盤 H1.62/D3.65/A4.10 → 現盤 H1.64/D3.60/A4.05；外盤HAD_OS初盤 H1.66/D3.86/A4.08 → 現盤 H1.71/D3.73/A4.05；蒸汽→和3.4%；入球線初盤2.5→現盤2.5；大 1.61→1.61；細 2.17→2.17；讓球初盤主-0.75/1.92 客1.84 → 現盤主-0.75/1.95 客1.82",
-        "bait_suspect": false,
-        "hkjc_steam": null,
-        "sharp_steam": "draw",
-        "had": {
-          "open": {
-            "home": 1.62,
-            "draw": 3.65,
-            "away": 4.1
-          },
-          "now": {
-            "home": 1.64,
-            "draw": 3.6,
-            "away": 4.05
-          },
-          "shorten": {
-            "home": -0.0123,
-            "draw": 0.0137,
-            "away": 0.0122
-          },
-          "steam": null,
-          "rlm": null,
-          "n_ticks": 2,
-          "brief_zh": "馬會HAD初盤 H1.62/D3.65/A4.10 → 現盤 H1.64/D3.60/A4.05"
-        },
-        "had_os": {
-          "open": {
-            "home": 1.66,
-            "draw": 3.86,
-            "away": 4.08
-          },
-          "now": {
-            "home": 1.71,
-            "draw": 3.73,
-            "away": 4.05
-          },
-          "shorten": {
-            "home": -0.0301,
-            "draw": 0.0337,
-            "away": 0.0074
-          },
-          "steam": "draw",
-          "rlm": null,
-          "n_ticks": 2,
-          "brief_zh": "外盤HAD_OS初盤 H1.66/D3.86/A4.08 → 現盤 H1.71/D3.73/A4.05；蒸汽→和3.4%"
-        },
-        "hil": {
-          "line_open": 2.5,
-          "line_now": 2.5,
-          "over_open": 1.61,
-          "over_now": 1.61,
-          "under_open": 2.17,
-          "under_now": 2.17,
-          "steam": null,
-          "n_ticks": 2,
-          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.61→1.61；細 2.17→2.17"
-        },
-        "hdc": {
-          "line_open": -0.75,
-          "line_now": -0.75,
-          "home_open": 1.92,
-          "home_now": 1.95,
-          "away_open": 1.84,
-          "away_now": 1.82,
-          "steam": null,
-          "n_ticks": 2,
-          "brief_zh": "讓球初盤主-0.75/1.92 客1.84 → 現盤主-0.75/1.95 客1.82"
-        }
-      },
-      "primary_source": "DATA4MULA",
-      "primary_source_zh": "主：D4M",
-      "d4m_missing": false,
-      "classic_handicap": {
-        "theory_line": -0.25,
-        "actual_line": -0.75,
-        "open_bias": "開大",
-        "heat": "開深仲低水→誘上風險",
-        "eu_asia_ok": true,
-        "verdict": "開深誘上 → 偏向下盤／避低風險追熱",
-        "brief_zh": "進球期望 1.70-1.50；理論盤-0.25；實際-0.75（開大）；冷熱：開深仲低水→誘上風險；歐亞：歐亞大致一致",
-        "conflict": true
-      },
-      "form": [
-        "WWDDD",
-        "DWWWD"
-      ],
-      "h2h_summary": [
-        0,
-        0,
-        1
-      ],
-      "goal_expectancy": 3.2,
-      "narrative_cites": [],
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
-      "corners": null,
-      "live_score": null,
-      "review_zh": "無完場比分"
-    },
-    {
-      "front_end_id": "FB8775",
-      "kickoff_hkt": "2026-11-12 11:00",
-      "tournament": "女子墨西哥超級聯賽",
-      "home": {
-        "ch": "帕丘卡女足",
-        "en": "Pachuca Women"
-      },
-      "away": {
-        "ch": "蒙特雷女足",
-        "en": "Monterrey Women"
-      },
-      "market": "HAD",
-      "market_label": "主客和",
-      "pick": "客勝",
-      "pick_code": "A",
-      "line": null,
-      "pick_line": "主客和 客勝",
-      "hkjc_odds": 2.27,
-      "est_prob_pct": 35.9,
-      "star": false,
-      "star_zh": null,
-      "prob_label": "Poisson+TipsAudit公允+pi-rating+歷史Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes",
-      "confidence": "low",
-      "confidence_zh": "低",
-      "stake": 50,
-      "edge_pp": -3.0,
-      "short_price": false,
-      "risk_tier": "low",
-      "risk_zh": "低風險",
-      "options": [
-        {
-          "risk_tier": "low",
-          "risk_zh": "低風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": 0.062,
-          "market": "HAD",
-          "market_label": "主客和",
-          "pick": "客勝",
-          "pick_code": "A",
-          "line": null,
-          "pick_line": "主客和 客勝",
-          "hkjc_odds": 2.27,
-          "est_prob_pct": 35.9,
-          "est_prob_raw_pct": 46.3,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "分桶校準[HAD] 分桶[HAD] n=247 hit=0.3158",
-          "prob_label": "Poisson+TipsAudit公允+pi-rating+歷史Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": -3.0,
-          "short_price": false,
-          "summary": "主：D4M｜低風險：「主客和 客勝」 @ 2.27，校準後約 35.9%（原 46.3%）（Poisson+TipsAudit公允+pi-rating）。訊號：形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8。【唔建議實注／湊位】",
-          "why": "估計機率 44.5%（Poisson+TipsAudit公允+pi-rating+歷史Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會客勝 2.27｜莊家視角：責任平衡；RLM；責任平衡→降權追價；fade公眾熱｜跨站：HKJC vs 共識軟 11.9pp（公允≈50%）；TipsAudit公允邊 +9.2pp｜CLV代理正｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況PPG客2.60>主1.80｜主近5場 3勝0和2負 場均入3.2/失1.4 大2.5率100% BTTS60% 休整5.0日｜走向：順向蒸汽+0.80；RLM反向輕加｜睇盤：老派：跟客／下盤｜校準[HAD] 46.3%→35.9%｜賽後適應罰−0.51｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8"
-        },
-        {
-          "risk_tier": "medium",
-          "risk_zh": "中風險",
           "efficiency": "weak_fill",
           "efficiency_zh": "湊位／效率偏低",
           "buyable": false,
@@ -2025,123 +1923,87 @@ window.__PUMPKIN_EMBEDDED__ = {
           "clv_proxy": null,
           "market": "HDC",
           "market_label": "讓球",
-          "pick": "客讓",
-          "pick_code": "A",
-          "line": "0.0",
-          "pick_line": "讓球 客讓 0.0",
-          "hkjc_odds": 1.78,
-          "est_prob_pct": 48.3,
-          "est_prob_raw_pct": 53.7,
-          "star": false,
-          "star_zh": null,
-          "calibrated": true,
-          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=20 hit=0.45",
-          "prob_label": "馬會去水",
-          "confidence": "low",
-          "confidence_zh": "低",
-          "stake": 50,
-          "edge_pp": -4.29,
-          "short_price": false,
-          "summary": "主：D4M｜中風險：「讓球 客讓 0.0」 @ 1.78，校準後約 48.3%（原 53.7%）（馬會去水）。訊號：形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8。【唔建議實注／湊位】",
-          "why": "讓球估計機率 51.9%（馬會去水）；客讓 0.0 @ 1.78｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況PPG客2.60>主1.80｜主近5場 3勝0和2負 場均入3.2/失1.4 大2.5率100% BTTS60% 休整5.0日｜走向：順向蒸汽+0.80；RLM反向輕加｜睇盤：老派：跟客／下盤｜校準[HDC] 53.7%→48.3%｜賽後適應罰−0.58｜效率門檻：湊位／弱邊｜形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8｜唔建議實注：校準p 48.3% < 60%（可買硬閘）"
-        },
-        {
-          "risk_tier": "high",
-          "risk_zh": "高風險",
-          "efficiency": "weak_fill",
-          "efficiency_zh": "湊位／效率偏低",
-          "buyable": false,
-          "recommend_zh": "唔建議實注／湊位",
-          "clv_proxy": null,
-          "market": "FHL",
-          "market_label": "半場大細",
-          "pick": "大",
+          "pick": "主讓",
           "pick_code": "H",
-          "line": 1.5,
-          "pick_line": "半場大細 大 1.5",
-          "hkjc_odds": 2.15,
-          "est_prob_pct": 43.0,
-          "est_prob_raw_pct": 44.5,
+          "line": "-0.5/-1.0",
+          "pick_line": "讓球 主讓 -0.5/-1.0",
+          "hkjc_odds": 1.97,
+          "est_prob_pct": 44.2,
+          "est_prob_raw_pct": 46.9,
           "star": false,
           "star_zh": null,
           "calibrated": true,
-          "calibration_note": "分桶校準[FHL] 分桶[FHL] n=68 hit=0.4559",
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=25 hit=0.44",
           "prob_label": "馬會去水",
           "confidence": "low",
           "confidence_zh": "低",
           "stake": 50,
-          "edge_pp": -3.54,
+          "edge_pp": -3.86,
           "short_price": false,
-          "summary": "主：D4M｜高風險：「半場大細 大 1.5」 @ 2.15，校準後約 43.0%（原 44.5%）（馬會去水）。訊號：形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8。【唔建議實注／湊位】",
-          "why": "半場大細估計 43.0%；大 2.15｜冷聯／稀缺：加嚴 HIL／FHA｜近況大細一致：近況／H2H大2.5率約71%；GE代理4.4｜主近5場 3勝0和2負 場均入3.2/失1.4 大2.5率100% BTTS60% 休整5.0日｜走向：RLM反向輕加｜睇盤：大球開淺於理論｜賽後適應罰−0.42｜效率門檻：湊位／弱邊｜形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8｜唔建議實注：高風險預設唔可買（減少負期望）"
+          "summary": "主：D4M｜高風險：「讓球 主讓 -0.5/-1.0」 @ 1.97，校準後約 44.2%（原 46.9%）（馬會去水）。【唔建議實注／湊位】",
+          "why": "讓球估計機率 46.9%（馬會去水）；主讓 -0.5/-1.0 @ 1.97｜睇盤：歐亞分歧 → 降權／唔入低風險；歐亞分歧降權｜校準[HDC] 46.9%→44.2%｜效率門檻：湊位／弱邊｜唔建議實注：高風險預設唔可買（減少負期望）"
         }
       ],
-      "summary": "主：D4M。三選項：低風險 主客和 客勝 @ 2.27（約35.9%）｜中風險 讓球 客讓 0.0 @ 1.78（約48.3%）｜高風險 半場大細 大 1.5 @ 2.15（約43.0%）。建議「主客和 客勝」 @ 2.27，估計機率約 35.9%（Poisson+TipsAudit公允+pi-rating+歷史Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）。莊家視角偏「責任平衡」→avoid，毒性0.45：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追",
-      "why": "估計機率 44.5%（Poisson+TipsAudit公允+pi-rating+歷史Elo+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會客勝 2.27｜莊家視角：責任平衡；RLM；責任平衡→降權追價；fade公眾熱｜跨站：HKJC vs 共識軟 11.9pp（公允≈50%）；TipsAudit公允邊 +9.2pp｜CLV代理正｜冷聯／稀缺：加嚴 HIL／FHA｜近況一致：近況PPG客2.60>主1.80｜主近5場 3勝0和2負 場均入3.2/失1.4 大2.5率100% BTTS60% 休整5.0日｜走向：順向蒸汽+0.80；RLM反向輕加｜睇盤：老派：跟客／下盤｜校準[HAD] 46.3%→35.9%｜賽後適應罰−0.51｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 4.4（代理，非xG）→ 偏大；主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8",
+      "summary": "主：D4M。三選項：低風險 讓球 客讓 -0.5/-1.0 @ 1.74（約47.4%）｜中風險 入球單雙 雙 @ 1.8（約49.0%）｜高風險 讓球 主讓 -0.5/-1.0 @ 1.97（約44.2%）。建議「讓球 客讓 -0.5/-1.0」 @ 1.74，估計機率約 47.4%（馬會去水）。莊家視角偏「資料不足」，毒性0.05：有盤路片段但模式唔清。跨站：主相對共識硬33.7pp；和相對共識硬3.4pp；客相對共識軟37.0pp；Smarkets交換已對齊。Data4mula初",
+      "why": "讓球估計機率 53.1%（馬會去水）；客讓 -0.5/-1.0 @ 1.74｜睇盤：歐亞分歧 → 降權／唔入低風險；歐亞分歧降權｜校準[HDC] 53.1%→47.4%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信",
       "signals": {
-        "lean_had": "away",
-        "lean_ou": "over",
-        "cites": [
-          "形勢進球期望約 4.4（代理，非xG）→ 偏大",
-          "主近5場 3勝0和2負 場均入3.2/失1.4；近5 LLWWW PPG1.8",
-          "客近5場 4勝1和0負 場均入3.0/失1.2；近5 WWDWW PPG2.6",
-          "HAD客縮水 2.42→2.27"
-        ],
-        "goal_expectancy": 4.4
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [],
+        "goal_expectancy": null
       },
       "bookmaker_angle": {
-        "intent": "責任平衡",
-        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H2.3/A2.42 → 即市 H2.45/A2.27；HAD蒸汽→客（中）；RLM:home_drift；馬會軟邊:away；馬會硬邊:home；最大縮水 6.2%",
-        "steam": true,
-        "rlm": true,
+        "intent": "資料不足",
+        "brief_zh": "有盤路片段但模式唔清。｜HAD開盤 H1.66/A4.2 → 即市 H1.66/A4.2；馬會軟邊:away；馬會硬邊:home,draw",
+        "steam": false,
+        "rlm": false,
         "against_public": false,
         "available": true,
-        "toxicity_score": 0.45,
-        "action": "avoid",
-        "sub_tags": [
-          "RLM"
-        ],
+        "toxicity_score": 0.05,
+        "action": "neutral",
+        "sub_tags": [],
         "numbers": {
-          "had_max_short_pct": 0.062,
-          "steam_grade": "中",
-          "trap_boost": 0.2,
+          "had_max_short_pct": 0.0,
+          "steam_grade": "無",
+          "trap_boost": 0.0,
           "soft_sides": [
             "away"
           ],
           "hard_sides": [
-            "home"
+            "home",
+            "draw"
           ],
           "cross_conflict": false
         }
       },
       "odds_compare": {
-        "brief_zh": "主相對共識硬10.8pp；客相對共識軟11.9pp；Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "brief_zh": "主相對共識硬33.7pp；和相對共識硬3.4pp；客相對共識軟37.0pp；Smarkets交換已對齊",
         "sources_status": {
           "hkjc": true,
           "d4m_os": false,
           "espn_dk": false,
           "tipsaudit_fair": true,
-          "pinnacle": true,
+          "pinnacle": false,
           "smarkets": true,
           "bsd_consensus": false
         },
         "had_diff_vs_consensus": {
           "home": {
-            "hkjc_devig": 0.3572,
-            "consensus_fair": 0.2493,
-            "soft_pp": -10.79,
+            "hkjc_devig": 0.5268,
+            "consensus_fair": 0.1898,
+            "soft_pp": -33.7,
             "flag": "hkjc_hard+outlier"
           },
           "draw": {
-            "hkjc_devig": 0.2574,
-            "consensus_fair": 0.2461,
-            "soft_pp": -1.13,
-            "flag": null
+            "hkjc_devig": 0.265,
+            "consensus_fair": 0.2315,
+            "soft_pp": -3.35,
+            "flag": "hkjc_hard"
           },
           "away": {
-            "hkjc_devig": 0.3855,
-            "consensus_fair": 0.5046,
-            "soft_pp": 11.91,
+            "hkjc_devig": 0.2082,
+            "consensus_fair": 0.5787,
+            "soft_pp": 37.05,
             "flag": "hkjc_soft+outlier"
           }
         },
@@ -2150,180 +2012,174 @@ window.__PUMPKIN_EMBEDDED__ = {
             "away"
           ],
           "hkjc_hard_sides": [
-            "home"
+            "home",
+            "draw"
           ],
           "best_soft": {
             "side": "away",
-            "hkjc_devig": 0.3855,
-            "consensus_fair": 0.5046,
-            "soft_pp": 11.91,
+            "hkjc_devig": 0.2082,
+            "consensus_fair": 0.5787,
+            "soft_pp": 37.05,
             "flag": "hkjc_soft+outlier"
           },
           "consensus_1x2": {
-            "home": 0.2493,
-            "draw": 0.2461,
-            "away": 0.5046
+            "home": 0.1898,
+            "draw": 0.2315,
+            "away": 0.5787
           },
-          "n_sources_1x2": 3
+          "n_sources_1x2": 2
         }
       },
       "odds_movement": {
-        "brief_zh": "初盤意圖：責任平衡／RLM；HAD客縮水 2.42→2.27（6.2%）；主熱降冷／客縮（RLM）；主勝走勢加速；馬會HAD初盤 H2.30/D3.40/A2.42 → 現盤 H2.45/D3.40/A2.27；蒸汽→客6.2%；RLM熱降冷",
-        "had_steam": "away",
+        "brief_zh": "初盤意圖：穩盤；馬會HAD初盤 H1.66/D3.30/A4.20 → 現盤 H1.66/D3.30/A4.20；入球線初盤2.5→現盤2.5；大 1.89→1.89；細 1.81→1.81；讓球初盤主-0.75/1.97 客1.74 → 現盤主-0.75/1.97 客1.74；跨莊分歧大（3源）",
+        "had_steam": null,
         "sharp_steam": null,
         "follow_sharp": null,
         "bait_suspect": false,
-        "d4m_intent_zh": "責任平衡／RLM",
+        "d4m_intent_zh": "穩盤",
         "had_open": {
-          "home": 2.3,
-          "draw": 3.4,
-          "away": 2.42
+          "home": 1.66,
+          "draw": 3.3,
+          "away": 4.2
         },
         "had_now": {
-          "home": 2.45,
-          "draw": 3.4,
-          "away": 2.27
+          "home": 1.66,
+          "draw": 3.3,
+          "away": 4.2
         },
         "hil_steam": null,
         "hil_line_open": 2.5,
         "hil_line_now": 2.5,
-        "timing": "mid",
+        "timing": "early",
         "toxic_move": false,
-        "cross_book_n": 4,
+        "cross_book_n": 3,
         "open_now": {
-          "intent_zh": "責任平衡／RLM",
-          "brief_zh": "馬會HAD初盤 H2.30/D3.40/A2.42 → 現盤 H2.45/D3.40/A2.27；蒸汽→客6.2%；RLM熱降冷；入球線初盤2.5→現盤2.5；大 1.53→1.53；細 2.33→2.33；讓球初盤主0.0/1.81 客1.89 → 現盤主0.0/1.92 客1.78；讓球蒸汽→客",
+          "intent_zh": "穩盤",
+          "brief_zh": "馬會HAD初盤 H1.66/D3.30/A4.20 → 現盤 H1.66/D3.30/A4.20；入球線初盤2.5→現盤2.5；大 1.89→1.89；細 1.81→1.81；讓球初盤主-0.75/1.97 客1.74 → 現盤主-0.75/1.97 客1.74",
           "bait_suspect": false,
           "sharp_steam": null,
-          "hkjc_steam": "away",
+          "hkjc_steam": null,
           "markets": {
             "HAD": {
               "open": {
-                "home": 2.3,
-                "draw": 3.4,
-                "away": 2.42
+                "home": 1.66,
+                "draw": 3.3,
+                "away": 4.2
               },
               "now": {
-                "home": 2.45,
-                "draw": 3.4,
-                "away": 2.27
+                "home": 1.66,
+                "draw": 3.3,
+                "away": 4.2
               },
               "shorten": {
-                "home": -0.0652,
+                "home": 0.0,
                 "draw": 0.0,
-                "away": 0.062
+                "away": 0.0
               },
-              "steam": "away",
-              "rlm": "home_drift",
+              "steam": null,
+              "rlm": null,
               "n_ticks": 2,
-              "brief_zh": "馬會HAD初盤 H2.30/D3.40/A2.42 → 現盤 H2.45/D3.40/A2.27；蒸汽→客6.2%；RLM熱降冷"
+              "brief_zh": "馬會HAD初盤 H1.66/D3.30/A4.20 → 現盤 H1.66/D3.30/A4.20"
             },
             "HIL": {
               "line_open": 2.5,
               "line_now": 2.5,
-              "over_open": 1.53,
-              "over_now": 1.53,
-              "under_open": 2.33,
-              "under_now": 2.33,
+              "over_open": 1.89,
+              "over_now": 1.89,
+              "under_open": 1.81,
+              "under_now": 1.81,
               "steam": null,
               "n_ticks": 2,
-              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.53→1.53；細 2.33→2.33"
+              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.89→1.89；細 1.81→1.81"
             },
             "HDC": {
-              "line_open": 0.0,
-              "line_now": 0.0,
-              "home_open": 1.81,
-              "home_now": 1.92,
-              "away_open": 1.89,
-              "away_now": 1.78,
-              "steam": "away",
+              "line_open": -0.75,
+              "line_now": -0.75,
+              "home_open": 1.97,
+              "home_now": 1.97,
+              "away_open": 1.74,
+              "away_now": 1.74,
+              "steam": null,
               "n_ticks": 2,
-              "brief_zh": "讓球初盤主0.0/1.81 客1.89 → 現盤主0.0/1.92 客1.78；讓球蒸汽→客"
+              "brief_zh": "讓球初盤主-0.75/1.97 客1.74 → 現盤主-0.75/1.97 客1.74"
             }
           }
         }
       },
       "d4m_open_now": {
-        "intent_zh": "責任平衡／RLM",
-        "brief_zh": "馬會HAD初盤 H2.30/D3.40/A2.42 → 現盤 H2.45/D3.40/A2.27；蒸汽→客6.2%；RLM熱降冷；入球線初盤2.5→現盤2.5；大 1.53→1.53；細 2.33→2.33；讓球初盤主0.0/1.81 客1.89 → 現盤主0.0/1.92 客1.78；讓球蒸汽→客",
+        "intent_zh": "穩盤",
+        "brief_zh": "馬會HAD初盤 H1.66/D3.30/A4.20 → 現盤 H1.66/D3.30/A4.20；入球線初盤2.5→現盤2.5；大 1.89→1.89；細 1.81→1.81；讓球初盤主-0.75/1.97 客1.74 → 現盤主-0.75/1.97 客1.74",
         "bait_suspect": false,
-        "hkjc_steam": "away",
+        "hkjc_steam": null,
         "sharp_steam": null,
         "had": {
           "open": {
-            "home": 2.3,
-            "draw": 3.4,
-            "away": 2.42
+            "home": 1.66,
+            "draw": 3.3,
+            "away": 4.2
           },
           "now": {
-            "home": 2.45,
-            "draw": 3.4,
-            "away": 2.27
+            "home": 1.66,
+            "draw": 3.3,
+            "away": 4.2
           },
           "shorten": {
-            "home": -0.0652,
+            "home": 0.0,
             "draw": 0.0,
-            "away": 0.062
+            "away": 0.0
           },
-          "steam": "away",
-          "rlm": "home_drift",
+          "steam": null,
+          "rlm": null,
           "n_ticks": 2,
-          "brief_zh": "馬會HAD初盤 H2.30/D3.40/A2.42 → 現盤 H2.45/D3.40/A2.27；蒸汽→客6.2%；RLM熱降冷"
+          "brief_zh": "馬會HAD初盤 H1.66/D3.30/A4.20 → 現盤 H1.66/D3.30/A4.20"
         },
         "had_os": null,
         "hil": {
           "line_open": 2.5,
           "line_now": 2.5,
-          "over_open": 1.53,
-          "over_now": 1.53,
-          "under_open": 2.33,
-          "under_now": 2.33,
+          "over_open": 1.89,
+          "over_now": 1.89,
+          "under_open": 1.81,
+          "under_now": 1.81,
           "steam": null,
           "n_ticks": 2,
-          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.53→1.53；細 2.33→2.33"
+          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.89→1.89；細 1.81→1.81"
         },
         "hdc": {
-          "line_open": 0.0,
-          "line_now": 0.0,
-          "home_open": 1.81,
-          "home_now": 1.92,
-          "away_open": 1.89,
-          "away_now": 1.78,
-          "steam": "away",
+          "line_open": -0.75,
+          "line_now": -0.75,
+          "home_open": 1.97,
+          "home_now": 1.97,
+          "away_open": 1.74,
+          "away_now": 1.74,
+          "steam": null,
           "n_ticks": 2,
-          "brief_zh": "讓球初盤主0.0/1.81 客1.89 → 現盤主0.0/1.92 客1.78；讓球蒸汽→客"
+          "brief_zh": "讓球初盤主-0.75/1.97 客1.74 → 現盤主-0.75/1.97 客1.74"
         }
       },
       "primary_source": "DATA4MULA",
       "primary_source_zh": "主：D4M",
       "d4m_missing": false,
       "classic_handicap": {
-        "theory_line": -0.0,
-        "actual_line": 0.0,
-        "open_bias": "合適",
-        "heat": "主降溫升水",
-        "eu_asia_ok": true,
-        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
-        "brief_zh": "進球期望 2.20-2.20；理論盤-0.0；實際0.0（合適）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬17.0pp",
-        "conflict": false
+        "theory_line": null,
+        "actual_line": -0.75,
+        "open_bias": "未知",
+        "heat": "不明",
+        "eu_asia_ok": false,
+        "verdict": "歐亞分歧 → 降權／唔入低風險",
+        "brief_zh": "理論盤—；實際-0.75（未知）；冷熱：不明；歐亞：歐賠偏客但亞盤主讓 — 分歧；主水位相對公允硬28.3pp；主水位中水",
+        "conflict": true
       },
-      "form": [
-        "LLWWW",
-        "WWDWW"
-      ],
-      "h2h_summary": [
-        7,
-        5,
-        13
-      ],
-      "goal_expectancy": 4.4,
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
       "narrative_cites": [],
       "settlement": "PENDING",
       "status_zh": "待結",
       "ft_score": null,
       "corners": null,
       "live_score": null,
-      "review_zh": "無完場比分"
+      "review_zh": null
     }
   ],
   "review_rows": [
@@ -2345,11 +2201,139 @@ window.__PUMPKIN_EMBEDDED__ = {
       "stake": 50,
       "settlement": "PENDING",
       "status_zh": "待結",
-      "ft_score": null,
+      "ft_score": "0-1",
+      "corners": 8,
+      "result_value": "LIVE 0-1",
+      "review_zh": "LIVE 0-1（暫算 HIT）",
+      "match_status": "LIVE"
+    },
+    {
+      "tip_key": "FB8771|HDC|客讓|-0.5/-1.0|low|2026-11-12 07:44",
+      "front_end_id": "FB8771",
+      "kickoff_hkt": "2026-11-12 10:00",
+      "tournament": "墨西哥甲組聯賽",
+      "home": {
+        "ch": "派拉達斯FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "拉巴斯體育會",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "客讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 客讓 -0.5/-1.0",
+      "hkjc_odds": 1.82,
+      "est_prob_pct": 47.5,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
       "corners": null,
-      "result_value": null,
-      "review_zh": "無完場比分",
-      "match_status": "PREEVENT"
+      "result_value": "1-1",
+      "review_zh": "✅ 中｜讓球 FT 1-1 line -0.75。事前估 47.5%。原因：水位 1.82 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 1-1 line -0.75。事前估 47.5%。原因：水位 1.82 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.82 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%B4%BE%E6%8B%89%E9%81%94%E6%96%AFFC%20%E6%8B%89%E5%B7%B4%E6%96%AF%E9%AB%94%E8%82%B2%E6%9C%83",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 47.5,
+        "prob_error": 0.5253
+      },
+      "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先"
+    },
+    {
+      "tip_key": "FB8771|OOE|雙||medium|2026-11-12 07:44",
+      "front_end_id": "FB8771",
+      "kickoff_hkt": "2026-11-12 10:00",
+      "tournament": "墨西哥甲組聯賽",
+      "home": {
+        "ch": "派拉達斯FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "拉巴斯體育會",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "✅ 中｜總2雙。事前估 49.0%。原因：水位 1.81 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總2雙。事前估 49.0%。原因：水位 1.81 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.81 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%B4%BE%E6%8B%89%E9%81%94%E6%96%AFFC%20%E6%8B%89%E5%B7%B4%E6%96%AF%E9%AB%94%E8%82%B2%E6%9C%83",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 派拉達斯FC vs 拉巴斯體育會",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.51
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
     },
     {
       "front_end_id": "FB8771",
@@ -2367,13 +2351,205 @@ window.__PUMPKIN_EMBEDDED__ = {
       "hkjc_odds": 1.82,
       "est_prob_pct": 47.5,
       "stake": 50,
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
       "corners": null,
-      "result_value": null,
-      "review_zh": "無完場比分",
-      "match_status": "PREEVENT"
+      "result_value": "1-1",
+      "review_zh": "估計方向啱；讓球 FT 1-1 line -0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB8772|OOE|單||low|2026-11-12 07:44",
+      "front_end_id": "FB8772",
+      "kickoff_hkt": "2026-11-12 09:00",
+      "tournament": "女子墨西哥超級聯賽",
+      "home": {
+        "ch": "CF阿美利加女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "托盧卡女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 47.5,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0",
+      "review_zh": "✅ 中｜總3單。事前估 47.5%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總3單。事前估 47.5%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.85 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=CF%E9%98%BF%E7%BE%8E%E5%88%A9%E5%8A%A0%E5%A5%B3%E8%B6%B3%20%E6%89%98%E7%9B%A7%E5%8D%A1%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 47.5,
+        "prob_error": 0.5252
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8772|HDC|客讓|-2.0/-2.5|medium|2026-11-12 07:44",
+      "front_end_id": "FB8772",
+      "kickoff_hkt": "2026-11-12 09:00",
+      "tournament": "女子墨西哥超級聯賽",
+      "home": {
+        "ch": "CF阿美利加女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "托盧卡女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "客讓",
+      "line": "-2.0/-2.5",
+      "risk_tier": "medium",
+      "pick_line": "HDC 客讓 -2.0/-2.5",
+      "hkjc_odds": 2.01,
+      "est_prob_pct": 42.6,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0",
+      "review_zh": "❌ 唔中｜讓球 FT 3-0 line -2.25。事前估 42.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：HDC/medium 水位帶再觀察，分數輕罰",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜讓球 FT 3-0 line -2.25。事前估 42.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：HDC/medium 水位帶再觀察，分數輕罰",
+        "next_change_zh": "下次：HDC/medium 水位帶再觀察，分數輕罰",
+        "causes": [
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=CF%E9%98%BF%E7%BE%8E%E5%88%A9%E5%8A%A0%E5%A5%B3%E8%B6%B3%20%E6%89%98%E7%9B%A7%E5%8D%A1%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 42.6,
+        "prob_error": 0.426
+      },
+      "next_change_zh": "下次：HDC/medium 水位帶再觀察，分數輕罰"
+    },
+    {
+      "tip_key": "FB8772|HIL|大|4.5|high|2026-11-12 07:44",
+      "front_end_id": "FB8772",
+      "kickoff_hkt": "2026-11-12 09:00",
+      "tournament": "女子墨西哥超級聯賽",
+      "home": {
+        "ch": "CF阿美利加女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "托盧卡女足",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 4.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 大 4.5",
+      "hkjc_odds": 2.08,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-0",
+      "corners": null,
+      "result_value": "3-0 總3",
+      "review_zh": "❌ 唔中｜入球3 vs 線4.5。事前估 49.0%。原因：高線大波（大 4.5）易高估——政策永不低風險；事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球3 vs 線4.5。事前估 49.0%。原因：高線大波（大 4.5）易高估——政策永不低風險；事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "causes": [
+          {
+            "tag": "hil_over_high",
+            "zh": "高線大波（大 4.5）易高估——政策永不低風險",
+            "direction": "against"
+          },
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=CF%E9%98%BF%E7%BE%8E%E5%88%A9%E5%8A%A0%E5%A5%B3%E8%B6%B3%20%E6%89%98%E7%9B%A7%E5%8D%A1%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 CF阿美利加女足 vs 托盧卡女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊"
     },
     {
       "front_end_id": "FB8772",
@@ -2391,13 +2567,220 @@ window.__PUMPKIN_EMBEDDED__ = {
       "hkjc_odds": 1.85,
       "est_prob_pct": 47.5,
       "stake": 50,
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-0",
       "corners": null,
-      "result_value": null,
-      "review_zh": "無完場比分",
-      "match_status": "PREEVENT"
+      "result_value": "3-0",
+      "review_zh": "估計方向啱；總3單；莊家視角：逆走盤／穩盤（資訊導向）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB8773|HDC|客讓|-0.5/-1.0|low|2026-11-12 07:44",
+      "front_end_id": "FB8773",
+      "kickoff_hkt": "2026-11-12 08:30",
+      "tournament": "盃賽",
+      "home": {
+        "ch": "法林明高女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "國際體育會女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "客讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 客讓 -0.5/-1.0",
+      "hkjc_odds": 1.8,
+      "est_prob_pct": 47.3,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-3",
+      "corners": null,
+      "result_value": "1-3",
+      "review_zh": "✅ 中｜讓球 FT 1-3 line -0.75。事前估 47.3%。原因：水位 1.80 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 1-3 line -0.75。事前估 47.3%。原因：水位 1.80 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.80 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%B3%95%E6%9E%97%E6%98%8E%E9%AB%98%E5%A5%B3%E8%B6%B3%20%E5%9C%8B%E9%9A%9B%E9%AB%94%E8%82%B2%E6%9C%83%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 47.3,
+        "prob_error": 0.5273
+      },
+      "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先"
+    },
+    {
+      "tip_key": "FB8773|OOE|雙||medium|2026-11-12 07:44",
+      "front_end_id": "FB8773",
+      "kickoff_hkt": "2026-11-12 08:30",
+      "tournament": "盃賽",
+      "home": {
+        "ch": "法林明高女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "國際體育會女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-3",
+      "corners": null,
+      "result_value": "1-3",
+      "review_zh": "✅ 中｜總4雙。事前估 49.0%。原因：水位 1.81 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總4雙。事前估 49.0%。原因：水位 1.81 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.81 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%B3%95%E6%9E%97%E6%98%8E%E9%AB%98%E5%A5%B3%E8%B6%B3%20%E5%9C%8B%E9%9A%9B%E9%AB%94%E8%82%B2%E6%9C%83%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.51
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8773|HDC|主讓|-0.5/-1.0|high|2026-11-12 07:44",
+      "front_end_id": "FB8773",
+      "kickoff_hkt": "2026-11-12 08:30",
+      "tournament": "盃賽",
+      "home": {
+        "ch": "法林明高女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "國際體育會女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "high",
+      "pick_line": "HDC 主讓 -0.5/-1.0",
+      "hkjc_odds": 1.89,
+      "est_prob_pct": 46.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-3",
+      "corners": null,
+      "result_value": "1-3",
+      "review_zh": "❌ 唔中｜讓球 FT 1-3 line -0.75。事前估 46.0%。原因：事前估 46.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜讓球 FT 1-3 line -0.75。事前估 46.0%。原因：事前估 46.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 46.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%B3%95%E6%9E%97%E6%98%8E%E9%AB%98%E5%A5%B3%E8%B6%B3%20%E5%9C%8B%E9%9A%9B%E9%AB%94%E8%82%B2%E6%9C%83%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261112",
+            "summary_zh": "ESPN 當日分數板對照（20261112）：請核對 法林明高女足 vs 國際體育會女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 46.0,
+        "prob_error": 0.4601
+      },
+      "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過"
     },
     {
       "front_end_id": "FB8773",
@@ -2415,13 +2798,13 @@ window.__PUMPKIN_EMBEDDED__ = {
       "hkjc_odds": 1.8,
       "est_prob_pct": 47.3,
       "stake": 50,
-      "settlement": "PENDING",
-      "status_zh": "待結",
-      "ft_score": null,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-3",
       "corners": null,
-      "result_value": null,
-      "review_zh": "無完場比分",
-      "match_status": "PREEVENT"
+      "result_value": "1-3",
+      "review_zh": "估計方向啱；讓球 FT 1-3 line -0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB8751|HDC|主讓|-1.0|low|2026-11-11 18:32",
@@ -48959,26 +49342,26 @@ window.__PUMPKIN_EMBEDDED__ = {
     }
   ],
   "history_meta": {
-    "ledger_n": 736,
+    "ledger_n": 744,
     "user_bets_n": 2,
     "window_review_n": 4,
-    "review_rows_n": 742,
-    "postmatch_n": 734,
+    "review_rows_n": 750,
+    "postmatch_n": 742,
     "note_zh": "覆盤／命中率來自 settlement_ledger + 實注；每場有賽後贏／輸分析（含外網對照）；空窗唔會清走歷史。"
   },
   "disclaimer": "紙盤分析，唔係投注建議。估計機率（已盡量校準）唔保證命中。18歲以下唔准。請理性博彩。",
   "postmatch_adapt": {
-    "as_of_hkt": "2026-11-12 08:04:39 HKT",
-    "n_patterns": 144,
-    "n_penalties": 43,
+    "as_of_hkt": "2026-11-12 12:05:44 HKT",
+    "n_patterns": 146,
+    "n_penalties": 45,
     "n_bonuses": 6,
     "n_gates": 5,
     "changelog_zh": [
       "輕罰 HAD|medium|med|3.50+ p̂=0.28 → +0.53",
-      "輕罰 HAD|high|hot|3.50+ p̂=0.26 → +0.60",
-      "輕罰 HAD|high|med|3.50+ p̂=0.28 → +0.53",
+      "輕罰 HAD|high|hot|3.50+ p̂=0.26 → +0.59",
+      "輕罰 HAD|high|med|3.50+ p̂=0.28 → +0.52",
       "輕罰 HAD|medium|cold|2.50-3.50 p̂=0.26 → +0.58",
-      "罰分 HIL|low|cold|2.00-2.50 p̂=0.28 → +0.51",
+      "罰分 HIL|low|cold|2.00-2.50 p̂=0.28 → +0.50",
       "罰分 HAD|low|med|3.50+ p̂=0.25 → +0.68",
       "硬閘 block_low HAD|low|med|3.50+",
       "輕罰 HAD|high|hot|2.50-3.50 p̂=0.29 → +0.46"
