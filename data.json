@@ -1,14 +1,14 @@
 {
-  "generated_at_hkt": "2026-11-16 12:34:11 HKT",
-  "as_of_hkt": "2026-11-16 12:34:01 HKT",
-  "tips_count": 0,
-  "matches_count": 0,
-  "options_total": 0,
+  "generated_at_hkt": "2026-11-16 15:36:07 HKT",
+  "as_of_hkt": "2026-11-16 15:28:57 HKT",
+  "tips_count": 5,
+  "matches_count": 5,
+  "options_total": 15,
   "low_risk_ge60": 0,
   "star_ge70": 0,
   "buyable_count": 0,
   "buyable_list": [],
-  "screened": 0,
+  "screened": 5,
   "method": "每場三個馬會盤推薦（低／中／高風險）；一視同仁（無 A/B 層）；主資料：DATA4MULA（初盤→現盤／賠率／線移動）；次要對照：ESPN/DK、TipsAudit、Pinnacle、7M、X、FotMob；可買硬閘校準p≥60%（weak_fill 唔入可買清單）；模型：Poisson/Dixon-Coles ρ、歷史Elo、pi-rating、Bayes、isotonic 校準、Kelly；D4M／外盤只做機率估計，絕唔推外圍投注。",
   "policy": {
     "tiers": "disabled — all matches equal",
@@ -26,95 +26,102 @@
     "probability": "估計機率 = 以 DATA4MULA 為主（初盤→現盤、HAD_OS／大細 de-vig、線移動）；ESPN/DK、TipsAudit、Pinnacle、7M、X 只作次要對照；再混馬會去水、Poisson(時間衰減GF/GA + 聯賽ρ)、歷史Elo／pi-rating、市場錨定／Bayes／isotonic 校準；可買硬閘校準p≥60%；blend 讀 model_weights.json（d4m≫espn）；唔係賽果保證",
     "risk_definition": "低風險＝最高校準估計機率（優先≥60%）、水位≥1.70 主盤（角球／高線大波≥3.5／水位<1.70 永遠排除）；中風險＝中段水位（≥1.70）同模型分；高風險＝較長賠率／較高上行但仍有理由（唔係亂槍）；水位<1.70 預設唔推（冇肉），僅中／高全場無肉時例外湊位並降注"
   },
-  "hit_rate": 0.4449,
+  "hit_rate": 0.4435,
   "cross_match_guard": {
-    "active": false,
-    "n": 0,
-    "reason": "too_few_picks"
+    "active": true,
+    "n": 5,
+    "demoted": 1,
+    "direction_counts": {
+      "HDC:H": 2,
+      "HDC:A": 3
+    },
+    "notes": [
+      "跨場相關：HDC:A 佔 3/5（60%）→ 保留 2、改寫 1"
+    ]
   },
   "calibration": {
-    "n_settled": 1099,
-    "honesty_zh": "校準已套用（n=1099／時間加權2426，半衰期10日）；仍係估計，唔保證命中",
+    "n_settled": 1132,
+    "honesty_zh": "校準已套用（n=1132／時間加權2551，半衰期10日）；仍係估計，唔保證命中",
     "identity": false,
-    "brier_raw": 0.2427,
-    "brier_calibrated": 0.2419,
+    "brier_raw": 0.2429,
+    "brier_calibrated": 0.2421,
     "rolling": {
       "7d": {
-        "n": 392,
-        "hit": 195,
-        "miss": 197,
-        "hit_rate": 0.4974,
-        "brier": 0.2551
+        "n": 425,
+        "hit": 208,
+        "miss": 217,
+        "hit_rate": 0.4894,
+        "brier": 0.2542
       },
       "30d": {
-        "n": 1099,
-        "hit": 489,
-        "miss": 610,
-        "hit_rate": 0.4449,
-        "brier": 0.2469
+        "n": 1132,
+        "hit": 502,
+        "miss": 630,
+        "hit_rate": 0.4435,
+        "brier": 0.2468
       }
     }
   },
   "rolling_7d": {
-    "n": 392,
-    "hit": 195,
-    "miss": 197,
-    "hit_rate": 0.4974,
-    "brier": 0.2551
+    "n": 425,
+    "hit": 208,
+    "miss": 217,
+    "hit_rate": 0.4894,
+    "brier": 0.2542
   },
   "rolling_30d": {
-    "n": 1099,
-    "hit": 489,
-    "miss": 610,
-    "hit_rate": 0.4449,
-    "brier": 0.2469
+    "n": 1132,
+    "hit": 502,
+    "miss": 630,
+    "hit_rate": 0.4435,
+    "brier": 0.2468
   },
-  "odds_compare_coverage": "EMPTY — external 0/0 (D4M 0.0% Pin 0.0% SM 0.0% ESPN 0.0% TA 0.0%)",
+  "odds_compare_coverage": "OK — external 5/5 (D4M 100.0% Pin 100.0% SM 80.0% ESPN 0.0% TA 0.0%)",
   "toxic_train": "cached — soft≥2.5pp n=14320 @ 2026-11-14 08:09:28 HKT",
   "sources": {
-    "HKJC": "OK — window 0 / raw 68",
-    "DATA4MULA": "PRIMARY — OK — linked 0/0 (fb_map 68, odds 68)",
-    "Overseas ESPN/DK": "SECONDARY — linked 0/0 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
-    "FotMob": "OK — linked 0, detailed 0, near_KO_XI 0",
-    "7M": "PARTIAL — linked 0/0 (catalogue 12)",
-    "X": "EMPTY — linked 0/0 (raw_matches 10)",
-    "Signals": "EMPTY — linked 0/0 (weather 0, standings 0, line_move 0, xg_recent 0)",
-    "TipsAudit": "PARTIAL — linked 0/0 (catalogue 279)",
-    "Pinnacle": "PARTIAL — linked 0/0 (catalogue 66)",
-    "Smarkets": "PARTIAL — linked 0/0 (catalogue 26)",
-    "OddsCompare": "EMPTY — external 0/0 (D4M 0.0% Pin 0.0% SM 0.0% ESPN 0.0% TA 0.0%)",
-    "OddsMovement": "PARTIAL — with_move 0/0",
-    "ClassicHandicap": "PARTIAL — with_classic 0/0",
+    "HKJC": "OK — window 5 / raw 67",
+    "DATA4MULA": "PRIMARY — OK — linked 5/5 (fb_map 68, odds 68)",
+    "Overseas ESPN/DK": "SECONDARY — linked 0/5 (leagues none; odds_api=skipped (no THE_ODDS_API_KEY))",
+    "FotMob": "OK — linked 4, detailed 4, near_KO_XI 0",
+    "7M": "OK — linked 3/5 (catalogue 12)",
+    "X": "EMPTY — linked 0/5 (raw_matches 10)",
+    "Signals": "OK — linked 4/5 (weather 3, standings 3, line_move 4, xg_recent 0)",
+    "TipsAudit": "PARTIAL — linked 0/5 (catalogue 291)",
+    "Pinnacle": "OK — linked 5/5 (catalogue 87)",
+    "Smarkets": "OK — linked 4/5 (catalogue 28)",
+    "OddsCompare": "OK — external 5/5 (D4M 100.0% Pin 100.0% SM 80.0% ESPN 0.0% TA 0.0%)",
+    "OddsMovement": "OK — with_move 5/5",
+    "ClassicHandicap": "OK — with_classic 5/5",
     "ToxicTrain": "cached — soft≥2.5pp n=14320 @ 2026-11-14 08:09:28 HKT",
-    "HistoricalElo/ρ": "cached — matches 38091 teams 439 ρ=-0.033",
-    "Calibration": "n=1099 identity=False brier_raw=0.2427→cal=0.2419 | 校準已套用（n=1099／時間加權2426，半衰期10日）；仍係估計，唔保證命中",
+    "HistoricalElo/ρ": "OK — matches 38091 teams 439 ρ=-0.033",
+    "Calibration": "n=1099 identity=False brier_raw=0.2427→cal=0.2418 | 校準已套用（n=1099／時間加權2419，半衰期10日）；仍係估計，唔保證命中",
     "HitrateBuckets": "n=1099 prior=0.4695 half_life=10.0d"
   },
   "attribution_footer": "Fair odds reference includes TipsAudit (tipsaudit.com). External books are never tipped.",
   "settlement_summary": {
-    "as_of_hkt": "2026-11-16 12:34:11 HKT",
-    "tips_as_of": "2026-11-16 12:34:01 HKT",
-    "n_tips": 0,
-    "n_settled": 1099,
+    "as_of_hkt": "2026-11-16 15:36:07 HKT",
+    "tips_as_of": "2026-11-16 15:28:57 HKT",
+    "n_tips": 29,
+    "n_settled": 1132,
     "n_pending": 0,
-    "n_hit": 489,
-    "n_miss": 610,
+    "n_hit": 502,
+    "n_miss": 630,
     "n_void": 7,
-    "hit_rate": 0.4449,
-    "brier": 0.2469,
-    "paper_pnl": -9028.5,
+    "hit_rate": 0.4435,
+    "brier": 0.2468,
+    "paper_pnl": -9398.5,
     "by_market": {
       "HIL": {
-        "n": 207,
-        "hit": 106,
-        "miss": 101,
-        "hit_rate": 0.5121
+        "n": 214,
+        "hit": 108,
+        "miss": 106,
+        "hit_rate": 0.5047
       },
       "HAD": {
-        "n": 319,
+        "n": 324,
         "hit": 107,
-        "miss": 212,
-        "hit_rate": 0.3354
+        "miss": 217,
+        "hit_rate": 0.3302
       },
       "CHL": {
         "n": 4,
@@ -123,10 +130,10 @@
         "hit_rate": 0.0
       },
       "FHL": {
-        "n": 112,
-        "hit": 54,
-        "miss": 58,
-        "hit_rate": 0.4821
+        "n": 117,
+        "hit": 57,
+        "miss": 60,
+        "hit_rate": 0.4872
       },
       "FHA": {
         "n": 52,
@@ -135,24 +142,2053 @@
         "hit_rate": 0.3654
       },
       "HDC": {
-        "n": 116,
-        "hit": 58,
-        "miss": 58,
-        "hit_rate": 0.5
+        "n": 123,
+        "hit": 62,
+        "miss": 61,
+        "hit_rate": 0.5041
       },
       "OOE": {
-        "n": 289,
-        "hit": 145,
-        "miss": 144,
-        "hit_rate": 0.5017
+        "n": 298,
+        "hit": 149,
+        "miss": 149,
+        "hit_rate": 0.5
       }
     },
-    "clv_by_quality": {},
-    "error_patterns": [],
+    "clv_by_quality": {
+      "screen_snap": {
+        "n": 87,
+        "mean": -0.002
+      }
+    },
+    "error_patterns": [
+      "高線大波（HIL/FHL 大≥3.5）唔中 3/5 → 唔作低風險、收緊進球期望代理權重"
+    ],
     "source": "settlement_ledger+window",
-    "ledger_n": 1106
+    "ledger_n": 1139
   },
-  "tips": [],
+  "tips": [
+    {
+      "front_end_id": "FB9044",
+      "kickoff_hkt": "2026-11-16 19:00",
+      "tournament": "國際賽",
+      "home": {
+        "ch": "黑山U21",
+        "en": "Montenegro U21"
+      },
+      "away": {
+        "ch": "波斯尼亞U21",
+        "en": "Bosnia-Herzegovina U21"
+      },
+      "market": "HDC",
+      "market_label": "讓球",
+      "pick": "主讓",
+      "pick_code": "H",
+      "line": "0.0",
+      "pick_line": "讓球 主讓 0.0",
+      "hkjc_odds": 2.03,
+      "est_prob_pct": 48.8,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -2.96,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "主讓",
+          "pick_code": "H",
+          "line": "0.0",
+          "pick_line": "讓球 主讓 0.0",
+          "hkjc_odds": 2.03,
+          "est_prob_pct": 48.8,
+          "est_prob_raw_pct": 43.8,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=116 hit=0.5",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -2.96,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「讓球 主讓 0.0」 @ 2.03，校準後約 48.8%（原 43.8%）（馬會去水）。訊號：主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "讓球估計機率 46.3%（馬會去水）；主讓 0.0 @ 2.03｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：客場近況PPG1.00 vs 主場近況0.33 → 降權／唔入低風險｜客隊休整2.8日 → 主隊相對有利｜主隊休整2.8日 → 主勝降權｜主近5場 0勝3和2負 場均入1.0/失1.6 大2.5率40% BTTS80% 休整2.8日 疲勞旗｜走向：RLM追熱降權｜睇盤：老派：跟主向｜校準[HDC] 43.8%→48.8%｜賽後適應加＋0.16｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": -0.0462,
+          "market": "HAD",
+          "market_label": "主客和",
+          "pick": "主勝",
+          "pick_code": "H",
+          "line": null,
+          "pick_line": "主客和 主勝",
+          "hkjc_odds": 2.72,
+          "est_prob_pct": 27.2,
+          "est_prob_raw_pct": 39.1,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HAD] 分桶[HAD] n=319 hit=0.3354",
+          "prob_label": "D4M外盤+Elo+Poisson+pi-rating+馬會去水+Bayes",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": 7.44,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「主客和 主勝」 @ 2.72，校準後約 27.2%（原 39.1%）（D4M外盤+Elo+Poisson）。訊號：主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "估計機率 41.6%（D4M外盤+Elo+Poisson+pi-rating+馬會去水+Bayes）；馬會主勝 2.72｜莊家視角：責任平衡；RLM；RLM/公眾熱→避；CLV代理正｜走盤逆向（非近開賽）輕罰｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：客場近況PPG1.00 vs 主場近況0.33 → 降權／唔入低風險｜客隊休整2.8日 → 主隊相對有利｜主隊休整2.8日 → 主勝降權｜主近5場 0勝3和2負 場均入1.0/失1.6 大2.5率40% BTTS80% 休整2.8日 疲勞旗｜走向：RLM追熱降權｜睇盤：老派：跟主向｜校準[HAD] 39.1%→27.2%｜賽後適應罰−0.96｜效率門檻：湊位／弱邊｜主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高｜唔建議實注：校準p 27.2% < 60%（可買硬閘）"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "單",
+          "pick_code": "O",
+          "line": null,
+          "pick_line": "入球單雙 單",
+          "hkjc_odds": 1.88,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 49.2,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.0,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「入球單雙 單」 @ 1.88，校準後約 49.0%（馬會去水）。訊號：主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高。【唔建議實注／湊位】",
+          "why": "單雙估計 49.2%；單 1.88｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜走向：RLM反向輕加｜睇盤：進球期望 1.61-1.30；理論盤-0.25；實際0.0（合適）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬17.0pp｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高｜唔建議實注：市場 OOE 永不列入可買"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 讓球 主讓 0.0 @ 2.03（約48.8%）｜中風險 主客和 主勝 @ 2.72（約27.2%）｜高風險 入球單雙 單 @ 1.88（約49.0%）。建議「讓球 主讓 0.0」 @ 2.03，估計機率約 48.8%（馬會去水）。莊家視角偏「責任平衡」→avoid，毒性0.45：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula初盤→現盤「責",
+      "why": "讓球估計機率 46.3%（馬會去水）；主讓 0.0 @ 2.03｜冷聯／稀缺：加嚴 HIL／FHA｜近況相反：客場近況PPG1.00 vs 主場近況0.33 → 降權／唔入低風險｜客隊休整2.8日 → 主隊相對有利｜主隊休整2.8日 → 主勝降權｜主近5場 0勝3和2負 場均入1.0/失1.6 大2.5率40% BTTS80% 休整2.8日 疲勞旗｜走向：RLM追熱降權｜睇盤：老派：跟主向｜校準[HDC] 43.8%→48.8%｜賽後適應加＋0.16｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91；BTTS 比率偏高",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "over",
+        "cites": [
+          "主場攻防拆：主場入0.67/失1.67 vs 客場入1.0/失2.75→期望2.91",
+          "BTTS 比率偏高",
+          "主近5場 0勝3和2負 場均入1.0/失1.6；近5 DLDDL PPG0.6",
+          "客近5場 1勝2和2負 場均入0.8/失2.2；近5 DDLLW PPG1.0",
+          "大球縮水 1.83→1.74"
+        ],
+        "goal_expectancy": 2.91
+      },
+      "bookmaker_angle": {
+        "intent": "責任平衡",
+        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H2.6/A2.41 → 即市 H2.72/A2.35；大細蒸汽→大；RLM:home_drift；最大縮水 2.5%",
+        "steam": true,
+        "rlm": true,
+        "against_public": false,
+        "available": true,
+        "toxicity_score": 0.45,
+        "action": "avoid",
+        "sub_tags": [
+          "RLM"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0249,
+          "steam_grade": "弱",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": true,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": true,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.3251,
+            "consensus_fair": 0.3228,
+            "soft_pp": -0.23,
+            "flag": null
+          },
+          "draw": {
+            "hkjc_devig": 0.2987,
+            "consensus_fair": 0.2825,
+            "soft_pp": -1.62,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.3762,
+            "consensus_fair": 0.3948,
+            "soft_pp": 1.86,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
+          "best_soft": {
+            "side": "away",
+            "hkjc_devig": 0.3762,
+            "consensus_fair": 0.3948,
+            "soft_pp": 1.86,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.3228,
+            "draw": 0.2825,
+            "away": 0.3948
+          },
+          "n_sources_1x2": 3
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：責任平衡／RLM；主熱降冷／客縮（RLM）；主勝走勢加速；大球縮水 1.83→1.74；馬會HAD初盤 H2.60/D3.00/A2.41 → 現盤 H2.72/D2.96/A2.35；RLM熱降冷",
+        "had_steam": null,
+        "sharp_steam": null,
+        "follow_sharp": null,
+        "bait_suspect": false,
+        "d4m_intent_zh": "責任平衡／RLM",
+        "had_open": {
+          "home": 2.6,
+          "draw": 3.0,
+          "away": 2.41
+        },
+        "had_now": {
+          "home": 2.72,
+          "draw": 2.96,
+          "away": 2.35
+        },
+        "hil_steam": "over",
+        "hil_line_open": 2.25,
+        "hil_line_now": 2.25,
+        "timing": "mid",
+        "toxic_move": false,
+        "cross_book_n": 4,
+        "open_now": {
+          "intent_zh": "責任平衡／RLM",
+          "brief_zh": "馬會HAD初盤 H2.60/D3.00/A2.41 → 現盤 H2.72/D2.96/A2.35；RLM熱降冷；外盤HAD_OS初盤 H2.65/D3.24/A2.36 → 現盤 H2.79/D3.19/A2.30；RLM熱降冷；入球線初盤2.25→現盤2.25；大 1.83→1.74；細 1.87→1.97；蒸汽→大；讓球初盤主0.0/1.96 客1.81 → 現盤主0.0/2.03 客1.75；讓球蒸汽→客",
+          "bait_suspect": false,
+          "sharp_steam": null,
+          "hkjc_steam": null,
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 2.6,
+                "draw": 3.0,
+                "away": 2.41
+              },
+              "now": {
+                "home": 2.72,
+                "draw": 2.96,
+                "away": 2.35
+              },
+              "shorten": {
+                "home": -0.0462,
+                "draw": 0.0133,
+                "away": 0.0249
+              },
+              "steam": null,
+              "rlm": "home_drift",
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H2.60/D3.00/A2.41 → 現盤 H2.72/D2.96/A2.35；RLM熱降冷"
+            },
+            "HAD_OS": {
+              "open": {
+                "home": 2.65,
+                "draw": 3.24,
+                "away": 2.36
+              },
+              "now": {
+                "home": 2.79,
+                "draw": 3.19,
+                "away": 2.3
+              },
+              "shorten": {
+                "home": -0.0528,
+                "draw": 0.0154,
+                "away": 0.0254
+              },
+              "steam": null,
+              "rlm": "home_drift",
+              "n_ticks": 2,
+              "brief_zh": "外盤HAD_OS初盤 H2.65/D3.24/A2.36 → 現盤 H2.79/D3.19/A2.30；RLM熱降冷"
+            },
+            "HIL": {
+              "line_open": 2.25,
+              "line_now": 2.25,
+              "over_open": 1.83,
+              "over_now": 1.74,
+              "under_open": 1.87,
+              "under_now": 1.97,
+              "steam": "over",
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.25→現盤2.25；大 1.83→1.74；細 1.87→1.97；蒸汽→大"
+            },
+            "HDC": {
+              "line_open": 0.0,
+              "line_now": 0.0,
+              "home_open": 1.96,
+              "home_now": 2.03,
+              "away_open": 1.81,
+              "away_now": 1.75,
+              "steam": "away",
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主0.0/1.96 客1.81 → 現盤主0.0/2.03 客1.75；讓球蒸汽→客"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "責任平衡／RLM",
+        "brief_zh": "馬會HAD初盤 H2.60/D3.00/A2.41 → 現盤 H2.72/D2.96/A2.35；RLM熱降冷；外盤HAD_OS初盤 H2.65/D3.24/A2.36 → 現盤 H2.79/D3.19/A2.30；RLM熱降冷；入球線初盤2.25→現盤2.25；大 1.83→1.74；細 1.87→1.97；蒸汽→大；讓球初盤主0.0/1.96 客1.81 → 現盤主0.0/2.03 客1.75；讓球蒸汽→客",
+        "bait_suspect": false,
+        "hkjc_steam": null,
+        "sharp_steam": null,
+        "had": {
+          "open": {
+            "home": 2.6,
+            "draw": 3.0,
+            "away": 2.41
+          },
+          "now": {
+            "home": 2.72,
+            "draw": 2.96,
+            "away": 2.35
+          },
+          "shorten": {
+            "home": -0.0462,
+            "draw": 0.0133,
+            "away": 0.0249
+          },
+          "steam": null,
+          "rlm": "home_drift",
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H2.60/D3.00/A2.41 → 現盤 H2.72/D2.96/A2.35；RLM熱降冷"
+        },
+        "had_os": {
+          "open": {
+            "home": 2.65,
+            "draw": 3.24,
+            "away": 2.36
+          },
+          "now": {
+            "home": 2.79,
+            "draw": 3.19,
+            "away": 2.3
+          },
+          "shorten": {
+            "home": -0.0528,
+            "draw": 0.0154,
+            "away": 0.0254
+          },
+          "steam": null,
+          "rlm": "home_drift",
+          "n_ticks": 2,
+          "brief_zh": "外盤HAD_OS初盤 H2.65/D3.24/A2.36 → 現盤 H2.79/D3.19/A2.30；RLM熱降冷"
+        },
+        "hil": {
+          "line_open": 2.25,
+          "line_now": 2.25,
+          "over_open": 1.83,
+          "over_now": 1.74,
+          "under_open": 1.87,
+          "under_now": 1.97,
+          "steam": "over",
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.25→現盤2.25；大 1.83→1.74；細 1.87→1.97；蒸汽→大"
+        },
+        "hdc": {
+          "line_open": 0.0,
+          "line_now": 0.0,
+          "home_open": 1.96,
+          "home_now": 2.03,
+          "away_open": 1.81,
+          "away_now": 1.75,
+          "steam": "away",
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主0.0/1.96 客1.81 → 現盤主0.0/2.03 客1.75；讓球蒸汽→客"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": -0.25,
+        "actual_line": 0.0,
+        "open_bias": "合適",
+        "heat": "主降溫升水",
+        "eu_asia_ok": true,
+        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
+        "brief_zh": "進球期望 1.61-1.30；理論盤-0.25；實際0.0（合適）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬17.0pp",
+        "conflict": false
+      },
+      "form": [
+        "DLDDL",
+        "DDLLW"
+      ],
+      "h2h_summary": [
+        2,
+        4,
+        3
+      ],
+      "goal_expectancy": 2.91,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB9067",
+      "kickoff_hkt": "2026-11-16 19:00",
+      "tournament": "國際賽",
+      "home": {
+        "ch": "烏茲別克U20",
+        "en": "Uzbekistan U20"
+      },
+      "away": {
+        "ch": "委內瑞拉U20",
+        "en": "Venezuela U20"
+      },
+      "market": "HDC",
+      "market_label": "讓球",
+      "pick": "客讓",
+      "pick_code": "A",
+      "line": "0.0/-0.5",
+      "pick_line": "讓球 客讓 0.0/-0.5",
+      "hkjc_odds": 1.91,
+      "est_prob_pct": 49.1,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -3.7,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "客讓",
+          "pick_code": "A",
+          "line": "0.0/-0.5",
+          "pick_line": "讓球 客讓 0.0/-0.5",
+          "hkjc_odds": 1.91,
+          "est_prob_pct": 49.1,
+          "est_prob_raw_pct": 48.7,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=116 hit=0.5",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.7,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「讓球 客讓 0.0/-0.5」 @ 1.91，校準後約 49.1%（馬會去水）。【唔建議實注／湊位】",
+          "why": "讓球估計機率 48.7%（馬會去水）；客讓 0.0/-0.5 @ 1.91｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬9.9pp｜賽後適應罰−0.49；賽後適應加＋0.15；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "單",
+          "pick_code": "O",
+          "line": null,
+          "pick_line": "入球單雙 單",
+          "hkjc_odds": 1.87,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 49.5,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.02,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「入球單雙 單」 @ 1.87，校準後約 49.0%（馬會去水）。【唔建議實注／湊位】",
+          "why": "單雙估計 49.5%；單 1.87｜政策：單雙預設唔入低風險｜市場權重×0.28｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬9.9pp｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：市場 OOE 永不列入可買"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": 0.0244,
+          "market": "HAD",
+          "market_label": "主客和",
+          "pick": "主勝",
+          "pick_code": "H",
+          "line": null,
+          "pick_line": "主客和 主勝",
+          "hkjc_odds": 2.0,
+          "est_prob_pct": 38.2,
+          "est_prob_raw_pct": 46.2,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HAD] 分桶[HAD] n=319 hit=0.3354",
+          "prob_label": "D4M外盤+Elo+馬會去水+Bayes",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.83,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「主客和 主勝」 @ 2.0，校準後約 38.2%（原 46.2%）（D4M外盤+Elo+馬會去水）。【唔建議實注／湊位】",
+          "why": "估計機率 46.2%（D4M外盤+Elo+馬會去水+Bayes）；馬會主勝 2.0｜莊家視角：穩盤；微動｜CLV代理正｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬9.9pp｜校準[HAD] 46.2%→38.2%｜賽後適應罰−0.96｜效率門檻：湊位／弱邊｜唔建議實注：高風險預設唔可買（減少負期望）"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 讓球 客讓 0.0/-0.5 @ 1.91（約49.1%）｜中風險 入球單雙 單 @ 1.87（約49.0%）｜高風險 主客和 主勝 @ 2.0（約38.2%）。建議「讓球 客讓 0.0/-0.5」 @ 1.91，估計機率約 49.1%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：Pinnacle尖莊已對齊。Data4mula初盤→現盤「穩盤」：馬會HAD初盤 H2.05/D3.25/A2.",
+      "why": "讓球估計機率 48.7%（馬會去水）；客讓 0.0/-0.5 @ 1.91｜冷聯／稀缺：加嚴 HIL／FHA｜睇盤：理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬9.9pp｜賽後適應罰−0.49；賽後適應加＋0.15；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": null,
+        "cites": [],
+        "goal_expectancy": null
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H2.05/A2.95 → 即市 H2.0/A3.05；最大縮水 2.4%",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true,
+        "toxicity_score": 0.1,
+        "action": "neutral",
+        "sub_tags": [
+          "微動"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0244,
+          "steam_grade": "弱",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": true,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": false,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.44,
+            "consensus_fair": 0.4534,
+            "soft_pp": 1.34,
+            "flag": null
+          },
+          "draw": {
+            "hkjc_devig": 0.2667,
+            "consensus_fair": 0.263,
+            "soft_pp": -0.37,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.2933,
+            "consensus_fair": 0.2836,
+            "soft_pp": -0.97,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
+          "best_soft": {
+            "side": "home",
+            "hkjc_devig": 0.44,
+            "consensus_fair": 0.4534,
+            "soft_pp": 1.34,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.4534,
+            "draw": 0.263,
+            "away": 0.2836
+          },
+          "n_sources_1x2": 2
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：穩盤；主勝走勢減速；馬會HAD初盤 H2.05/D3.25/A2.95 → 現盤 H2.00/D3.25/A3.05；外盤HAD_OS初盤 H1.98/D3.50/A3.15 → 現盤 H1.99/D3.49/A3.13；入球線初盤2.5→現盤2.5；大 1.74→1.74；細 1.97→1.97",
+        "had_steam": null,
+        "sharp_steam": null,
+        "follow_sharp": null,
+        "bait_suspect": false,
+        "d4m_intent_zh": "穩盤",
+        "had_open": {
+          "home": 2.05,
+          "draw": 3.25,
+          "away": 2.95
+        },
+        "had_now": {
+          "home": 2.0,
+          "draw": 3.25,
+          "away": 3.05
+        },
+        "hil_steam": null,
+        "hil_line_open": 2.5,
+        "hil_line_now": 2.5,
+        "timing": "mid",
+        "toxic_move": false,
+        "cross_book_n": 3,
+        "open_now": {
+          "intent_zh": "穩盤",
+          "brief_zh": "馬會HAD初盤 H2.05/D3.25/A2.95 → 現盤 H2.00/D3.25/A3.05；外盤HAD_OS初盤 H1.98/D3.50/A3.15 → 現盤 H1.99/D3.49/A3.13；入球線初盤2.5→現盤2.5；大 1.74→1.74；細 1.97→1.97；讓球初盤主-0.25/1.86 客1.86 → 現盤主-0.25/1.82 客1.9",
+          "bait_suspect": false,
+          "sharp_steam": null,
+          "hkjc_steam": null,
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 2.05,
+                "draw": 3.25,
+                "away": 2.95
+              },
+              "now": {
+                "home": 2.0,
+                "draw": 3.25,
+                "away": 3.05
+              },
+              "shorten": {
+                "home": 0.0244,
+                "draw": 0.0,
+                "away": -0.0339
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H2.05/D3.25/A2.95 → 現盤 H2.00/D3.25/A3.05"
+            },
+            "HAD_OS": {
+              "open": {
+                "home": 1.98,
+                "draw": 3.5,
+                "away": 3.15
+              },
+              "now": {
+                "home": 1.99,
+                "draw": 3.49,
+                "away": 3.13
+              },
+              "shorten": {
+                "home": -0.0051,
+                "draw": 0.0029,
+                "away": 0.0063
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "外盤HAD_OS初盤 H1.98/D3.50/A3.15 → 現盤 H1.99/D3.49/A3.13"
+            },
+            "HIL": {
+              "line_open": 2.5,
+              "line_now": 2.5,
+              "over_open": 1.74,
+              "over_now": 1.74,
+              "under_open": 1.97,
+              "under_now": 1.97,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.74→1.74；細 1.97→1.97"
+            },
+            "HDC": {
+              "line_open": -0.25,
+              "line_now": -0.25,
+              "home_open": 1.86,
+              "home_now": 1.82,
+              "away_open": 1.86,
+              "away_now": 1.9,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主-0.25/1.86 客1.86 → 現盤主-0.25/1.82 客1.9"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "穩盤",
+        "brief_zh": "馬會HAD初盤 H2.05/D3.25/A2.95 → 現盤 H2.00/D3.25/A3.05；外盤HAD_OS初盤 H1.98/D3.50/A3.15 → 現盤 H1.99/D3.49/A3.13；入球線初盤2.5→現盤2.5；大 1.74→1.74；細 1.97→1.97；讓球初盤主-0.25/1.86 客1.86 → 現盤主-0.25/1.82 客1.9",
+        "bait_suspect": false,
+        "hkjc_steam": null,
+        "sharp_steam": null,
+        "had": {
+          "open": {
+            "home": 2.05,
+            "draw": 3.25,
+            "away": 2.95
+          },
+          "now": {
+            "home": 2.0,
+            "draw": 3.25,
+            "away": 3.05
+          },
+          "shorten": {
+            "home": 0.0244,
+            "draw": 0.0,
+            "away": -0.0339
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H2.05/D3.25/A2.95 → 現盤 H2.00/D3.25/A3.05"
+        },
+        "had_os": {
+          "open": {
+            "home": 1.98,
+            "draw": 3.5,
+            "away": 3.15
+          },
+          "now": {
+            "home": 1.99,
+            "draw": 3.49,
+            "away": 3.13
+          },
+          "shorten": {
+            "home": -0.0051,
+            "draw": 0.0029,
+            "away": 0.0063
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "外盤HAD_OS初盤 H1.98/D3.50/A3.15 → 現盤 H1.99/D3.49/A3.13"
+        },
+        "hil": {
+          "line_open": 2.5,
+          "line_now": 2.5,
+          "over_open": 1.74,
+          "over_now": 1.74,
+          "under_open": 1.97,
+          "under_now": 1.97,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.74→1.74；細 1.97→1.97"
+        },
+        "hdc": {
+          "line_open": -0.25,
+          "line_now": -0.25,
+          "home_open": 1.86,
+          "home_now": 1.82,
+          "away_open": 1.86,
+          "away_now": 1.9,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主-0.25/1.86 客1.86 → 現盤主-0.25/1.82 客1.9"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": -0.25,
+        "actual_line": -0.25,
+        "open_bias": "合適",
+        "heat": "不明",
+        "eu_asia_ok": true,
+        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
+        "brief_zh": "理論盤後備 Pinnacle AH -0.25；理論盤-0.25；實際-0.25（合適）；冷熱：不明；歐亞：歐亞大致一致；主水位相對公允硬9.9pp",
+        "conflict": false
+      },
+      "form": null,
+      "h2h_summary": null,
+      "goal_expectancy": null,
+      "narrative_cites": [],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB9029",
+      "kickoff_hkt": "2026-11-16 21:00",
+      "tournament": "非國盃外圍賽",
+      "home": {
+        "ch": "納米比亞",
+        "en": "Namibia"
+      },
+      "away": {
+        "ch": "喀麥隆",
+        "en": "Cameroon"
+      },
+      "market": "HDC",
+      "market_label": "讓球",
+      "pick": "主讓",
+      "pick_code": "H",
+      "line": "+1.0",
+      "pick_line": "讓球 主讓 +1.0",
+      "hkjc_odds": 2.0,
+      "est_prob_pct": 48.8,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -3.48,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "主讓",
+          "pick_code": "H",
+          "line": "+1.0",
+          "pick_line": "讓球 主讓 +1.0",
+          "hkjc_odds": 2.0,
+          "est_prob_pct": 48.8,
+          "est_prob_raw_pct": 44.0,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=116 hit=0.5",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.48,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「讓球 主讓 +1.0」 @ 2.0，校準後約 48.8%（原 44.0%）（馬會去水）。訊號：H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8。【唔建議實注／湊位】",
+          "why": "讓球估計機率 46.5%（馬會去水）；主讓 +1.0 @ 2.0｜盃賽／淘汰賽：數據噪訊高｜近況相反：近況PPG客2.60>主0.80 → 降權／唔入低風險｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝1和3負 場均入0.2/失1.8 大2.5率20% BTTS0% 休整3.5日｜走向：順向蒸汽+0.80；跟尖莊初盤→現盤蒸汽｜睇盤：進球期望 0.30-1.80；理論盤1.5；實際1.0（開大）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬39.0pp｜校準[HDC] 44.0%→48.8%｜賽後適應加＋0.16｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8；7M：「納米比亞遭遇各項賽事三連敗，期間一球不入且均場失3球，今仗再戰勁敵喀麥隆，納米比亞無力渡劫。」；7M心水指向客隊「喀麥隆」"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "FHA",
+          "market_label": "半場主客和",
+          "pick": "半場和",
+          "pick_code": "D",
+          "line": null,
+          "pick_line": "半場主客和 半場和",
+          "hkjc_odds": 2.07,
+          "est_prob_pct": 45.0,
+          "est_prob_raw_pct": 42.2,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[FHA] 分桶[FHA] n=52 hit=0.3654",
+          "prob_label": "馬會去水（半場弱校準）",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -6.07,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「半場主客和 半場和」 @ 2.07，校準後約 45.0%（原 42.2%）（馬會去水（半場弱校準））。訊號：H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8。【唔建議實注／湊位】",
+          "why": "半場主客和估計 42.2%；半場和 2.07｜政策：FHA 唔作低風險（覆盤命中極低）｜盃賽／淘汰賽：數據噪訊高｜盃賽輪換風險：盃賽短休／陣容lastStarting11｜主近5場 1勝1和3負 場均入0.2/失1.8 大2.5率20% BTTS0% 休整3.5日｜睇盤：進球期望 0.30-1.80；理論盤1.5；實際1.0（開大）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬39.0pp｜校準[FHA] 42.2%→45.0%｜賽後適應罰−0.56；賽後硬閘：FHA唔低風險｜效率門檻：湊位／弱邊｜H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8；7M：「納米比亞遭遇各項賽事三連敗，期間一球不入且均場失3球，今仗再戰勁敵喀麥隆，納米比亞無力渡劫。」；7M心水指向客隊「喀麥隆」｜唔建議實注：市場 FHA 永不列入可買"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "雙",
+          "pick_code": "E",
+          "line": null,
+          "pick_line": "入球單雙 雙",
+          "hkjc_odds": 1.81,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 51.1,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.17,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「入球單雙 雙」 @ 1.81，校準後約 49.0%（原 51.1%）（馬會去水）。訊號：H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8。【唔建議實注／湊位】",
+          "why": "單雙估計 51.1%；雙 1.81｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜睇盤：進球期望 0.30-1.80；理論盤1.5；實際1.0（開大）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬39.0pp｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8；7M：「納米比亞遭遇各項賽事三連敗，期間一球不入且均場失3球，今仗再戰勁敵喀麥隆，納米比亞無力渡劫。」；7M心水指向客隊「喀麥隆」｜唔建議實注：市場 OOE 永不列入可買"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 讓球 主讓 +1.0 @ 2.0（約48.8%）｜中風險 半場主客和 半場和 @ 2.07（約45.0%）｜高風險 入球單雙 雙 @ 1.81（約49.0%）。建議「讓球 主讓 +1.0」 @ 2.0，估計機率約 48.8%（馬會去水）。莊家視角偏「誘盤嫌疑」→fade_public，毒性0.7：公眾敘事／熱門與蒸汽相反，兼有放長或馬會相對外盤偏軟 → 高誘盤嫌疑，勿追熱。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。D",
+      "why": "讓球估計機率 46.5%（馬會去水）；主讓 +1.0 @ 2.0｜盃賽／淘汰賽：數據噪訊高｜近況相反：近況PPG客2.60>主0.80 → 降權／唔入低風險｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝1和3負 場均入0.2/失1.8 大2.5率20% BTTS0% 休整3.5日｜走向：順向蒸汽+0.80；跟尖莊初盤→現盤蒸汽｜睇盤：進球期望 0.30-1.80；理論盤1.5；實際1.0（開大）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬39.0pp｜校準[HDC] 44.0%→48.8%｜賽後適應加＋0.16｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜H2H近5場場均僅 1.6 球；主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8；7M：「納米比亞遭遇各項賽事三連敗，期間一球不入且均場失3球，今仗再戰勁敵喀麥隆，納米比亞無力渡劫。」；7M心水指向客隊「喀麥隆」",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "under",
+        "cites": [
+          "H2H近5場場均僅 1.6 球",
+          "主近5場 1勝1和3負 場均入0.2/失1.8；近5 DWLLL PPG0.8",
+          "客近5場 4勝1和0負 場均入1.8/失0.4；近5 WWDWW PPG2.6",
+          "高溫 → 節奏可能偏慢（輕偏細）",
+          "外盤HAD_OS主縮水 9.12→7.78"
+        ],
+        "goal_expectancy": 2.1
+      },
+      "bookmaker_angle": {
+        "intent": "誘盤嫌疑",
+        "brief_zh": "公眾敘事／熱門與蒸汽相反，兼有放長或馬會相對外盤偏軟 → 高誘盤嫌疑，勿追熱。｜HAD開盤 H9.0/A1.32 → 即市 H8.75/A1.33；HAD蒸汽→主（弱）；最大縮水 2.8%",
+        "steam": true,
+        "rlm": true,
+        "against_public": true,
+        "available": true,
+        "toxicity_score": 0.7,
+        "action": "fade_public",
+        "sub_tags": [
+          "RLM",
+          "逆公眾"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0278,
+          "steam_grade": "弱",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": true,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": true,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.1006,
+            "consensus_fair": 0.108,
+            "soft_pp": 0.74,
+            "flag": null
+          },
+          "draw": {
+            "hkjc_devig": 0.2378,
+            "consensus_fair": 0.2349,
+            "soft_pp": -0.29,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.6616,
+            "consensus_fair": 0.657,
+            "soft_pp": -0.46,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
+          "best_soft": {
+            "side": "home",
+            "hkjc_devig": 0.1006,
+            "consensus_fair": 0.108,
+            "soft_pp": 0.74,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.108,
+            "draw": 0.2349,
+            "away": 0.657
+          },
+          "n_sources_1x2": 3
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：責任平衡／RLM；主勝走勢減速；馬會HAD初盤 H9.00/D3.75/A1.32 → 現盤 H8.75/D3.70/A1.33；外盤HAD_OS初盤 H9.12/D4.17/A1.34 → 現盤 H7.78/D3.85/A1.42；蒸汽→主14.7%；RLM熱降冷；入球線初盤2.25→現盤2.25；大 2.07→2.07；細 1.67→1.67",
+        "had_steam": "home",
+        "sharp_steam": "home",
+        "follow_sharp": "home",
+        "bait_suspect": false,
+        "d4m_intent_zh": "責任平衡／RLM",
+        "had_open": {
+          "home": 9.0,
+          "draw": 3.75,
+          "away": 1.32
+        },
+        "had_now": {
+          "home": 8.75,
+          "draw": 3.7,
+          "away": 1.33
+        },
+        "hil_steam": null,
+        "hil_line_open": 2.25,
+        "hil_line_now": 2.25,
+        "timing": "early",
+        "toxic_move": false,
+        "cross_book_n": 4,
+        "open_now": {
+          "intent_zh": "責任平衡／RLM",
+          "brief_zh": "馬會HAD初盤 H9.00/D3.75/A1.32 → 現盤 H8.75/D3.70/A1.33；外盤HAD_OS初盤 H9.12/D4.17/A1.34 → 現盤 H7.78/D3.85/A1.42；蒸汽→主14.7%；RLM熱降冷；入球線初盤2.25→現盤2.25；大 2.07→2.07；細 1.67→1.67；讓球初盤主1.0/2.01 客1.73 → 現盤主1.0/2.0 客1.74",
+          "bait_suspect": false,
+          "sharp_steam": "home",
+          "hkjc_steam": null,
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 9.0,
+                "draw": 3.75,
+                "away": 1.32
+              },
+              "now": {
+                "home": 8.75,
+                "draw": 3.7,
+                "away": 1.33
+              },
+              "shorten": {
+                "home": 0.0278,
+                "draw": 0.0133,
+                "away": -0.0076
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H9.00/D3.75/A1.32 → 現盤 H8.75/D3.70/A1.33"
+            },
+            "HAD_OS": {
+              "open": {
+                "home": 9.12,
+                "draw": 4.17,
+                "away": 1.34
+              },
+              "now": {
+                "home": 7.78,
+                "draw": 3.85,
+                "away": 1.42
+              },
+              "shorten": {
+                "home": 0.1469,
+                "draw": 0.0767,
+                "away": -0.0597
+              },
+              "steam": "home",
+              "rlm": "away_drift",
+              "n_ticks": 2,
+              "brief_zh": "外盤HAD_OS初盤 H9.12/D4.17/A1.34 → 現盤 H7.78/D3.85/A1.42；蒸汽→主14.7%；RLM熱降冷"
+            },
+            "HIL": {
+              "line_open": 2.25,
+              "line_now": 2.25,
+              "over_open": 2.07,
+              "over_now": 2.07,
+              "under_open": 1.67,
+              "under_now": 1.67,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.25→現盤2.25；大 2.07→2.07；細 1.67→1.67"
+            },
+            "HDC": {
+              "line_open": 1.0,
+              "line_now": 1.0,
+              "home_open": 2.01,
+              "home_now": 2.0,
+              "away_open": 1.73,
+              "away_now": 1.74,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主1.0/2.01 客1.73 → 現盤主1.0/2.0 客1.74"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "責任平衡／RLM",
+        "brief_zh": "馬會HAD初盤 H9.00/D3.75/A1.32 → 現盤 H8.75/D3.70/A1.33；外盤HAD_OS初盤 H9.12/D4.17/A1.34 → 現盤 H7.78/D3.85/A1.42；蒸汽→主14.7%；RLM熱降冷；入球線初盤2.25→現盤2.25；大 2.07→2.07；細 1.67→1.67；讓球初盤主1.0/2.01 客1.73 → 現盤主1.0/2.0 客1.74",
+        "bait_suspect": false,
+        "hkjc_steam": null,
+        "sharp_steam": "home",
+        "had": {
+          "open": {
+            "home": 9.0,
+            "draw": 3.75,
+            "away": 1.32
+          },
+          "now": {
+            "home": 8.75,
+            "draw": 3.7,
+            "away": 1.33
+          },
+          "shorten": {
+            "home": 0.0278,
+            "draw": 0.0133,
+            "away": -0.0076
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H9.00/D3.75/A1.32 → 現盤 H8.75/D3.70/A1.33"
+        },
+        "had_os": {
+          "open": {
+            "home": 9.12,
+            "draw": 4.17,
+            "away": 1.34
+          },
+          "now": {
+            "home": 7.78,
+            "draw": 3.85,
+            "away": 1.42
+          },
+          "shorten": {
+            "home": 0.1469,
+            "draw": 0.0767,
+            "away": -0.0597
+          },
+          "steam": "home",
+          "rlm": "away_drift",
+          "n_ticks": 2,
+          "brief_zh": "外盤HAD_OS初盤 H9.12/D4.17/A1.34 → 現盤 H7.78/D3.85/A1.42；蒸汽→主14.7%；RLM熱降冷"
+        },
+        "hil": {
+          "line_open": 2.25,
+          "line_now": 2.25,
+          "over_open": 2.07,
+          "over_now": 2.07,
+          "under_open": 1.67,
+          "under_now": 1.67,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.25→現盤2.25；大 2.07→2.07；細 1.67→1.67"
+        },
+        "hdc": {
+          "line_open": 1.0,
+          "line_now": 1.0,
+          "home_open": 2.01,
+          "home_now": 2.0,
+          "away_open": 1.73,
+          "away_now": 1.74,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主1.0/2.01 客1.73 → 現盤主1.0/2.0 客1.74"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": 1.5,
+        "actual_line": 1.0,
+        "open_bias": "開大",
+        "heat": "主受熱降水",
+        "eu_asia_ok": true,
+        "verdict": "觀望",
+        "brief_zh": "進球期望 0.30-1.80；理論盤1.5；實際1.0（開大）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬39.0pp",
+        "conflict": false
+      },
+      "form": [
+        "DWLLL",
+        "WWDWW"
+      ],
+      "h2h_summary": [
+        1,
+        2,
+        2
+      ],
+      "goal_expectancy": 2.1,
+      "narrative_cites": [
+        "7M：「納米比亞遭遇各項賽事三連敗，期間一球不入且均場失3球，今仗再戰勁敵喀麥隆，納米比亞無力渡劫。」",
+        "7M心水指向客隊「喀麥隆」"
+      ],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB9030",
+      "kickoff_hkt": "2026-11-16 21:00",
+      "tournament": "非國盃外圍賽",
+      "home": {
+        "ch": "蘇丹",
+        "en": "Sudan"
+      },
+      "away": {
+        "ch": "塞內加爾",
+        "en": "Senegal"
+      },
+      "market": "HDC",
+      "market_label": "讓球",
+      "pick": "客讓",
+      "pick_code": "A",
+      "line": "+1.5/+2.0",
+      "pick_line": "讓球 客讓 +1.5/+2.0",
+      "hkjc_odds": 2.0,
+      "est_prob_pct": 49.1,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -3.48,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "客讓",
+          "pick_code": "A",
+          "line": "+1.5/+2.0",
+          "pick_line": "讓球 客讓 +1.5/+2.0",
+          "hkjc_odds": 2.0,
+          "est_prob_pct": 49.1,
+          "est_prob_raw_pct": 48.3,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=116 hit=0.5",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.48,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「讓球 客讓 +1.5/+2.0」 @ 2.0，校準後約 49.1%（馬會去水）。訊號：主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0。【唔建議實注／湊位】",
+          "why": "讓球估計機率 46.5%（馬會去水）；客讓 +1.5/+2.0 @ 2.0｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG客2.00>主0.60｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝0和4負 場均入0.8/失2.6 大2.5率60% BTTS60% 休整3.5日｜睇盤：進球期望 0.90-2.20；理論盤1.25；實際1.75（開小）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬50.7pp｜賽後適應加＋0.16；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0；7M：「塞內加爾無論近況、班底實力抑或是對賽都佔優，今輪再勝蘇丹沒有任何懸念。」；7M心水指向客隊「塞內加爾」"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "雙",
+          "pick_code": "E",
+          "line": null,
+          "pick_line": "入球單雙 雙",
+          "hkjc_odds": 1.84,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 50.3,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.08,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「入球單雙 雙」 @ 1.84，校準後約 49.0%（原 50.3%）（馬會去水）。訊號：主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0。【唔建議實注／湊位】",
+          "why": "單雙估計 50.3%；雙 1.84｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜睇盤：進球期望 0.90-2.20；理論盤1.25；實際1.75（開小）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬50.7pp｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0；7M：「塞內加爾無論近況、班底實力抑或是對賽都佔優，今輪再勝蘇丹沒有任何懸念。」；7M心水指向客隊「塞內加爾」｜唔建議實注：市場 OOE 永不列入可買"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "單",
+          "pick_code": "O",
+          "line": null,
+          "pick_line": "入球單雙 單",
+          "hkjc_odds": 1.86,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 49.7,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.03,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「入球單雙 單」 @ 1.86，校準後約 49.0%（馬會去水）。訊號：主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0。【唔建議實注／湊位】",
+          "why": "單雙估計 49.7%；單 1.86｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜睇盤：進球期望 0.90-2.20；理論盤1.25；實際1.75（開小）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬50.7pp｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0；7M：「塞內加爾無論近況、班底實力抑或是對賽都佔優，今輪再勝蘇丹沒有任何懸念。」；7M心水指向客隊「塞內加爾」｜唔建議實注：市場 OOE 永不列入可買"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 讓球 客讓 +1.5/+2.0 @ 2.0（約49.1%）｜中風險 入球單雙 雙 @ 1.84（約49.0%）｜高風險 入球單雙 單 @ 1.86（約49.0%）。建議「讓球 客讓 +1.5/+2.0」 @ 2.0，估計機率約 49.1%（馬會去水）。莊家視角偏「穩盤」，毒性0.1：開盤至即市變動細，莊家似穩盤／少責任壓力。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula初盤→現盤「穩盤」：馬會HAD初盤 H",
+      "why": "讓球估計機率 46.5%（馬會去水）；客讓 +1.5/+2.0 @ 2.0｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況PPG客2.00>主0.60｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 1勝0和4負 場均入0.8/失2.6 大2.5率60% BTTS60% 休整3.5日｜睇盤：進球期望 0.90-2.20；理論盤1.25；實際1.75（開小）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬50.7pp｜賽後適應加＋0.16；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6；客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0；7M：「塞內加爾無論近況、班底實力抑或是對賽都佔優，今輪再勝蘇丹沒有任何懸念。」；7M心水指向客隊「塞內加爾」",
+      "signals": {
+        "lean_had": null,
+        "lean_ou": "under",
+        "cites": [
+          "主近5場 1勝0和4負 場均入0.8/失2.6；近5 LLWLL PPG0.6",
+          "客近5場 3勝1和1負 場均入1.8/失1.0；近5 LDWWW PPG2.0",
+          "高溫 → 節奏可能偏慢（輕偏細）",
+          "主勝 CV 高 (0.143) — 盤路波動"
+        ],
+        "goal_expectancy": 3.1
+      },
+      "bookmaker_angle": {
+        "intent": "穩盤",
+        "brief_zh": "開盤至即市變動細，莊家似穩盤／少責任壓力。｜HAD開盤 H13.0/A1.16 → 即市 H14.0/A1.15；最大縮水 0.9%",
+        "steam": false,
+        "rlm": false,
+        "against_public": false,
+        "available": true,
+        "toxicity_score": 0.1,
+        "action": "neutral",
+        "sub_tags": [
+          "微動"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0086,
+          "steam_grade": "無",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": true,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": true,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.063,
+            "consensus_fair": 0.0613,
+            "soft_pp": -0.17,
+            "flag": null
+          },
+          "draw": {
+            "hkjc_devig": 0.1697,
+            "consensus_fair": 0.1663,
+            "soft_pp": -0.34,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.7673,
+            "consensus_fair": 0.7724,
+            "soft_pp": 0.51,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
+          "best_soft": {
+            "side": "away",
+            "hkjc_devig": 0.7673,
+            "consensus_fair": 0.7724,
+            "soft_pp": 0.51,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.0613,
+            "draw": 0.1663,
+            "away": 0.7724
+          },
+          "n_sources_1x2": 3
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：穩盤；主勝走勢加速；馬會HAD初盤 H13.00/D5.00/A1.16 → 現盤 H14.00/D5.20/A1.15；外盤HAD_OS初盤 H12.77/D5.13/A1.21 → 現盤 H12.69/D5.16/A1.22；入球線初盤2.5→現盤2.5；大 1.84→1.84；細 1.86→1.86",
+        "had_steam": null,
+        "sharp_steam": null,
+        "follow_sharp": null,
+        "bait_suspect": false,
+        "d4m_intent_zh": "穩盤",
+        "had_open": {
+          "home": 13.0,
+          "draw": 5.0,
+          "away": 1.16
+        },
+        "had_now": {
+          "home": 14.0,
+          "draw": 5.2,
+          "away": 1.15
+        },
+        "hil_steam": null,
+        "hil_line_open": 2.5,
+        "hil_line_now": 2.5,
+        "timing": "early",
+        "toxic_move": false,
+        "cross_book_n": 4,
+        "open_now": {
+          "intent_zh": "穩盤",
+          "brief_zh": "馬會HAD初盤 H13.00/D5.00/A1.16 → 現盤 H14.00/D5.20/A1.15；外盤HAD_OS初盤 H12.77/D5.13/A1.21 → 現盤 H12.69/D5.16/A1.22；入球線初盤2.5→現盤2.5；大 1.84→1.84；細 1.86→1.86；讓球初盤主1.75/1.7 客2.05 → 現盤主1.75/1.74 客2.0",
+          "bait_suspect": false,
+          "sharp_steam": null,
+          "hkjc_steam": null,
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 13.0,
+                "draw": 5.0,
+                "away": 1.16
+              },
+              "now": {
+                "home": 14.0,
+                "draw": 5.2,
+                "away": 1.15
+              },
+              "shorten": {
+                "home": -0.0769,
+                "draw": -0.04,
+                "away": 0.0086
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H13.00/D5.00/A1.16 → 現盤 H14.00/D5.20/A1.15"
+            },
+            "HAD_OS": {
+              "open": {
+                "home": 12.77,
+                "draw": 5.13,
+                "away": 1.21
+              },
+              "now": {
+                "home": 12.69,
+                "draw": 5.16,
+                "away": 1.22
+              },
+              "shorten": {
+                "home": 0.0063,
+                "draw": -0.0058,
+                "away": -0.0083
+              },
+              "steam": null,
+              "rlm": null,
+              "n_ticks": 2,
+              "brief_zh": "外盤HAD_OS初盤 H12.77/D5.13/A1.21 → 現盤 H12.69/D5.16/A1.22"
+            },
+            "HIL": {
+              "line_open": 2.5,
+              "line_now": 2.5,
+              "over_open": 1.84,
+              "over_now": 1.84,
+              "under_open": 1.86,
+              "under_now": 1.86,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.5→現盤2.5；大 1.84→1.84；細 1.86→1.86"
+            },
+            "HDC": {
+              "line_open": 1.75,
+              "line_now": 1.75,
+              "home_open": 1.7,
+              "home_now": 1.74,
+              "away_open": 2.05,
+              "away_now": 2.0,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主1.75/1.7 客2.05 → 現盤主1.75/1.74 客2.0"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "穩盤",
+        "brief_zh": "馬會HAD初盤 H13.00/D5.00/A1.16 → 現盤 H14.00/D5.20/A1.15；外盤HAD_OS初盤 H12.77/D5.13/A1.21 → 現盤 H12.69/D5.16/A1.22；入球線初盤2.5→現盤2.5；大 1.84→1.84；細 1.86→1.86；讓球初盤主1.75/1.7 客2.05 → 現盤主1.75/1.74 客2.0",
+        "bait_suspect": false,
+        "hkjc_steam": null,
+        "sharp_steam": null,
+        "had": {
+          "open": {
+            "home": 13.0,
+            "draw": 5.0,
+            "away": 1.16
+          },
+          "now": {
+            "home": 14.0,
+            "draw": 5.2,
+            "away": 1.15
+          },
+          "shorten": {
+            "home": -0.0769,
+            "draw": -0.04,
+            "away": 0.0086
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H13.00/D5.00/A1.16 → 現盤 H14.00/D5.20/A1.15"
+        },
+        "had_os": {
+          "open": {
+            "home": 12.77,
+            "draw": 5.13,
+            "away": 1.21
+          },
+          "now": {
+            "home": 12.69,
+            "draw": 5.16,
+            "away": 1.22
+          },
+          "shorten": {
+            "home": 0.0063,
+            "draw": -0.0058,
+            "away": -0.0083
+          },
+          "steam": null,
+          "rlm": null,
+          "n_ticks": 2,
+          "brief_zh": "外盤HAD_OS初盤 H12.77/D5.13/A1.21 → 現盤 H12.69/D5.16/A1.22"
+        },
+        "hil": {
+          "line_open": 2.5,
+          "line_now": 2.5,
+          "over_open": 1.84,
+          "over_now": 1.84,
+          "under_open": 1.86,
+          "under_now": 1.86,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.5→現盤2.5；大 1.84→1.84；細 1.86→1.86"
+        },
+        "hdc": {
+          "line_open": 1.75,
+          "line_now": 1.75,
+          "home_open": 1.7,
+          "home_now": 1.74,
+          "away_open": 2.05,
+          "away_now": 2.0,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主1.75/1.7 客2.05 → 現盤主1.75/1.74 客2.0"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": 1.25,
+        "actual_line": 1.75,
+        "open_bias": "開小",
+        "heat": "主降溫升水",
+        "eu_asia_ok": true,
+        "verdict": "觀望",
+        "brief_zh": "進球期望 0.90-2.20；理論盤1.25；實際1.75（開小）；冷熱：主降溫升水；歐亞：歐亞大致一致；主水位相對公允硬50.7pp",
+        "conflict": false
+      },
+      "form": [
+        "LLWLL",
+        "LDWWW"
+      ],
+      "h2h_summary": [
+        0,
+        3,
+        5
+      ],
+      "goal_expectancy": 3.1,
+      "narrative_cites": [
+        "7M：「塞內加爾無論近況、班底實力抑或是對賽都佔優，今輪再勝蘇丹沒有任何懸念。」",
+        "7M心水指向客隊「塞內加爾」"
+      ],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    },
+    {
+      "front_end_id": "FB9032",
+      "kickoff_hkt": "2026-11-16 21:00",
+      "tournament": "非國盃外圍賽",
+      "home": {
+        "ch": "津巴布韋",
+        "en": "Zimbabwe"
+      },
+      "away": {
+        "ch": "赤道畿內亞",
+        "en": "Equatorial Guinea"
+      },
+      "market": "OOE",
+      "market_label": "入球單雙",
+      "pick": "雙",
+      "pick_code": "E",
+      "line": null,
+      "pick_line": "入球單雙 雙",
+      "hkjc_odds": 1.75,
+      "est_prob_pct": 49.0,
+      "star": false,
+      "star_zh": null,
+      "prob_label": "馬會去水",
+      "confidence": "low",
+      "confidence_zh": "低",
+      "stake": 50,
+      "edge_pp": -4.44,
+      "short_price": false,
+      "risk_tier": "low",
+      "risk_zh": "低風險",
+      "options": [
+        {
+          "risk_tier": "low",
+          "risk_zh": "低風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "OOE",
+          "market_label": "入球單雙",
+          "pick": "雙",
+          "pick_code": "E",
+          "line": null,
+          "pick_line": "入球單雙 雙",
+          "hkjc_odds": 1.75,
+          "est_prob_pct": 49.0,
+          "est_prob_raw_pct": 52.7,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[OOE] 分桶[OOE] n=289 hit=0.5017",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.44,
+          "short_price": false,
+          "summary": "主：D4M｜低風險：「入球單雙 雙」 @ 1.75，校準後約 49.0%（原 52.7%）（馬會去水）。訊號：形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4。【唔建議實注／湊位】",
+          "why": "單雙估計 52.7%；雙 1.75｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜走向：RLM反向輕加｜睇盤：進球期望 1.00-0.90；理論盤-0.0；實際-0.25（合適）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬11.1pp｜校準[OOE] 52.7%→84.0%｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4；7M：「兩隊目前非國盃外都是取得1勝1和1負，津巴布韋入球數多一些，赤道畿內亞失球相對少一些，整體表現各有千秋，今鋪再次打和較為正路。」；7M：評述偏大球／進攻｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A"
+        },
+        {
+          "risk_tier": "medium",
+          "risk_zh": "中風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": null,
+          "market": "HDC",
+          "market_label": "讓球",
+          "pick": "客讓",
+          "pick_code": "A",
+          "line": "0.0/-0.5",
+          "pick_line": "讓球 客讓 0.0/-0.5",
+          "hkjc_odds": 1.88,
+          "est_prob_pct": 49.1,
+          "est_prob_raw_pct": 47.0,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HDC] 分桶[HDC] n=116 hit=0.5",
+          "prob_label": "馬會去水",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -3.73,
+          "short_price": false,
+          "summary": "主：D4M｜中風險：「讓球 客讓 0.0/-0.5」 @ 1.88，校準後約 49.1%（原 47.0%）（馬會去水）。訊號：形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4。【唔建議實注／湊位】",
+          "why": "讓球估計機率 49.5%（馬會去水）；客讓 0.0/-0.5 @ 1.88｜盃賽／淘汰賽：數據噪訊高｜近況相反：近況偏主 → 降權／唔入低風險｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 2勝1和2負 場均入1.0/失1.2 大2.5率40% BTTS40% 休整3.6日｜走向：逆向蒸汽降權；RLM追熱降權；逆尖莊走勢降權｜睇盤：老派：跟客／下盤｜校準[HDC] 47.0%→49.4%｜賽後適應罰−0.49；賽後適應加＋0.16；賽後機率封頂49%｜效率門檻：湊位／弱邊｜唔建議實注：低風險弱邊／湊位／過度自信｜形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4；7M：「兩隊目前非國盃外都是取得1勝1和1負，津巴布韋入球數多一些，赤道畿內亞失球相對少一些，整體表現各有千秋，今鋪再次打和較為正路。」；7M：評述偏大球／進攻｜跨場堆疊降為中風險（HDC:A）"
+        },
+        {
+          "risk_tier": "high",
+          "risk_zh": "高風險",
+          "efficiency": "weak_fill",
+          "efficiency_zh": "湊位／效率偏低",
+          "buyable": false,
+          "recommend_zh": "唔建議實注／湊位",
+          "clv_proxy": 0.0463,
+          "market": "HAD",
+          "market_label": "主客和",
+          "pick": "主勝",
+          "pick_code": "H",
+          "line": null,
+          "pick_line": "主客和 主勝",
+          "hkjc_odds": 2.06,
+          "est_prob_pct": 39.6,
+          "est_prob_raw_pct": 46.9,
+          "star": false,
+          "star_zh": null,
+          "calibrated": true,
+          "calibration_note": "分桶校準[HAD] 分桶[HAD] n=319 hit=0.3354",
+          "prob_label": "D4M外盤+Elo+Poisson+pi-rating+訊號偏向+走盤蒸汽+馬會去水+Bayes",
+          "confidence": "low",
+          "confidence_zh": "低",
+          "stake": 50,
+          "edge_pp": -4.04,
+          "short_price": false,
+          "summary": "主：D4M｜高風險：「主客和 主勝」 @ 2.06，校準後約 39.6%（原 46.9%）（D4M外盤+Elo+Poisson）。訊號：形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4。【唔建議實注／湊位】",
+          "why": "估計機率 45.7%（D4M外盤+Elo+Poisson+pi-rating+訊號偏向+走盤蒸汽+馬會去水+Bayes）；馬會主勝 2.06｜莊家視角：責任平衡；RLM；責任平衡→降權追價；fade公眾熱；CLV代理正｜CLV代理正｜盃賽／淘汰賽：數據噪訊高｜近況一致：近況偏向主｜盃賽輪換風險：盃賽短休／陣容lastStarting11（讓球／主客和輕罰）｜主近5場 2勝1和2負 場均入1.0/失1.2 大2.5率40% BTTS40% 休整3.6日｜走向：順向蒸汽+0.80；RLM反向輕加；跟尖莊初盤→現盤蒸汽｜睇盤：進球期望 1.00-0.90；理論盤-0.0；實際-0.25（合適）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬11.1pp｜校準[HAD] 46.9%→39.6%｜賽後適應罰−0.75｜效率門檻：湊位／弱邊｜形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4；7M：「兩隊目前非國盃外都是取得1勝1和1負，津巴布韋入球數多一些，赤道畿內亞失球相對少一些，整體表現各有千秋，今鋪再次打和較為正路。」；7M：評述偏大球／進攻｜唔建議實注：高風險預設唔可買（減少負期望）"
+        }
+      ],
+      "summary": "主：D4M。三選項：低風險 入球單雙 雙 @ 1.75（約49.0%）｜中風險 讓球 客讓 0.0/-0.5 @ 1.88（約49.1%）｜高風險 主客和 主勝 @ 2.06（約39.6%）。建議「入球單雙 雙」 @ 1.75，估計機率約 49.0%（馬會去水）。莊家視角偏「責任平衡」→avoid，毒性0.45：出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。跨站：Pinnacle尖莊已對齊；Smarkets交換已對齊。Data4mula初盤→現盤「責任平衡",
+      "why": "單雙估計 52.7%；雙 1.75｜政策：單雙預設唔入低風險｜市場權重×0.28｜盃賽／淘汰賽：數據噪訊高｜走向：RLM反向輕加｜睇盤：進球期望 1.00-0.90；理論盤-0.0；實際-0.25（合適）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬11.1pp｜校準[OOE] 52.7%→84.0%｜賽後機率封頂49%｜效率門檻：湊位／弱邊｜形勢進球期望約 1.9（代理，非xG）→ 偏細；主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4；7M：「兩隊目前非國盃外都是取得1勝1和1負，津巴布韋入球數多一些，赤道畿內亞失球相對少一些，整體表現各有千秋，今鋪再次打和較為正路。」；7M：評述偏大球／進攻｜唔建議實注：市場 OOE 永不列入可買｜跨場相關守衛：避開堆疊 HDC:A",
+      "signals": {
+        "lean_had": "home",
+        "lean_ou": "under",
+        "cites": [
+          "形勢進球期望約 1.9（代理，非xG）→ 偏細",
+          "主近5場 2勝1和2負 場均入1.0/失1.2；近5 LWWLD PPG1.4",
+          "客近5場 2勝1和2負 場均入0.6/失1.0；近5 LWLWD PPG1.4",
+          "天氣平和",
+          "HAD主縮水 2.16→2.06"
+        ],
+        "goal_expectancy": 1.9
+      },
+      "bookmaker_angle": {
+        "intent": "責任平衡",
+        "brief_zh": "出現熱降冷（RLM），莊家或在平衡注碼責任，唔好盲目追熱。｜HAD開盤 H2.16/A3.3 → 即市 H2.06/A3.5；HAD蒸汽→主（弱）；RLM:away_drift；最大縮水 4.6%",
+        "steam": true,
+        "rlm": true,
+        "against_public": false,
+        "available": true,
+        "toxicity_score": 0.45,
+        "action": "avoid",
+        "sub_tags": [
+          "RLM"
+        ],
+        "numbers": {
+          "had_max_short_pct": 0.0463,
+          "steam_grade": "弱",
+          "trap_boost": 0.0,
+          "soft_sides": [],
+          "hard_sides": [],
+          "cross_conflict": false
+        }
+      },
+      "odds_compare": {
+        "brief_zh": "Pinnacle尖莊已對齊；Smarkets交換已對齊",
+        "sources_status": {
+          "hkjc": true,
+          "d4m_os": true,
+          "espn_dk": false,
+          "tipsaudit_fair": false,
+          "pinnacle": true,
+          "smarkets": true,
+          "bsd_consensus": false
+        },
+        "had_diff_vs_consensus": {
+          "home": {
+            "hkjc_devig": 0.4283,
+            "consensus_fair": 0.4382,
+            "soft_pp": 0.99,
+            "flag": null
+          },
+          "draw": {
+            "hkjc_devig": 0.3197,
+            "consensus_fair": 0.3184,
+            "soft_pp": -0.13,
+            "flag": null
+          },
+          "away": {
+            "hkjc_devig": 0.2521,
+            "consensus_fair": 0.2434,
+            "soft_pp": -0.87,
+            "flag": null
+          }
+        },
+        "toxic": {
+          "hkjc_soft_sides": [],
+          "hkjc_hard_sides": [],
+          "best_soft": {
+            "side": "home",
+            "hkjc_devig": 0.4283,
+            "consensus_fair": 0.4382,
+            "soft_pp": 0.99,
+            "flag": null
+          },
+          "consensus_1x2": {
+            "home": 0.4382,
+            "draw": 0.3184,
+            "away": 0.2434
+          },
+          "n_sources_1x2": 3
+        }
+      },
+      "odds_movement": {
+        "brief_zh": "初盤意圖：責任平衡／RLM；HAD主縮水 2.16→2.06（4.6%）；客熱降冷／主縮（RLM）；主勝走勢減速；馬會HAD初盤 H2.16/D2.73/A3.30 → 現盤 H2.06/D2.76/A3.50；蒸汽→主4.6%；RLM熱降冷",
+        "had_steam": "home",
+        "sharp_steam": "home",
+        "follow_sharp": "home",
+        "bait_suspect": false,
+        "d4m_intent_zh": "責任平衡／RLM",
+        "had_open": {
+          "home": 2.16,
+          "draw": 2.73,
+          "away": 3.3
+        },
+        "had_now": {
+          "home": 2.06,
+          "draw": 2.76,
+          "away": 3.5
+        },
+        "hil_steam": null,
+        "hil_line_open": 2.25,
+        "hil_line_now": 2.25,
+        "timing": "early",
+        "toxic_move": false,
+        "cross_book_n": 4,
+        "open_now": {
+          "intent_zh": "責任平衡／RLM",
+          "brief_zh": "馬會HAD初盤 H2.16/D2.73/A3.30 → 現盤 H2.06/D2.76/A3.50；蒸汽→主4.6%；RLM熱降冷；外盤HAD_OS初盤 H2.17/D2.95/A3.32 → 現盤 H2.09/D2.96/A3.60；蒸汽→主3.7%；RLM熱降冷；入球線初盤2.25→現盤2.25；大 2.10→2.10；細 1.65→1.65；讓球初盤主-0.25/1.9 客1.82 → 現盤主-0.25/1.84 客1.88；讓球蒸汽→主",
+          "bait_suspect": false,
+          "sharp_steam": "home",
+          "hkjc_steam": "home",
+          "markets": {
+            "HAD": {
+              "open": {
+                "home": 2.16,
+                "draw": 2.73,
+                "away": 3.3
+              },
+              "now": {
+                "home": 2.06,
+                "draw": 2.76,
+                "away": 3.5
+              },
+              "shorten": {
+                "home": 0.0463,
+                "draw": -0.011,
+                "away": -0.0606
+              },
+              "steam": "home",
+              "rlm": "away_drift",
+              "n_ticks": 2,
+              "brief_zh": "馬會HAD初盤 H2.16/D2.73/A3.30 → 現盤 H2.06/D2.76/A3.50；蒸汽→主4.6%；RLM熱降冷"
+            },
+            "HAD_OS": {
+              "open": {
+                "home": 2.17,
+                "draw": 2.95,
+                "away": 3.32
+              },
+              "now": {
+                "home": 2.09,
+                "draw": 2.96,
+                "away": 3.6
+              },
+              "shorten": {
+                "home": 0.0369,
+                "draw": -0.0034,
+                "away": -0.0843
+              },
+              "steam": "home",
+              "rlm": "away_drift",
+              "n_ticks": 2,
+              "brief_zh": "外盤HAD_OS初盤 H2.17/D2.95/A3.32 → 現盤 H2.09/D2.96/A3.60；蒸汽→主3.7%；RLM熱降冷"
+            },
+            "HIL": {
+              "line_open": 2.25,
+              "line_now": 2.25,
+              "over_open": 2.1,
+              "over_now": 2.1,
+              "under_open": 1.65,
+              "under_now": 1.65,
+              "steam": null,
+              "n_ticks": 2,
+              "brief_zh": "入球線初盤2.25→現盤2.25；大 2.10→2.10；細 1.65→1.65"
+            },
+            "HDC": {
+              "line_open": -0.25,
+              "line_now": -0.25,
+              "home_open": 1.9,
+              "home_now": 1.84,
+              "away_open": 1.82,
+              "away_now": 1.88,
+              "steam": "home",
+              "n_ticks": 2,
+              "brief_zh": "讓球初盤主-0.25/1.9 客1.82 → 現盤主-0.25/1.84 客1.88；讓球蒸汽→主"
+            }
+          }
+        }
+      },
+      "d4m_open_now": {
+        "intent_zh": "責任平衡／RLM",
+        "brief_zh": "馬會HAD初盤 H2.16/D2.73/A3.30 → 現盤 H2.06/D2.76/A3.50；蒸汽→主4.6%；RLM熱降冷；外盤HAD_OS初盤 H2.17/D2.95/A3.32 → 現盤 H2.09/D2.96/A3.60；蒸汽→主3.7%；RLM熱降冷；入球線初盤2.25→現盤2.25；大 2.10→2.10；細 1.65→1.65；讓球初盤主-0.25/1.9 客1.82 → 現盤主-0.25/1.84 客1.88；讓球蒸汽→主",
+        "bait_suspect": false,
+        "hkjc_steam": "home",
+        "sharp_steam": "home",
+        "had": {
+          "open": {
+            "home": 2.16,
+            "draw": 2.73,
+            "away": 3.3
+          },
+          "now": {
+            "home": 2.06,
+            "draw": 2.76,
+            "away": 3.5
+          },
+          "shorten": {
+            "home": 0.0463,
+            "draw": -0.011,
+            "away": -0.0606
+          },
+          "steam": "home",
+          "rlm": "away_drift",
+          "n_ticks": 2,
+          "brief_zh": "馬會HAD初盤 H2.16/D2.73/A3.30 → 現盤 H2.06/D2.76/A3.50；蒸汽→主4.6%；RLM熱降冷"
+        },
+        "had_os": {
+          "open": {
+            "home": 2.17,
+            "draw": 2.95,
+            "away": 3.32
+          },
+          "now": {
+            "home": 2.09,
+            "draw": 2.96,
+            "away": 3.6
+          },
+          "shorten": {
+            "home": 0.0369,
+            "draw": -0.0034,
+            "away": -0.0843
+          },
+          "steam": "home",
+          "rlm": "away_drift",
+          "n_ticks": 2,
+          "brief_zh": "外盤HAD_OS初盤 H2.17/D2.95/A3.32 → 現盤 H2.09/D2.96/A3.60；蒸汽→主3.7%；RLM熱降冷"
+        },
+        "hil": {
+          "line_open": 2.25,
+          "line_now": 2.25,
+          "over_open": 2.1,
+          "over_now": 2.1,
+          "under_open": 1.65,
+          "under_now": 1.65,
+          "steam": null,
+          "n_ticks": 2,
+          "brief_zh": "入球線初盤2.25→現盤2.25；大 2.10→2.10；細 1.65→1.65"
+        },
+        "hdc": {
+          "line_open": -0.25,
+          "line_now": -0.25,
+          "home_open": 1.9,
+          "home_now": 1.84,
+          "away_open": 1.82,
+          "away_now": 1.88,
+          "steam": "home",
+          "n_ticks": 2,
+          "brief_zh": "讓球初盤主-0.25/1.9 客1.82 → 現盤主-0.25/1.84 客1.88；讓球蒸汽→主"
+        }
+      },
+      "primary_source": "DATA4MULA",
+      "primary_source_zh": "主：D4M",
+      "d4m_missing": false,
+      "classic_handicap": {
+        "theory_line": -0.0,
+        "actual_line": -0.25,
+        "open_bias": "合適",
+        "heat": "主受熱降水",
+        "eu_asia_ok": true,
+        "verdict": "盤型合適＋歐亞一致 → 跟基本面",
+        "brief_zh": "進球期望 1.00-0.90；理論盤-0.0；實際-0.25（合適）；冷熱：主受熱降水；歐亞：歐亞大致一致；主水位相對公允硬11.1pp",
+        "conflict": false
+      },
+      "form": [
+        "LWWLD",
+        "LWLWD"
+      ],
+      "h2h_summary": [
+        0,
+        1,
+        0
+      ],
+      "goal_expectancy": 1.9,
+      "narrative_cites": [
+        "7M：「兩隊目前非國盃外都是取得1勝1和1負，津巴布韋入球數多一些，赤道畿內亞失球相對少一些，整體表現各有千秋，今鋪再次打和較為正路。」",
+        "7M：評述偏大球／進攻"
+      ],
+      "settlement": "PENDING",
+      "status_zh": "待結",
+      "ft_score": null,
+      "corners": null,
+      "live_score": null,
+      "review_zh": null
+    }
+  ],
   "review_rows": [
     {
       "tip_key": "FB8996|HDC|客讓|0.0/-0.5|low|2026-11-15 18:36",
@@ -368,6 +2404,30 @@
         "prob_error": 0.5179
       },
       "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB8996",
+      "kickoff_hkt": "2026-11-16 00:30",
+      "tournament": "女子英格蘭超級聯賽",
+      "home": {
+        "ch": "阿仙奴女足",
+        "en": "Arsenal Women"
+      },
+      "away": {
+        "ch": "倫敦城雌獅女足",
+        "en": "London City Lionesses Women"
+      },
+      "pick_line": "讓球 客讓 0.0/-0.5",
+      "hkjc_odds": 2.05,
+      "est_prob_pct": 36.4,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "估計方向啱；讓球 FT 1-1 line -0.25；莊家視角：逆走盤／穩盤（資料不足）仍中 — 模型或價值盤。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB9024|HIL|細|3.5|low|2026-11-15 18:36",
@@ -749,6 +2809,658 @@
       "next_change_zh": "下次：維持現有閘，累積樣本再校"
     },
     {
+      "tip_key": "FB9025|HDC|主讓|-0.5/-1.0|low|2026-11-15 18:36",
+      "front_end_id": "FB9025",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "川迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "燕豪芬女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.02,
+      "est_prob_pct": 45.2,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜讓球 FT 2-3 line -0.75。事前估 45.2%。原因：事前估 45.2% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜讓球 FT 2-3 line -0.75。事前估 45.2%。原因：事前估 45.2% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 45.2% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%B7%9D%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E7%87%95%E8%B1%AA%E8%8A%AC%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 45.2,
+        "prob_error": 0.4525
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9025|OOE|雙||medium|2026-11-15 18:36",
+      "front_end_id": "FB9025",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "川迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "燕豪芬女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%B7%9D%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E7%87%95%E8%B1%AA%E8%8A%AC%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9025|FHL|大|1.5|high|2026-11-15 18:36",
+      "front_end_id": "FB9025",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "川迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "燕豪芬女足",
+        "en": ""
+      },
+      "market": "FHL",
+      "pick": "大",
+      "line": 1.5,
+      "risk_tier": "high",
+      "pick_line": "FHL 大 1.5",
+      "hkjc_odds": 2.33,
+      "est_prob_pct": 34.3,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總3",
+      "review_zh": "✅ 中｜入球3 vs 線1.5。事前估 34.3%。原因：水位 2.33 帶合理，有肉又中；低機率估 34.3% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜入球3 vs 線1.5。事前估 34.3%。原因：水位 2.33 帶合理，有肉又中；低機率估 34.3% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.33 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "underdog_hit",
+            "zh": "低機率估 34.3% 都中——幸運／或估得太保守",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%B7%9D%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E7%87%95%E8%B1%AA%E8%8A%AC%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 川迪女足 vs 燕豪芬女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 34.3,
+        "prob_error": 0.6568
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB9024",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "阿爾克馬爾女足",
+        "en": "AZ Alkmaar Women"
+      },
+      "away": {
+        "ch": "阿積士女足",
+        "en": "Ajax Women"
+      },
+      "pick_line": "入球大細 細 3.5",
+      "hkjc_odds": 1.75,
+      "est_prob_pct": 44.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1 總2",
+      "review_zh": "估計方向啱；入球2 vs 線3.5；莊家視角：逆走盤／穩盤（資訊導向）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9023",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "飛燕諾女足",
+        "en": "Feyenoord Women"
+      },
+      "away": {
+        "ch": "海倫芬女足",
+        "en": "Heerenveen Women"
+      },
+      "pick_line": "半場大細 大 1.5",
+      "hkjc_odds": 2.15,
+      "est_prob_pct": 46.2,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-2",
+      "corners": null,
+      "result_value": "3-2 總2",
+      "review_zh": "估計方向啱；入球2 vs 線1.5；莊家視角：逆走盤／穩盤（資料不足）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9025",
+      "kickoff_hkt": "2026-11-15 23:45",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "川迪女足",
+        "en": "Twente Women"
+      },
+      "away": {
+        "ch": "燕豪芬女足",
+        "en": "PSV Eindhoven Women"
+      },
+      "pick_line": "讓球 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.02,
+      "est_prob_pct": 45.2,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向錯；讓球 FT 2-3 line -0.75；莊家視角：走盤（資料不足）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB8860|HDC|主讓|+0.5/+1.0|low|2026-11-15 18:36",
+      "front_end_id": "FB8860",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "卡爾巴FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "沙比阿爾阿里",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "+0.5/+1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 +0.5/+1.0",
+      "hkjc_odds": 1.78,
+      "est_prob_pct": 48.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "✅ 中｜讓球 FT 1-1 line 0.75。事前估 48.9%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 1-1 line 0.75。事前估 48.9%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%8D%A1%E7%88%BE%E5%B7%B4FC%20%E6%B2%99%E6%AF%94%E9%98%BF%E7%88%BE%E9%98%BF%E9%87%8C",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.9,
+        "prob_error": 0.5115
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8860|HAD|主勝||medium|2026-11-15 18:36",
+      "front_end_id": "FB8860",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "卡爾巴FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "沙比阿爾阿里",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 3.3,
+      "est_prob_pct": 25.4,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "❌ 唔中｜FT 1-1。事前估 25.4%。原因：毒水位帶 3.30（2.50–3.50）高／中風險易唔中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里。下次應改：下次：2.50–3.50 水位高／中風險再降權或避",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 1-1。事前估 25.4%。原因：毒水位帶 3.30（2.50–3.50）高／中風險易唔中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里。下次應改：下次：2.50–3.50 水位高／中風險再降權或避",
+        "next_change_zh": "下次：2.50–3.50 水位高／中風險再降權或避",
+        "causes": [
+          {
+            "tag": "toxic_odds_band",
+            "zh": "毒水位帶 3.30（2.50–3.50）高／中風險易唔中",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%8D%A1%E7%88%BE%E5%B7%B4FC%20%E6%B2%99%E6%AF%94%E9%98%BF%E7%88%BE%E9%98%BF%E9%87%8C",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 卡爾巴FC vs 沙比阿爾阿里",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 25.4,
+        "prob_error": 0.2545
+      },
+      "next_change_zh": "下次：2.50–3.50 水位高／中風險再降權或避"
+    },
+    {
+      "tip_key": "FB8861|FHL|細|1.5|low|2026-11-15 18:36",
+      "front_end_id": "FB8861",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "艾查捷拉",
+        "en": ""
+      },
+      "away": {
+        "ch": "賓尼耶斯",
+        "en": ""
+      },
+      "market": "FHL",
+      "pick": "細",
+      "line": 1.5,
+      "risk_tier": "low",
+      "pick_line": "FHL 細 1.5",
+      "hkjc_odds": 1.74,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0 總0",
+      "review_zh": "✅ 中｜入球0 vs 線1.5。事前估 49.0%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜入球0 vs 線1.5。事前估 49.0%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%89%BE%E6%9F%A5%E6%8D%B7%E6%8B%89%20%E8%B3%93%E5%B0%BC%E8%80%B6%E6%96%AF",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.51
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8861|OOE|單||medium|2026-11-15 18:36",
+      "front_end_id": "FB8861",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "艾查捷拉",
+        "en": ""
+      },
+      "away": {
+        "ch": "賓尼耶斯",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 48.5,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0",
+      "review_zh": "✅ 中｜總1單。事前估 48.5%。原因：水位 1.85 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總1單。事前估 48.5%。原因：水位 1.85 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.85 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%89%BE%E6%9F%A5%E6%8D%B7%E6%8B%89%20%E8%B3%93%E5%B0%BC%E8%80%B6%E6%96%AF",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.5,
+        "prob_error": 0.5152
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8861|HIL|大|3.5|high|2026-11-15 18:36",
+      "front_end_id": "FB8861",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "艾查捷拉",
+        "en": ""
+      },
+      "away": {
+        "ch": "賓尼耶斯",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 大 3.5",
+      "hkjc_odds": 2.12,
+      "est_prob_pct": 45.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0 總1",
+      "review_zh": "❌ 唔中｜入球1 vs 線3.5。事前估 45.0%。原因：高線大波（大 3.5）易高估——政策永不低風險；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球1 vs 線3.5。事前估 45.0%。原因：高線大波（大 3.5）易高估——政策永不低風險；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "causes": [
+          {
+            "tag": "hil_over_high",
+            "zh": "高線大波（大 3.5）易高估——政策永不低風險",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%89%BE%E6%9F%A5%E6%8D%B7%E6%8B%89%20%E8%B3%93%E5%B0%BC%E8%80%B6%E6%96%AF",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 艾查捷拉 vs 賓尼耶斯",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 45.0,
+        "prob_error": 0.4498
+      },
+      "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊"
+    },
+    {
+      "front_end_id": "FB8860",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "卡爾巴FC",
+        "en": "Kalba FC"
+      },
+      "away": {
+        "ch": "沙比阿爾阿里",
+        "en": "Shabab Al Ahli"
+      },
+      "pick_line": "讓球 主讓 +0.5/+1.0",
+      "hkjc_odds": 1.78,
+      "est_prob_pct": 48.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "估計方向啱；讓球 FT 1-1 line 0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8861",
+      "kickoff_hkt": "2026-11-15 23:30",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "艾查捷拉",
+        "en": "Al Jazira"
+      },
+      "away": {
+        "ch": "賓尼耶斯",
+        "en": "Baniyas"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.74,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0 總0",
+      "review_zh": "估計方向啱；入球0 vs 線1.5；莊家視角：逆走盤／穩盤（資料不足）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
       "tip_key": "FB8894|HDC|主讓|-0.5/-1.0|low|2026-11-15 18:36",
       "front_end_id": "FB8894",
       "kickoff_hkt": "2026-11-15 23:15",
@@ -954,6 +3666,30 @@
         "prob_error": 0.51
       },
       "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB8894",
+      "kickoff_hkt": "2026-11-15 23:15",
+      "tournament": "西班牙乙組聯賽",
+      "home": {
+        "ch": "CF格蘭納達",
+        "en": "CF Granada"
+      },
+      "away": {
+        "ch": "拉斯彭馬斯",
+        "en": "Las Palmas"
+      },
+      "pick_line": "讓球 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.09,
+      "est_prob_pct": 45.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0",
+      "review_zh": "估計方向啱；讓球 FT 1-0 line -0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB9004|FHL|大|1.5|low|2026-11-15 18:36",
@@ -1333,6 +4069,275 @@
         "prob_error": 0.4848
       },
       "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB8992|HDC|客讓|+0.5/+1.0|low|2026-11-15 18:36",
+      "front_end_id": "FB8992",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子德國甲組聯賽",
+      "home": {
+        "ch": "紐倫堡女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "科隆女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "客讓",
+      "line": "+0.5/+1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 客讓 +0.5/+1.0",
+      "hkjc_odds": 2.07,
+      "est_prob_pct": 29.3,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "✅ 中｜讓球 FT 2-3 line 0.75。事前估 29.3%。原因：水位 2.07 帶合理，有肉又中；低機率估 29.3% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 2-3 line 0.75。事前估 29.3%。原因：水位 2.07 帶合理，有肉又中；低機率估 29.3% 都中——幸運／或估得太保守；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.07 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "underdog_hit",
+            "zh": "低機率估 29.3% 都中——幸運／或估得太保守",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E7%B4%90%E5%80%AB%E5%A0%A1%E5%A5%B3%E8%B6%B3%20%E7%A7%91%E9%9A%86%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 29.3,
+        "prob_error": 0.7068
+      },
+      "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先"
+    },
+    {
+      "tip_key": "FB8992|HAD|主勝||medium|2026-11-15 18:36",
+      "front_end_id": "FB8992",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子德國甲組聯賽",
+      "home": {
+        "ch": "紐倫堡女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "科隆女足",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 3.3,
+      "est_prob_pct": 35.2,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜FT 2-3。事前估 35.2%。原因：毒水位帶 3.30（2.50–3.50）高／中風險易唔中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：2.50–3.50 水位高／中風險再降權或避",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 2-3。事前估 35.2%。原因：毒水位帶 3.30（2.50–3.50）高／中風險易唔中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：2.50–3.50 水位高／中風險再降權或避",
+        "next_change_zh": "下次：2.50–3.50 水位高／中風險再降權或避",
+        "causes": [
+          {
+            "tag": "toxic_odds_band",
+            "zh": "毒水位帶 3.30（2.50–3.50）高／中風險易唔中",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E7%B4%90%E5%80%AB%E5%A0%A1%E5%A5%B3%E8%B6%B3%20%E7%A7%91%E9%9A%86%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 35.2,
+        "prob_error": 0.3522
+      },
+      "next_change_zh": "下次：2.50–3.50 水位高／中風險再降權或避"
+    },
+    {
+      "tip_key": "FB8992|FHL|大|1.5|high|2026-11-15 18:36",
+      "front_end_id": "FB8992",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子德國甲組聯賽",
+      "home": {
+        "ch": "紐倫堡女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "科隆女足",
+        "en": ""
+      },
+      "market": "FHL",
+      "pick": "大",
+      "line": 1.5,
+      "risk_tier": "high",
+      "pick_line": "FHL 大 1.5",
+      "hkjc_odds": 2.22,
+      "est_prob_pct": 42.6,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總3",
+      "review_zh": "✅ 中｜入球3 vs 線1.5。事前估 42.6%。原因：水位 2.22 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜入球3 vs 線1.5。事前估 42.6%。原因：水位 2.22 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.22 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E7%B4%90%E5%80%AB%E5%A0%A1%E5%A5%B3%E8%B6%B3%20%E7%A7%91%E9%9A%86%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 紐倫堡女足 vs 科隆女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 42.6,
+        "prob_error": 0.5743
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB9004",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "西維爾女足",
+        "en": "Sevilla Women"
+      },
+      "away": {
+        "ch": "馬德里體育會女足",
+        "en": "Atletico Madrid Women"
+      },
+      "pick_line": "半場大細 大 1.5",
+      "hkjc_odds": 2.48,
+      "est_prob_pct": 34.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2 總3",
+      "review_zh": "估計方向啱；入球3 vs 線1.5；莊家視角：逆走盤／穩盤（穩盤）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8992",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子德國甲組聯賽",
+      "home": {
+        "ch": "紐倫堡女足",
+        "en": "Nurnberg Women"
+      },
+      "away": {
+        "ch": "科隆女足",
+        "en": "Cologne Women"
+      },
+      "pick_line": "讓球 客讓 +0.5/+1.0",
+      "hkjc_odds": 2.07,
+      "est_prob_pct": 29.3,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向啱；讓球 FT 2-3 line 0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9005",
+      "kickoff_hkt": "2026-11-15 23:00",
+      "tournament": "女子德國甲組聯賽",
+      "home": {
+        "ch": "RB萊比錫女足",
+        "en": "RB Leipzig Women"
+      },
+      "away": {
+        "ch": "法蘭克福女足",
+        "en": "Frankfurt Women"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-5",
+      "corners": null,
+      "result_value": "1-5 總2",
+      "review_zh": "估計方向錯；入球2 vs 線1.5；莊家視角：走盤（穩盤）未指向本 tip，結果唔中。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB8952|HDC|客讓|0.0/+0.5|low|2026-11-15 18:36",
@@ -2075,6 +5080,333 @@
       "next_change_zh": "下次：維持現有閘，累積樣本再校"
     },
     {
+      "tip_key": "FB9009|FHL|大|1.5|low|2026-11-15 18:36",
+      "front_end_id": "FB9009",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "法國足總盃",
+      "home": {
+        "ch": "呂米伊華尼利斯",
+        "en": ""
+      },
+      "away": {
+        "ch": "聖伊天",
+        "en": ""
+      },
+      "market": "FHL",
+      "pick": "大",
+      "line": 1.5,
+      "risk_tier": "low",
+      "pick_line": "FHL 大 1.5",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2 總0",
+      "review_zh": "❌ 唔中｜入球0 vs 線1.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球0 vs 線1.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%91%82%E7%B1%B3%E4%BC%8A%E8%8F%AF%E5%B0%BC%E5%88%A9%E6%96%AF%20%E8%81%96%E4%BC%8A%E5%A4%A9",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過"
+    },
+    {
+      "tip_key": "FB9009|HAD|主勝||medium|2026-11-15 18:36",
+      "front_end_id": "FB9009",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "法國足總盃",
+      "home": {
+        "ch": "呂米伊華尼利斯",
+        "en": ""
+      },
+      "away": {
+        "ch": "聖伊天",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 10.5,
+      "est_prob_pct": 12.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2",
+      "review_zh": "❌ 唔中｜FT 1-2。事前估 12.1%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 1-2。事前估 12.1%。原因：盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "causes": [
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%91%82%E7%B1%B3%E4%BC%8A%E8%8F%AF%E5%B0%BC%E5%88%A9%E6%96%AF%20%E8%81%96%E4%BC%8A%E5%A4%A9",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 12.1,
+        "prob_error": 0.121
+      },
+      "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過"
+    },
+    {
+      "tip_key": "FB9009|HIL|大|3.5|high|2026-11-15 18:36",
+      "front_end_id": "FB9009",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "法國足總盃",
+      "home": {
+        "ch": "呂米伊華尼利斯",
+        "en": ""
+      },
+      "away": {
+        "ch": "聖伊天",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 大 3.5",
+      "hkjc_odds": 2.08,
+      "est_prob_pct": 45.3,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2 總3",
+      "review_zh": "❌ 唔中｜入球3 vs 線3.5。事前估 45.3%。原因：高線大波（大 3.5）易高估——政策永不低風險；事前估 45.3% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球3 vs 線3.5。事前估 45.3%。原因：高線大波（大 3.5）易高估——政策永不低風險；事前估 45.3% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天。下次應改：下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊",
+        "causes": [
+          {
+            "tag": "hil_over_high",
+            "zh": "高線大波（大 3.5）易高估——政策永不低風險",
+            "direction": "against"
+          },
+          {
+            "tag": "overconfident",
+            "zh": "事前估 45.3% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E5%91%82%E7%B1%B3%E4%BC%8A%E8%8F%AF%E5%B0%BC%E5%88%A9%E6%96%AF%20%E8%81%96%E4%BC%8A%E5%A4%A9",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 呂米伊華尼利斯 vs 聖伊天",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 45.3,
+        "prob_error": 0.4528
+      },
+      "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊"
+    },
+    {
+      "front_end_id": "FB8952",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "歐洲國家聯賽",
+      "home": {
+        "ch": "塞浦路斯",
+        "en": "Cyprus"
+      },
+      "away": {
+        "ch": "黑山",
+        "en": "Montenegro"
+      },
+      "pick_line": "讓球 客讓 0.0/+0.5",
+      "hkjc_odds": 1.92,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-4",
+      "corners": null,
+      "result_value": "1-4",
+      "review_zh": "估計方向啱；讓球 FT 1-4 line 0.25；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8956",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "歐洲國家聯賽",
+      "home": {
+        "ch": "拉脫維亞",
+        "en": "Latvia"
+      },
+      "away": {
+        "ch": "阿美尼亞",
+        "en": "Armenia"
+      },
+      "pick_line": "讓球 客讓 0.0/+0.5",
+      "hkjc_odds": 1.92,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "0-0",
+      "corners": null,
+      "result_value": "0-0",
+      "review_zh": "估計方向錯；讓球 FT 0-0 line 0.25；莊家視角：走盤（責任平衡）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8994",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "女子英格蘭超級聯賽",
+      "home": {
+        "ch": "阿士東維拉女足",
+        "en": "Aston Villa Women"
+      },
+      "away": {
+        "ch": "伯明翰女足",
+        "en": "Birmingham Women"
+      },
+      "pick_line": "讓球 客讓 0.0/-0.5",
+      "hkjc_odds": 2.04,
+      "est_prob_pct": 41.2,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0",
+      "review_zh": "估計方向錯；讓球 FT 1-0 line -0.25；莊家視角：走盤（責任平衡）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8995",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "女子英格蘭超級聯賽",
+      "home": {
+        "ch": "韋斯咸女足",
+        "en": "West Ham Women"
+      },
+      "away": {
+        "ch": "查爾頓女足",
+        "en": "Charlton Women"
+      },
+      "pick_line": "讓球 主讓 -1.0/-1.5",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "估計方向啱；讓球 FT 2-0 line -1.25；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9009",
+      "kickoff_hkt": "2026-11-15 22:00",
+      "tournament": "法國足總盃",
+      "home": {
+        "ch": "呂米伊華尼利斯",
+        "en": "Rumilly-Vallieres"
+      },
+      "away": {
+        "ch": "聖伊天",
+        "en": "St. Etienne"
+      },
+      "pick_line": "半場大細 大 1.5",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-2",
+      "corners": null,
+      "result_value": "1-2 總0",
+      "review_zh": "估計方向錯；入球0 vs 線1.5；莊家視角：走盤（資訊導向）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
       "tip_key": "FB8844|HDC|客讓|0.0/+0.5|low|2026-11-15 18:36",
       "front_end_id": "FB8844",
       "kickoff_hkt": "2026-11-15 21:30",
@@ -2265,6 +5597,30 @@
         "prob_error": 0.479
       },
       "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "front_end_id": "FB8844",
+      "kickoff_hkt": "2026-11-15 21:30",
+      "tournament": "荷蘭乙組聯賽",
+      "home": {
+        "ch": "馬斯特里赫特",
+        "en": "Maastricht"
+      },
+      "away": {
+        "ch": "維迪斯",
+        "en": "Vitesse"
+      },
+      "pick_line": "讓球 客讓 0.0/+0.5",
+      "hkjc_odds": 1.88,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-1",
+      "corners": null,
+      "result_value": "2-1",
+      "review_zh": "估計方向錯；讓球 FT 2-1 line 0.25；莊家視角：走盤（誘盤嫌疑）未指向本 tip，結果唔中。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB8893|HDC|主讓|-0.5/-1.0|low|2026-11-15 18:36",
@@ -3006,6 +6362,1217 @@
       "next_change_zh": "下次：大≥3.5 維持永不低風險，只可中／高且要有邊"
     },
     {
+      "tip_key": "FB8977|FHL|細|1.5|low|2026-11-15 18:36",
+      "front_end_id": "FB8977",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "赫根女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "比堤亞女足",
+        "en": ""
+      },
+      "market": "FHL",
+      "pick": "細",
+      "line": 1.5,
+      "risk_tier": "low",
+      "pick_line": "FHL 細 1.5",
+      "hkjc_odds": 1.93,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總3",
+      "review_zh": "❌ 唔中｜入球3 vs 線1.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球3 vs 線1.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B5%AB%E6%A0%B9%E5%A5%B3%E8%B6%B3%20%E6%AF%94%E5%A0%A4%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB8977|HIL|細|3.5|medium|2026-11-15 18:36",
+      "front_end_id": "FB8977",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "赫根女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "比堤亞女足",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "細",
+      "line": 3.5,
+      "risk_tier": "medium",
+      "pick_line": "HIL 細 3.5",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 48.9,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總5",
+      "review_zh": "❌ 唔中｜入球5 vs 線3.5。事前估 48.9%。原因：事前估 48.9% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球5 vs 線3.5。事前估 48.9%。原因：事前估 48.9% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 48.9% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B5%AB%E6%A0%B9%E5%A5%B3%E8%B6%B3%20%E6%AF%94%E5%A0%A4%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.9,
+        "prob_error": 0.4888
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB8977|OOE|單||high|2026-11-15 18:36",
+      "front_end_id": "FB8977",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "赫根女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "比堤亞女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "high",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 48.5,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "✅ 中｜總5單。事前估 48.5%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總5單。事前估 48.5%。原因：水位 1.85 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.85 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E8%B5%AB%E6%A0%B9%E5%A5%B3%E8%B6%B3%20%E6%AF%94%E5%A0%A4%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 赫根女足 vs 比堤亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.5,
+        "prob_error": 0.5152
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB8893",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "西班牙乙組聯賽",
+      "home": {
+        "ch": "特內里費",
+        "en": "Tenerife"
+      },
+      "away": {
+        "ch": "施奧達",
+        "en": "Ceuta"
+      },
+      "pick_line": "讓球 主讓 -0.5/-1.0",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-0",
+      "corners": null,
+      "result_value": "2-0",
+      "review_zh": "估計方向啱；讓球 FT 2-0 line -0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8997",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "法國足總盃",
+      "home": {
+        "ch": "巴黎13體育會",
+        "en": "Paris 13 Atletico"
+      },
+      "away": {
+        "ch": "紅星",
+        "en": "Red Star"
+      },
+      "pick_line": "讓球 客讓 +0.5/+1.0",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-2",
+      "corners": null,
+      "result_value": "0-2",
+      "review_zh": "估計方向啱；讓球 FT 0-2 line 0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8977",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "赫根女足",
+        "en": "Hacken Women"
+      },
+      "away": {
+        "ch": "比堤亞女足",
+        "en": "Pitea Women"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.93,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總3",
+      "review_zh": "估計方向錯；入球3 vs 線1.5；莊家視角：走盤（對沖熱門）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8976",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "哈馬比女足",
+        "en": "Hammarby Women"
+      },
+      "away": {
+        "ch": "基斯迪史達斯女足",
+        "en": "Kristianstads Women"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.93,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-0",
+      "corners": null,
+      "result_value": "1-0 總1",
+      "review_zh": "估計方向啱；入球1 vs 線1.5；莊家視角：逆走盤／穩盤（對沖熱門）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8975",
+      "kickoff_hkt": "2026-11-15 21:00",
+      "tournament": "女子瑞典超級聯賽",
+      "home": {
+        "ch": "馬模女足",
+        "en": "Malmo Women"
+      },
+      "away": {
+        "ch": "域斯祖女足",
+        "en": "Vittsjo Women"
+      },
+      "pick_line": "半場大細 細 1.5",
+      "hkjc_odds": 1.86,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1 總2",
+      "review_zh": "估計方向錯；入球2 vs 線1.5；莊家視角：走盤（資訊導向）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB8862|HDC|主讓|-1.0/-1.5|low|2026-11-15 18:36",
+      "front_end_id": "FB8862",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "阿爾華達",
+        "en": ""
+      },
+      "away": {
+        "ch": "科爾法簡",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "-1.0/-1.5",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 -1.0/-1.5",
+      "hkjc_odds": 1.87,
+      "est_prob_pct": 48.8,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1",
+      "review_zh": "✅ 中｜讓球 FT 3-1 line -1.25。事前估 48.8%。原因：水位 1.87 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 3-1 line -1.25。事前估 48.8%。原因：水位 1.87 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.87 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%88%BE%E8%8F%AF%E9%81%94%20%E7%A7%91%E7%88%BE%E6%B3%95%E7%B0%A1",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.8,
+        "prob_error": 0.5118
+      },
+      "next_change_zh": "下次：同類低風險讓球／主勝（水位≥1.80）可維持優先"
+    },
+    {
+      "tip_key": "FB8862|OOE|單||medium|2026-11-15 18:36",
+      "front_end_id": "FB8862",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "阿爾華達",
+        "en": ""
+      },
+      "away": {
+        "ch": "科爾法簡",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.85,
+      "est_prob_pct": 48.5,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1",
+      "review_zh": "❌ 唔中｜總4雙。事前估 48.5%。原因：事前估 48.5% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜總4雙。事前估 48.5%。原因：事前估 48.5% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 48.5% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%88%BE%E8%8F%AF%E9%81%94%20%E7%A7%91%E7%88%BE%E6%B3%95%E7%B0%A1",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 48.5,
+        "prob_error": 0.4848
+      },
+      "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過"
+    },
+    {
+      "tip_key": "FB8862|HIL|大|3.5|high|2026-11-15 18:36",
+      "front_end_id": "FB8862",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "阿爾華達",
+        "en": ""
+      },
+      "away": {
+        "ch": "科爾法簡",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "大",
+      "line": 3.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 大 3.5",
+      "hkjc_odds": 2.27,
+      "est_prob_pct": 42.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1 總4",
+      "review_zh": "✅ 中｜入球4 vs 線3.5。事前估 42.9%。原因：高線大波（大 3.5）易高估——政策永不低風險；水位 2.27 帶合理，有肉又中；CLV負（-0.035）但仍然中——蒸汽唔係萬能。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜入球4 vs 線3.5。事前估 42.9%。原因：高線大波（大 3.5）易高估——政策永不低風險；水位 2.27 帶合理，有肉又中；CLV負（-0.035）但仍然中——蒸汽唔係萬能。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "hil_over_high",
+            "zh": "高線大波（大 3.5）易高估——政策永不低風險",
+            "direction": "support"
+          },
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.27 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "clv_neg_but_hit",
+            "zh": "CLV負（-0.035）但仍然中——蒸汽唔係萬能",
+            "direction": "neutral"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%88%BE%E8%8F%AF%E9%81%94%20%E7%A7%91%E7%88%BE%E6%B3%95%E7%B0%A1",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿爾華達 vs 科爾法簡",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 42.9,
+        "prob_error": 0.5711
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8859|HAD|客勝||low|2026-11-15 18:36",
+      "front_end_id": "FB8859",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "杜拜聯FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "FC沙迦",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "客勝",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HAD 客勝",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "❌ 唔中｜FT 1-1。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 1-1。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "against"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%9D%9C%E6%8B%9C%E8%81%AFFC%20FC%E6%B2%99%E8%BF%A6",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：盃賽／輪換風險場降低風險檔，優先讓球穩盤或跳過"
+    },
+    {
+      "tip_key": "FB8859|OOE|雙||medium|2026-11-15 18:36",
+      "front_end_id": "FB8859",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "杜拜聯FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "FC沙迦",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.83,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "✅ 中｜總2雙。事前估 49.0%。原因：水位 1.83 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總2雙。事前估 49.0%。原因：水位 1.83 帶合理，有肉又中；盃賽／淘汰賽：數據噪訊高；盃賽＋陣容未確認 → 輪換風險。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.83 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%9D%9C%E6%8B%9C%E8%81%AFFC%20FC%E6%B2%99%E8%BF%A6",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.51
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB8859|HIL|細|2.5|high|2026-11-15 18:36",
+      "front_end_id": "FB8859",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "杜拜聯FC",
+        "en": ""
+      },
+      "away": {
+        "ch": "FC沙迦",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "細",
+      "line": 2.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 細 2.5",
+      "hkjc_odds": 2.22,
+      "est_prob_pct": 39.9,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1 總2",
+      "review_zh": "✅ 中｜入球2 vs 線2.5。事前估 39.9%。原因：水位 2.22 帶合理，有肉又中；低機率估 39.9% 都中——幸運／或估得太保守；盃賽／淘汰賽：數據噪訊高。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜入球2 vs 線2.5。事前估 39.9%。原因：水位 2.22 帶合理，有肉又中；低機率估 39.9% 都中——幸運／或估得太保守；盃賽／淘汰賽：數據噪訊高。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 2.22 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "underdog_hit",
+            "zh": "低機率估 39.9% 都中——幸運／或估得太保守",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cup",
+            "zh": "盃賽／淘汰賽：數據噪訊高",
+            "direction": "support"
+          },
+          {
+            "tag": "cup_rotation",
+            "zh": "盃賽＋陣容未確認 → 輪換風險",
+            "direction": "neutral"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E6%9D%9C%E6%8B%9C%E8%81%AFFC%20FC%E6%B2%99%E8%BF%A6",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 杜拜聯FC vs FC沙迦",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 39.9,
+        "prob_error": 0.601
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB8862",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "阿爾華達",
+        "en": "Al Wahda"
+      },
+      "away": {
+        "ch": "科爾法簡",
+        "en": "Khor Fakkan"
+      },
+      "pick_line": "讓球 主讓 -1.0/-1.5",
+      "hkjc_odds": 1.87,
+      "est_prob_pct": 48.8,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "3-1",
+      "corners": null,
+      "result_value": "3-1",
+      "review_zh": "估計方向啱；讓球 FT 3-1 line -1.25；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB8859",
+      "kickoff_hkt": "2026-11-15 20:50",
+      "tournament": "阿聯酋聯賽盃",
+      "home": {
+        "ch": "杜拜聯FC",
+        "en": "Dubai United FC"
+      },
+      "away": {
+        "ch": "FC沙迦",
+        "en": "Sharjah FC"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 1.81,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "估計方向錯；FT 1-1；莊家視角：走盤（責任平衡）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB9003|HAD|主勝||low|2026-11-15 18:36",
+      "front_end_id": "FB9003",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子挪威超級聯賽",
+      "home": {
+        "ch": "阿納巴莊那女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "洛亞女足",
+        "en": ""
+      },
+      "market": "HAD",
+      "pick": "主勝",
+      "line": null,
+      "risk_tier": "low",
+      "pick_line": "HAD 主勝",
+      "hkjc_odds": 2.34,
+      "est_prob_pct": 36.6,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜FT 2-3。事前估 36.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：HAD/low 水位帶再觀察，分數輕罰",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜FT 2-3。事前估 36.6%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：HAD/low 水位帶再觀察，分數輕罰",
+        "next_change_zh": "下次：HAD/low 水位帶再觀察，分數輕罰",
+        "causes": [
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%B4%8D%E5%B7%B4%E8%8E%8A%E9%82%A3%E5%A5%B3%E8%B6%B3%20%E6%B4%9B%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 36.6,
+        "prob_error": 0.3658
+      },
+      "next_change_zh": "下次：HAD/low 水位帶再觀察，分數輕罰"
+    },
+    {
+      "tip_key": "FB9003|OOE|雙||medium|2026-11-15 18:36",
+      "front_end_id": "FB9003",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子挪威超級聯賽",
+      "home": {
+        "ch": "阿納巴莊那女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "洛亞女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.82,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%B4%8D%E5%B7%B4%E8%8E%8A%E9%82%A3%E5%A5%B3%E8%B6%B3%20%E6%B4%9B%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9003|HIL|細|2.5|high|2026-11-15 18:36",
+      "front_end_id": "FB9003",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子挪威超級聯賽",
+      "home": {
+        "ch": "阿納巴莊那女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "洛亞女足",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "細",
+      "line": 2.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 細 2.5",
+      "hkjc_odds": 2.05,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總5",
+      "review_zh": "❌ 唔中｜入球5 vs 線2.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球5 vs 線2.5。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%98%BF%E7%B4%8D%E5%B7%B4%E8%8E%8A%E9%82%A3%E5%A5%B3%E8%B6%B3%20%E6%B4%9B%E4%BA%9E%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 阿納巴莊那女足 vs 洛亞女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9021|HDC|客讓|+0.5/+1.0|low|2026-11-15 18:36",
+      "front_end_id": "FB9021",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子蘇格蘭超級聯賽",
+      "home": {
+        "ch": "些路迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "格拉斯哥流浪女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "客讓",
+      "line": "+0.5/+1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 客讓 +0.5/+1.0",
+      "hkjc_odds": 1.73,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "✅ 中｜讓球 FT 2-3 line 0.75。事前估 49.1%。原因：CLV負（-0.104）但仍然中——蒸汽唔係萬能；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜讓球 FT 2-3 line 0.75。事前估 49.1%。原因：CLV負（-0.104）但仍然中——蒸汽唔係萬能；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "clv_neg_but_hit",
+            "zh": "CLV負（-0.104）但仍然中——蒸汽唔係萬能",
+            "direction": "neutral"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E4%BA%9B%E8%B7%AF%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E6%A0%BC%E6%8B%89%E6%96%AF%E5%93%A5%E6%B5%81%E6%B5%AA%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.1,
+        "prob_error": 0.509
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB9021|OOE|雙||medium|2026-11-15 18:36",
+      "front_end_id": "FB9021",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子蘇格蘭超級聯賽",
+      "home": {
+        "ch": "些路迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "格拉斯哥流浪女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E4%BA%9B%E8%B7%AF%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E6%A0%BC%E6%8B%89%E6%96%AF%E5%93%A5%E6%B5%81%E6%B5%AA%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9021|HIL|細|2.5|high|2026-11-15 18:36",
+      "front_end_id": "FB9021",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子蘇格蘭超級聯賽",
+      "home": {
+        "ch": "些路迪女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "格拉斯哥流浪女足",
+        "en": ""
+      },
+      "market": "HIL",
+      "pick": "細",
+      "line": 2.5,
+      "risk_tier": "high",
+      "pick_line": "HIL 細 2.5",
+      "hkjc_odds": 2.3,
+      "est_prob_pct": 47.9,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3 總5",
+      "review_zh": "❌ 唔中｜入球5 vs 線2.5。事前估 47.9%。原因：事前估 47.9% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜入球5 vs 線2.5。事前估 47.9%。原因：事前估 47.9% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 47.9% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E4%BA%9B%E8%B7%AF%E8%BF%AA%E5%A5%B3%E8%B6%B3%20%E6%A0%BC%E6%8B%89%E6%96%AF%E5%93%A5%E6%B5%81%E6%B5%AA%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 些路迪女足 vs 格拉斯哥流浪女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 47.9,
+        "prob_error": 0.4788
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "front_end_id": "FB9003",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子挪威超級聯賽",
+      "home": {
+        "ch": "阿納巴莊那女足",
+        "en": "Arna-Bjornar Women"
+      },
+      "away": {
+        "ch": "洛亞女足",
+        "en": "Roa Women"
+      },
+      "pick_line": "主客和 主勝",
+      "hkjc_odds": 2.34,
+      "est_prob_pct": 36.6,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向錯；FT 2-3；莊家視角：走盤（資訊導向）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9021",
+      "kickoff_hkt": "2026-11-15 20:00",
+      "tournament": "女子蘇格蘭超級聯賽",
+      "home": {
+        "ch": "些路迪女足",
+        "en": "Celtic Women"
+      },
+      "away": {
+        "ch": "格拉斯哥流浪女足",
+        "en": "Rangers Women"
+      },
+      "pick_line": "讓球 客讓 +0.5/+1.0",
+      "hkjc_odds": 1.73,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向啱；讓球 FT 2-3 line 0.75；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
       "tip_key": "FB8993|HDC|主讓|0.0/-0.5|low|2026-11-15 18:36",
       "front_end_id": "FB8993",
       "kickoff_hkt": "2026-11-15 19:30",
@@ -3216,6 +7783,30 @@
       "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
     },
     {
+      "front_end_id": "FB8993",
+      "kickoff_hkt": "2026-11-15 19:30",
+      "tournament": "女子意大利甲組聯賽",
+      "home": {
+        "ch": "薩斯索羅女足",
+        "en": "Sassuolo Women"
+      },
+      "away": {
+        "ch": "特拉納女足",
+        "en": "Ternana Women"
+      },
+      "pick_line": "讓球 主讓 0.0/-0.5",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "1-1",
+      "corners": null,
+      "result_value": "1-1",
+      "review_zh": "估計方向錯；讓球 FT 1-1 line -0.25；莊家視角：走盤（責任平衡）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
       "tip_key": "FB9022|HAD|客勝||low|2026-11-15 18:36",
       "front_end_id": "FB9022",
       "kickoff_hkt": "2026-11-15 19:15",
@@ -3411,6 +8002,329 @@
         "prob_error": 0.5532
       },
       "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "front_end_id": "FB9022",
+      "kickoff_hkt": "2026-11-15 19:15",
+      "tournament": "女子荷蘭甲組聯賽",
+      "home": {
+        "ch": "海牙女足",
+        "en": "Den Haag Women"
+      },
+      "away": {
+        "ch": "迪加史卓普女足",
+        "en": "De Graafschap Women"
+      },
+      "pick_line": "主客和 客勝",
+      "hkjc_odds": 2.05,
+      "est_prob_pct": 26.5,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "0-2",
+      "corners": null,
+      "result_value": "0-2",
+      "review_zh": "估計方向啱；FT 0-2；莊家視角：逆走盤／穩盤（責任平衡）仍中 — 模型或價值盤。",
+      "match_status": "FT"
+    },
+    {
+      "tip_key": "FB9002|HDC|主讓|0.0/-0.5|low|2026-11-15 18:36",
+      "front_end_id": "FB9002",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "馬德里CFF女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "洛格羅尼奧女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "0.0/-0.5",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 0.0/-0.5",
+      "hkjc_odds": 1.89,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜讓球 FT 2-3 line -0.25。事前估 49.1%。原因：事前估 49.1% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜讓球 FT 2-3 line -0.25。事前估 49.1%。原因：事前估 49.1% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.1% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%A6%AC%E5%BE%B7%E9%87%8CCFF%E5%A5%B3%E8%B6%B3%20%E6%B4%9B%E6%A0%BC%E7%BE%85%E5%B0%BC%E5%A5%A7%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.1,
+        "prob_error": 0.491
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "tip_key": "FB9002|OOE|單||medium|2026-11-15 18:36",
+      "front_end_id": "FB9002",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "馬德里CFF女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "洛格羅尼奧女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "單",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 單",
+      "hkjc_odds": 1.84,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "HIT",
+      "status_zh": "中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "✅ 中｜總5單。事前估 49.0%。原因：水位 1.84 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足。下次應改：下次：維持現有閘，累積樣本再校",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "✅ 中｜總5單。事前估 49.0%。原因：水位 1.84 帶合理，有肉又中；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足。下次應改：下次：維持現有閘，累積樣本再校",
+        "next_change_zh": "下次：維持現有閘，累積樣本再校",
+        "causes": [
+          {
+            "tag": "odds_ok",
+            "zh": "水位 1.84 帶合理，有肉又中",
+            "direction": "support"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "support"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E9%A6%AC%E5%BE%B7%E9%87%8CCFF%E5%A5%B3%E8%B6%B3%20%E6%B4%9B%E6%A0%BC%E7%BE%85%E5%B0%BC%E5%A5%A7%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 馬德里CFF女足 vs 洛格羅尼奧女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.51
+      },
+      "next_change_zh": "下次：維持現有閘，累積樣本再校"
+    },
+    {
+      "tip_key": "FB9001|HDC|主讓|-0.5/-1.0|low|2026-11-15 18:36",
+      "front_end_id": "FB9001",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "皇家蘇斯達女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "畢爾包女足",
+        "en": ""
+      },
+      "market": "HDC",
+      "pick": "主讓",
+      "line": "-0.5/-1.0",
+      "risk_tier": "low",
+      "pick_line": "HDC 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 44.4,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜讓球 FT 2-3 line -0.75。事前估 44.4%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足。下次應改：下次：HDC/low 水位帶再觀察，分數輕罰",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜讓球 FT 2-3 line -0.75。事前估 44.4%。原因：冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足。下次應改：下次：HDC/low 水位帶再觀察，分數輕罰",
+        "next_change_zh": "下次：HDC/low 水位帶再觀察，分數輕罰",
+        "causes": [
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E7%9A%87%E5%AE%B6%E8%98%87%E6%96%AF%E9%81%94%E5%A5%B3%E8%B6%B3%20%E7%95%A2%E7%88%BE%E5%8C%85%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 44.4,
+        "prob_error": 0.4437
+      },
+      "next_change_zh": "下次：HDC/low 水位帶再觀察，分數輕罰"
+    },
+    {
+      "tip_key": "FB9001|OOE|雙||medium|2026-11-15 18:36",
+      "front_end_id": "FB9001",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "皇家蘇斯達女足",
+        "en": ""
+      },
+      "away": {
+        "ch": "畢爾包女足",
+        "en": ""
+      },
+      "market": "OOE",
+      "pick": "雙",
+      "line": null,
+      "risk_tier": "medium",
+      "pick_line": "OOE 雙",
+      "hkjc_odds": 1.82,
+      "est_prob_pct": 49.0,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+      "match_status": "FT",
+      "source": "ledger",
+      "history": true,
+      "postmatch": {
+        "analysis_zh": "❌ 唔中｜總5單。事前估 49.0%。原因：事前估 49.0% 但唔中（偏差大）→ 校準／降權；冷聯／稀缺：加嚴 HIL／FHA。外網：FotMob:FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。｜ESPN:ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足。下次應改：下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴",
+        "causes": [
+          {
+            "tag": "overconfident",
+            "zh": "事前估 49.0% 但唔中（偏差大）→ 校準／降權",
+            "direction": "against"
+          },
+          {
+            "tag": "league_cold",
+            "zh": "冷聯／稀缺：加嚴 HIL／FHA",
+            "direction": "against"
+          }
+        ],
+        "external": [
+          {
+            "source": "FotMob",
+            "url": "https://www.fotmob.com/search?term=%E7%9A%87%E5%AE%B6%E8%98%87%E6%96%AF%E9%81%94%E5%A5%B3%E8%B6%B3%20%E7%95%A2%E7%88%BE%E5%8C%85%E5%A5%B3%E8%B6%B3",
+            "summary_zh": "FotMob：API 暫取唔到正文，請用搜尋連結自行對照賽後評。",
+            "missing": null
+          },
+          {
+            "source": "ESPN",
+            "url": "https://www.espn.com/soccer/scoreboard/_/date/20261115",
+            "summary_zh": "ESPN 當日分數板對照（20261115）：請核對 皇家蘇斯達女足 vs 畢爾包女足",
+            "missing": null
+          }
+        ],
+        "pre_est_prob_pct": 49.0,
+        "prob_error": 0.49
+      },
+      "next_change_zh": "下次：呢類盤校準後機率再壓低，低風險門檻更嚴"
+    },
+    {
+      "front_end_id": "FB9002",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "馬德里CFF女足",
+        "en": "Madrid CFF Women"
+      },
+      "away": {
+        "ch": "洛格羅尼奧女足",
+        "en": "DUX Logrono Women"
+      },
+      "pick_line": "讓球 主讓 0.0/-0.5",
+      "hkjc_odds": 1.89,
+      "est_prob_pct": 49.1,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向錯；讓球 FT 2-3 line -0.25；莊家視角：走盤（責任平衡）未指向本 tip，結果唔中。",
+      "match_status": "FT"
+    },
+    {
+      "front_end_id": "FB9001",
+      "kickoff_hkt": "2026-11-15 19:00",
+      "tournament": "女子西班牙甲組聯賽",
+      "home": {
+        "ch": "皇家蘇斯達女足",
+        "en": "Real Sociedad Women"
+      },
+      "away": {
+        "ch": "畢爾包女足",
+        "en": "Bilbao Women"
+      },
+      "pick_line": "讓球 主讓 -0.5/-1.0",
+      "hkjc_odds": 2.1,
+      "est_prob_pct": 44.4,
+      "stake": 50,
+      "settlement": "MISS",
+      "status_zh": "唔中",
+      "ft_score": "2-3",
+      "corners": null,
+      "result_value": "2-3",
+      "review_zh": "估計方向錯；讓球 FT 2-3 line -0.75；莊家視角：走盤（誘盤嫌疑）未指向本 tip，結果唔中。",
+      "match_status": "FT"
     },
     {
       "tip_key": "FB8828|FHL|細|1.5|low|2026-11-15 15:24",
@@ -70667,28 +75581,28 @@
     }
   ],
   "history_meta": {
-    "ledger_n": 1106,
+    "ledger_n": 1139,
     "user_bets_n": 2,
-    "window_review_n": 0,
-    "review_rows_n": 1108,
-    "postmatch_n": 1101,
+    "window_review_n": 29,
+    "review_rows_n": 1170,
+    "postmatch_n": 1134,
     "note_zh": "覆盤／命中率來自 settlement_ledger + 實注；每場有賽後贏／輸分析（含外網對照）；空窗唔會清走歷史。"
   },
   "disclaimer": "紙盤分析，唔係投注建議。估計機率（已盡量校準）唔保證命中。18歲以下唔准。請理性博彩。",
   "postmatch_adapt": {
-    "as_of_hkt": "2026-11-16 12:34:11 HKT",
-    "n_patterns": 167,
-    "n_penalties": 48,
+    "as_of_hkt": "2026-11-16 15:35:49 HKT",
+    "n_patterns": 168,
+    "n_penalties": 49,
     "n_bonuses": 10,
     "n_gates": 5,
     "changelog_zh": [
-      "輕罰 HAD|high|hot|3.50+ p̂=0.27 → +0.54",
+      "輕罰 HAD|high|hot|3.50+ p̂=0.27 → +0.53",
       "輕罰 HAD|high|med|3.50+ p̂=0.29 → +0.48",
       "輕罰 HIL|low|cold|2.00-2.50 p̂=0.29 → +0.48",
       "罰分 HAD|low|med|3.50+ p̂=0.26 → +0.60",
       "輕罰 HAD|high|hot|2.50-3.50 p̂=0.30 → +0.43",
       "罰分 HIL|low|hot|2.00-2.50 p̂=0.27 → +0.53",
-      "輕罰 HAD|medium|hot|2.50-3.50 p̂=0.28 → +0.53",
+      "輕罰 HAD|medium|hot|2.50-3.50 p̂=0.28 → +0.52",
       "罰分 HAD|low|hot|3.50+ p̂=0.27 → +0.54"
     ],
     "note_zh": "由 postmatch 賽後分析＋ledger 時間衰減聚合；analyse／選盤自動讀取。"
