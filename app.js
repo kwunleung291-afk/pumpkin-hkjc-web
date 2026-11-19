@@ -657,12 +657,29 @@
     )}（n=${esc(r30.n || 0)}）</div>`;
   }
 
+  async function loadData() {
+    if (window.__PUMPKIN_EMBEDDED__) return window.__PUMPKIN_EMBEDDED__;
+    try {
+      const r = await fetch("./data.json.gz.b64", { cache: "no-store" });
+      if (r.ok && window.DecompressionStream) {
+        const b64 = (await r.text()).replace(/\s+/g, "");
+        const bin = Uint8Array.from(atob(b64), function (c) { return c.charCodeAt(0); });
+        const stream = new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"));
+        const text = await new Response(stream).text();
+        return JSON.parse(text);
+      }
+    } catch (err) {
+      /* fall through to data.json */
+    }
+    const res = await fetch("./data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return await res.json();
+  }
+
   async function boot() {
     bindTabs();
     try {
-      const res = await fetch("./data.json", { cache: "no-store" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
+      const data = await loadData();
       window.__PUMPKIN_DATA__ = data;
       fillTop(data);
       renderBuyableList(data);
